@@ -18,10 +18,10 @@ NOTE: There were 240 observations read from the data set TESTDATA.BLOOD_PRESSURE
 NOTE: The data set WORK.BLOOD_PRESSURE2 has 360 observations and 5 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
-MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\boxplot.sas
+MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\boxplot.sas
 226        %boxplot(data=blood_pressure2, x=visit, y=sbp, group=med, report=&g_work/report21.pdf)
 MPRINT(BOXPLOT):   proc sql noprint;
 MPRINT(BOXPLOT):   select distinct visit into :xvalues separated by '" "' from blood_pressure2;
@@ -38,12 +38,12 @@ MPRINT(BOXPLOT):   select min(med) into :lower from blood_pressure2;
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 ERROR: boxplot: Variable med must have exactly two values
-MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 227        %assertLogMsg(i_logMsg=ERROR: boxplot: Variable med must have exactly two values)
 MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
 MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;

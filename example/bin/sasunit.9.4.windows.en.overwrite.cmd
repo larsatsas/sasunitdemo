@@ -4,7 +4,7 @@ REM For copyright information and terms of usage under the GPL license see inclu
 REM or https://sourceforge.net/p/sasunit/wiki/readme/.
 
 cd ..
-SET SASUNIT_ROOT=C:\sasunit
+SET SASUNIT_ROOT=C:\Users\sas\work\sasunitdemo
 SET SASUNIT_OVERWRITE=1
 SET SASUNIT_LANGUAGE=en
 SET SASUNIT_HOST_OS=windows

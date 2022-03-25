@@ -14,9 +14,9 @@ Warnings: 0
 </p>
 <pre>
 NOTE: PROCEDURE PRINTTO used (Total process time):
-44                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+44                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
-      real time           0.02 seconds
+      real time           0.01 seconds
       cpu time            0.01 seconds
  
  
@@ -34,7 +34,7 @@ NOTE: DATA statement used (Total process time):
       cpu time            0.00 seconds
  
  
-MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\boxplot.sas
+MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\boxplot.sas
 62         %boxplot(data=blood_pressure, x=visit, y=sbp, group=med, report=&g_work/report4.pdf)
 MPRINT(BOXPLOT):   proc sql noprint;
 MPRINT(BOXPLOT):   select distinct visit into :xvalues separated by '" "' from blood_pressure;
@@ -70,7 +70,7 @@ NOTE: Table WORK.DATA10 created, with 6 rows and 1 columns.
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-45                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+45                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
       cpu time            0.00 seconds
  
@@ -97,8 +97,8 @@ MPRINT(BOXPLOT):   select min(visit), max(visit) into :xmin, :xmax from blood_pr
 MPRINT(BOXPLOT):   select count(*) into :misscount from blood_pressure where visit is missing;
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
+      real time           0.00 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(BOXPLOT):   run;
@@ -116,7 +116,7 @@ NOTE: There were 240 observations read from the data set WORK.BLOOD_PRESSURE.
 NOTE: The data set WORK.DATA11 has 240 observations and 3 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(BOXPLOT):   GOPTIONS FTEXT="Helvetica" HTEXT=12pt hsize=16cm vsize=16cm;
@@ -125,10 +125,10 @@ MPRINT(BOXPLOT):   SYMBOL2 WIDTH = 3 BWIDTH = 3 COLOR = black LINE = 1 VALUE = n
 MPRINT(BOXPLOT):   AXIS1 LABEL=(ANGLE=90) MINOR=none;
 MPRINT(BOXPLOT):   AXIS2 ORDER=(-100 0 100 200 300 400 500 600) VALUE=(" " "0" "100" "200" "300" "400" "500" " ") MINOR=none;
 MPRINT(BOXPLOT):   LEGEND1 FRAME;
-MPRINT(BOXPLOT):   ODS PDF FILE="D:\opt\sasinside\SASWORK\_TD25084_SAS-AAP_/report4.pdf";
-46                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+MPRINT(BOXPLOT):   ODS PDF FILE="D:\opt\sasinside\SASWORK\_TD5912_SAS-AAP_/report4.pdf";
+46                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
-NOTE: Writing ODS PDF output to DISK destination "D:\opt\sasinside\SASWORK\_TD25084_SAS-AAP_\report4.pdf", printer "PDF".
+NOTE: Writing ODS PDF output to DISK destination "D:\opt\sasinside\SASWORK\_TD5912_SAS-AAP_\report4.pdf", printer "PDF".
 MPRINT(BOXPLOT):   ODS LISTING CLOSE;
 MPRINT(BOXPLOT):   PROC GPLOT DATA=WORK.DATA11;
 MPRINT(BOXPLOT):   PLOT sbp * visit = med / VAXIS=Axis1 HAXIS=Axis2 LEGEND=Legend1 NOFRAME;
@@ -139,11 +139,11 @@ MPRINT(BOXPLOT):   QUIT;
 NOTE: There were 240 observations read from the data set WORK.DATA11.
 NOTE: PROCEDURE GPLOT used (Total process time):
       real time           0.03 seconds
-      cpu time            0.03 seconds
+      cpu time            0.04 seconds
  
  
 MPRINT(BOXPLOT):   ODS PDF CLOSE;
-NOTE: ODS PDF printed 1 page to D:\opt\sasinside\SASWORK\_TD25084_SAS-AAP_\report4.pdf.
+NOTE: ODS PDF printed 1 page to D:\opt\sasinside\SASWORK\_TD5912_SAS-AAP_\report4.pdf.
 MPRINT(BOXPLOT):   ODS LISTING;
 MPRINT(BOXPLOT):   proc sql noprint;
 MPRINT(BOXPLOT):   drop table WORK.DATA11;
@@ -156,8 +156,8 @@ NOTE: PROCEDURE SQL used (Total process time):
       cpu time            0.00 seconds
  
  
-MAUTOLOCDISPLAY(ASSERTREPORT):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertreport.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTREPORT):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertreport.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 63         %assertReport(i_actual=&g_work/report4.pdf, i_expected=,
 64                       i_desc=please compare chart with specification in source code)
 MPRINT(ASSERTREPORT.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;

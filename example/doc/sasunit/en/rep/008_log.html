@@ -13,7 +13,7 @@ Warnings: 0
 <br>
 </p>
 <pre>
-1                                           The SAS System              07:09 Thursday, March 24, 2022
+1                                           The SAS System                09:39 Friday, March 25, 2022
  
 NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA.
 NOTE: SAS (r) Proprietary Software 9.4 (TS1M7)
@@ -35,7 +35,7 @@ NOTE: Additional host information:
  X64_DSRV16 WIN 10.0.14393  Server
  
 NOTE: SAS initialization used:
-      real time           0.59 seconds
+      real time           0.36 seconds
       cpu time            0.32 seconds
  
 NOTE: The macro _SCENARIO completed compilation without errors.
@@ -48,10 +48,10 @@ NOTE: The macro _HANDLEERROR completed compilation without errors.
       79 instructions 1948 bytes.
 NOTE: The macro _EXISTDIR completed compilation without errors.
       42 instructions 856 bytes.
-MPRINT(_SCENARIO):   LIBNAME target "C:\sasunit\example\doc\sasunit\en";
+MPRINT(_SCENARIO):   LIBNAME target "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en";
 NOTE: Libref TARGET was successfully assigned as follows:
       Engine:        V9
-      Physical Name: C:\sasunit\example\doc\sasunit\en
+      Physical Name: C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en
 1          /**
 2             \file
 3             \ingroup    SASUNIT_EXAMPLES_TEST
@@ -69,7 +69,7 @@ NOTE: Libref TARGET was successfully assigned as follows:
 15                        Revision: 40 - KL: Added support for different languages in test assertion.
 16            \author     \$Author: klandwich $
 17            \date       \$Date: 2017-10-31 10:50:14 +0100 (Di, 31 Okt 2017) $
-2                                                                                                                        The SAS System                                                                                           07:09 Thursday, March 24, 20
+2                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 20
  
 18
 19            \sa         For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/
@@ -87,12 +87,12 @@ NOTE: The macro INITSCENARIO completed compilation without errors.
 NOTE: The macro _READENVMETADATA completed compilation without errors.
       235 instructions 5444 bytes.
 MPRINT(INITSCENARIO):  ;
-MPRINT(INITSCENARIO):   filename _CUR_SCN "C:/sasunit/example/saspgm/generate_test.sas";
+MPRINT(INITSCENARIO):   filename _CUR_SCN "C:/Users/sas/work/sasunitdemo/example/saspgm/generate_test.sas";
 MPRINT(INITSCENARIO):   proc sql noprint;
 MPRINT(INITSCENARIO):   select put (max(1,max(scn_id)+1), z3.) into :g_scnID from target.scn;
 MPRINT(INITSCENARIO):   select modate into :l_changed from sashelp.vextfl where fileref="_CUR_SCN";
-MPRINT(INITSCENARIO):   select scn_id into :l_scnID from target.scn where "C:/sasunit/example/saspgm/generate_test.sas" contains trim(scn_path);
-MPRINT(INITSCENARIO):   select scn_id into :g_scnID from target.scn where "C:/sasunit/example/saspgm/generate_test.sas" contains trim(scn_path);
+MPRINT(INITSCENARIO):   select scn_id into :l_scnID from target.scn where "C:/Users/sas/work/sasunitdemo/example/saspgm/generate_test.sas" contains trim(scn_path);
+MPRINT(INITSCENARIO):   select scn_id into :g_scnID from target.scn where "C:/Users/sas/work/sasunitdemo/example/saspgm/generate_test.sas" contains trim(scn_path);
 MPRINT(INITSCENARIO):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.01 seconds
@@ -102,7 +102,7 @@ NOTE: PROCEDURE SQL used (Total process time):
 MPRINT(INITSCENARIO):   filename _CUR_SCN clear;
 NOTE: Fileref _CUR_SCN has been deassigned.
 MPRINT(INITSCENARIO):   proc sql noprint;
-MPRINT(INITSCENARIO):   update target.scn set scn_start =1963724981.58 ,scn_changed ="01JUL19:02:01:24"dt ,scn_desc ="Tests for generate.sas" where scn_id = 008;
+MPRINT(INITSCENARIO):   update target.scn set scn_start =1963820371.873 ,scn_changed ="01JUL19:02:01:24"dt ,scn_desc ="Tests for generate.sas" where scn_id = 008;
 NOTE: 1 row was updated in TARGET.SCN.
  
 MPRINT(INITSCENARIO):   delete from target.cas where cas_scnid=008;
@@ -113,7 +113,7 @@ NOTE: No rows were deleted from TARGET.TST.
  
 MPRINT(INITSCENARIO):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.03 seconds
+      real time           0.01 seconds
       cpu time            0.01 seconds
  
  
@@ -125,7 +125,7 @@ MPRINT(INITSCENARIO._LOADENVIRONMENT):   DATA _null_;
 MPRINT(INITSCENARIO._LOADENVIRONMENT):   SET target.tsu;
 MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_project' , trim(tsu_project));
 MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_root' , trim(tsu_root));
-3                                                                                                                        The SAS System                                                                                           07:09 Thursday, March 24, 20
+3                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_sasunitroot' , trim(tsu_sasunitroot));
 MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_sasunit' , trim(tsu_sasunit));
@@ -181,7 +181,7 @@ NOTE: DATA statement used (Total process time):
  
  
 NOTE: The macro _ABSPATH completed compilation without errors.
-4                                                                                                                        The SAS System                                                                                           07:09 Thursday, March 24, 20
+4                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 20
  
       55 instructions 1240 bytes.
 NOTE: The macro _DETECTSYMBOLS completed compilation without errors.
@@ -206,9 +206,9 @@ NOTE: The infile _DETECT is:
       Catalog Name=WORK.DETECT.NOTE.LOG,
       Catalog Page Size=4096,
       Number of Catalog Pages=4,
-      Created=Thu, Mar 24, 2022 07:09:42 AM,
-      Last Modified=Thu, Mar 24, 2022 07:09:42 AM,
-      Filename=D:\opt\sasinside\SASWORK\_TD25516_SAS-AAP_\detect.sas7bcat,
+      Created=Fri, Mar 25, 2022 09:39:32 AM,
+      Last Modified=Fri, Mar 25, 2022 09:39:32 AM,
+      Filename=D:\opt\sasinside\SASWORK\_TD13528_SAS-AAP_\detect.sas7bcat,
       Release Created=9.0401M7,
       Host Created=X64_DSRV16,
       Owner Name=BUILTIN\Administrators,
@@ -220,7 +220,7 @@ NOTE: 1 record was read from the infile _DETECT.
       The maximum record length was 50.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   filename _detect;
@@ -229,7 +229,7 @@ MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   proc datasets lib=work n
 MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   delete detect / memtype=catalog;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   quit;
  
-5                                                                                                                        The SAS System                                                                                           07:09 Thursday, March 24, 20
+5                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 20
  
 NOTE: Deleting WORK.DETECT (memtype=CATALOG).
 NOTE: PROCEDURE DATASETS used (Total process time):
@@ -238,24 +238,24 @@ NOTE: PROCEDURE DATASETS used (Total process time):
  
  
 MPRINT(INITSCENARIO._LOADENVIRONMENT):  ;
-MPRINT(INITSCENARIO._LOADENVIRONMENT):   LIBNAME testout "C:\sasunit\example\doc\sasunit\en/tst";
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   LIBNAME testout "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst";
 NOTE: Libref TESTOUT was successfully assigned as follows:
       Engine:        V9
-      Physical Name: C:\sasunit\example\doc\sasunit\en\tst
-MPRINT(INITSCENARIO._LOADENVIRONMENT):   FILENAME testout "C:\sasunit\example\doc\sasunit\en/tst";
-MPRINT(INITSCENARIO._LOADENVIRONMENT):   LIBNAME testdata "C:/sasunit/example/dat";
+      Physical Name: C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\tst
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   FILENAME testout "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst";
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   LIBNAME testdata "C:/Users/sas/work/sasunitdemo/example/dat";
 NOTE: Libref TESTDATA was successfully assigned as follows:
       Engine:        V9
-      Physical Name: C:\sasunit\example\dat
-MPRINT(INITSCENARIO._LOADENVIRONMENT):   FILENAME testdata "C:/sasunit/example/dat";
-MPRINT(INITSCENARIO._LOADENVIRONMENT):   LIBNAME refdata "C:/sasunit/example/dat";
+      Physical Name: C:\Users\sas\work\sasunitdemo\example\dat
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   FILENAME testdata "C:/Users/sas/work/sasunitdemo/example/dat";
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   LIBNAME refdata "C:/Users/sas/work/sasunitdemo/example/dat";
 NOTE: Libref REFDATA refers to the same physical library as TESTDATA.
 NOTE: Libref REFDATA was successfully assigned as follows:
       Engine:        V9
-      Physical Name: C:\sasunit\example\dat
-MPRINT(INITSCENARIO._LOADENVIRONMENT):   FILENAME refdata "C:/sasunit/example/dat";
-MPRINT(INITSCENARIO._LOADENVIRONMENT):   FILENAME doc "C:/sasunit/example/doc/spec";
-MPRINT(INITSCENARIO._LOADENVIRONMENT):   OPTIONS MAUTOSOURCE APPEND=(SASAUTOS=("C:/sasunit/saspgm/sasunit/windows" "C:/sasunit/example/saspgm" ));
+      Physical Name: C:\Users\sas\work\sasunitdemo\example\dat
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   FILENAME refdata "C:/Users/sas/work/sasunitdemo/example/dat";
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   FILENAME doc "C:/Users/sas/work/sasunitdemo/example/doc/spec";
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   OPTIONS MAUTOSOURCE APPEND=(SASAUTOS=("C:/Users/sas/work/sasunitdemo/saspgm/sasunit/windows" "C:/Users/sas/work/sasunitdemo/example/saspgm" ));
 NOTE: The macro _OSCMDS completed compilation without errors.
       111 instructions 4216 bytes.
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   * retrieve dateformat from WINDOWS registry *;
@@ -264,7 +264,7 @@ MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   options noxwait xsync xmin;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   options XWAIT XSYNC NOXMIN;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   data _null_;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   length g_dateformat $40 dateformat $80;
-MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   infile "D:\opt\sasinside\SASWORK\_TD25516_SAS-AAP_\retrive_dateformat.txt";
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   infile "D:\opt\sasinside\SASWORK\_TD13528_SAS-AAP_\retrive_dateformat.txt";
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   input;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   if index (upcase (_INFILE_), "REG_SZ") then do;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   dateformat = lowcase (scan (_INFILE_,3," "));
@@ -285,7 +285,7 @@ MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   else do;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   g_dateformat = "yymmdd10.";
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   end;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   end;
-6                                                                                                                        The SAS System                                                                                           07:09 Thursday, March 24, 20
+6                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   else do;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   if (index_d &gt; index_m) then do;
@@ -300,18 +300,18 @@ MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   call symputx ("G_DATEFORMAT", t
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   end;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   run;
  
-NOTE: The infile "D:\opt\sasinside\SASWORK\_TD25516_SAS-AAP_\retrive_dateformat.txt" is:
-      Filename=D:\opt\sasinside\SASWORK\_TD25516_SAS-AAP_\retrive_dateformat.txt,
+NOTE: The infile "D:\opt\sasinside\SASWORK\_TD13528_SAS-AAP_\retrive_dateformat.txt" is:
+      Filename=D:\opt\sasinside\SASWORK\_TD13528_SAS-AAP_\retrive_dateformat.txt,
       RECFM=V,LRECL=32767,File Size (bytes)=89,
-      Last Modified=24Mar2022:07:09:41,
-      Create Time=24Mar2022:07:09:41
+      Last Modified=25Mar2022:09:39:32,
+      Create Time=25Mar2022:09:39:32
  
-NOTE: 4 records were read from the infile "D:\opt\sasinside\SASWORK\_TD25516_SAS-AAP_\retrive_dateformat.txt".
+NOTE: 4 records were read from the infile "D:\opt\sasinside\SASWORK\_TD13528_SAS-AAP_\retrive_dateformat.txt".
       The minimum record length was 0.
       The maximum record length was 45.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(INITSCENARIO._LOADENVIRONMENT):  ;
@@ -324,7 +324,7 @@ GLOBAL G_CROSSREF 1
 GLOBAL G_CROSSREFSASUNIT 1
 GLOBAL G_DATEFORMAT mmddyy10.
 GLOBAL G_DIRMACRO _dir
-GLOBAL G_DOC C:/sasunit/example/doc/spec
+GLOBAL G_DOC C:/Users/sas/work/sasunitdemo/example/doc/spec
 GLOBAL G_ENDCOMMAND
 GLOBAL G_ERROR ERROR
 GLOBAL G_ERROR_CODE
@@ -335,25 +335,25 @@ GLOBAL G_INSCENARIO 0
 GLOBAL G_INTESTCALL 0
 GLOBAL G_INTESTCASE 0
 GLOBAL G_LANGUAGE en
-GLOBAL G_LOG C:\sasunit\example\doc\sasunit\en/log
+GLOBAL G_LOG C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log
 GLOBAL G_LOGFILE
 GLOBAL G_MAKEDIR md
 GLOBAL G_NOTE NOTE
 GLOBAL G_PRINTFILE
 GLOBAL G_PROJECT SASUnit Examples
-7                                                                                                                        The SAS System                                                                                           07:09 Thursday, March 24, 20
+7                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 20
  
-GLOBAL G_REFDATA C:\sasunit\example\dat
+GLOBAL G_REFDATA C:\Users\sas\work\sasunitdemo\example\dat
 GLOBAL G_REMOVEDIR rd /S /Q
 GLOBAL G_REMOVEFILE del /S /Q
 GLOBAL G_REP_ENCODING UTF8
-GLOBAL G_ROOT C:\sasunit\example
+GLOBAL G_ROOT C:\Users\sas\work\sasunitdemo\example
 GLOBAL G_RUNENVIRONMENT SASUNIT_DMS
 GLOBAL G_RUNMODE SASUNIT_BATCH
 GLOBAL G_RUNNINGPROGRAM generate_test.sas
-GLOBAL G_RUNNINGPROGRAMFULLNAME C:/sasunit/example/saspgm/generate_test.sas
-GLOBAL G_SASAUTOS C:/sasunit/example/saspgm
-GLOBAL G_SASAUTOS0 C:/sasunit/example/saspgm
+GLOBAL G_RUNNINGPROGRAMFULLNAME C:/Users/sas/work/sasunitdemo/example/saspgm/generate_test.sas
+GLOBAL G_SASAUTOS C:/Users/sas/work/sasunitdemo/example/saspgm
+GLOBAL G_SASAUTOS0 C:/Users/sas/work/sasunitdemo/example/saspgm
 GLOBAL G_SASAUTOS1
 GLOBAL G_SASAUTOS10
 GLOBAL G_SASAUTOS11
@@ -383,23 +383,23 @@ GLOBAL G_SASAUTOS6
 GLOBAL G_SASAUTOS7
 GLOBAL G_SASAUTOS8
 GLOBAL G_SASAUTOS9
-GLOBAL G_SASCFG C:/sasunit/example/bin/sasunit.9.4.windows.en.cfg
+GLOBAL G_SASCFG C:/Users/sas/work/sasunitdemo/example/bin/sasunit.9.4.windows.en.cfg
 GLOBAL G_SASSTART "D:\opt\sasinside\SASHome\SASFoundation\9.4/sas.exe"
-GLOBAL G_SASUNIT C:/sasunit/saspgm/sasunit
-GLOBAL G_SASUNITROOT C:/sasunit
-GLOBAL G_SASUNIT_OS C:/sasunit/saspgm/sasunit/windows
+GLOBAL G_SASUNIT C:/Users/sas/work/sasunitdemo/saspgm/sasunit
+GLOBAL G_SASUNITROOT C:/Users/sas/work/sasunitdemo
+GLOBAL G_SASUNIT_OS C:/Users/sas/work/sasunitdemo/saspgm/sasunit/windows
 GLOBAL G_SASUSER
 GLOBAL G_SCNID 008
 GLOBAL G_SPLASH -nosplash
-GLOBAL G_TARGET C:\sasunit\example\doc\sasunit\en
+GLOBAL G_TARGET C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en
 GLOBAL G_TESTCOVERAGE 1
-GLOBAL G_TESTDATA C:\sasunit\example\dat
-GLOBAL G_TESTOUT C:\sasunit\example\doc\sasunit\en/tst
+GLOBAL G_TESTDATA C:\Users\sas\work\sasunitdemo\example\dat
+GLOBAL G_TESTOUT C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst
 GLOBAL G_VERBOSE 0
 GLOBAL G_WARNING WARNING
-8                                                                                                                        The SAS System                                                                                           07:09 Thursday, March 24, 20
+8                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 20
  
-GLOBAL G_WORK D:\opt\sasinside\SASWORK\_TD25516_SAS-AAP_
+GLOBAL G_WORK D:\opt\sasinside\SASWORK\_TD13528_SAS-AAP_
 GLOBAL G_XCMD XCMD
 GLOBAL SYS_SQL_IP_ALL -1
 GLOBAL SYS_SQL_IP_STMT
@@ -407,9 +407,9 @@ MPRINT(INITSCENARIO):  ;
 MPRINT(INITSCENARIO):   options linesize=max;
 NOTE: The macro _NLS completed compilation without errors.
       13 instructions 848 bytes.
-MAUTOLOCDISPLAY(_NLS):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_nls.sas
+MAUTOLOCDISPLAY(_NLS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_nls.sas
 MPRINT(INITSCENARIO._NLS):   data work.nls (drop=mark);
-MPRINT(INITSCENARIO._NLS):   infile "C:/sasunit/saspgm/sasunit/_nls.txt" truncover;
+MPRINT(INITSCENARIO._NLS):   infile "C:/Users/sas/work/sasunitdemo/saspgm/sasunit/_nls.txt" truncover;
 MPRINT(INITSCENARIO._NLS):   input mark $3. @;
 MPRINT(INITSCENARIO._NLS):   if mark ne '###' then do;
 MPRINT(INITSCENARIO._NLS):   if mark='---' then input @4 program $32.;
@@ -419,13 +419,13 @@ MPRINT(INITSCENARIO._NLS):   output;
 MPRINT(INITSCENARIO._NLS):   end;
 MPRINT(INITSCENARIO._NLS):   run;
  
-NOTE: The infile "C:/sasunit/saspgm/sasunit/_nls.txt" is:
-      Filename=C:\sasunit\saspgm\sasunit\_nls.txt,
+NOTE: The infile "C:/Users/sas/work/sasunitdemo/saspgm/sasunit/_nls.txt" is:
+      Filename=C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_nls.txt,
       RECFM=V,LRECL=32767,File Size (bytes)=23172,
       Last Modified=01Jul2019:02:01:07,
-      Create Time=01Jul2019:02:01:07
+      Create Time=25Mar2022:09:29:15
  
-NOTE: 720 records were read from the infile "C:/sasunit/saspgm/sasunit/_nls.txt".
+NOTE: 720 records were read from the infile "C:/Users/sas/work/sasunitdemo/saspgm/sasunit/_nls.txt".
       The minimum record length was 9.
       The maximum record length was 127.
 NOTE: The data set WORK.NLS has 696 observations and 4 variables.
@@ -453,7 +453,7 @@ MPRINT(INITSCENARIO._NLS):   proc datasets lib=work nolist;
 MPRINT(INITSCENARIO._NLS):   delete nls;
 MPRINT(INITSCENARIO._NLS):   run;
 NOTE: Deleting WORK.NLS (memtype=DATA).
-9                                                                                                                        The SAS System                                                                                           07:09 Thursday, March 24, 20
+9                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(INITSCENARIO._NLS):   quit;
 NOTE: PROCEDURE DATASETS used (Total process time):
@@ -467,13 +467,13 @@ MPRINT(INITSCENARIO):  ;
 31         %initTestcase(i_object=generate.sas, i_desc=example with one by variable)
 NOTE: The macro INITTESTCASE completed compilation without errors.
       175 instructions 5000 bytes.
-MAUTOLOCDISPLAY(INITTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\inittestcase.sas
+MAUTOLOCDISPLAY(INITTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\inittestcase.sas
 NOTE: The macro LOWCASE completed compilation without errors.
       29 instructions 504 bytes.
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 NOTE: The macro _GETAUTOCALLNUMBER completed compilation without errors.
       67 instructions 1320 bytes.
-MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_getautocallnumber.sas
+MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getautocallnumber.sas
 NOTE: The macro CMPRES completed compilation without errors.
       43 instructions 816 bytes.
 MAUTOLOCDISPLAY(CMPRES):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\cmpres.sas
@@ -489,26 +489,26 @@ MAUTOLOCDISPLAY(VERIFY):  This macro was compiled from the autocall file D:\opt\
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 NOTE: The macro _STDPATH completed compilation without errors.
       77 instructions 1820 bytes.
-MAUTOLOCDISPLAY(_STDPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_stdpath.sas
+MAUTOLOCDISPLAY(_STDPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_stdpath.sas
 MPRINT(INITTESTCASE):   PROC SQL NOPRINT;
 MPRINT(INITTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid = 008;
 MPRINT(INITTESTCASE):   SELECT exa_id INTO :l_exaid FROM target.exa WHERE lowcase (exa_pgm) = "generate.sas" and exa_auton=2;
 MPRINT(INITTESTCASE):   INSERT INTO target.cas VALUES ( 008 ,1 ,161 ,"generate.sas" ,"example with one by variable" ,
-MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_abspath.sas
-MPRINT(INITTESTCASE):  "" ,1963724981.849 ,. ,. );
+MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_abspath.sas
+MPRINT(INITTESTCASE):  "" ,1963820372.128 ,. ,. );
 NOTE: 1 row was inserted into TARGET.CAS.
  
 MPRINT(INITTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 ========================== test case 1 ======================================================
-MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\sasunit\example\doc\sasunit\en/log/008_001.log" PRINT="C:\sasunit\example\doc\sasunit\en/tst/008_001.lst" ;
+MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_001.log" PRINT="C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_001.lst" ;
 MPRINT(INITTESTCASE):   RUN;
  
-13                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+13                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 NOTE: PROCEDURE PRINTTO used (Total process time):
       real time           0.00 seconds
@@ -519,58 +519,58 @@ MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
 MPRINT(ENDTESTCALL):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
-MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963724982.193 WHERE cas_scnid = 008 AND cas_id = 1;
+MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963820372.424 WHERE cas_scnid = 008 AND cas_id = 1;
 NOTE: 1 row was updated in TARGET.CAS.
  
 MPRINT(ENDTESTCALL):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
  
  
 MPRINT(ENDTESTCALL):   DATA _null_;
-MPRINT(ENDTESTCALL):   INFILE "C:\sasunit\example\doc\sasunit\en/tst/008_001.lst";
+MPRINT(ENDTESTCALL):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_001.lst";
 MPRINT(ENDTESTCALL):   INPUT;
 MPRINT(ENDTESTCALL):   CALL symput ('l_filled','1');
 MPRINT(ENDTESTCALL):   STOP;
 MPRINT(ENDTESTCALL):   RUN;
  
-NOTE: The infile "C:\sasunit\example\doc\sasunit\en/tst/008_001.lst" is:
-      Filename=C:\sasunit\example\doc\sasunit\en\tst\008_001.lst,
+NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_001.lst" is:
+      Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\tst\008_001.lst,
       RECFM=V,LRECL=32767,File Size (bytes)=0,
-      Last Modified=24Mar2022:07:09:41,
-      Create Time=24Mar2022:07:09:41
+      Last Modified=25Mar2022:09:39:32,
+      Create Time=25Mar2022:09:39:32
  
-NOTE: 0 records were read from the infile "C:\sasunit\example\doc\sasunit\en/tst/008_001.lst".
+NOTE: 0 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_001.lst".
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 NOTE: The macro _DELFILE completed compilation without errors.
       26 instructions 552 bytes.
-MAUTOLOCDISPLAY(_DELFILE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_delfile.sas
+MAUTOLOCDISPLAY(_DELFILE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_delfile.sas
 MPRINT(ENDTESTCALL):   ODS _ALL_ CLOSE;
 50         %assertLibrary(i_actual=test1, i_expected=test2, i_desc=check libraries)
 NOTE: The macro ASSERTLIBRARY completed compilation without errors.
       199 instructions 5716 bytes.
-MAUTOLOCDISPLAY(ASSERTLIBRARY):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlibrary.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLIBRARY):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlibrary.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ASSERTLIBRARY):  ;
 NOTE: The macro _CHECKCALLINGSEQUENCE completed compilation without errors.
       96 instructions 2052 bytes.
-14                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+14                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
-MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_checkcallingsequence.sas
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checkcallingsequence.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 NOTE: The macro _GETSCENARIOTESTID completed compilation without errors.
       138 instructions 3708 bytes.
-MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_getscenariotestid.sas
+MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getscenariotestid.sas
 MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   PROC SQL NOPRINT;
 MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   *** determine number of the current test case ****;
 MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   SELECT max(cas_id) INTO :l_casid_gti FROM target.cas WHERE cas_scnid = 008;
@@ -586,7 +586,7 @@ MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   SELECT max(tst_id) INTO :l_tstid_gti
 MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLIBRARY):  ;
@@ -597,7 +597,7 @@ MAUTOLOCDISPLAY(TRIM):  This macro was compiled from the autocall file D:\opt\sa
 MAUTOLOCDISPLAY(TRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\trim.sas
 NOTE: The macro _ASSERTLIBRARY completed compilation without errors.
       293 instructions 11024 bytes.
-MAUTOLOCDISPLAY(_ASSERTLIBRARY):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_assertlibrary.sas
+MAUTOLOCDISPLAY(_ASSERTLIBRARY):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_assertlibrary.sas
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc sql noprint;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   create table WORK._assertLibraryActual as select libname as BaseLibname, memname as BaseMemName, nlobs as BaseObs format=commax18., nvar as BaseNVar format=commax18. from dictionary.tables where libname = "TEST1"
 order by memname;
@@ -610,7 +610,7 @@ NOTE: Table WORK._ASSERTLIBRARYEXPECTED created, with 2 rows and 4 columns.
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.02 seconds
-      cpu time            0.03 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   data work._ergebnis;
@@ -620,7 +620,7 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   by memname;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   l_rc = .;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   InActual=InAct;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   InExpected=InExp;
-15                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+15                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   if (InAct AND inExp) then do;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   DoCompare=1;
@@ -659,7 +659,7 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   select sum (DoCompare) into :AnzCompares
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc sql noprint;
@@ -676,7 +676,7 @@ NOTE: PROCEDURE SQL used (Total process time):
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc sql noprint;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   select count (*) into :OpenODSDestinations from sashelp.vdest;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
-16                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+16                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
@@ -690,7 +690,7 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   run;
 NOTE: There were 9 observations read from the data set TEST2.CLASS1.
 NOTE: There were 9 observations read from the data set TEST1.CLASS1.
 NOTE: PROCEDURE COMPARE used (Total process time):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.01 seconds
  
  
@@ -720,7 +720,7 @@ NOTE: 1 row was updated in WORK._ERGEBNIS.
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.02 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
  
  
@@ -732,7 +732,7 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   when (0) Comparefailed=0;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   when (128) do;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   if ("STRICT" = "MOREOBS" OR "STRICT" = "MORECOLSNOBS") then do;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   Comparefailed=0;
-17                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+17                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   end;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   end;
@@ -781,16 +781,16 @@ NOTE: PROCEDURE SQL used (Total process time):
       cpu time            0.00 seconds
  
  
-MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_getscenariotestid.sas
+MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getscenariotestid.sas
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   PROC SQL NOPRINT;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   *** determine number of the current test case ****;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   SELECT max(cas_id) INTO :l_casid_gti FROM target.cas WHERE cas_scnid = 008;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-18                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+18                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   PROC SQL NOPRINT;
@@ -798,31 +798,31 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   *** determine number 
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   SELECT max(tst_id) INTO :l_tstid_gti FROM target.tst WHERE tst_scnid = 008 AND tst_casid= 1;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):  ;
 NOTE: The macro _CREATETESTSUBFOLDER completed compilation without errors.
       68 instructions 1896 bytes.
-MAUTOLOCDISPLAY(_CREATETESTSUBFOLDER):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_createtestsubfolder.sas
+MAUTOLOCDISPLAY(_CREATETESTSUBFOLDER):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_createtestsubfolder.sas
 NOTE: The macro _GETTESTSUBFOLDER completed compilation without errors.
       112 instructions 2920 bytes.
-MAUTOLOCDISPLAY(_GETTESTSUBFOLDER):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_gettestsubfolder.sas
-MAUTOLOCDISPLAY(_EXISTDIR):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_existdir.sas
+MAUTOLOCDISPLAY(_GETTESTSUBFOLDER):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_gettestsubfolder.sas
+MAUTOLOCDISPLAY(_EXISTDIR):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_existdir.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
-MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_abspath.sas
+MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_abspath.sas
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._CREATETESTSUBFOLDER):  ;
-MAUTOLOCDISPLAY(_MKDIR):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\windows\_mkdir.sas
+MAUTOLOCDISPLAY(_MKDIR):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\windows\_mkdir.sas
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._CREATETESTSUBFOLDER._MKDIR):   options noxwait xsync xmin;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._CREATETESTSUBFOLDER._MKDIR):   options XWAIT XSYNC NOXMIN;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._CREATETESTSUBFOLDER):  ;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):  ;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   *** Capture tables instead of ODS DOCUMENT ***;
-MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   libname _alLib "C:/sasunit/example/doc/sasunit/en/tst/_008_001_001_assertlibrary";
+MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   libname _alLib "C:/Users/sas/work/sasunitdemo/example/doc/sasunit/en/tst/_008_001_001_assertlibrary";
 NOTE: Libref _ALLIB was successfully assigned as follows:
       Engine:        V9
-      Physical Name: C:\sasunit\example\doc\sasunit\en\tst\_008_001_001_assertlibrary
+      Physical Name: C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\tst\_008_001_001_assertlibrary
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   ods document name=_alLib._Library_act(WRITE);
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc print data=WORK._assertLibraryActual label noobs;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   run;
@@ -830,7 +830,7 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   run;
 NOTE: There were 2 observations read from the data set WORK._ASSERTLIBRARYACTUAL.
 NOTE: PROCEDURE PRINT used (Total process time):
       real time           0.05 seconds
-      cpu time            0.03 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   ods document close;
@@ -840,11 +840,11 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   run;
  
 NOTE: There were 2 observations read from the data set WORK._ASSERTLIBRARYEXPECTED.
 NOTE: PROCEDURE PRINT used (Total process time):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
  
  
-19                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+19                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   ods document close;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   data _alLib._Library_rep;
@@ -855,7 +855,7 @@ NOTE: There were 2 observations read from the data set WORK._ERGEBNIS.
 NOTE: The data set _ALLIB._LIBRARY_REP has 2 observations and 16 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   libname _alLib clear;
@@ -869,7 +869,7 @@ NOTE: Deleting WORK._ASSERTLIBRARYACTUAL (memtype=DATA).
 NOTE: Deleting WORK._ASSERTLIBRARYEXPECTED (memtype=DATA).
 NOTE: PROCEDURE DATASETS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(ASSERTLIBRARY):  ;
@@ -877,7 +877,7 @@ MPRINT(ASSERTLIBRARY):  ;
 MPRINT(ASSERTLIBRARY):   *** update result in test database ***;
 NOTE: The macro _ASSERTS completed compilation without errors.
       174 instructions 4852 bytes.
-MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_asserts.sas
+MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_asserts.sas
 MPRINT(ASSERTLIBRARY._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ASSERTLIBRARY._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 MPRINT(ASSERTLIBRARY._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 008 AND tst_casid = 1 ;
@@ -894,22 +894,22 @@ NOTE: PROCEDURE SQL used (Total process time):
 51         %endTestcase() /* assertLog is called implicitly */
 NOTE: The macro ENDTESTCASE completed compilation without errors.
       82 instructions 2388 bytes.
-MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcase.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcase.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ENDTESTCASE):  ;
 MPRINT(ENDTESTCASE):   PROC SQL NOPRINT;
 MPRINT(ENDTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
-20                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+20                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(ENDTESTCASE):   SELECT count(*) INTO :l_assertLog FROM target.tst WHERE tst_scnid = 008 AND tst_casid = 1 AND tst_type='assertLog';
 NOTE: The macro ASSERTLOG completed compilation without errors.
       83 instructions 2816 bytes.
-MAUTOLOCDISPLAY(ASSERTLOG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlog.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLOG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlog.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ENDTESTCASE.ASSERTLOG):  ;
-MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_checkcallingsequence.sas
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checkcallingsequence.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
@@ -926,9 +926,9 @@ NOTE: PROCEDURE SQL used (Total process time):
  
 NOTE: The macro _CHECKLOG completed compilation without errors.
       34 instructions 1896 bytes.
-MAUTOLOCDISPLAY(_CHECKLOG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_checklog.sas
+MAUTOLOCDISPLAY(_CHECKLOG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checklog.sas
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   DATA _null_;
-MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   INFILE "C:\sasunit\example\doc\sasunit\en/log/008_001.log" TRUNCOVER end=eof IGNOREDOSEOF;
+MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_001.log" TRUNCOVER end=eof IGNOREDOSEOF;
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   INPUT logline $char255.;
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   ATTRIB _errorPatternId LENGTH = 8 _ignoreErrPatternId LENGTH = 8 _warningPatternId LENGTH = 8 _errcount LENGTH = 8 _warncount LENGTH = 8 ;
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   RETAIN _errorPatternId 0 _ignoreErrPatternId 0 _warningPatternId 0 _errcount 0 _warncount 0 ;
@@ -949,14 +949,14 @@ MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   CALL symputx ("l_warning_count", put(
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   END;
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   RUN;
  
-NOTE: The infile "C:\sasunit\example\doc\sasunit\en/log/008_001.log" is:
-      Filename=C:\sasunit\example\doc\sasunit\en\log\008_001.log,
-      RECFM=V,LRECL=32767,File Size (bytes)=7262,
-      Last Modified=24Mar2022:07:09:42,
-      Create Time=24Mar2022:07:09:41
+NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_001.log" is:
+      Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\log\008_001.log,
+      RECFM=V,LRECL=32767,File Size (bytes)=7338,
+      Last Modified=25Mar2022:09:39:32,
+      Create Time=25Mar2022:09:39:32
  
-NOTE: 169 records were read from the infile "C:\sasunit\example\doc\sasunit\en/log/008_001.log".
-21                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+NOTE: 169 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_001.log".
+21                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
       The minimum record length was 0.
       The maximum record length was 257.
@@ -965,7 +965,7 @@ NOTE: DATA statement used (Total process time):
       cpu time            0.01 seconds
  
  
-MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_asserts.sas
+MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_asserts.sas
 MPRINT(ENDTESTCASE.ASSERTLOG._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ENDTESTCASE.ASSERTLOG._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 MPRINT(ENDTESTCASE.ASSERTLOG._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 008 AND tst_casid = 1 ;
@@ -994,30 +994,30 @@ NOTE: 1 row was updated in TARGET.CAS.
  
 MPRINT(ENDTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
+      real time           0.00 seconds
+      cpu time            0.01 seconds
  
  
-MAUTOLOCDISPLAY(INITTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\inittestcase.sas
+MAUTOLOCDISPLAY(INITTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\inittestcase.sas
 52
 53         /*-- Testcase 2: two by variables --------------------------------------------*/
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 54         %initTestcase(i_object=generate.sas, i_desc=example with two by variables)
-MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_getautocallnumber.sas
+MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getautocallnumber.sas
 MAUTOLOCDISPLAY(CMPRES):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\cmpres.sas
 MAUTOLOCDISPLAY(LEFT):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\left.sas
 MAUTOLOCDISPLAY(QTRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\qtrim.sas
 MAUTOLOCDISPLAY(VERIFY):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\verify.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
-MAUTOLOCDISPLAY(_STDPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_stdpath.sas
+MAUTOLOCDISPLAY(_STDPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_stdpath.sas
 MPRINT(INITTESTCASE):   PROC SQL NOPRINT;
 MPRINT(INITTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid = 008;
-22                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+22                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(INITTESTCASE):   SELECT exa_id INTO :l_exaid FROM target.exa WHERE lowcase (exa_pgm) = "generate.sas" and exa_auton=2;
 MPRINT(INITTESTCASE):   INSERT INTO target.cas VALUES ( 008 ,2 ,161 ,"generate.sas" ,"example with two by variables" ,
-MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_abspath.sas
-MPRINT(INITTESTCASE):  "" ,1963724982.699 ,. ,. );
+MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_abspath.sas
+MPRINT(INITTESTCASE):  "" ,1963820372.848 ,. ,. );
 NOTE: 1 row was inserted into TARGET.CAS.
  
 MPRINT(INITTESTCASE):   QUIT;
@@ -1027,7 +1027,7 @@ NOTE: PROCEDURE SQL used (Total process time):
  
  
 ========================== test case 2 ======================================================
-MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\sasunit\example\doc\sasunit\en/log/008_002.log" PRINT="C:\sasunit\example\doc\sasunit\en/tst/008_002.lst" ;
+MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_002.log" PRINT="C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_002.lst" ;
 MPRINT(INITTESTCASE):   RUN;
  
 NOTE: PROCEDURE PRINTTO used (Total process time):
@@ -1040,12 +1040,12 @@ MPRINT(ENDTESTCALL):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE ca
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
-26                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+26                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
  
  
 MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
-MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963724982.914 WHERE cas_scnid = 008 AND cas_id = 2;
+MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963820373.001 WHERE cas_scnid = 008 AND cas_id = 2;
 NOTE: 1 row was updated in TARGET.CAS.
  
 MPRINT(ENDTESTCALL):   QUIT;
@@ -1055,34 +1055,34 @@ NOTE: PROCEDURE SQL used (Total process time):
  
  
 MPRINT(ENDTESTCALL):   DATA _null_;
-MPRINT(ENDTESTCALL):   INFILE "C:\sasunit\example\doc\sasunit\en/tst/008_002.lst";
+MPRINT(ENDTESTCALL):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_002.lst";
 MPRINT(ENDTESTCALL):   INPUT;
 MPRINT(ENDTESTCALL):   CALL symput ('l_filled','1');
 MPRINT(ENDTESTCALL):   STOP;
 MPRINT(ENDTESTCALL):   RUN;
  
-NOTE: The infile "C:\sasunit\example\doc\sasunit\en/tst/008_002.lst" is:
-      Filename=C:\sasunit\example\doc\sasunit\en\tst\008_002.lst,
+NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_002.lst" is:
+      Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\tst\008_002.lst,
       RECFM=V,LRECL=32767,File Size (bytes)=0,
-      Last Modified=24Mar2022:07:09:42,
-      Create Time=24Mar2022:07:09:42
+      Last Modified=25Mar2022:09:39:32,
+      Create Time=25Mar2022:09:39:32
  
-NOTE: 0 records were read from the infile "C:\sasunit\example\doc\sasunit\en/tst/008_002.lst".
+NOTE: 0 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_002.lst".
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
  
  
-MAUTOLOCDISPLAY(_DELFILE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_delfile.sas
+MAUTOLOCDISPLAY(_DELFILE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_delfile.sas
 MPRINT(ENDTESTCALL):   ODS _ALL_ CLOSE;
-MAUTOLOCDISPLAY(ASSERTLIBRARY):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlibrary.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLIBRARY):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlibrary.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 77         %assertLibrary(i_actual=test1, i_expected=test2, i_desc=check libraries)
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ASSERTLIBRARY):  ;
-MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_checkcallingsequence.sas
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checkcallingsequence.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
-MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_getscenariotestid.sas
+MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getscenariotestid.sas
 MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   PROC SQL NOPRINT;
 MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   *** determine number of the current test case ****;
 MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   SELECT max(cas_id) INTO :l_casid_gti FROM target.cas WHERE cas_scnid = 008;
@@ -1096,7 +1096,7 @@ MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   PROC SQL NOPRINT;
 MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   *** determine number of the current test case ****;
 MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   SELECT max(tst_id) INTO :l_tstid_gti FROM target.tst WHERE tst_scnid = 008 AND tst_casid= 2;
 MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   QUIT;
-27                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+27                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
@@ -1107,7 +1107,7 @@ MPRINT(ASSERTLIBRARY):  ;
 MAUTOLOCDISPLAY(TRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\trim.sas
 MAUTOLOCDISPLAY(TRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\trim.sas
 MAUTOLOCDISPLAY(TRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\trim.sas
-MAUTOLOCDISPLAY(_ASSERTLIBRARY):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_assertlibrary.sas
+MAUTOLOCDISPLAY(_ASSERTLIBRARY):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_assertlibrary.sas
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc sql noprint;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   create table WORK._assertLibraryActual as select libname as BaseLibname, memname as BaseMemName, nlobs as BaseObs format=commax18., nvar as BaseNVar format=commax18. from dictionary.tables where libname = "TEST1"
 order by memname;
@@ -1119,7 +1119,7 @@ NOTE: Table WORK._ASSERTLIBRARYEXPECTED created, with 4 rows and 4 columns.
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.03 seconds
+      real time           0.02 seconds
       cpu time            0.03 seconds
  
  
@@ -1152,7 +1152,7 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   else do;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   DoCompare=0;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   CompareFailed=2;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   end;
-28                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+28                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   run;
  
@@ -1160,8 +1160,8 @@ NOTE: There were 4 observations read from the data set WORK._ASSERTLIBRARYACTUAL
 NOTE: There were 4 observations read from the data set WORK._ASSERTLIBRARYEXPECTED.
 NOTE: The data set WORK._ERGEBNIS has 4 observations and 12 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
+      real time           0.00 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc sql noprint;
@@ -1180,7 +1180,7 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   from work._ergebnis where DoCompare=1;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc sql noprint;
@@ -1208,10 +1208,10 @@ NOTE: 1 row was updated in WORK._ERGEBNIS.
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-29                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+29                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
-      real time           0.01 seconds
-      cpu time            0.01 seconds
+      real time           0.00 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc compare base=test2.PRDSALE2 compare=test1.PRDSALE2 noprint;
@@ -1230,7 +1230,7 @@ NOTE: 1 row was updated in WORK._ERGEBNIS.
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.02 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
  
  
@@ -1250,7 +1250,7 @@ NOTE: 1 row was updated in WORK._ERGEBNIS.
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
  
  
@@ -1261,10 +1261,10 @@ NOTE: There were 360 observations read from the data set TEST2.PRDSALE4.
 NOTE: There were 360 observations read from the data set TEST1.PRDSALE4.
 NOTE: PROCEDURE COMPARE used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
-30                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+30                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc sql noprint;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   update work._ergebnis set l_rc=0 where upcase (memname)="PRDSALE4";
@@ -1272,8 +1272,8 @@ NOTE: 1 row was updated in WORK._ERGEBNIS.
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
+      real time           0.00 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   ods listing close;
@@ -1303,8 +1303,8 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   run;
 NOTE: There were 4 observations read from the data set WORK._ERGEBNIS.
 NOTE: The data set WORK._ERGEBNIS has 4 observations and 12 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
+      real time           0.00 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   data work._ergebnis;
@@ -1320,7 +1320,7 @@ NOTE: There were 4 observations read from the data set WORK._ERGEBNIS.
 NOTE: The data set WORK._ERGEBNIS has 4 observations and 16 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-31                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+31                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
       cpu time            0.00 seconds
  
@@ -1333,14 +1333,14 @@ NOTE: PROCEDURE SQL used (Total process time):
       cpu time            0.00 seconds
  
  
-MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_getscenariotestid.sas
+MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getscenariotestid.sas
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   PROC SQL NOPRINT;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   *** determine number of the current test case ****;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   SELECT max(cas_id) INTO :l_casid_gti FROM target.cas WHERE cas_scnid = 008;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   PROC SQL NOPRINT;
@@ -1353,22 +1353,22 @@ NOTE: PROCEDURE SQL used (Total process time):
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):  ;
-MAUTOLOCDISPLAY(_CREATETESTSUBFOLDER):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_createtestsubfolder.sas
-MAUTOLOCDISPLAY(_GETTESTSUBFOLDER):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_gettestsubfolder.sas
-MAUTOLOCDISPLAY(_EXISTDIR):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_existdir.sas
+MAUTOLOCDISPLAY(_CREATETESTSUBFOLDER):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_createtestsubfolder.sas
+MAUTOLOCDISPLAY(_GETTESTSUBFOLDER):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_gettestsubfolder.sas
+MAUTOLOCDISPLAY(_EXISTDIR):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_existdir.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
-MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_abspath.sas
+MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_abspath.sas
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._CREATETESTSUBFOLDER):  ;
-MAUTOLOCDISPLAY(_MKDIR):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\windows\_mkdir.sas
+MAUTOLOCDISPLAY(_MKDIR):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\windows\_mkdir.sas
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._CREATETESTSUBFOLDER._MKDIR):   options noxwait xsync xmin;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._CREATETESTSUBFOLDER._MKDIR):   options XWAIT XSYNC NOXMIN;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._CREATETESTSUBFOLDER):  ;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):  ;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   *** Capture tables instead of ODS DOCUMENT ***;
-MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   libname _alLib "C:/sasunit/example/doc/sasunit/en/tst/_008_002_001_assertlibrary";
+MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   libname _alLib "C:/Users/sas/work/sasunitdemo/example/doc/sasunit/en/tst/_008_002_001_assertlibrary";
 NOTE: Libref _ALLIB was successfully assigned as follows:
       Engine:        V9
-      Physical Name: C:\sasunit\example\doc\sasunit\en\tst\_008_002_001_assertlibrary
+      Physical Name: C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\tst\_008_002_001_assertlibrary
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   ods document name=_alLib._Library_act(WRITE);
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc print data=WORK._assertLibraryActual label noobs;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   run;
@@ -1376,7 +1376,7 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   run;
 NOTE: There were 4 observations read from the data set WORK._ASSERTLIBRARYACTUAL.
 NOTE: PROCEDURE PRINT used (Total process time):
       real time           0.01 seconds
-32                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+32                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
       cpu time            0.00 seconds
  
@@ -1421,7 +1421,7 @@ NOTE: PROCEDURE DATASETS used (Total process time):
 MPRINT(ASSERTLIBRARY):  ;
 MPRINT(ASSERTLIBRARY):  ;
 MPRINT(ASSERTLIBRARY):   *** update result in test database ***;
-MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_asserts.sas
+MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_asserts.sas
 MPRINT(ASSERTLIBRARY._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ASSERTLIBRARY._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 MPRINT(ASSERTLIBRARY._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 008 AND tst_casid = 2 ;
@@ -1432,24 +1432,24 @@ MPRINT(ASSERTLIBRARY._ASSERTS):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
       cpu time            0.01 seconds
-33                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+33                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
  
  
 ========================== Check        2.1 (assertLibrary) =====================================
-MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcase.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcase.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 78         %endTestcase()
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ENDTESTCASE):  ;
 MPRINT(ENDTESTCASE):   PROC SQL NOPRINT;
 MPRINT(ENDTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 MPRINT(ENDTESTCASE):   SELECT count(*) INTO :l_assertLog FROM target.tst WHERE tst_scnid = 008 AND tst_casid = 2 AND tst_type='assertLog';
-MAUTOLOCDISPLAY(ASSERTLOG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlog.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLOG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlog.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ENDTESTCASE.ASSERTLOG):  ;
-MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_checkcallingsequence.sas
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checkcallingsequence.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
@@ -1464,9 +1464,9 @@ NOTE: PROCEDURE SQL used (Total process time):
       cpu time            0.00 seconds
  
  
-MAUTOLOCDISPLAY(_CHECKLOG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_checklog.sas
+MAUTOLOCDISPLAY(_CHECKLOG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checklog.sas
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   DATA _null_;
-MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   INFILE "C:\sasunit\example\doc\sasunit\en/log/008_002.log" TRUNCOVER end=eof IGNOREDOSEOF;
+MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_002.log" TRUNCOVER end=eof IGNOREDOSEOF;
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   INPUT logline $char255.;
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   ATTRIB _errorPatternId LENGTH = 8 _ignoreErrPatternId LENGTH = 8 _warningPatternId LENGTH = 8 _errcount LENGTH = 8 _warncount LENGTH = 8 ;
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   RETAIN _errorPatternId 0 _ignoreErrPatternId 0 _warningPatternId 0 _errcount 0 _warncount 0 ;
@@ -1487,15 +1487,15 @@ MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   CALL symputx ("l_warning_count", put(
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   END;
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   RUN;
  
-NOTE: The infile "C:\sasunit\example\doc\sasunit\en/log/008_002.log" is:
-34                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_002.log" is:
+34                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
-      Filename=C:\sasunit\example\doc\sasunit\en\log\008_002.log,
-      RECFM=V,LRECL=32767,File Size (bytes)=8531,
-      Last Modified=24Mar2022:07:09:42,
-      Create Time=24Mar2022:07:09:42
+      Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\log\008_002.log,
+      RECFM=V,LRECL=32767,File Size (bytes)=8569,
+      Last Modified=25Mar2022:09:39:32,
+      Create Time=25Mar2022:09:39:32
  
-NOTE: 196 records were read from the infile "C:\sasunit\example\doc\sasunit\en/log/008_002.log".
+NOTE: 196 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_002.log".
       The minimum record length was 0.
       The maximum record length was 257.
 NOTE: DATA statement used (Total process time):
@@ -1503,7 +1503,7 @@ NOTE: DATA statement used (Total process time):
       cpu time            0.01 seconds
  
  
-MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_asserts.sas
+MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_asserts.sas
 MPRINT(ENDTESTCASE.ASSERTLOG._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ENDTESTCASE.ASSERTLOG._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 MPRINT(ENDTESTCASE.ASSERTLOG._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 008 AND tst_casid = 2 ;
@@ -1536,36 +1536,36 @@ NOTE: PROCEDURE SQL used (Total process time):
       cpu time            0.01 seconds
  
  
-MAUTOLOCDISPLAY(INITTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\inittestcase.sas
+MAUTOLOCDISPLAY(INITTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\inittestcase.sas
 79
 80         /*-- Testcase 3: one by variable with only one value -------------------------*/
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 81         %initTestcase(i_object=generate.sas, i_desc=example with one by variable with only one value)
-MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_getautocallnumber.sas
+MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getautocallnumber.sas
 MAUTOLOCDISPLAY(CMPRES):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\cmpres.sas
 MAUTOLOCDISPLAY(LEFT):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\left.sas
-35                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+35                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MAUTOLOCDISPLAY(QTRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\qtrim.sas
 MAUTOLOCDISPLAY(VERIFY):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\verify.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
-MAUTOLOCDISPLAY(_STDPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_stdpath.sas
+MAUTOLOCDISPLAY(_STDPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_stdpath.sas
 MPRINT(INITTESTCASE):   PROC SQL NOPRINT;
 MPRINT(INITTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid = 008;
 MPRINT(INITTESTCASE):   SELECT exa_id INTO :l_exaid FROM target.exa WHERE lowcase (exa_pgm) = "generate.sas" and exa_auton=2;
 MPRINT(INITTESTCASE):   INSERT INTO target.cas VALUES ( 008 ,3 ,161 ,"generate.sas" ,"example with one by variable with only one value" ,
-MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_abspath.sas
-MPRINT(INITTESTCASE):  "" ,1963724983.346 ,. ,. );
+MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_abspath.sas
+MPRINT(INITTESTCASE):  "" ,1963820373.348 ,. ,. );
 NOTE: 1 row was inserted into TARGET.CAS.
  
 MPRINT(INITTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 ========================== test case 3 ======================================================
-MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\sasunit\example\doc\sasunit\en/log/008_003.log" PRINT="C:\sasunit\example\doc\sasunit\en/tst/008_003.lst" ;
+MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_003.log" PRINT="C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_003.lst" ;
 MPRINT(INITTESTCASE):   RUN;
  
 NOTE: PROCEDURE PRINTTO used (Total process time):
@@ -1581,46 +1581,46 @@ NOTE: PROCEDURE SQL used (Total process time):
  
  
 MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
-MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963724983.578 WHERE cas_scnid = 008 AND cas_id = 3;
+MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963820373.44 WHERE cas_scnid = 008 AND cas_id = 3;
 NOTE: 1 row was updated in TARGET.CAS.
  
 MPRINT(ENDTESTCALL):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ENDTESTCALL):   DATA _null_;
-MPRINT(ENDTESTCALL):   INFILE "C:\sasunit\example\doc\sasunit\en/tst/008_003.lst";
+MPRINT(ENDTESTCALL):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_003.lst";
 MPRINT(ENDTESTCALL):   INPUT;
 MPRINT(ENDTESTCALL):   CALL symput ('l_filled','1');
 MPRINT(ENDTESTCALL):   STOP;
 MPRINT(ENDTESTCALL):   RUN;
  
-NOTE: The infile "C:\sasunit\example\doc\sasunit\en/tst/008_003.lst" is:
-      Filename=C:\sasunit\example\doc\sasunit\en\tst\008_003.lst,
+NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_003.lst" is:
+      Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\tst\008_003.lst,
       RECFM=V,LRECL=32767,File Size (bytes)=0,
-39                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+39                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
-      Last Modified=24Mar2022:07:09:43,
-      Create Time=24Mar2022:07:09:43
+      Last Modified=25Mar2022:09:39:33,
+      Create Time=25Mar2022:09:39:33
  
-NOTE: 0 records were read from the infile "C:\sasunit\example\doc\sasunit\en/tst/008_003.lst".
+NOTE: 0 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_003.lst".
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
-MAUTOLOCDISPLAY(_DELFILE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_delfile.sas
+MAUTOLOCDISPLAY(_DELFILE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_delfile.sas
 MPRINT(ENDTESTCALL):   ODS _ALL_ CLOSE;
-MAUTOLOCDISPLAY(ASSERTLIBRARY):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlibrary.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLIBRARY):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlibrary.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 98         %assertLibrary(i_actual=test1, i_expected=test2, i_desc=check libraries)
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ASSERTLIBRARY):  ;
-MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_checkcallingsequence.sas
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checkcallingsequence.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
-MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_getscenariotestid.sas
+MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getscenariotestid.sas
 MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   PROC SQL NOPRINT;
 MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   *** determine number of the current test case ****;
 MPRINT(ASSERTLIBRARY._GETSCENARIOTESTID):   SELECT max(cas_id) INTO :l_casid_gti FROM target.cas WHERE cas_scnid = 008;
@@ -1643,7 +1643,7 @@ MPRINT(ASSERTLIBRARY):  ;
 MAUTOLOCDISPLAY(TRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\trim.sas
 MAUTOLOCDISPLAY(TRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\trim.sas
 MAUTOLOCDISPLAY(TRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\trim.sas
-MAUTOLOCDISPLAY(_ASSERTLIBRARY):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_assertlibrary.sas
+MAUTOLOCDISPLAY(_ASSERTLIBRARY):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_assertlibrary.sas
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc sql noprint;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   create table WORK._assertLibraryActual as select libname as BaseLibname, memname as BaseMemName, nlobs as BaseObs format=commax18., nvar as BaseNVar format=commax18. from dictionary.tables where libname = "TEST1"
 order by memname;
@@ -1656,7 +1656,7 @@ NOTE: Table WORK._ASSERTLIBRARYEXPECTED created, with 1 rows and 4 columns.
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.02 seconds
-40                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+40                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
       cpu time            0.03 seconds
  
@@ -1712,7 +1712,7 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc sql noprint;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   select memname into :Memname1-:
 MAUTOLOCDISPLAY(TRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\trim.sas
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY.TRIM):  Memname1
-41                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+41                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   from work._ergebnis where DoCompare=1;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
@@ -1726,7 +1726,7 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   select count (*) into :OpenODSDestinatio
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   ods listing;
@@ -1746,8 +1746,8 @@ NOTE: 1 row was updated in WORK._ERGEBNIS.
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
+      real time           0.00 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   ods listing close;
@@ -1768,7 +1768,7 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   end;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   when (2176) do;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   if ("STRICT" = "MORECOLSNOBS") then do;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   Comparefailed=0;
-42                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+42                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   end;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   end;
@@ -1780,7 +1780,7 @@ NOTE: There were 1 observations read from the data set WORK._ERGEBNIS.
 NOTE: The data set WORK._ERGEBNIS has 1 observations and 12 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   data work._ergebnis;
@@ -1796,7 +1796,7 @@ NOTE: There were 1 observations read from the data set WORK._ERGEBNIS.
 NOTE: The data set WORK._ERGEBNIS has 1 observations and 16 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc sql noprint;
@@ -1807,7 +1807,7 @@ NOTE: PROCEDURE SQL used (Total process time):
       cpu time            0.00 seconds
  
  
-MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_getscenariotestid.sas
+MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getscenariotestid.sas
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   PROC SQL NOPRINT;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   *** determine number of the current test case ****;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   SELECT max(cas_id) INTO :l_casid_gti FROM target.cas WHERE cas_scnid = 008;
@@ -1824,27 +1824,27 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._GETSCENARIOTESTID):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
-43                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+43                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):  ;
-MAUTOLOCDISPLAY(_CREATETESTSUBFOLDER):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_createtestsubfolder.sas
-MAUTOLOCDISPLAY(_GETTESTSUBFOLDER):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_gettestsubfolder.sas
-MAUTOLOCDISPLAY(_EXISTDIR):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_existdir.sas
+MAUTOLOCDISPLAY(_CREATETESTSUBFOLDER):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_createtestsubfolder.sas
+MAUTOLOCDISPLAY(_GETTESTSUBFOLDER):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_gettestsubfolder.sas
+MAUTOLOCDISPLAY(_EXISTDIR):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_existdir.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
-MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_abspath.sas
+MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_abspath.sas
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._CREATETESTSUBFOLDER):  ;
-MAUTOLOCDISPLAY(_MKDIR):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\windows\_mkdir.sas
+MAUTOLOCDISPLAY(_MKDIR):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\windows\_mkdir.sas
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._CREATETESTSUBFOLDER._MKDIR):   options noxwait xsync xmin;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._CREATETESTSUBFOLDER._MKDIR):   options XWAIT XSYNC NOXMIN;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY._CREATETESTSUBFOLDER):  ;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):  ;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   *** Capture tables instead of ODS DOCUMENT ***;
-MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   libname _alLib "C:/sasunit/example/doc/sasunit/en/tst/_008_003_001_assertlibrary";
+MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   libname _alLib "C:/Users/sas/work/sasunitdemo/example/doc/sasunit/en/tst/_008_003_001_assertlibrary";
 NOTE: Libref _ALLIB was successfully assigned as follows:
       Engine:        V9
-      Physical Name: C:\sasunit\example\doc\sasunit\en\tst\_008_003_001_assertlibrary
+      Physical Name: C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\tst\_008_003_001_assertlibrary
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   ods document name=_alLib._Library_act(WRITE);
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc print data=WORK._assertLibraryActual label noobs;
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   run;
@@ -1852,7 +1852,7 @@ MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   run;
 NOTE: There were 1 observations read from the data set WORK._ASSERTLIBRARYACTUAL.
 NOTE: PROCEDURE PRINT used (Total process time):
       real time           0.01 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   ods document close;
@@ -1880,7 +1880,7 @@ NOTE: DATA statement used (Total process time):
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   libname _alLib clear;
 NOTE: Libref _ALLIB has been deassigned.
-44                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+44                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   proc datasets lib=work nolist memtype=(data view);
 MPRINT(ASSERTLIBRARY._ASSERTLIBRARY):   delete _ergebnis _assertLibraryActual _assertLibraryExpected;
@@ -1891,13 +1891,13 @@ NOTE: Deleting WORK._ASSERTLIBRARYACTUAL (memtype=DATA).
 NOTE: Deleting WORK._ASSERTLIBRARYEXPECTED (memtype=DATA).
 NOTE: PROCEDURE DATASETS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLIBRARY):  ;
 MPRINT(ASSERTLIBRARY):  ;
 MPRINT(ASSERTLIBRARY):   *** update result in test database ***;
-MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_asserts.sas
+MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_asserts.sas
 MPRINT(ASSERTLIBRARY._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ASSERTLIBRARY._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 MPRINT(ASSERTLIBRARY._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 008 AND tst_casid = 3 ;
@@ -1907,27 +1907,27 @@ NOTE: 1 row was inserted into TARGET.TST.
 MPRINT(ASSERTLIBRARY._ASSERTS):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 ========================== Check        3.1 (assertLibrary) =====================================
-MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcase.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcase.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 99         %endTestcase()
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ENDTESTCASE):  ;
 MPRINT(ENDTESTCASE):   PROC SQL NOPRINT;
 MPRINT(ENDTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 MPRINT(ENDTESTCASE):   SELECT count(*) INTO :l_assertLog FROM target.tst WHERE tst_scnid = 008 AND tst_casid = 3 AND tst_type='assertLog';
-MAUTOLOCDISPLAY(ASSERTLOG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlog.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLOG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlog.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ENDTESTCASE.ASSERTLOG):  ;
-MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_checkcallingsequence.sas
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checkcallingsequence.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ENDTESTCASE.ASSERTLOG):   PROC SQL NOPRINT;
@@ -1936,13 +1936,13 @@ MPRINT(ENDTESTCASE.ASSERTLOG):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
-45                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+45                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
  
  
-MAUTOLOCDISPLAY(_CHECKLOG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_checklog.sas
+MAUTOLOCDISPLAY(_CHECKLOG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checklog.sas
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   DATA _null_;
-MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   INFILE "C:\sasunit\example\doc\sasunit\en/log/008_003.log" TRUNCOVER end=eof IGNOREDOSEOF;
+MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_003.log" TRUNCOVER end=eof IGNOREDOSEOF;
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   INPUT logline $char255.;
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   ATTRIB _errorPatternId LENGTH = 8 _ignoreErrPatternId LENGTH = 8 _warningPatternId LENGTH = 8 _errcount LENGTH = 8 _warncount LENGTH = 8 ;
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   RETAIN _errorPatternId 0 _ignoreErrPatternId 0 _warningPatternId 0 _errcount 0 _warncount 0 ;
@@ -1963,13 +1963,13 @@ MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   CALL symputx ("l_warning_count", put(
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   END;
 MPRINT(ENDTESTCASE.ASSERTLOG._CHECKLOG):   RUN;
  
-NOTE: The infile "C:\sasunit\example\doc\sasunit\en/log/008_003.log" is:
-      Filename=C:\sasunit\example\doc\sasunit\en\log\008_003.log,
-      RECFM=V,LRECL=32767,File Size (bytes)=6701,
-      Last Modified=24Mar2022:07:09:43,
-      Create Time=24Mar2022:07:09:43
+NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_003.log" is:
+      Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\log\008_003.log,
+      RECFM=V,LRECL=32767,File Size (bytes)=6739,
+      Last Modified=25Mar2022:09:39:33,
+      Create Time=25Mar2022:09:39:33
  
-NOTE: 168 records were read from the infile "C:\sasunit\example\doc\sasunit\en/log/008_003.log".
+NOTE: 168 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_003.log".
       The minimum record length was 0.
       The maximum record length was 257.
 NOTE: DATA statement used (Total process time):
@@ -1977,7 +1977,7 @@ NOTE: DATA statement used (Total process time):
       cpu time            0.00 seconds
  
  
-MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_asserts.sas
+MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_asserts.sas
 MPRINT(ENDTESTCASE.ASSERTLOG._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ENDTESTCASE.ASSERTLOG._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 MPRINT(ENDTESTCASE.ASSERTLOG._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 008 AND tst_casid = 3 ;
@@ -1987,12 +1987,12 @@ NOTE: 1 row was inserted into TARGET.TST.
 MPRINT(ENDTESTCASE.ASSERTLOG._ASSERTS):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 ========================== Check        3.2 (assertLog) =====================================
 MPRINT(ENDTESTCASE):   QUIT;
-46                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+46                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(ENDTESTCASE):   PROC SQL NOPRINT;
 MPRINT(ENDTESTCASE):   SELECT max (tst_res) INTO :l_result FROM target.tst WHERE tst_scnid=008 AND tst_casid=3;
@@ -2009,27 +2009,27 @@ NOTE: 1 row was updated in TARGET.CAS.
 MPRINT(ENDTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
-MAUTOLOCDISPLAY(INITTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\inittestcase.sas
+MAUTOLOCDISPLAY(INITTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\inittestcase.sas
 100
 101        /*-- Testcase 4: invalid dataset ---------------------------------------------*/
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 102        %initTestcase(i_object=generate.sas, i_desc=invalid dataset)
-MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_getautocallnumber.sas
+MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getautocallnumber.sas
 MAUTOLOCDISPLAY(CMPRES):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\cmpres.sas
 MAUTOLOCDISPLAY(LEFT):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\left.sas
 MAUTOLOCDISPLAY(QTRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\qtrim.sas
 MAUTOLOCDISPLAY(VERIFY):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\verify.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
-MAUTOLOCDISPLAY(_STDPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_stdpath.sas
+MAUTOLOCDISPLAY(_STDPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_stdpath.sas
 MPRINT(INITTESTCASE):   PROC SQL NOPRINT;
 MPRINT(INITTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid = 008;
 MPRINT(INITTESTCASE):   SELECT exa_id INTO :l_exaid FROM target.exa WHERE lowcase (exa_pgm) = "generate.sas" and exa_auton=2;
 MPRINT(INITTESTCASE):   INSERT INTO target.cas VALUES ( 008 ,4 ,161 ,"generate.sas" ,"invalid dataset" ,
-MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_abspath.sas
-MPRINT(INITTESTCASE):  "" ,1963724983.934 ,. ,. );
+MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_abspath.sas
+MPRINT(INITTESTCASE):  "" ,1963820373.737 ,. ,. );
 NOTE: 1 row was inserted into TARGET.CAS.
  
 MPRINT(INITTESTCASE):   QUIT;
@@ -2039,7 +2039,7 @@ NOTE: PROCEDURE SQL used (Total process time):
  
  
 ========================== test case 4 ======================================================
-MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\sasunit\example\doc\sasunit\en/log/008_004.log" PRINT="C:\sasunit\example\doc\sasunit\en/tst/008_004.lst" ;
+MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_004.log" PRINT="C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_004.lst" ;
 MPRINT(INITTESTCASE):   RUN;
  
 NOTE: PROCEDURE PRINTTO used (Total process time):
@@ -2051,57 +2051,57 @@ MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
 MPRINT(ENDTESTCALL):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
-MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963724984.038 WHERE cas_scnid = 008 AND cas_id = 4;
+MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963820373.819 WHERE cas_scnid = 008 AND cas_id = 4;
 NOTE: 1 row was updated in TARGET.CAS.
  
 MPRINT(ENDTESTCALL):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(ENDTESTCALL):   DATA _null_;
-MPRINT(ENDTESTCALL):   INFILE "C:\sasunit\example\doc\sasunit\en/tst/008_004.lst";
+MPRINT(ENDTESTCALL):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_004.lst";
 MPRINT(ENDTESTCALL):   INPUT;
 MPRINT(ENDTESTCALL):   CALL symput ('l_filled','1');
 MPRINT(ENDTESTCALL):   STOP;
 MPRINT(ENDTESTCALL):   RUN;
  
-NOTE: The infile "C:\sasunit\example\doc\sasunit\en/tst/008_004.lst" is:
-      Filename=C:\sasunit\example\doc\sasunit\en\tst\008_004.lst,
+NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_004.lst" is:
+      Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\tst\008_004.lst,
       RECFM=V,LRECL=32767,File Size (bytes)=0,
-      Last Modified=24Mar2022:07:09:43,
-      Create Time=24Mar2022:07:09:43
+      Last Modified=25Mar2022:09:39:33,
+      Create Time=25Mar2022:09:39:33
  
-NOTE: 0 records were read from the infile "C:\sasunit\example\doc\sasunit\en/tst/008_004.lst".
+NOTE: 0 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_004.lst".
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
-49                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+49                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
  
  
-MAUTOLOCDISPLAY(_DELFILE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_delfile.sas
+MAUTOLOCDISPLAY(_DELFILE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_delfile.sas
 MPRINT(ENDTESTCALL):   ODS _ALL_ CLOSE;
 109        %assertLogMsg(i_logMsg=ERROR: Macro Generate: data= or by= specified incorrectly)
 NOTE: The macro ASSERTLOGMSG completed compilation without errors.
       117 instructions 3376 bytes.
-MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ASSERTLOGMSG):  ;
-MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_checkcallingsequence.sas
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checkcallingsequence.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 MPRINT(ASSERTLOGMSG):   PROC SQL NOPRINT;
 MPRINT(ASSERTLOGMSG):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid = 008;
 MPRINT(ASSERTLOGMSG):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLOGMSG):   DATA _null_;
@@ -2109,7 +2109,7 @@ MPRINT(ASSERTLOGMSG):   RETAIN pattern_id;
 MPRINT(ASSERTLOGMSG):   IF _n_=1 THEN DO;
 MPRINT(ASSERTLOGMSG):   pattern_id = prxparse("/ERROR: MACRO GENERATE: DATA= OR BY= SPECIFIED INCORRECTLY/");
 MPRINT(ASSERTLOGMSG):   END;
-MPRINT(ASSERTLOGMSG):   INFILE "C:\sasunit\example\doc\sasunit\en/log/008_004.log" END=eof TRUNCOVER IGNOREDOSEOF;
+MPRINT(ASSERTLOGMSG):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_004.log" END=eof TRUNCOVER IGNOREDOSEOF;
 MPRINT(ASSERTLOGMSG):   INPUT logrec $char256.;
 MPRINT(ASSERTLOGMSG):   logrec = upcase(logrec);
 MPRINT(ASSERTLOGMSG):   IF prxmatch (pattern_id, logrec) THEN DO;
@@ -2117,13 +2117,13 @@ MPRINT(ASSERTLOGMSG):   call symput ('l_msg_found', '1');
 MPRINT(ASSERTLOGMSG):   END;
 MPRINT(ASSERTLOGMSG):   RUN;
  
-NOTE: The infile "C:\sasunit\example\doc\sasunit\en/log/008_004.log" is:
-      Filename=C:\sasunit\example\doc\sasunit\en\log\008_004.log,
-      RECFM=V,LRECL=32767,File Size (bytes)=3170,
-      Last Modified=24Mar2022:07:09:44,
-      Create Time=24Mar2022:07:09:43
+NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_004.log" is:
+      Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\log\008_004.log,
+      RECFM=V,LRECL=32767,File Size (bytes)=3208,
+      Last Modified=25Mar2022:09:39:33,
+      Create Time=25Mar2022:09:39:33
  
-NOTE: 79 records were read from the infile "C:\sasunit\example\doc\sasunit\en/log/008_004.log".
+NOTE: 79 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_004.log".
       The minimum record length was 0.
       The maximum record length was 257.
 NOTE: DATA statement used (Total process time):
@@ -2131,24 +2131,24 @@ NOTE: DATA statement used (Total process time):
       cpu time            0.00 seconds
  
  
-MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_asserts.sas
+MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_asserts.sas
 MPRINT(ASSERTLOGMSG._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ASSERTLOGMSG._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 MPRINT(ASSERTLOGMSG._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 008 AND tst_casid = 4 ;
 MPRINT(ASSERTLOGMSG._ASSERTS):   INSERT INTO target.tst VALUES ( 008 , 4 ,1 ,"assertLogMsg" ,"Scan for log messages " ,"1ERROR: Macro Generate: data= or by= specified incorrectly " ,"1 " ,0 ,"assertLogMsg: assert passed." );
 NOTE: 1 row was inserted into TARGET.TST.
-50                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+50                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
  
 MPRINT(ASSERTLOGMSG._ASSERTS):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 ========================== Check        4.1 (assertLogMsg) =====================================
-MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcase.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcase.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 110        %endTestcase(i_assertLog=0)
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ENDTESTCASE):  ;
@@ -2165,7 +2165,7 @@ MPRINT(ENDTESTCASE):   SELECT max (tst_res) INTO :l_result FROM target.tst WHERE
 MPRINT(ENDTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ENDTESTCASE):   PROC SQL NOPRINT;
@@ -2178,36 +2178,36 @@ NOTE: PROCEDURE SQL used (Total process time):
       cpu time            0.00 seconds
  
  
-MAUTOLOCDISPLAY(INITTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\inittestcase.sas
+MAUTOLOCDISPLAY(INITTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\inittestcase.sas
 111
 112        /*-- Testcase 5: invalid by variable -----------------------------------------*/
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 113        %initTestcase(i_object=generate.sas, i_desc=invalid by variable)
-MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_getautocallnumber.sas
+MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getautocallnumber.sas
 MAUTOLOCDISPLAY(CMPRES):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\cmpres.sas
 MAUTOLOCDISPLAY(LEFT):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\left.sas
 MAUTOLOCDISPLAY(QTRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\qtrim.sas
 MAUTOLOCDISPLAY(VERIFY):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\verify.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
-MAUTOLOCDISPLAY(_STDPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_stdpath.sas
+MAUTOLOCDISPLAY(_STDPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_stdpath.sas
 MPRINT(INITTESTCASE):   PROC SQL NOPRINT;
 MPRINT(INITTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid = 008;
 MPRINT(INITTESTCASE):   SELECT exa_id INTO :l_exaid FROM target.exa WHERE lowcase (exa_pgm) = "generate.sas" and exa_auton=2;
-51                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+51                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(INITTESTCASE):   INSERT INTO target.cas VALUES ( 008 ,5 ,161 ,"generate.sas" ,"invalid by variable" ,
-MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_abspath.sas
-MPRINT(INITTESTCASE):  "" ,1963724984.084 ,. ,. );
+MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_abspath.sas
+MPRINT(INITTESTCASE):  "" ,1963820373.861 ,. ,. );
 NOTE: 1 row was inserted into TARGET.CAS.
  
 MPRINT(INITTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 ========================== test case 5 ======================================================
-MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\sasunit\example\doc\sasunit\en/log/008_005.log" PRINT="C:\sasunit\example\doc\sasunit\en/tst/008_005.lst" ;
+MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_005.log" PRINT="C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_005.lst" ;
 MPRINT(INITTESTCASE):   RUN;
  
 NOTE: PROCEDURE PRINTTO used (Total process time):
@@ -2219,48 +2219,48 @@ MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
 MPRINT(ENDTESTCALL):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
-MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963724984.148 WHERE cas_scnid = 008 AND cas_id = 5;
+MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963820373.91 WHERE cas_scnid = 008 AND cas_id = 5;
 NOTE: 1 row was updated in TARGET.CAS.
  
 MPRINT(ENDTESTCALL):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
-53                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+53                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
  
  
 MPRINT(ENDTESTCALL):   DATA _null_;
-MPRINT(ENDTESTCALL):   INFILE "C:\sasunit\example\doc\sasunit\en/tst/008_005.lst";
+MPRINT(ENDTESTCALL):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_005.lst";
 MPRINT(ENDTESTCALL):   INPUT;
 MPRINT(ENDTESTCALL):   CALL symput ('l_filled','1');
 MPRINT(ENDTESTCALL):   STOP;
 MPRINT(ENDTESTCALL):   RUN;
  
-NOTE: The infile "C:\sasunit\example\doc\sasunit\en/tst/008_005.lst" is:
-      Filename=C:\sasunit\example\doc\sasunit\en\tst\008_005.lst,
+NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_005.lst" is:
+      Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\tst\008_005.lst,
       RECFM=V,LRECL=32767,File Size (bytes)=0,
-      Last Modified=24Mar2022:07:09:44,
-      Create Time=24Mar2022:07:09:44
+      Last Modified=25Mar2022:09:39:33,
+      Create Time=25Mar2022:09:39:33
  
-NOTE: 0 records were read from the infile "C:\sasunit\example\doc\sasunit\en/tst/008_005.lst".
+NOTE: 0 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_005.lst".
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
-MAUTOLOCDISPLAY(_DELFILE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_delfile.sas
+MAUTOLOCDISPLAY(_DELFILE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_delfile.sas
 MPRINT(ENDTESTCALL):   ODS _ALL_ CLOSE;
-MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 120        %assertLogMsg(i_logMsg=ERROR: Macro Generate: data= or by= specified incorrectly)
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ASSERTLOGMSG):  ;
-MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_checkcallingsequence.sas
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checkcallingsequence.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 MPRINT(ASSERTLOGMSG):   PROC SQL NOPRINT;
 MPRINT(ASSERTLOGMSG):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid = 008;
@@ -2275,7 +2275,7 @@ MPRINT(ASSERTLOGMSG):   RETAIN pattern_id;
 MPRINT(ASSERTLOGMSG):   IF _n_=1 THEN DO;
 MPRINT(ASSERTLOGMSG):   pattern_id = prxparse("/ERROR: MACRO GENERATE: DATA= OR BY= SPECIFIED INCORRECTLY/");
 MPRINT(ASSERTLOGMSG):   END;
-MPRINT(ASSERTLOGMSG):   INFILE "C:\sasunit\example\doc\sasunit\en/log/008_005.log" END=eof TRUNCOVER IGNOREDOSEOF;
+MPRINT(ASSERTLOGMSG):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_005.log" END=eof TRUNCOVER IGNOREDOSEOF;
 MPRINT(ASSERTLOGMSG):   INPUT logrec $char256.;
 MPRINT(ASSERTLOGMSG):   logrec = upcase(logrec);
 MPRINT(ASSERTLOGMSG):   IF prxmatch (pattern_id, logrec) THEN DO;
@@ -2283,15 +2283,15 @@ MPRINT(ASSERTLOGMSG):   call symput ('l_msg_found', '1');
 MPRINT(ASSERTLOGMSG):   END;
 MPRINT(ASSERTLOGMSG):   RUN;
  
-NOTE: The infile "C:\sasunit\example\doc\sasunit\en/log/008_005.log" is:
-      Filename=C:\sasunit\example\doc\sasunit\en\log\008_005.log,
-      RECFM=V,LRECL=32767,File Size (bytes)=2806,
-54                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_005.log" is:
+      Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\log\008_005.log,
+      RECFM=V,LRECL=32767,File Size (bytes)=2844,
+54                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
-      Last Modified=24Mar2022:07:09:44,
-      Create Time=24Mar2022:07:09:44
+      Last Modified=25Mar2022:09:39:33,
+      Create Time=25Mar2022:09:39:33
  
-NOTE: 75 records were read from the infile "C:\sasunit\example\doc\sasunit\en/log/008_005.log".
+NOTE: 75 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_005.log".
       The minimum record length was 0.
       The maximum record length was 257.
 NOTE: DATA statement used (Total process time):
@@ -2299,7 +2299,7 @@ NOTE: DATA statement used (Total process time):
       cpu time            0.00 seconds
  
  
-MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_asserts.sas
+MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_asserts.sas
 MPRINT(ASSERTLOGMSG._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ASSERTLOGMSG._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 MPRINT(ASSERTLOGMSG._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 008 AND tst_casid = 5 ;
@@ -2313,8 +2313,8 @@ NOTE: PROCEDURE SQL used (Total process time):
  
  
 ========================== Check        5.1 (assertLogMsg) =====================================
-MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcase.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcase.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 121        %endTestcase(i_assertLog=0)
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ENDTESTCASE):  ;
@@ -2323,7 +2323,7 @@ MPRINT(ENDTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE ca
 MPRINT(ENDTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ENDTESTCASE):   PROC SQL NOPRINT;
@@ -2340,46 +2340,46 @@ NOTE: 1 row was updated in TARGET.CAS.
  
 MPRINT(ENDTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
-55                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+55                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
  
  
-MAUTOLOCDISPLAY(INITTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\inittestcase.sas
+MAUTOLOCDISPLAY(INITTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\inittestcase.sas
 122
 123        /*-- Testcase 6: invalid output library --------------------------------------*/
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 124        %initTestcase(i_object=generate.sas, i_desc=invalid output library)
-MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_getautocallnumber.sas
+MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getautocallnumber.sas
 MAUTOLOCDISPLAY(CMPRES):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\cmpres.sas
 MAUTOLOCDISPLAY(LEFT):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\left.sas
 MAUTOLOCDISPLAY(QTRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\qtrim.sas
 MAUTOLOCDISPLAY(VERIFY):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\verify.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
-MAUTOLOCDISPLAY(_STDPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_stdpath.sas
+MAUTOLOCDISPLAY(_STDPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_stdpath.sas
 MPRINT(INITTESTCASE):   PROC SQL NOPRINT;
 MPRINT(INITTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid = 008;
 MPRINT(INITTESTCASE):   SELECT exa_id INTO :l_exaid FROM target.exa WHERE lowcase (exa_pgm) = "generate.sas" and exa_auton=2;
 MPRINT(INITTESTCASE):   INSERT INTO target.cas VALUES ( 008 ,6 ,161 ,"generate.sas" ,"invalid output library" ,
-MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_abspath.sas
-MPRINT(INITTESTCASE):  "" ,1963724984.203 ,. ,. );
+MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_abspath.sas
+MPRINT(INITTESTCASE):  "" ,1963820373.948 ,. ,. );
 NOTE: 1 row was inserted into TARGET.CAS.
  
 MPRINT(INITTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 ========================== test case 6 ======================================================
-MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\sasunit\example\doc\sasunit\en/log/008_006.log" PRINT="C:\sasunit\example\doc\sasunit\en/tst/008_006.lst" ;
+MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_006.log" PRINT="C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_006.lst" ;
 MPRINT(INITTESTCASE):   RUN;
  
 NOTE: PROCEDURE PRINTTO used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
-58                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+58                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
  
  
@@ -2391,7 +2391,7 @@ NOTE: PROCEDURE SQL used (Total process time):
  
  
 MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
-MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963724984.415 WHERE cas_scnid = 008 AND cas_id = 6;
+MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963820374.025 WHERE cas_scnid = 008 AND cas_id = 6;
 NOTE: 1 row was updated in TARGET.CAS.
  
 MPRINT(ENDTESTCALL):   QUIT;
@@ -2401,43 +2401,43 @@ NOTE: PROCEDURE SQL used (Total process time):
  
  
 MPRINT(ENDTESTCALL):   DATA _null_;
-MPRINT(ENDTESTCALL):   INFILE "C:\sasunit\example\doc\sasunit\en/tst/008_006.lst";
+MPRINT(ENDTESTCALL):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_006.lst";
 MPRINT(ENDTESTCALL):   INPUT;
 MPRINT(ENDTESTCALL):   CALL symput ('l_filled','1');
 MPRINT(ENDTESTCALL):   STOP;
 MPRINT(ENDTESTCALL):   RUN;
  
-NOTE: The infile "C:\sasunit\example\doc\sasunit\en/tst/008_006.lst" is:
-      Filename=C:\sasunit\example\doc\sasunit\en\tst\008_006.lst,
+NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_006.lst" is:
+      Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\tst\008_006.lst,
       RECFM=V,LRECL=32767,File Size (bytes)=0,
-      Last Modified=24Mar2022:07:09:44,
-      Create Time=24Mar2022:07:09:44
+      Last Modified=25Mar2022:09:39:33,
+      Create Time=25Mar2022:09:39:33
  
-NOTE: 0 records were read from the infile "C:\sasunit\example\doc\sasunit\en/tst/008_006.lst".
+NOTE: 0 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/008_006.lst".
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
  
  
-MAUTOLOCDISPLAY(_DELFILE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_delfile.sas
+MAUTOLOCDISPLAY(_DELFILE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_delfile.sas
 MPRINT(ENDTESTCALL):   ODS _ALL_ CLOSE;
-MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 131        %assertLogMsg(i_logMsg=ERROR: (Libname|Libref) TEST3 is not assigned|ERROR: (Libname|Libref) TEST3 ist nicht zugewiesen
 132                     ,i_desc=regular expression used to support different languages
 133                     )
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ASSERTLOGMSG):  ;
-MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_checkcallingsequence.sas
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checkcallingsequence.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 MPRINT(ASSERTLOGMSG):   PROC SQL NOPRINT;
 MPRINT(ASSERTLOGMSG):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid = 008;
 MPRINT(ASSERTLOGMSG):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-59                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+59                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ASSERTLOGMSG):   DATA _null_;
@@ -2445,7 +2445,7 @@ MPRINT(ASSERTLOGMSG):   RETAIN pattern_id;
 MPRINT(ASSERTLOGMSG):   IF _n_=1 THEN DO;
 MPRINT(ASSERTLOGMSG):   pattern_id = prxparse("/ERROR: (LIBNAME|LIBREF) TEST3 IS NOT ASSIGNED|ERROR: (LIBNAME|LIBREF) TEST3 IST NICHT ZUGEWIESEN/");
 MPRINT(ASSERTLOGMSG):   END;
-MPRINT(ASSERTLOGMSG):   INFILE "C:\sasunit\example\doc\sasunit\en/log/008_006.log" END=eof TRUNCOVER IGNOREDOSEOF;
+MPRINT(ASSERTLOGMSG):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_006.log" END=eof TRUNCOVER IGNOREDOSEOF;
 MPRINT(ASSERTLOGMSG):   INPUT logrec $char256.;
 MPRINT(ASSERTLOGMSG):   logrec = upcase(logrec);
 MPRINT(ASSERTLOGMSG):   IF prxmatch (pattern_id, logrec) THEN DO;
@@ -2453,21 +2453,21 @@ MPRINT(ASSERTLOGMSG):   call symput ('l_msg_found', '1');
 MPRINT(ASSERTLOGMSG):   END;
 MPRINT(ASSERTLOGMSG):   RUN;
  
-NOTE: The infile "C:\sasunit\example\doc\sasunit\en/log/008_006.log" is:
-      Filename=C:\sasunit\example\doc\sasunit\en\log\008_006.log,
-      RECFM=V,LRECL=32767,File Size (bytes)=5144,
-      Last Modified=24Mar2022:07:09:44,
-      Create Time=24Mar2022:07:09:44
+NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_006.log" is:
+      Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\log\008_006.log,
+      RECFM=V,LRECL=32767,File Size (bytes)=5182,
+      Last Modified=25Mar2022:09:39:34,
+      Create Time=25Mar2022:09:39:33
  
-NOTE: 131 records were read from the infile "C:\sasunit\example\doc\sasunit\en/log/008_006.log".
+NOTE: 131 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/008_006.log".
       The minimum record length was 0.
       The maximum record length was 257.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
-MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_asserts.sas
+MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_asserts.sas
 MPRINT(ASSERTLOGMSG._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ASSERTLOGMSG._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 MPRINT(ASSERTLOGMSG._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 008 AND tst_casid = 6 ;
@@ -2482,8 +2482,8 @@ NOTE: PROCEDURE SQL used (Total process time):
  
  
 ========================== Check        6.1 (assertLogMsg) =====================================
-MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcase.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcase.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 134        %endTestcase(i_assertLog=0)
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ENDTESTCASE):  ;
@@ -2491,10 +2491,10 @@ MPRINT(ENDTESTCASE):   PROC SQL NOPRINT;
 MPRINT(ENDTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=008;
 MPRINT(ENDTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
-60                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+60                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(ENDTESTCASE):   PROC SQL NOPRINT;
@@ -2512,7 +2512,7 @@ NOTE: 1 row was updated in TARGET.CAS.
 MPRINT(ENDTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 135
@@ -2534,12 +2534,12 @@ NOTE: PROCEDURE DELETE used (Total process time):
 142        %endScenario();
 NOTE: The macro ENDSCENARIO completed compilation without errors.
       88 instructions 5584 bytes.
-MAUTOLOCDISPLAY(ENDSCENARIO):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endscenario.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDSCENARIO):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endscenario.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ENDSCENARIO):  ;
-MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcase.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcase.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ENDSCENARIO.ENDTESTCASE):  ;
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endScenario.
@@ -2547,15 +2547,15 @@ MPRINT(ENDSCENARIO):  ;
 MPRINT(ENDSCENARIO):   proc sql noprint;
 MPRINT(ENDSCENARIO):   select max (cas_res) into :l_result from target.cas WHERE cas_scnid=008;
 MPRINT(ENDSCENARIO):   QUIT;
-61                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+61                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(ENDSCENARIO):   PROC SQL NOPRINT;
-MPRINT(ENDSCENARIO):   UPDATE target.scn SET scn_res = 0 ,scn_end = 1963724984.46 WHERE scn_id = 008;
+MPRINT(ENDSCENARIO):   UPDATE target.scn SET scn_res = 0 ,scn_end = 1963820374.075 WHERE scn_id = 008;
 NOTE: 1 row was updated in TARGET.SCN.
  
 MPRINT(ENDSCENARIO):   QUIT;
@@ -2573,20 +2573,20 @@ MPRINT(ENDSCENARIO):   quit;
  
 NOTE: PROCEDURE DATASETS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 143        /** \endcond */
  
 NOTE: The macro _TERMSCENARIO completed compilation without errors.
       5 instructions 88 bytes.
-MAUTOLOCDISPLAY(_TERMSCENARIO):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\_termscenario.sas
-MAUTOLOCDISPLAY(ENDSCENARIO):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endscenario.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(_TERMSCENARIO):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_termscenario.sas
+MAUTOLOCDISPLAY(ENDSCENARIO):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endscenario.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(_TERMSCENARIO.ENDSCENARIO):  ;
-MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcase.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcase.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(_TERMSCENARIO.ENDSCENARIO.ENDTESTCASE):  ;
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endScenario.
@@ -2596,7 +2596,7 @@ MPRINT(_TERMSCENARIO):  ;
  
 NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
 NOTE: The SAS System used:
-      real time           3.57 seconds
+      real time           2.65 seconds
       cpu time            1.92 seconds
  
 </pre>

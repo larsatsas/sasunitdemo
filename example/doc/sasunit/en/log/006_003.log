@@ -1,5 +1,5 @@
 NOTE: PROCEDURE PRINTTO used (Total process time):
-      real time           0.01 seconds
+      real time           0.02 seconds
       cpu time            0.01 seconds
       
 
@@ -7,7 +7,7 @@ MPRINT(INITTESTCASE):   options linesize=max;
 47         
 48         ods listing;
 49         %CrossReferenceTest3 (5);
-MAUTOLOCDISPLAY(CROSSREFERENCETEST3):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\crossreferencetest3.sas
+MAUTOLOCDISPLAY(CROSSREFERENCETEST3):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\crossreferencetest3.sas
 MPRINT(CROSSREFERENCETEST3):   proc freq data=test;
 MPRINT(CROSSREFERENCETEST3):   table sex*age;
 MPRINT(CROSSREFERENCETEST3):   title "A Standard Frequency Output";
@@ -16,8 +16,8 @@ MPRINT(CROSSREFERENCETEST3):   run;
 NOTE: There were 19 observations read from the data set WORK.TEST.
 NOTE: The PROCEDURE FREQ printed page 5.
 NOTE: PROCEDURE FREQ used (Total process time):
-      real time           0.01 seconds
-20                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+      real time           0.02 seconds
+20                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
 
       cpu time            0.00 seconds
       
@@ -25,7 +25,7 @@ NOTE: PROCEDURE FREQ used (Total process time):
 MPRINT(CROSSREFERENCETEST3):   Title;
 MPRINT(CROSSREFERENCETEST3):   data var;
 MPRINT(CROSSREFERENCETEST3):   var =
-MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\crossreferencetest4.sas
+MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\crossreferencetest4.sas
 MPRINT(CROSSREFERENCETEST3.CROSSREFERENCETEST4):   8;
 MPRINT(CROSSREFERENCETEST3):  ;
 MPRINT(CROSSREFERENCETEST3):   run;
@@ -33,10 +33,10 @@ MPRINT(CROSSREFERENCETEST3):   run;
 NOTE: The data set WORK.VAR has 1 observations and 1 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 50         
 51         %endTestcall()
 MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;

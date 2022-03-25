@@ -1,5 +1,5 @@
 NOTE: PROCEDURE PRINTTO used (Total process time):
-10                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+10                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
 
       real time           0.00 seconds
       cpu time            0.00 seconds
@@ -11,21 +11,21 @@ MPRINT(INITTESTCASE):   options linesize=max;
 34         %_mkdir(&g_work/test1)
 NOTE: The macro _MKDIR completed compilation without errors.
       60 instructions 1648 bytes.
-MAUTOLOCDISPLAY(_MKDIR):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\windows\_mkdir.sas
+MAUTOLOCDISPLAY(_MKDIR):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\windows\_mkdir.sas
 MPRINT(_MKDIR):   options noxwait xsync xmin;
 MPRINT(_MKDIR):   options XWAIT XSYNC NOXMIN;
 35         libname test1 "&g_work/test1";
 NOTE: Libref TEST1 was successfully assigned as follows: 
       Engine:        V9 
-      Physical Name: D:\opt\sasinside\SASWORK\_TD25516_SAS-AAP_\test1
+      Physical Name: D:\opt\sasinside\SASWORK\_TD13528_SAS-AAP_\test1
 36         %_mkdir(&g_work/test2)
-MAUTOLOCDISPLAY(_MKDIR):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\windows\_mkdir.sas
+MAUTOLOCDISPLAY(_MKDIR):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\windows\_mkdir.sas
 MPRINT(_MKDIR):   options noxwait xsync xmin;
 MPRINT(_MKDIR):   options XWAIT XSYNC NOXMIN;
 37         libname test2 "&g_work/test2";
 NOTE: Libref TEST2 was successfully assigned as follows: 
       Engine:        V9 
-      Physical Name: D:\opt\sasinside\SASWORK\_TD25516_SAS-AAP_\test2
+      Physical Name: D:\opt\sasinside\SASWORK\_TD13528_SAS-AAP_\test2
 38         
 39         proc sort data=sashelp.class out=test2.class1 (label="Dataset for sex=F (9 observations)");
 40            by sex;
@@ -36,7 +36,7 @@ NOTE: There were 9 observations read from the data set SASHELP.CLASS.
       WHERE sex='F';
 NOTE: The data set TEST2.CLASS1 has 9 observations and 5 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
       
 
@@ -50,16 +50,16 @@ NOTE: There were 10 observations read from the data set SASHELP.CLASS.
 NOTE: The data set TEST2.CLASS2 has 10 observations and 5 variables.
 NOTE: PROCEDURE SORT used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 47         
 48         %generate(data=sashelp.class, by=sex, out=test1.class)
-11                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+11                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
 
 NOTE: The macro GENERATE completed compilation without errors.
       98 instructions 2812 bytes.
-MAUTOLOCDISPLAY(GENERATE):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\generate.sas
+MAUTOLOCDISPLAY(GENERATE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\generate.sas
 MPRINT(GENERATE):   data;
 MPRINT(GENERATE):   run;
 
@@ -75,7 +75,7 @@ MPRINT(GENERATE):   run;
 NOTE: The data set WORK.DATA2 has 1 observations and 0 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(GENERATE):   proc sort data=sashelp.class out=WORK.DATA1;
@@ -85,7 +85,7 @@ MPRINT(GENERATE):   run;
 NOTE: There were 19 observations read from the data set SASHELP.CLASS.
 NOTE: The data set WORK.DATA1 has 19 observations and 5 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
       
 
@@ -97,7 +97,7 @@ MPRINT(GENERATE):   run;
 NOTE: There were 19 observations read from the data set WORK.DATA1.
 NOTE: The data set WORK.DATA2 has 2 observations and 3 variables.
 NOTE: PROCEDURE MEANS used (Total process time):
-      real time           0.07 seconds
+      real time           0.08 seconds
       cpu time            0.01 seconds
       
 
@@ -111,7 +111,7 @@ NOTE: There were 1 observations read from the data set WORK.DATA2.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
-12                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+12                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
 
       
 
@@ -127,7 +127,7 @@ MPRINT(GENERATE):   run;
 NOTE: There were 2 observations read from the data set WORK.DATA2.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(GENERATE):   data test1.class1 (label="Dataset for sex=F (9 observations)") TEST1.CLASS2 (label="Dataset for sex=M (10 observations)") ;
@@ -145,8 +145,8 @@ NOTE: There were 19 observations read from the data set WORK.DATA1.
 NOTE: The data set TEST1.CLASS1 has 9 observations and 5 variables.
 NOTE: The data set TEST1.CLASS2 has 10 observations and 5 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
+      real time           0.00 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(GENERATE):   proc datasets lib=work nolist;
@@ -157,13 +157,13 @@ NOTE: Deleting WORK.DATA1 (memtype=DATA).
 NOTE: Deleting WORK.DATA2 (memtype=DATA).
 NOTE: PROCEDURE DATASETS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 49         %endTestcall()
 NOTE: The macro ENDTESTCALL completed compilation without errors.
       101 instructions 2836 bytes.
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
 MPRINT(ENDTESTCALL):   RUN;
 

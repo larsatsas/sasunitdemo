@@ -6,12 +6,12 @@ NOTE: PROCEDURE PRINTTO used (Total process time):
 MPRINT(INITTESTCASE):   options linesize=max;
 25         
 26         ods listing;
-10                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+10                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
 
 27         %CrossReferenceTest1;
 NOTE: The macro CROSSREFERENCETEST1 completed compilation without errors.
       21 instructions 624 bytes.
-MAUTOLOCDISPLAY(CROSSREFERENCETEST1):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\crossreferencetest1.sas
+MAUTOLOCDISPLAY(CROSSREFERENCETEST1):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\crossreferencetest1.sas
 MPRINT(CROSSREFERENCETEST1):   data test;
 MPRINT(CROSSREFERENCETEST1):   set sashelp.class;
 MPRINT(CROSSREFERENCETEST1):   run;
@@ -20,17 +20,17 @@ NOTE: There were 19 observations read from the data set SASHELP.CLASS.
 NOTE: The data set WORK.TEST has 19 observations and 5 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 NOTE: The macro CROSSREFERENCETEST2 completed compilation without errors.
       20 instructions 580 bytes.
-MAUTOLOCDISPLAY(CROSSREFERENCETEST2):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\crossreferencetest2.sas
+MAUTOLOCDISPLAY(CROSSREFERENCETEST2):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\crossreferencetest2.sas
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):   data test2;
 NOTE: The macro CROSSREFERENCETEST4 completed compilation without errors.
       19 instructions 392 bytes.
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):   l_calc =
-MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\crossreferencetest4.sas
+MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\crossreferencetest4.sas
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST4):   9;
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):  ;
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):   run;
@@ -55,25 +55,25 @@ MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):   title;
 i_nobs=4
 NOTE: The macro CROSSREFERENCETEST3 completed compilation without errors.
       12 instructions 384 bytes.
-MAUTOLOCDISPLAY(CROSSREFERENCETEST3):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\crossreferencetest3.sas
+MAUTOLOCDISPLAY(CROSSREFERENCETEST3):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\crossreferencetest3.sas
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   proc freq data=test;
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   table sex*age;
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   title "A Standard Frequency Output";
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   run;
 
 NOTE: There were 19 observations read from the data set WORK.TEST.
-11                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+11                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
 
 NOTE: The PROCEDURE FREQ printed page 2.
 NOTE: PROCEDURE FREQ used (Total process time):
-      real time           0.18 seconds
-      cpu time            0.00 seconds
+      real time           0.09 seconds
+      cpu time            0.03 seconds
       
 
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   Title;
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   data var;
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   var =
-MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\crossreferencetest4.sas
+MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\crossreferencetest4.sas
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3.CROSSREFERENCETEST4):   8;
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):  ;
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   run;
@@ -88,7 +88,7 @@ MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):  ;
 MPRINT(CROSSREFERENCETEST1):  ;
 MPRINT(CROSSREFERENCETEST1):   data _null_;
 MPRINT(CROSSREFERENCETEST1):   calc =
-MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\crossreferencetest4.sas
+MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\crossreferencetest4.sas
 MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST4):   7;
 MPRINT(CROSSREFERENCETEST1):  ;
 MPRINT(CROSSREFERENCETEST1):   run;
@@ -102,7 +102,7 @@ NOTE: DATA statement used (Total process time):
 29         %endTestcall()
 NOTE: The macro ENDTESTCALL completed compilation without errors.
       101 instructions 2836 bytes.
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
 MPRINT(ENDTESTCALL):   RUN;
 

@@ -7,9 +7,9 @@ MPRINT(INITTESTCASE):   options linesize=max;
 95         %endTestcall()
 NOTE: The macro ENDTESTCALL completed compilation without errors.
       101 instructions 2836 bytes.
-15                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+15                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
 
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
 MPRINT(ENDTESTCALL):   RUN;
 

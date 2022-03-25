@@ -17,7 +17,7 @@ NOTE: DATA statement used (Total process time):
       cpu time            0.00 seconds
       
 
-MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\boxplot.sas
+MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\boxplot.sas
 82         %boxplot(data=blood_pressure, x=visit, y=sbp, group=med, report=&g_work/report6.pdf)
 MPRINT(BOXPLOT):   proc sql noprint;
 MPRINT(BOXPLOT):   select distinct visit into :xvalues separated by '" "' from blood_pressure;
@@ -25,7 +25,7 @@ MPRINT(BOXPLOT):   select distinct visit into :xvalues2 separated by ' ' from bl
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(BOXPLOT):   proc sql noprint;
@@ -43,7 +43,7 @@ MPRINT(BOXPLOT):   RUN;
 NOTE: The data set WORK.DATA16 has 1 observations and 0 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(BOXPLOT):   proc sql noprint;
@@ -51,11 +51,11 @@ MPRINT(BOXPLOT):   create table WORK.DATA16 as select distinct visit from blood_
 NOTE: Table WORK.DATA16 created, with 1 rows and 1 columns.
 
 MPRINT(BOXPLOT):   quit;
-66                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+66                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
 
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(BOXPLOT):   data WORK.DATA16;
@@ -91,11 +91,11 @@ NOTE: Table WORK.DATA16 has been dropped.
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
-MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 83         %assertLogMsg(i_logMsg=ERROR: boxplot: x variable must have at least two values)
 MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
 MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;

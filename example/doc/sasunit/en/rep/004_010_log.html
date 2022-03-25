@@ -19,16 +19,16 @@ NOTE: PROCEDURE PRINTTO used (Total process time):
       real time           0.01 seconds
       cpu time            0.01 seconds
  
-88                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+88                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
  
  
 MPRINT(INITTESTCASE):   options linesize=max;
 118        %boxplot(data=testdata.blood_pressure, x=visitXXX, y=sbp, group=med, report=&g_work/report10.pdf)
-MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\boxplot.sas
+MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\boxplot.sas
 <span style="color:#FF0000"><a name="error001">ERROR: boxplot: Variable visitXXX does not exist in data set testdata.blood_pressure</a></span>
 119        %assertLogMsg(i_logMsg=ERROR: boxplot: Variable visitXXX does not exist in data set testdata.blood_pressure)
-MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
 MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;
  

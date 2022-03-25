@@ -30,25 +30,25 @@ NOTE: There were 240 observations read from the data set TESTDATA.BLOOD_PRESSURE
 NOTE: The data set WORK.BLOOD_PRESSURE has 240 observations and 6 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
-MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\boxplot.sas
+MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\boxplot.sas
 185        %boxplot(data=blood_pressure, x=visit, y=sbpc, group=med, report=&g_work/report17.pdf)
 MPRINT(BOXPLOT):   proc sql noprint;
 MPRINT(BOXPLOT):   select distinct visit into :xvalues separated by '" "' from blood_pressure;
 MPRINT(BOXPLOT):   select distinct visit into :xvalues2 separated by ' ' from blood_pressure;
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-117                                                                                                                      The SAS System                                                                                           07:09 Thursday, March 24, 20
+117                                                                                                                      The SAS System                                                                                             09:39 Friday, March 25, 20
  
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 <span style="color:#FF0000"><a name="error001">ERROR: boxplot: Variable sbpc in data set blood_pressure must be numeric</a></span>
-MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 186        %assertLogMsg(i_logMsg=ERROR: boxplot: Variable sbpc in data set blood_pressure must be numeric)
 MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
 MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;

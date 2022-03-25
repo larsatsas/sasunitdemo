@@ -5,9 +5,9 @@ NOTE: PROCEDURE PRINTTO used (Total process time):
 
 MPRINT(INITTESTCASE):   options linesize=max;
 74         %let nobs=%nobs(xxx);
-MAUTOLOCDISPLAY(NOBS):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\nobs.sas
+MAUTOLOCDISPLAY(NOBS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\nobs.sas
 75         %endTestcall()
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
 MPRINT(ENDTESTCALL):   RUN;
 

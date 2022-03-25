@@ -22,7 +22,7 @@ MPRINT(INITTESTCASE):   options linesize=max;
 118        %combineddataset
 NOTE: The macro COMBINEDDATASET completed compilation without errors.
       9 instructions 556 bytes.
-MAUTOLOCDISPLAY(COMBINEDDATASET):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\combineddataset.sas
+MAUTOLOCDISPLAY(COMBINEDDATASET):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\combineddataset.sas
 MPRINT(COMBINEDDATASET):   proc sql noprint;
 MPRINT(COMBINEDDATASET):   create table work.combineddataset as select CustomerName ,Customer.CustomerNumber ,Contracts.ContractNumber ,ContractType from work.Customer left join work.CustomerContracts on
 Customer.CustomerNumber=CustomerContracts.CustomerNumber left join work.Contracts on CustomerContracts.ContractNumber=Contracts.ContractNumber;
@@ -30,11 +30,11 @@ NOTE: Table WORK.COMBINEDDATASET created, with 8 rows and 4 columns.
  
 MPRINT(COMBINEDDATASET):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.01 seconds
+      real time           0.01 seconds
+      cpu time            0.03 seconds
  
  
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 119        %endTestCall()
 MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
 MPRINT(ENDTESTCALL):   RUN;

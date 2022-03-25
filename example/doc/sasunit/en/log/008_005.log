@@ -9,7 +9,7 @@ MPRINT(INITTESTCASE):   options linesize=max;
 
 NOTE: PROCEDURE DATASETS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 116        proc datasets lib=test2 nolist kill;
@@ -20,7 +20,7 @@ NOTE: PROCEDURE DATASETS used (Total process time):
       cpu time            0.00 seconds
       
 
-MAUTOLOCDISPLAY(GENERATE):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\generate.sas
+MAUTOLOCDISPLAY(GENERATE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\generate.sas
 118        %generate(data=sashelp.class, by=sexXXX, out=test1.class)
 MPRINT(GENERATE):   data;
 MPRINT(GENERATE):   run;
@@ -37,7 +37,7 @@ MPRINT(GENERATE):   run;
 NOTE: The data set WORK.DATA10 has 1 observations and 0 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-52                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+52                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
 
       cpu time            0.00 seconds
       
@@ -52,7 +52,7 @@ WARNING: The data set WORK.DATA9 may be incomplete.  When this step was stopped 
 WARNING: Data set WORK.DATA9 was not replaced because this step was stopped.
 NOTE: PROCEDURE SORT used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 ERROR: Macro Generate: data= or by= specified incorrectly
 
@@ -68,7 +68,7 @@ NOTE: PROCEDURE DATASETS used (Total process time):
       cpu time            0.00 seconds
       
 
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 119        %endTestcall()
 MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
 MPRINT(ENDTESTCALL):   RUN;

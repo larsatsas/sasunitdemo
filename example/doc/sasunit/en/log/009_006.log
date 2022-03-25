@@ -1,11 +1,11 @@
 NOTE: PROCEDURE PRINTTO used (Total process time):
-      real time           0.02 seconds
-      cpu time            0.03 seconds
+      real time           0.01 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(TESTCASE.INITTESTCASE):   options linesize=max;
-MAUTOLOCDISPLAY(GETVARS):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\getvars.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(GETVARS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\getvars.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 MPRINT(TESTCASE.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
 MPRINT(TESTCASE.ENDTESTCALL):   RUN;
 

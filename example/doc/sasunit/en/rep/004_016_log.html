@@ -16,16 +16,16 @@ Warnings: 0
 </p>
 <pre>
 NOTE: PROCEDURE PRINTTO used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.01 seconds
+      real time           0.02 seconds
+      cpu time            0.03 seconds
  
  
 MPRINT(INITTESTCASE):   options linesize=max;
 174        %boxplot(data=testdata.blood_pressure, x=visit, y=, group=med, report=&g_work/report16.pdf)
-MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\boxplot.sas
+MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\boxplot.sas
 MPRINT(BOXPLOT):   proc sql noprint;
 MPRINT(BOXPLOT):   select distinct visit into :xvalues separated by '" "' from testdata.blood_pressure;
-113                                                                                                                      The SAS System                                                                                           07:09 Thursday, March 24, 20
+113                                                                                                                      The SAS System                                                                                             09:39 Friday, March 25, 20
  
 MPRINT(BOXPLOT):   select distinct visit into :xvalues2 separated by ' ' from testdata.blood_pressure;
 MPRINT(BOXPLOT):   quit;
@@ -35,8 +35,8 @@ NOTE: PROCEDURE SQL used (Total process time):
  
  
 <span style="color:#FF0000"><a name="error001">ERROR: boxplot: Y variable not specified</a></span>
-MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
-MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 175        %assertLogMsg(i_logMsg=ERROR: boxplot: Y variable not specified)
 MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
 MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;

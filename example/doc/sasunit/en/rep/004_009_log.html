@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS log for test case 009 in test scenario 004 (boxplot.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Errors&#160;&#160;: 1 
+==>
+<a href="#error001">1</a>
+<br>
+Warnings: 0 
+<br>
+</p>
+<pre>
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+111        %boxplot(data=, x=visit, y=sbp, group=med, report=&g_work/report9.pdf)
+MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\boxplot.sas
+<span style="color:#FF0000"><a name="error001">ERROR: boxplot: Data set  does not exist</a></span>
+112        %assertLogMsg(i_logMsg=ERROR: boxplot: Data set does not exist)
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

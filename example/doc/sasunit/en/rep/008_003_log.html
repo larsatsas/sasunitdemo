@@ -1,0 +1,186 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS log for test case 003 in test scenario 008 (generate.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Errors&#160;&#160;: 0 
+<br>
+Warnings: 0 
+<br>
+</p>
+<pre>
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+82         proc datasets lib=test1 nolist kill;
+NOTE: Deleting TEST1.PRDSALE1 (memtype=DATA).
+NOTE: Deleting TEST1.PRDSALE2 (memtype=DATA).
+NOTE: Deleting TEST1.PRDSALE3 (memtype=DATA).
+NOTE: Deleting TEST1.PRDSALE4 (memtype=DATA).
+83         quit;
+ 
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.11 seconds
+      cpu time            0.01 seconds
+ 
+ 
+84         proc datasets lib=test2 nolist kill;
+NOTE: Deleting TEST2.PRDSALE1 (memtype=DATA).
+NOTE: Deleting TEST2.PRDSALE2 (memtype=DATA).
+NOTE: Deleting TEST2.PRDSALE3 (memtype=DATA).
+NOTE: Deleting TEST2.PRDSALE4 (memtype=DATA).
+85         quit;
+ 
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+86         /* create input dataset */
+87         proc sort data=sashelp.class out=work.class;
+36                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+ 
+88            by sex;
+89            where sex='F';
+90         run;
+ 
+NOTE: There were 9 observations read from the data set SASHELP.CLASS.
+      WHERE sex='F';
+NOTE: The data set WORK.CLASS has 9 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+91         /* create expected output dataset */
+92         proc sort data=sashelp.class out=test2.class1 (label="Dataset for sex=F (9 observations)");
+93            by sex;
+94            where sex='F';
+95         run;
+ 
+NOTE: There were 9 observations read from the data set SASHELP.CLASS.
+      WHERE sex='F';
+NOTE: The data set TEST2.CLASS1 has 9 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MAUTOLOCDISPLAY(GENERATE):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\generate.sas
+96         %generate(data=class, by=sex, out=test1.class)
+MPRINT(GENERATE):   data;
+MPRINT(GENERATE):   run;
+ 
+NOTE: The data set WORK.DATA5 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(GENERATE):   data;
+MPRINT(GENERATE):   run;
+ 
+NOTE: The data set WORK.DATA6 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   proc sort data=class out=WORK.DATA5;
+MPRINT(GENERATE):   by sex;
+MPRINT(GENERATE):   run;
+ 
+NOTE: Input data set is already sorted; it has been copied to the output data set.
+NOTE: There were 9 observations read from the data set WORK.CLASS.
+NOTE: The data set WORK.DATA5 has 9 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+37                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+ 
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(GENERATE):   proc means noprint data=WORK.DATA5(keep=sex);
+MPRINT(GENERATE):   by sex;
+MPRINT(GENERATE):   output out=WORK.DATA6;
+MPRINT(GENERATE):   run;
+ 
+NOTE: There were 9 observations read from the data set WORK.DATA5.
+NOTE: The data set WORK.DATA6 has 1 observations and 3 variables.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   data _null_;
+MPRINT(GENERATE):   set WORK.DATA6 nobs=count;
+MPRINT(GENERATE):   call symput ("count", compress(put(count,8.)));
+MPRINT(GENERATE):   stop;
+MPRINT(GENERATE):   run;
+ 
+NOTE: There were 1 observations read from the data set WORK.DATA6.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   data _null_;
+MPRINT(GENERATE):   set WORK.DATA6 end=eof;
+MPRINT(GENERATE):   array t(1) $ 200 _temporary_;
+MPRINT(GENERATE):   t(1) = 'Dataset for';
+MPRINT(GENERATE):   t(1) = trim(t(1)) !! " sex=" !! trim(left(vvalue(sex)));
+MPRINT(GENERATE):   t(1) = trim(t(1)) !! ' (' !! compress(put(_freq_,8.)) !! ' observations)';
+MPRINT(GENERATE):   call symput ('label' !! compress(put(_n_,8.)), trim(t(1)));
+MPRINT(GENERATE):   run;
+ 
+NOTE: There were 1 observations read from the data set WORK.DATA6.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   data test1.class1 (label="Dataset for sex=F (9 observations)") ;
+MPRINT(GENERATE):   set WORK.DATA5;
+MPRINT(GENERATE):   by sex;
+MPRINT(GENERATE):   array t(1) _temporary_;
+MPRINT(GENERATE):   if first.sex then t(1)+1;
+MPRINT(GENERATE):   select(t(1));
+MPRINT(GENERATE):   when(1) output test1.class1;
+MPRINT(GENERATE):   end;
+MPRINT(GENERATE):   run;
+ 
+NOTE: There were 9 observations read from the data set WORK.DATA5.
+38                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+ 
+NOTE: The data set TEST1.CLASS1 has 9 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   proc datasets lib=work nolist;
+MPRINT(GENERATE):   delete DATA5 DATA6;
+MPRINT(GENERATE):   quit;
+ 
+NOTE: Deleting WORK.DATA5 (memtype=DATA).
+NOTE: Deleting WORK.DATA6 (memtype=DATA).
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+97         %endTestcall()
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

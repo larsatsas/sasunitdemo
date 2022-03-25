@@ -1,0 +1,455 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="de" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Programmdokumentation | SASUnit Examples - SASUnit Testdokumentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX350"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Programmdokumentation | SASUnit Examples - SASUnit Testdokumentation</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Programmdokumentation für Programm assertrecordexists.sas</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" scope="col">Ausführliche&nbsp;Beschreibung</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Check whether at least one record exists which satisfies a certain WHERE condition.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Version</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Revision: 674 $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Autor</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Author: klandwich $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Datum</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Date: 2019-05-22 12:43:14 +0200 (Mi, 22 Mai 2019) $</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Siehe&nbsp;auch</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Here you can find the SASUnit documentation, release notes and license information.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/saspgm/sasunit/assertrecordexists.sas $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Copyright</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For copyright information and terms of usage under the GPL license see included file readme.txt</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">or https://sourceforge.net/p/sasunit/wiki/readme/.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX351"></a>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_name</th>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" colspan="2" scope="colgroup">Parameter</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_dataset</td>
+<td class="l m pgmdocblinddata">data set to check</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_whereExpr</td>
+<td class="l m pgmdocblinddata">data set where-expression to be checked</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_desc</td>
+<td class="l m pgmdocblinddata">description of the assertion to be checked <br/>
+</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">default: &quot;Check for existence of specific records&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX352"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle2">Quellcode des Programms assertrecordexists.sas</td>
+</tr>
+<tr>
+<td class="c systemtitle3" style=" font-size: 10pt;"><a href="src/00/assertrecordexists.sas">[Herunterladen]</a>
+</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Datei WORK._PGMSRC_VIEW">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">ObsNum</th>
+<th class="l blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m pgmdocsource">00001</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00002</td>
+<td class="l m pgmdocsource">%MACRO assertRecordExists (i_dataset      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00003</td>
+<td class="l m pgmdocsource">,i_whereExpr    =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00004</td>
+<td class="l m pgmdocsource">,i_desc         = Check for existence of specific records</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00005</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00006</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00007</td>
+<td class="l m pgmdocsource">/*-- verify correct sequence of calls-----------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00008</td>
+<td class="l m pgmdocsource">%GLOBAL g_inTestCase;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00009</td>
+<td class="l m pgmdocsource">%endTestCall(i_messageStyle=NOTE);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00010</td>
+<td class="l m pgmdocsource">%IF %_checkCallingSequence(i_callerType=assert) NE 0 %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00011</td>
+<td class="l m pgmdocsource">%RETURN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00012</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00013</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00014</td>
+<td class="l m pgmdocsource">%LOCAL l_countMatches l_rc l_errMsg;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00015</td>
+<td class="l m pgmdocsource">%LET l_countMatches = -1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00016</td>
+<td class="l m pgmdocsource">%LET l_errMsg=;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00017</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00018</td>
+<td class="l m pgmdocsource">/*-- check parameter i_dataset  ------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00019</td>
+<td class="l m pgmdocsource">%IF NOT %SYSFUNC(EXIST(&amp;i_dataset.)) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00020</td>
+<td class="l m pgmdocsource">%LET l_rc = 2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00021</td>
+<td class="l m pgmdocsource">%LET l_errMsg=input dataset &amp;i_dataset. does not exist!;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00022</td>
+<td class="l m pgmdocsource">%GOTO Update;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00023</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00024</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00025</td>
+<td class="l m pgmdocsource">/*-- check parameter i_dataset  ------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00026</td>
+<td class="l m pgmdocsource">%IF %LENGTH(&amp;i_whereExpr) = 0 %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00027</td>
+<td class="l m pgmdocsource">%LET l_rc = 2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00028</td>
+<td class="l m pgmdocsource">%LET l_errMsg=where expression is empty!;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00029</td>
+<td class="l m pgmdocsource">%GOTO Update;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00030</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00031</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00032</td>
+<td class="l m pgmdocsource">PROC SQL NOPRINT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00033</td>
+<td class="l m pgmdocsource">SELECT COUNT(*) FORMAT=best12. INTO :l_countMatches</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00034</td>
+<td class="l m pgmdocsource">FROM &amp;i_dataset(WHERE=(%nrbquote(&amp;i_whereExpr)))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00035</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00036</td>
+<td class="l m pgmdocsource">QUIT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00037</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00038</td>
+<td class="l m pgmdocsource">%LET l_countMatches = &amp;l_countMatches; /* trim white space */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00039</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00040</td>
+<td class="l m pgmdocsource">%IF %eval(&amp;l_countMatches &gt;= 1)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00041</td>
+<td class="l m pgmdocsource">%THEN %LET l_rc = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00042</td>
+<td class="l m pgmdocsource">%ELSE</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00043</td>
+<td class="l m pgmdocsource">%LET l_rc = 2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00044</td>
+<td class="l m pgmdocsource">%LET l_errMsg=No matching records were found!;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00045</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00046</td>
+<td class="l m pgmdocsource">%UPDATE:</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00047</td>
+<td class="l m pgmdocsource">/*-- update comparison result in test database -------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00048</td>
+<td class="l m pgmdocsource">%_asserts(i_type     = assertRecordExists</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00049</td>
+<td class="l m pgmdocsource">,i_expected = &gt; 0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00050</td>
+<td class="l m pgmdocsource">,i_actual   = &amp;l_countMatches.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00051</td>
+<td class="l m pgmdocsource">,i_desc     = &amp;i_desc.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00052</td>
+<td class="l m pgmdocsource">,i_result   = &amp;l_rc.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00053</td>
+<td class="l m pgmdocsource">,i_errMsg   = &amp;l_errMsg.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00054</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00055</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00056</td>
+<td class="l m pgmdocsource">%MEND assertRecordExists;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

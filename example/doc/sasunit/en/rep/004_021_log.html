@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS log for test case 021 in test scenario 004 (boxplot.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Errors&#160;&#160;: 1 
+==>
+<a href="#error001">1</a>
+<br>
+Warnings: 0 
+<br>
+</p>
+<pre>
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+217        data work.blood_pressure2;
+218           set testdata.blood_pressure;
+219           if med=1 then do;
+220              output;
+221              med=2;
+222              output;
+223           end;
+224           else output;
+225        run;
+ 
+NOTE: There were 240 observations read from the data set TESTDATA.BLOOD_PRESSURE.
+NOTE: The data set WORK.BLOOD_PRESSURE2 has 360 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\boxplot.sas
+226        %boxplot(data=blood_pressure2, x=visit, y=sbp, group=med, report=&g_work/report21.pdf)
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   select distinct visit into :xvalues separated by '" "' from blood_pressure2;
+MPRINT(BOXPLOT):   select distinct visit into :xvalues2 separated by ' ' from blood_pressure2;
+MPRINT(BOXPLOT):   quit;
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   select count(distinct med) into :count from blood_pressure2;
+MPRINT(BOXPLOT):   select min(med) into :lower from blood_pressure2;
+MPRINT(BOXPLOT):   quit;
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+<span style="color:#FF0000"><a name="error001">ERROR: boxplot: Variable med must have exactly two values</a></span>
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+227        %assertLogMsg(i_logMsg=ERROR: boxplot: Variable med must have exactly two values)
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

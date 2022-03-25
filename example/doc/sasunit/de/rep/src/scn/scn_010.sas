@@ -1,0 +1,84 @@
+/**
+   \file
+   \ingroup    SASUNIT_EXAMPLES_TEST
+
+   \brief      Tests for nobs.sas - has to fail!
+
+               Example for a test scenario with the following features:
+               - create simple test scenario
+               - check value of macro symbol with assertEquals.sas
+
+   \version    \$Revision: 539 $
+   \author     \$Author: klandwich $
+   \date       \$Date: 2017-10-12 09:29:46 +0200 (Do, 12 Okt 2017) $
+
+   \sa         For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/
+               Here you can find the SASUnit documentation, release notes and license information.
+   \sa         \$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/example/saspgm/nobs_test.sas $
+   \copyright  This file is part of SASUnit, the Unit testing framework for SAS(R) programs.
+               For copyright information and terms of usage under the GPL license see included file readme.txt
+               or https://sourceforge.net/p/sasunit/wiki/readme/.
+
+*/ /** \cond */ 
+
+%initScenario(i_desc=Tests for nobs.sas - has to fail!);
+
+/*-- simple example with sashelp.class ---------------------------------------*/
+%initTestcase(i_object=nobs.sas, i_desc=simple example with sashelp.class)
+%let nobs=%nobs(sashelp.class);
+%endTestcall()
+%assertEquals(i_actual=&nobs, i_expected=19, i_desc=number of observations in sashelp.class)
+%assertLogMsg (i_logMsg=.let nobs=.nobs.sashelp.class.);
+%assertLogMsg (i_logMsg=NOTE: .* NOBS );
+%endTestcase()
+
+/*-- failed test -------------------------------------------------------------*/
+%initTestcase(i_object=nobs.sas, i_desc=failed test - must be red!)
+%let nobs=%nobs(sashelp.class);
+%endTestcall()
+%assertEquals(i_actual=&nobs, i_expected=20, i_desc=number of observations in dataset sashelp.class - must be red!)
+%endTestcase()
+
+/*-- example with big dataset ------------------------------------------------*/
+%initTestcase(i_object=nobs.sas, i_desc=%str(example with big dataset))
+data work.big;
+   do i=1 to 1000000;
+      x=ranuni(0);
+      output; 
+   end;
+run; 
+%let nobs=%nobs(work.big);
+%endTestcall()
+%assertEquals(i_actual=&nobs, i_expected=1000000, i_desc=number of observations in dataset work.big)
+%endTestcase()
+
+/*-- example with empty dataset ----------------------------------------------*/
+%initTestcase(i_object=nobs.sas, i_desc=%str(example with empty dataset))
+data work.empty;
+   stop; 
+run; 
+%let nobs=%nobs(work.empty);
+%endTestcall()
+%assertEquals(i_actual=&nobs, i_expected=0, i_desc=number of observations in dataset work.empty)
+%endTestcase()
+
+/*-- dataset not specified ---------------------------------------------------*/
+%initTestcase(i_object=nobs.sas, i_desc=%str(dataset not specified))
+%let nobs=%nobs(xxx);
+%endTestcall()
+%assertEquals(i_actual=&nobs, i_expected=, i_desc=number of observations when dataset is not specified)
+%endTestcase()
+
+/*-- invalid dataset ---------------------------------------------------------*/
+%initTestcase(i_object=nobs.sas, i_desc=%str(invalid dataset))
+%let nobs=%nobs(xxx);
+%endTestcall()
+%assertEquals(i_actual=&nobs, i_expected=, i_desc=number of observations with invalid dataset)
+%endTestcase()
+
+proc datasets lib=work memtype=DATA nolist;
+   delete big empty;
+run;quit;
+
+%endScenario();
+/** \endcond */

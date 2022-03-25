@@ -1,0 +1,592 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="de" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Programmdokumentation | SASUnit Examples - SASUnit Testdokumentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX303"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Programmdokumentation | SASUnit Examples - SASUnit Testdokumentation</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Programmdokumentation für Programm _single_dir.sas</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" scope="col">Ausführliche&nbsp;Beschreibung</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Generates a dataset with the names of all files in a directory.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Wildcards may be used to specify the files to be included</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Resulting SAS dataset has the columns</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">membername (name of the file in the directory)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">filename (name of file with absolute path, path separator is slash)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">changed (last modification data as SAS datetime).</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Version</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Revision: 641 $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Autor</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Author: klandwich $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Datum</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Date: 2019-03-26 07:47:28 +0100 (Di, 26 MÃ¤r 2019) $</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Siehe&nbsp;auch</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Here you can find the SASUnit documentation, release notes and license information.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/saspgm/sasunit/_single_dir.sas $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Copyright</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For copyright information and terms of usage under the GPL license see included file readme.txt</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">or https://sourceforge.net/p/sasunit/wiki/readme/.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX304"></a>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_name</th>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" colspan="2" scope="colgroup">Parameter</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_dsPath</td>
+<td class="l m pgmdocblinddata">name of sas dataset containing one variable directory. For each observation/directory the search will be done.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_pattern</td>
+<td class="l m pgmdocblinddata">pattern which the filemembers must match</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_members</td>
+<td class="l m pgmdocblinddata">output dataset, default is work.dir. This dataset contains three columns</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">named membername, filename and changed (optional: default = work.dir)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_subDirs</td>
+<td class="l m pgmdocblinddata">output dataset. This dataset contains one column named directory and</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">holds all subdirectories (optional: default = _NONE_)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX305"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle2">Quellcode des Programms _single_dir.sas</td>
+</tr>
+<tr>
+<td class="c systemtitle3" style=" font-size: 10pt;"><a href="src/00/_single_dir.sas">[Herunterladen]</a>
+</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Datei WORK._PGMSRC_VIEW">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">ObsNum</th>
+<th class="l blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m pgmdocsource">00001</td>
+<td class="l m pgmdocsource">%MACRO _single_dir (i_dsPath=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00002</td>
+<td class="l m pgmdocsource">,i_pattern=_NONE_</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00003</td>
+<td class="l m pgmdocsource">,o_members=work.dir</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00004</td>
+<td class="l m pgmdocsource">,o_subdirs=_NONE_</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00005</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00006</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00007</td>
+<td class="l m pgmdocsource">%local</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00008</td>
+<td class="l m pgmdocsource">l_i_path</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00009</td>
+<td class="l m pgmdocsource">l_dir_id</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00010</td>
+<td class="l m pgmdocsource">l_rc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00011</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00012</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00013</td>
+<td class="l m pgmdocsource">data work._sd_members</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00014</td>
+<td class="l m pgmdocsource">%if (%quote(&amp;i_pattern.) ne _NONE_) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00015</td>
+<td class="l m pgmdocsource">(where=(upcase (membername) like &quot;%upcase(&amp;i_pattern.)&quot;))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00016</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00017</td>
+<td class="l m pgmdocsource">%if (&amp;o_subdirs. ne _NONE_) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00018</td>
+<td class="l m pgmdocsource">&amp;o_subdirs. (keep=filename)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00019</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00020</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00021</td>
+<td class="l m pgmdocsource">length</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00022</td>
+<td class="l m pgmdocsource">membername</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00023</td>
+<td class="l m pgmdocsource">filename    $255</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00024</td>
+<td class="l m pgmdocsource">fileref     $8</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00025</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00026</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00027</td>
+<td class="l m pgmdocsource">set &amp;i_dsPath.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00028</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00029</td>
+<td class="l m pgmdocsource">retain filecounter 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00030</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00031</td>
+<td class="l m pgmdocsource">rc = filename (&quot;DIR&quot;, Directory);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00032</td>
+<td class="l m pgmdocsource">d_id = dopen(&quot;DIR&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00033</td>
+<td class="l m pgmdocsource">num  = dnum(d_id);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00034</td>
+<td class="l m pgmdocsource">if (num &lt; 1) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00035</td>
+<td class="l m pgmdocsource">putlog &quot;&amp;g_note.(SASUNIT): Given directory is empty:&quot; Directory;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00036</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00037</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00038</td>
+<td class="l m pgmdocsource">putlog &quot;&amp;g_note.(SASUNIT): Directory &quot;&quot;&quot; Directory +(-1) &quot;&quot;&quot; contains &quot; num &quot;entries.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00039</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00040</td>
+<td class="l m pgmdocsource">do i=1 to num;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00041</td>
+<td class="l m pgmdocsource">membername = dread (d_id, i);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00042</td>
+<td class="l m pgmdocsource">filename = catx (&quot;/&quot;, directory, membername);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00043</td>
+<td class="l m pgmdocsource">fileref  = &quot;SF&quot; !! put (filecounter, HEX6.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00044</td>
+<td class="l m pgmdocsource">rc = filename (fileref, filename);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00045</td>
+<td class="l m pgmdocsource">d_dir_id = dopen (fileref);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00046</td>
+<td class="l m pgmdocsource">if (d_dir_id &lt;= 0) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00047</td>
+<td class="l m pgmdocsource">output work._sd_members;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00048</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00049</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00050</td>
+<td class="l m pgmdocsource">d_dir_id = dclose (d_dir_id);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00051</td>
+<td class="l m pgmdocsource">putlog &quot;&amp;g_note.(SASUNIT): Directory &quot;&quot;&quot; Directory +(-1) &quot;&quot;&quot; contains subdirectory &quot;&quot;&quot; membername +(-1) &quot;&quot;&quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00052</td>
+<td class="l m pgmdocsource">rc = filename (fileref, &quot;&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00053</td>
+<td class="l m pgmdocsource">%if (&amp;o_subdirs. ne _NONE_) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00054</td>
+<td class="l m pgmdocsource">output &amp;o_subdirs.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00055</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00056</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00057</td>
+<td class="l m pgmdocsource">filecounter = filecounter + 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00058</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00059</td>
+<td class="l m pgmdocsource">d_id = dclose (d_id);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00060</td>
+<td class="l m pgmdocsource">rc = filename (&quot;DIR&quot;, &quot;&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00061</td>
+<td class="l m pgmdocsource">keep fileref filename membername;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00062</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00063</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00064</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00065</td>
+<td class="l m pgmdocsource">create table work._single_dir as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00066</td>
+<td class="l m pgmdocsource">select m.*</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00067</td>
+<td class="l m pgmdocsource">,v.modate as changed format=datetime20. informat=datetime.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00068</td>
+<td class="l m pgmdocsource">from work._sd_members m left join dictionary.extfiles v</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00069</td>
+<td class="l m pgmdocsource">on m.fileref = v.fileref;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00070</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00071</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00072</td>
+<td class="l m pgmdocsource">data _null_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00073</td>
+<td class="l m pgmdocsource">set work._single_dir;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00074</td>
+<td class="l m pgmdocsource">rc = filename (fileref, &quot;&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00075</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00076</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00077</td>
+<td class="l m pgmdocsource">data &amp;o_members.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00078</td>
+<td class="l m pgmdocsource">set work._single_dir (drop=fileref);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00079</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00080</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00081</td>
+<td class="l m pgmdocsource">proc datasets lib=work nolist;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00082</td>
+<td class="l m pgmdocsource">delete _sd_members _single_dir;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00083</td>
+<td class="l m pgmdocsource">run;quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00084</td>
+<td class="l m pgmdocsource">%MEND _single_dir;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

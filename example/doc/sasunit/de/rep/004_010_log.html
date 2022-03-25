@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS-Log für Testfall 010 in Testszenario 004 (boxplot.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Fehler&#160;&#160;&#160;: 1 
+==>
+<a href="#error001">1</a>
+<br>
+Warnungen: 0 
+<br>
+</p>
+<pre>
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+118        %boxplot(data=testdata.blood_pressure, x=visitXXX, y=sbp, group=med, report=&g_work/report10.pdf)
+MAUTOLOCDISPLAY(BOXPLOT):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\boxplot.sas kompiliert
+<span style="color:#FF0000"><a name="error001">ERROR: boxplot: Variable visitXXX does not exist in data set testdata.blood_pressure</a></span>
+119        %assertLogMsg(i_logMsg=ERROR: boxplot: Variable visitXXX does not exist in data set testdata.blood_pressure)
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\assertlogmsg.sas kompiliert
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

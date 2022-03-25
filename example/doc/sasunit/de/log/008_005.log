@@ -1,0 +1,75 @@
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(INITTESTCASE):   options linesize=max;
+114        proc datasets lib=test1 nolist kill;
+115        quit;
+
+NOTE: PROZEDUR DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+116        proc datasets lib=test2 nolist kill;
+117        quit;
+
+NOTE: PROZEDUR DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MAUTOLOCDISPLAY(GENERATE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\generate.sas kompiliert
+118        %generate(data=sashelp.class, by=sexXXX, out=test1.class)
+MPRINT(GENERATE):   data;
+MPRINT(GENERATE):   run;
+
+NOTE: The data set WORK.DATA9 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(GENERATE):   data;
+52                                                                                                                       Das SAS System                                                                                               08:02 Monday, July 1, 2019
+
+MPRINT(GENERATE):   run;
+
+NOTE: The data set WORK.DATA10 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(GENERATE):   proc sort data=sashelp.class out=WORK.DATA9;
+MPRINT(GENERATE):   by sexXXX;
+ERROR: Variable SEXXXX not found.
+MPRINT(GENERATE):   run;
+
+NOTE: The SAS System stopped processing this step because of errors.
+WARNING: The data set WORK.DATA9 may be incomplete.  When this step was stopped there were 0 observations and 0 variables.
+WARNING: Datei WORK.DATA9 wurde nicht ersetzt, da da dieser Schritt angehalten wurde.
+NOTE: PROZEDUR SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+ERROR: Macro Generate: data= or by= specified incorrectly
+
+
+MPRINT(GENERATE):   proc datasets lib=work nolist;
+MPRINT(GENERATE):   delete DATA9 DATA10;
+MPRINT(GENERATE):   quit;
+
+NOTE: Deleting WORK.DATA9 (memtype=DATA).
+NOTE: Deleting WORK.DATA10 (memtype=DATA).
+NOTE: PROZEDUR DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+119        %endTestcall()
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+

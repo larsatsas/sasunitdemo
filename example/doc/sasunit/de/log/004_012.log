@@ -1,0 +1,27 @@
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(INITTESTCASE):   options linesize=max;
+132        data work.blood_pressure;
+133           set testdata.blood_pressure;
+134           visitc = put (visit, 1.);
+135        run;
+
+NOTE: There were 240 observations read from the data set TESTDATA.BLOOD_PRESSURE.
+NOTE: The data set WORK.BLOOD_PRESSURE has 240 observations and 6 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.01 seconds
+      
+
+MAUTOLOCDISPLAY(BOXPLOT):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\boxplot.sas kompiliert
+136        %boxplot(data=blood_pressure, x=visitc, y=sbp, group=med, report=&g_work/report12.pdf)
+ERROR: boxplot: Variable visitc in data set blood_pressure must be numeric
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\assertlogmsg.sas kompiliert
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+137        %assertLogMsg(i_logMsg=ERROR: boxplot: Variable visitc in data set blood_pressure must be numeric)
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;
+

@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="de" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Testfälle nach Szenarien | SASUnit Examples - SASUnit Testdokumentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="AUTON002_136"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">assertColumns - Vergleich zweier Dateien</td>
+</tr>
+</table><br>
+<div>
+<div align="center">
+<table cellspacing="0" cellpadding="0" summary="Page Layout">
+<tr><td>
+<pre class="batch">                                       Die Prozedur COMPARE                                        
+                              Vergleich von WORK.REFDATA mit WORK.AUS                              
+                               (Methode=ABSOLUTE, Kriterium=1.0E-10)                               
+                                                                                                   
+                                       Dateizusammenfassung                                        
+                                                                                                   
+                   Datei                Erstellt          Geändert  NVar    NObs                   
+                                                                                                   
+                   WORK.REFDATA  01JUL19:08:02:21  01JUL19:08:02:21     3      10                  
+                   WORK.AUS      01JUL19:08:02:21  01JUL19:08:02:21     3      10                  
+                                                                                                   
+                                                                                                   
+                                   Zusammenfassung der Variablen                                   
+                                                                                                   
+                     Anzahl der gemeinsamen Variablen: 3.                                          
+                     Anzahl der Variablen mit unterschiedlichen Attributen: 1.                     
+</pre></td></tr>
+</table>
+</div>
+</div>
+<br>
+<a name="AUTON002_137"></a>
+<div>
+<div align="center">
+<table cellspacing="0" cellpadding="0" summary="Page Layout">
+<tr><td>
+<pre class="batch">                                                                                                   
+                                                                                                   
+                   Liste gemeinsamer Variablen mit unterschiedlichen Attributen.                   
+                                                                                                   
+                    Variable  Datei         Typ  Länge  Etikett                                    
+                                                                                                   
+                    est       WORK.REFDATA  Num        8  Yhat                                     
+                              WORK.AUS      Num        8  Predicted Value of Y                     
+</pre></td></tr>
+</table>
+</div>
+</div>
+<br>
+<a name="AUTON002_138"></a>
+<div>
+<div align="center">
+<table cellspacing="0" cellpadding="0" summary="Page Layout">
+<tr><td>
+<pre class="batch">                                                                                                   
+                                                                                                   
+                                 Zusammenfassung der Beobachtungen                                 
+                                                                                                   
+                                 Beobachtung      Basis Vergleich                                  
+                                                                                                   
+                                 Erste Beob.         1        1                                    
+                                 Letzte Beob.       10       10                                    
+                                                                                                   
+           Anzahl der gemeinsamen Beobachtungen: 10.                                               
+           Insgesamt aus WORK.REFDATA: 10 gelesene Beobachtungen.                                  
+           Insgesamt aus WORK.AUS: 10 gelesene Beobachtungen.                                      
+                                                                                                   
+           Anzahl Beobachtungen, bei denen einige Vergleichsvariablen ungleich sind: 0.            
+           Anzahl Beobachtungen, bei denen alle Vergleichsvariablen gleich sind: 10.               
+                                                                                                   
+                                                                                                   
+                                Zusammenfassung für Wertevergleich                                 
+                                                                                                   
+            Anzahl der verglichenen Variablen, bei denen alle Werte gleich sind: 3.                
+            Anzahl der verglichenen Variablen, bei denen einige Werte ungleich sind: 0.            
+            Gesamtanzahl der ungleichen Werte: 0.                                                  
+            Gesamtanzahl der nicht exakt gleichen Werte: 4.                                        
+            Maximale Differenz: 1.7764E-15.                                                        
+                                                                                                   
+                                                                                                   
+</pre></td></tr>
+</table>
+</div>
+</div>
+<br>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemfooter"><hr size="1"></td>
+</tr>
+<tr>
+<td class="r systemfooter2"><small>Erzeugt am     Montag,       1. Juli 2019,  8:04:08 von <a href="http://sourceforge.net/projects/sasunit/" class="link" title="SASUnit" onclick="window.open(this.href); return false;"> SASUnit <img src="SASUnit_Logo.png" title="SASUnit" alt="SASUnit" width=18px height=18px align="absmiddle" border="0"></a> Version 2.0.2 (681) </small></td>
+</tr>
+</table><br>
+</div>
+</body>
+</html>

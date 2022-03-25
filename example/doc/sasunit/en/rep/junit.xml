@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<testsuites>
+   <testsuite
+     tests     ="2"
+     failures  ="0"
+     id        ="001"
+     name      ="Test examples for assertExternal.sas"
+     package   ="saspgm/assertexternal_example_test.sas"
+     time      ="1.42800"
+     timestamp ="2022-03-24T07:09:16"
+   >
+      <testcase
+        classname ="assertexternal.sas"
+        name      ="Successful test with one path and one variable"
+        time      ="0.01900"
+        timestamp ="2022-03-24T07:09:16"
+        id        ="001-001"
+       />
+      <testcase
+        classname ="assertexternal.sas"
+        name      ="Tests with with two paths as params und file compare command"
+        time      ="0.02700"
+        timestamp ="2022-03-24T07:09:16"
+        id        ="001-002"
+       />
+   </testsuite>
+   <testsuite
+     tests     ="1"
+     failures  ="3"
+     id        ="002"
+     name      ="Test examples for assertImage.sas"
+     package   ="saspgm/assertimage_example_test.sas"
+     time      ="3.42700"
+     timestamp ="2022-03-24T07:09:18"
+   >
+      <testcase
+        classname ="assertImage.sas"
+        name      ="Tests with matching and non matching images"
+        time      ="0.02000"
+        timestamp ="2022-03-24T07:09:20"
+        id        ="002-001"
+      >
+         <failure
+           message ="assertImage failed:"
+           type   = "assertImage"
+         >assertImage failed:</failure>
+      </testcase>
+   </testsuite>
+   <testsuite
+     tests     ="1"
+     failures  ="0"
+     id        ="003"
+     name      ="Test examples for assertText.sas"
+     package   ="saspgm/asserttext_example_test.sas"
+     time      ="1.53800"
+     timestamp ="2022-03-24T07:09:22"
+   >
+      <testcase
+        classname ="asserttext.sas"
+        name      ="Specific tests with modifiers for Windows compare tool fc"
+        time      ="0.01300"
+        timestamp ="2022-03-24T07:09:23"
+        id        ="003-001"
+       />
+   </testsuite>
+   <testsuite
+     tests     ="22"
+     failures  ="0"
+     id        ="004"
+     name      ="Tests for boxplot.sas"
+     package   ="saspgm/boxplot_test.sas"
+     time      ="5.96200"
+     timestamp ="2022-03-24T07:09:24"
+   >
+      <testcase
+        classname ="boxplot.sas"
+        name      ="standard case without reference"
+        time      ="0.95600"
+        timestamp ="2022-03-24T07:09:25"
+        id        ="004-001"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="standard case with reference"
+        time      ="0.22000"
+        timestamp ="2022-03-24T07:09:26"
+        id        ="004-002"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="standard case with reference, missing values for Y"
+        time      ="0.24200"
+        timestamp ="2022-03-24T07:09:26"
+        id        ="004-003"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="different scaling for x and y axis"
+        time      ="0.27700"
+        timestamp ="2022-03-24T07:09:27"
+        id        ="004-004"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="only two visits"
+        time      ="0.22300"
+        timestamp ="2022-03-24T07:09:28"
+        id        ="004-005"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="only one visit"
+        time      ="0.07900"
+        timestamp ="2022-03-24T07:09:28"
+        id        ="004-006"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="18 visits"
+        time      ="0.24600"
+        timestamp ="2022-03-24T07:09:28"
+        id        ="004-007"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="invalid input data set"
+        time      ="0.02600"
+        timestamp ="2022-03-24T07:09:29"
+        id        ="004-008"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="input data set missing"
+        time      ="0.02700"
+        timestamp ="2022-03-24T07:09:29"
+        id        ="004-009"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="invalid x variable"
+        time      ="0.12900"
+        timestamp ="2022-03-24T07:09:29"
+        id        ="004-010"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="x variable missing"
+        time      ="0.02700"
+        timestamp ="2022-03-24T07:09:29"
+        id        ="004-011"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="x variable not numeric"
+        time      ="0.04700"
+        timestamp ="2022-03-24T07:09:29"
+        id        ="004-012"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="x variable values not equidistant"
+        time      ="0.07700"
+        timestamp ="2022-03-24T07:09:29"
+        id        ="004-013"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="x variable has missing values"
+        time      ="0.08400"
+        timestamp ="2022-03-24T07:09:29"
+        id        ="004-014"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="invalid y variable"
+        time      ="0.03200"
+        timestamp ="2022-03-24T07:09:29"
+        id        ="004-015"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="y variable not specified"
+        time      ="0.03600"
+        timestamp ="2022-03-24T07:09:29"
+        id        ="004-016"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="y variable not numeric"
+        time      ="0.04500"
+        timestamp ="2022-03-24T07:09:30"
+        id        ="004-017"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="invalid group variable"
+        time      ="0.03600"
+        timestamp ="2022-03-24T07:09:30"
+        id        ="004-018"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="group variable not specified"
+        time      ="0.03500"
+        timestamp ="2022-03-24T07:09:30"
+        id        ="004-019"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="group variable has only one value"
+        time      ="0.05400"
+        timestamp ="2022-03-24T07:09:30"
+        id        ="004-020"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="group variable has more than two values"
+        time      ="0.04600"
+        timestamp ="2022-03-24T07:09:30"
+        id        ="004-021"
+       />
+      <testcase
+        classname ="boxplot.sas"
+        name      ="group variable has missing values"
+        time      ="0.05200"
+        timestamp ="2022-03-24T07:09:30"
+        id        ="004-022"
+       />
+   </testsuite>
+   <testsuite
+     tests     ="3"
+     failures  ="2"
+     id        ="005"
+     name      ="Tests for comparison.sas"
+     package   ="saspgm/comparison_test.sas"
+     time      ="4.25300"
+     timestamp ="2022-03-24T07:09:31"
+   >
+      <testcase
+        classname ="comparison.sas"
+        name      ="Tests for comparison of different text files"
+        time      ="0.01900"
+        timestamp ="2022-03-24T07:09:32"
+        id        ="005-001"
+       />
+      <testcase
+        classname ="comparison.sas"
+        name      ="Tests for comparison of different image files"
+        time      ="0.02300"
+        timestamp ="2022-03-24T07:09:32"
+        id        ="005-002"
+      >
+         <failure
+           message ="assertImage failed:"
+           type   = "assertImage"
+         >assertImage failed:</failure>
+      </testcase>
+      <testcase
+        classname ="comparison.sas"
+        name      ="Word count example with assertExternal"
+        time      ="0.02800"
+        timestamp ="2022-03-24T07:09:35"
+        id        ="005-003"
+       />
+   </testsuite>
+   <testsuite
+     tests     ="4"
+     failures  ="0"
+     id        ="006"
+     name      ="Example for cross reference reports"
+     package   ="saspgm/crossreference_test.sas"
+     time      ="1.10700"
+     timestamp ="2022-03-24T07:09:37"
+   >
+      <testcase
+        classname ="CrossReferenceTest1.sas"
+        name      ="example for cross refence reports"
+        time      ="0.28400"
+        timestamp ="2022-03-24T07:09:37"
+        id        ="006-001"
+       />
+      <testcase
+        classname ="CrossReferenceTest2.sas"
+        name      ="example for cross refence reports"
+        time      ="0.06900"
+        timestamp ="2022-03-24T07:09:37"
+        id        ="006-002"
+       />
+      <testcase
+        classname ="CrossReferenceTest3.sas"
+        name      ="example for cross refence reports"
+        time      ="0.06000"
+        timestamp ="2022-03-24T07:09:38"
+        id        ="006-003"
+       />
+      <testcase
+        classname ="CrossReferenceTest4.sas"
+        name      ="example for cross refence reports"
+        time      ="0.02800"
+        timestamp ="2022-03-24T07:09:38"
+        id        ="006-004"
+       />
+   </testsuite>
+   <testsuite
+     tests     ="2"
+     failures  ="0"
+     id        ="007"
+     name      ="Tests for building a database"
+     package   ="saspgm/database_test.sas"
+     time      ="1.92900"
+     timestamp ="2022-03-24T07:09:39"
+   >
+      <testcase
+        classname ="basedatasets.sas"
+        name      ="Creation of base datasets"
+        time      ="0.03100"
+        timestamp ="2022-03-24T07:09:39"
+        id        ="007-001"
+       />
+      <testcase
+        classname ="combineddataset.sas"
+        name      ="Creating combined dataset"
+        time      ="0.05300"
+        timestamp ="2022-03-24T07:09:40"
+        id        ="007-002"
+       />
+   </testsuite>
+   <testsuite
+     tests     ="6"
+     failures  ="0"
+     id        ="008"
+     name      ="Tests for generate.sas"
+     package   ="saspgm/generate_test.sas"
+     time      ="3.04600"
+     timestamp ="2022-03-24T07:09:42"
+   >
+      <testcase
+        classname ="generate.sas"
+        name      ="example with one by variable"
+        time      ="0.34400"
+        timestamp ="2022-03-24T07:09:42"
+        id        ="008-001"
+       />
+      <testcase
+        classname ="generate.sas"
+        name      ="example with two by variables"
+        time      ="0.21500"
+        timestamp ="2022-03-24T07:09:43"
+        id        ="008-002"
+       />
+      <testcase
+        classname ="generate.sas"
+        name      ="example with one by variable with only one value"
+        time      ="0.23200"
+        timestamp ="2022-03-24T07:09:43"
+        id        ="008-003"
+       />
+      <testcase
+        classname ="generate.sas"
+        name      ="invalid dataset"
+        time      ="0.10400"
+        timestamp ="2022-03-24T07:09:44"
+        id        ="008-004"
+       />
+      <testcase
+        classname ="generate.sas"
+        name      ="invalid by variable"
+        time      ="0.06400"
+        timestamp ="2022-03-24T07:09:44"
+        id        ="008-005"
+       />
+      <testcase
+        classname ="generate.sas"
+        name      ="invalid output library"
+        time      ="0.21200"
+        timestamp ="2022-03-24T07:09:44"
+        id        ="008-006"
+       />
+   </testsuite>
+   <testsuite
+     tests     ="6"
+     failures  ="0"
+     id        ="009"
+     name      ="Tests for getvars.sas"
+     package   ="saspgm/getvars_test.sas"
+     time      ="1.02400"
+     timestamp ="2022-03-24T07:09:45"
+   >
+      <testcase
+        classname ="getvars.sas"
+        name      ="simple example with sashelp.class"
+        time      ="0.02000"
+        timestamp ="2022-03-24T07:09:46"
+        id        ="009-001"
+       />
+      <testcase
+        classname ="getvars.sas"
+        name      ="simple example with sashelp.class, different delimiter"
+        time      ="0.02800"
+        timestamp ="2022-03-24T07:09:46"
+        id        ="009-002"
+       />
+      <testcase
+        classname ="getvars.sas"
+        name      ="example with variable names containing special characters"
+        time      ="0.03300"
+        timestamp ="2022-03-24T07:09:46"
+        id        ="009-003"
+       />
+      <testcase
+        classname ="getvars.sas"
+        name      ="example with empty dataset"
+        time      ="0.02600"
+        timestamp ="2022-03-24T07:09:46"
+        id        ="009-004"
+       />
+      <testcase
+        classname ="getvars.sas"
+        name      ="example without dataset specified"
+        time      ="0.02700"
+        timestamp ="2022-03-24T07:09:46"
+        id        ="009-005"
+       />
+      <testcase
+        classname ="getvars.sas"
+        name      ="example with invalid dataset"
+        time      ="0.03600"
+        timestamp ="2022-03-24T07:09:46"
+        id        ="009-006"
+       />
+   </testsuite>
+   <testsuite
+     tests     ="6"
+     failures  ="1"
+     id        ="010"
+     name      ="Tests for nobs.sas - has to fail!"
+     package   ="saspgm/nobs_test.sas"
+     time      ="1.26900"
+     timestamp ="2022-03-24T07:09:47"
+   >
+      <testcase
+        classname ="nobs.sas"
+        name      ="simple example with sashelp.class"
+        time      ="0.03000"
+        timestamp ="2022-03-24T07:09:48"
+        id        ="010-001"
+       />
+      <testcase
+        classname ="nobs.sas"
+        name      ="failed test - must be red!"
+        time      ="0.04100"
+        timestamp ="2022-03-24T07:09:48"
+        id        ="010-002"
+      >
+         <failure
+           message ="assertEquals failed: expected value equals 20, but actual value equals 19"
+           type   = "assertEquals"
+         >assertEquals failed: expected value equals 20, but actual value equals 19</failure>
+      </testcase>
+      <testcase
+        classname ="nobs.sas"
+        name      ="example with big dataset"
+        time      ="0.16400"
+        timestamp ="2022-03-24T07:09:48"
+        id        ="010-003"
+       />
+      <testcase
+        classname ="nobs.sas"
+        name      ="example with empty dataset"
+        time      ="0.04300"
+        timestamp ="2022-03-24T07:09:48"
+        id        ="010-004"
+       />
+      <testcase
+        classname ="nobs.sas"
+        name      ="dataset not specified"
+        time      ="0.03000"
+        timestamp ="2022-03-24T07:09:48"
+        id        ="010-005"
+       />
+      <testcase
+        classname ="nobs.sas"
+        name      ="invalid dataset"
+        time      ="0.02900"
+        timestamp ="2022-03-24T07:09:48"
+        id        ="010-006"
+       />
+   </testsuite>
+   <testsuite
+     tests     ="1"
+     failures  ="0"
+     id        ="011"
+     name      ="Tests showing program documentation features. This is a second line of brief, that adds more information. This is a line with many characters, it needs to have more than 255. With this line I will cross the boundary of 255 characters in the description field."
+     package   ="saspgm/programdocumentation_test.sas"
+     time      ="0.60300"
+     timestamp ="2022-03-24T07:09:50"
+   >
+      <testcase
+        classname ="ProgramDocumentationDummy.sas"
+        name      ="Showing program documentation features"
+        time      ="0.01800"
+        timestamp ="2022-03-24T07:09:50"
+        id        ="011-001"
+       />
+   </testsuite>
+   <testsuite
+     tests     ="1"
+     failures  ="0"
+     id        ="012"
+     name      ="Tests for regression.sas"
+     package   ="saspgm/regression_test.sas"
+     time      ="2.88900"
+     timestamp ="2022-03-24T07:09:51"
+   >
+      <testcase
+        classname ="regression.sas"
+        name      ="compare linear regression between Excel and SAS"
+        time      ="1.31700"
+        timestamp ="2022-03-24T07:09:52"
+        id        ="012-001"
+       />
+   </testsuite>
+</testsuites>

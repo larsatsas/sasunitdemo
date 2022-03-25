@@ -1,0 +1,214 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS log for test case 002 in test scenario 008 (generate.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Errors&#160;&#160;: 0 
+<br>
+Warnings: 0 
+<br>
+</p>
+<pre>
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+55         proc datasets lib=test1 nolist kill;
+NOTE: Deleting TEST1.CLASS1 (memtype=DATA).
+NOTE: Deleting TEST1.CLASS2 (memtype=DATA).
+56         quit;
+ 
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+57         proc datasets lib=test2 nolist kill;
+NOTE: Deleting TEST2.CLASS1 (memtype=DATA).
+NOTE: Deleting TEST2.CLASS2 (memtype=DATA).
+58         quit;
+ 
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+59         proc sort data=sashelp.prdsale out=test2.prdsale1 (label="Dataset for region=EAST, year=1993 (360 observations)");
+60            by region year;
+61            where region="EAST" and year=1993;
+62         run;
+ 
+NOTE: There were 360 observations read from the data set SASHELP.PRDSALE.
+      WHERE (region='EAST') and (year=1993);
+NOTE: The data set TEST2.PRDSALE1 has 360 observations and 10 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+ 
+23                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+ 
+ 
+63         proc sort data=sashelp.prdsale out=test2.prdsale2 (label="Dataset for region=EAST, year=1994 (360 observations)");
+64            by region year;
+65            where region="EAST" and year=1994;
+66         run;
+ 
+NOTE: There were 360 observations read from the data set SASHELP.PRDSALE.
+      WHERE (region='EAST') and (year=1994);
+NOTE: The data set TEST2.PRDSALE2 has 360 observations and 10 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+67         proc sort data=sashelp.prdsale out=test2.prdsale3 (label="Dataset for region=WEST, year=1993 (360 observations)");
+68            by region year;
+69            where region="WEST" and year=1993;
+70         run;
+ 
+NOTE: There were 360 observations read from the data set SASHELP.PRDSALE.
+      WHERE (region='WEST') and (year=1993);
+NOTE: The data set TEST2.PRDSALE3 has 360 observations and 10 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+71         proc sort data=sashelp.prdsale out=test2.prdsale4 (label="Dataset for region=WEST, year=1994 (360 observations)");
+72            by region year;
+73            where region="WEST" and year=1994;
+74         run;
+ 
+NOTE: There were 360 observations read from the data set SASHELP.PRDSALE.
+      WHERE (region='WEST') and (year=1994);
+NOTE: The data set TEST2.PRDSALE4 has 360 observations and 10 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MAUTOLOCDISPLAY(GENERATE):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\generate.sas
+75         %generate(data=sashelp.prdsale, by=region year, out=test1.prdsale)
+MPRINT(GENERATE):   data;
+MPRINT(GENERATE):   run;
+ 
+NOTE: The data set WORK.DATA3 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   data;
+MPRINT(GENERATE):   run;
+ 
+24                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+ 
+NOTE: The data set WORK.DATA4 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   proc sort data=sashelp.prdsale out=WORK.DATA3;
+MPRINT(GENERATE):   by region year;
+MPRINT(GENERATE):   run;
+ 
+NOTE: There were 1440 observations read from the data set SASHELP.PRDSALE.
+NOTE: The data set WORK.DATA3 has 1440 observations and 10 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   proc means noprint data=WORK.DATA3(keep=region year);
+MPRINT(GENERATE):   by region year;
+MPRINT(GENERATE):   output out=WORK.DATA4;
+MPRINT(GENERATE):   run;
+ 
+NOTE: There were 1440 observations read from the data set WORK.DATA3.
+NOTE: The data set WORK.DATA4 has 4 observations and 4 variables.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   data _null_;
+MPRINT(GENERATE):   set WORK.DATA4 nobs=count;
+MPRINT(GENERATE):   call symput ("count", compress(put(count,8.)));
+MPRINT(GENERATE):   stop;
+MPRINT(GENERATE):   run;
+ 
+NOTE: There were 1 observations read from the data set WORK.DATA4.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   data _null_;
+MPRINT(GENERATE):   set WORK.DATA4 end=eof;
+MPRINT(GENERATE):   array t(1) $ 200 _temporary_;
+MPRINT(GENERATE):   t(1) = 'Dataset for';
+MPRINT(GENERATE):   t(1) = trim(t(1)) !! " region=" !! trim(left(vvalue(region)));
+MPRINT(GENERATE):   t(1) = trim(t(1)) !! ',';
+MPRINT(GENERATE):   t(1) = trim(t(1)) !! " year=" !! trim(left(vvalue(year)));
+MPRINT(GENERATE):   t(1) = trim(t(1)) !! ' (' !! compress(put(_freq_,8.)) !! ' observations)';
+MPRINT(GENERATE):   call symput ('label' !! compress(put(_n_,8.)), trim(t(1)));
+MPRINT(GENERATE):   run;
+ 
+NOTE: There were 4 observations read from the data set WORK.DATA4.
+NOTE: DATA statement used (Total process time):
+25                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+ 
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   data test1.prdsale1 (label="Dataset for region=EAST, year=1993 (360 observations)") TEST1.PRDSALE2 (label="Dataset for region=EAST, year=1994 (360 observations)") TEST1.PRDSALE3 (label="Dataset for region=WEST, year=1993 (360
+observations)") TEST1.PRDSALE4 (label="Dataset for region=WEST, year=1994 (360 observations)") ;
+MPRINT(GENERATE):   set WORK.DATA3;
+MPRINT(GENERATE):   by region year;
+MPRINT(GENERATE):   array t(1) _temporary_;
+MPRINT(GENERATE):   if first.year then t(1)+1;
+MPRINT(GENERATE):   select(t(1));
+MPRINT(GENERATE):   when(1) output test1.prdsale1;
+MPRINT(GENERATE):   when(2) output test1.prdsale2;
+MPRINT(GENERATE):   when(3) output test1.prdsale3;
+MPRINT(GENERATE):   when(4) output test1.prdsale4;
+MPRINT(GENERATE):   end;
+MPRINT(GENERATE):   run;
+ 
+NOTE: There were 1440 observations read from the data set WORK.DATA3.
+NOTE: The data set TEST1.PRDSALE1 has 360 observations and 10 variables.
+NOTE: The data set TEST1.PRDSALE2 has 360 observations and 10 variables.
+NOTE: The data set TEST1.PRDSALE3 has 360 observations and 10 variables.
+NOTE: The data set TEST1.PRDSALE4 has 360 observations and 10 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.05 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(GENERATE):   proc datasets lib=work nolist;
+MPRINT(GENERATE):   delete DATA3 DATA4;
+MPRINT(GENERATE):   quit;
+ 
+NOTE: Deleting WORK.DATA3 (memtype=DATA).
+NOTE: Deleting WORK.DATA4 (memtype=DATA).
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+76         %endTestcall()
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

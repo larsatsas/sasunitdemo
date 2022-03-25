@@ -1,0 +1,2631 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Program Documentation | SASUnit Examples - SASUnit Test Documentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX294"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Program Documentation | SASUnit Examples - SASUnit Test Documentation</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Program Documentation for Program _reporttreehtml.sas</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" scope="col">Detailed&nbsp;description</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">create the table of contents on the left side of the HTML report as a tree</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">structure:</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><project></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Scenarios</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><each test scenario></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><each test case></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><each test></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Units under Test</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><each autocall path></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><each units under test></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><each test case></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><each test></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Program documentation</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><groups></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><each SASUnit group></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><each macro></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><additional information></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><ToDo></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><Bug></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><Test></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><Depracated></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><files></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><each autocall path></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><each macro source file></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Version</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Revision: 653 $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Author</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Author: klandwich $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Date</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Date: 2019-04-24 07:31:56 +0200 (Mi, 24 Apr 2019) $</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">See&nbsp;also</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Here you can find the SASUnit documentation, release notes and license information.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/saspgm/sasunit/_reporttreehtml.sas $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Copyright</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For copyright information and terms of usage under the GPL license see included file readme.txt</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">or https://sourceforge.net/p/sasunit/wiki/readme/.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Return</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">results will be written to folder &amp;g_target/rep</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX295"></a>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_name</th>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" colspan="2" scope="colgroup">Parameters</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_repdata</td>
+<td class="l m pgmdocblinddata">input dataset (created in reportSASUnit.sas)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_html</td>
+<td class="l m pgmdocblinddata">test report in HTML format</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_pgmdoc</td>
+<td class="l m pgmdocblinddata">Creates source code documentation per examinee (0 / 1)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_pgmdoc_sasunit</td>
+<td class="l m pgmdocblinddata">Creates source code documentation also for sasunit macros (0 / 1)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_style</td>
+<td class="l m pgmdocblinddata">Name of the SAS style and css file to be used.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX296"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle2">Source Code of Program _reporttreehtml.sas</td>
+</tr>
+<tr>
+<td class="c systemtitle3" style=" font-size: 10pt;"><a href="src/00/_reporttreehtml.sas">[Download]</a>
+</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Data Set WORK._PGMSRC_VIEW">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">ObsNum</th>
+<th class="l blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m pgmdocsource">00001</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00002</td>
+<td class="l m pgmdocsource">%MACRO _reportTreeHTML (i_repdata        =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00003</td>
+<td class="l m pgmdocsource">,o_html           =0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00004</td>
+<td class="l m pgmdocsource">,o_pgmdoc         =0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00005</td>
+<td class="l m pgmdocsource">,o_pgmdoc_sasunit =0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00006</td>
+<td class="l m pgmdocsource">,i_style          =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00007</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00008</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00009</td>
+<td class="l m pgmdocsource">%LOCAL l_title;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00010</td>
+<td class="l m pgmdocsource">%LOCAL d_tree d_tree1 d_tree2 d_tree3 d_tree4 d_tree5 d_la i;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00011</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00012</td>
+<td class="l m pgmdocsource">%LET l_title = &amp;g_project | SASUnit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00013</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00014</td>
+<td class="l m pgmdocsource">%_tempFilename(d_tree)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00015</td>
+<td class="l m pgmdocsource">%_tempFilename(d_tree1)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00016</td>
+<td class="l m pgmdocsource">%_tempFilename(d_tree2)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00017</td>
+<td class="l m pgmdocsource">%_tempFilename(d_tree3)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00018</td>
+<td class="l m pgmdocsource">%_tempFilename(d_tree4)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00019</td>
+<td class="l m pgmdocsource">%_tempFilename(d_tree5)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00020</td>
+<td class="l m pgmdocsource">%_tempFilename(d_la)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00021</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00022</td>
+<td class="l m pgmdocsource">/*-- generate tree structure 1 for test scenarios ----------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00023</td>
+<td class="l m pgmdocsource">DATA &amp;d_tree1. (KEEP=label popup target lvl leaf rc);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00024</td>
+<td class="l m pgmdocsource">LENGTH label popup target $255 lvl leaf 8;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00025</td>
+<td class="l m pgmdocsource">SET &amp;i_repdata.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00026</td>
+<td class="l m pgmdocsource">BY scn_id cas_id tst_id;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00027</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00028</td>
+<td class="l m pgmdocsource">tst_type=tranwrd(tst_type,&quot;&nbsp;&quot;,&quot;&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00029</td>
+<td class="l m pgmdocsource">tst_desc=tranwrd(tst_desc,&quot;&nbsp;&quot;,&quot;&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00030</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00031</td>
+<td class="l m pgmdocsource">IF _n_=1 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00032</td>
+<td class="l m pgmdocsource">label  = &quot;&amp;g_nls_reportTree_001&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00033</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_002&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00034</td>
+<td class="l m pgmdocsource">target = &quot;scn_overview.html&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00035</td>
+<td class="l m pgmdocsource">lvl    = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00036</td>
+<td class="l m pgmdocsource">leaf   = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00037</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00038</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00039</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00040</td>
+<td class="l m pgmdocsource">IF first.scn_id THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00041</td>
+<td class="l m pgmdocsource">label  = scn_path;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00042</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_003 &quot; !! put(scn_id,z3.) !! &#39;: &amp;#x0D;&#39; !! scn_desc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00043</td>
+<td class="l m pgmdocsource">target = &quot;cas_overview.html#SCN&quot; !! put(scn_id,z3.) !! &quot;_&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00044</td>
+<td class="l m pgmdocsource">lvl    = 2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00045</td>
+<td class="l m pgmdocsource">leaf   = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00046</td>
+<td class="l m pgmdocsource">rc     = scn_res;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00047</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00048</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00049</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00050</td>
+<td class="l m pgmdocsource">IF first.cas_id THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00051</td>
+<td class="l m pgmdocsource">label  = put(cas_id,z3.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00052</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_004 &quot; !! put (cas_id,z3.) !! &#39;: &amp;#x0D;&#39; !! cas_desc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00053</td>
+<td class="l m pgmdocsource">target = &#39;cas_&#39; !! put(scn_id,z3.) !! &quot;_&quot; !! put (cas_id,z3.) !! &quot;.html&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00054</td>
+<td class="l m pgmdocsource">lvl    = 3;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00055</td>
+<td class="l m pgmdocsource">leaf   = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00056</td>
+<td class="l m pgmdocsource">rc     = cas_res;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00057</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00058</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00059</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00060</td>
+<td class="l m pgmdocsource">label  = put (tst_id, z3.) !! &#39; (&#39; !! trim(tst_type) !! &#39;)&#39;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00061</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_005 &quot; !! put (tst_id,z3.) !! &#39;: &amp;#x0D;&#39; !! tst_desc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00062</td>
+<td class="l m pgmdocsource">target = &#39;cas_&#39; !! put(scn_id,z3.) !! &quot;_&quot; !! put (cas_id,z3.) !! &quot;.html#TST&quot; !! put (tst_id,z3.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00063</td>
+<td class="l m pgmdocsource">lvl    = 4;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00064</td>
+<td class="l m pgmdocsource">leaf   = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00065</td>
+<td class="l m pgmdocsource">rc     = tst_res;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00066</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00067</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00068</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00069</td>
+<td class="l m pgmdocsource">/*-- generate tree structure 2 for units under test --------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00070</td>
+<td class="l m pgmdocsource">DATA &amp;d_tree2. (KEEP=label popup target lvl leaf rc);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00071</td>
+<td class="l m pgmdocsource">LENGTH label popup target $255 lvl leaf  8;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00072</td>
+<td class="l m pgmdocsource">SET &amp;i_repdata.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00073</td>
+<td class="l m pgmdocsource">BY exa_auton exa_id scn_id cas_id tst_id;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00074</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00075</td>
+<td class="l m pgmdocsource">tst_type=tranwrd(tst_type,&quot;&nbsp;&quot;,&quot;&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00076</td>
+<td class="l m pgmdocsource">tst_desc=tranwrd(tst_desc,&quot;&nbsp;&quot;,&quot;&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00077</td>
+<td class="l m pgmdocsource">cas_obj =tranwrd(cas_obj,&quot;&nbsp;&quot;,&quot;&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00078</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00079</td>
+<td class="l m pgmdocsource">leaf = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00080</td>
+<td class="l m pgmdocsource">IF _n_=1 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00081</td>
+<td class="l m pgmdocsource">label  = &quot;&amp;g_nls_reportTree_006&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00082</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_007&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00083</td>
+<td class="l m pgmdocsource">target = &quot;auton_overview.html&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00084</td>
+<td class="l m pgmdocsource">lvl    = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00085</td>
+<td class="l m pgmdocsource">leaf   = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00086</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00087</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00088</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00089</td>
+<td class="l m pgmdocsource">IF first.exa_auton THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00090</td>
+<td class="l m pgmdocsource">SELECT (exa_auton);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00091</td>
+<td class="l m pgmdocsource">WHEN (0) label = tsu_sasunit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00092</td>
+<td class="l m pgmdocsource">WHEN (1) label = tsu_sasunit_os;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00093</td>
+<td class="l m pgmdocsource">%DO i=0 %TO 29;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00094</td>
+<td class="l m pgmdocsource">WHEN (&amp;i+2) label = tsu_sasautos&amp;i;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00095</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00096</td>
+<td class="l m pgmdocsource">OTHERWISE label=&quot;&amp;g_nls_reportAuton_015&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00097</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00098</td>
+<td class="l m pgmdocsource">IF exa_auton=0 THEN</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00099</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_009 sasunit:&quot; !! &#39;&amp;#x0D;&#39; !! label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00100</td>
+<td class="l m pgmdocsource">ELSE IF exa_auton=1 THEN</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00101</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_009 os_specific sasunit:&quot; !! &#39;&amp;#x0D;&#39; !! label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00102</td>
+<td class="l m pgmdocsource">ELSE IF exa_auton=2 THEN</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00103</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_009 sasautos:&quot; !! &#39;&amp;#x0D;&#39; !! label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00104</td>
+<td class="l m pgmdocsource">ELSE IF exa_auton&gt;2 THEN</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00105</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_009 sasautos&quot; !! left(put(exa_auton-2,1.)) !! &#39;:&amp;#x0D;&#39; !! label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00106</td>
+<td class="l m pgmdocsource">ELSE</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00107</td>
+<td class="l m pgmdocsource">popup = &quot;&amp;g_nls_reportTree_010&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00108</td>
+<td class="l m pgmdocsource">target = &quot;auton_overview.html#AUTON&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00109</td>
+<td class="l m pgmdocsource">IF exa_auton NE . THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00110</td>
+<td class="l m pgmdocsource">target = trim(target) !! put(exa_auton,z3.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00111</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00112</td>
+<td class="l m pgmdocsource">ELSE DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00113</td>
+<td class="l m pgmdocsource">target = trim(target) !! put(99,z3.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00114</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00115</td>
+<td class="l m pgmdocsource">target = trim(target) !! &#39;_&#39;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00116</td>
+<td class="l m pgmdocsource">lvl    = 2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00117</td>
+<td class="l m pgmdocsource">leaf   = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00118</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00119</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00120</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00121</td>
+<td class="l m pgmdocsource">IF first.exa_id THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00122</td>
+<td class="l m pgmdocsource">label = cas_obj;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00123</td>
+<td class="l m pgmdocsource">SELECT (exa_auton);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00124</td>
+<td class="l m pgmdocsource">WHEN (0) popup = trim(tsu_sasunit) !! &#39;/&#39; !! cas_obj;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00125</td>
+<td class="l m pgmdocsource">WHEN (1) popup = trim(tsu_sasunit_os) !! &#39;/&#39; !! cas_obj;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00126</td>
+<td class="l m pgmdocsource">%DO i=0 %TO 29;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00127</td>
+<td class="l m pgmdocsource">WHEN (&amp;i+2) popup = trim(tsu_sasautos&amp;i) !! &#39;/&#39; !! cas_obj;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00128</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00129</td>
+<td class="l m pgmdocsource">OTHERWISE popup=cas_obj;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00130</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00131</td>
+<td class="l m pgmdocsource">popup = &quot;&amp;g_nls_reportTree_011: &quot; !! &#39;&amp;#x0D;&#39; !! popup;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00132</td>
+<td class="l m pgmdocsource">target = &quot;auton_overview.html#AUTON&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00133</td>
+<td class="l m pgmdocsource">IF exa_auton NE . THEN target = trim(target) !! put(exa_auton,z3.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00134</td>
+<td class="l m pgmdocsource">target = trim(target) !! &#39;_&#39; !! put(exa_id,z3.) !! &quot;_&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00135</td>
+<td class="l m pgmdocsource">lvl    = 3;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00136</td>
+<td class="l m pgmdocsource">leaf   = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00137</td>
+<td class="l m pgmdocsource">rc     = exa_res;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00138</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00139</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00140</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00141</td>
+<td class="l m pgmdocsource">IF first.cas_id THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00142</td>
+<td class="l m pgmdocsource">label  = put(scn_id,z3.) !! &quot;_&quot; !! put(cas_id,z3.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00143</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_012 &quot; !! put(scn_id,z3.) !! &quot;, &amp;g_nls_reportTree_013 &quot; !! put (cas_id,z3.) !! &#39;: &amp;#x0D;&#39; !! cas_desc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00144</td>
+<td class="l m pgmdocsource">target = &#39;cas_&#39; !! put(scn_id,z3.) !! &quot;_&quot; !! put (cas_id,z3.) !! &quot;.html&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00145</td>
+<td class="l m pgmdocsource">lvl    = 4;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00146</td>
+<td class="l m pgmdocsource">leaf   = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00147</td>
+<td class="l m pgmdocsource">rc     = cas_res;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00148</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00149</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00150</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00151</td>
+<td class="l m pgmdocsource">label  = put (tst_id, z3.) !! &#39; (&#39; !! trim(tst_type) !! &#39;)&#39;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00152</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_014 &quot; !! put (tst_id,z3.) !! &#39;&amp;#x0D;&#39; !! tst_desc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00153</td>
+<td class="l m pgmdocsource">target = &#39;cas_&#39; !! put(scn_id,z3.) !! &quot;_&quot; !! put (cas_id,z3.) !! &quot;.html#TST&quot; !! put (tst_id,z3.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00154</td>
+<td class="l m pgmdocsource">lvl    = 5;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00155</td>
+<td class="l m pgmdocsource">leaf   = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00156</td>
+<td class="l m pgmdocsource">rc     = tst_res;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00157</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00158</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00159</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00160</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00161</td>
+<td class="l m pgmdocsource">%if (&amp;o_pgmdoc.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00162</td>
+<td class="l m pgmdocsource">/*-- generate tree structure 3: program documentation Part I (Groups) ----------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00163</td>
+<td class="l m pgmdocsource">%local l_counter l_counterm1 l_i l_im1 l_j l_NewElements;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00164</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00165</td>
+<td class="l m pgmdocsource">%let l_NewElements=1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00166</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00167</td>
+<td class="l m pgmdocsource">data work.scn;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00168</td>
+<td class="l m pgmdocsource">set target.scn;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00169</td>
+<td class="l m pgmdocsource">scn_abs_path = resolve (&#39;%_abspath(&amp;g_root.,&#39; !! trim(scn_path) !! &#39;)&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00170</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00171</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00172</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00173</td>
+<td class="l m pgmdocsource">create table work._GrpDoc_1 as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00174</td>
+<td class="l m pgmdocsource">select _GrpDoc.*,</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00175</td>
+<td class="l m pgmdocsource">exa.exa_auton</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00176</td>
+<td class="l m pgmdocsource">from work._GrpDoc left join target.exa</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00177</td>
+<td class="l m pgmdocsource">%if (&amp;o_pgmdoc_sasunit. = 0) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00178</td>
+<td class="l m pgmdocsource">(where=(exa_auton &gt;= 2))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00179</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00180</td>
+<td class="l m pgmdocsource">on _GrpDoc.childPath = exa.exa_filename;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00181</td>
+<td class="l m pgmdocsource">create table work._GrpDoc_2 as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00182</td>
+<td class="l m pgmdocsource">select _GrpDoc_1.*,</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00183</td>
+<td class="l m pgmdocsource">scn.scn_id</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00184</td>
+<td class="l m pgmdocsource">from work._GrpDoc_1 left join work.scn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00185</td>
+<td class="l m pgmdocsource">on _GrpDoc_1.childPath = scn.scn_abs_path;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00186</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00187</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00188</td>
+<td class="l m pgmdocsource">data work._GrpDoc_3;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00189</td>
+<td class="l m pgmdocsource">set work._GrpDoc_2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00190</td>
+<td class="l m pgmdocsource">length pgmscn_name pgmexa_name target $255;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00191</td>
+<td class="l m pgmdocsource">if (not missing (scn_id)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00192</td>
+<td class="l m pgmdocsource">pgmscn_name  = catt (&quot;pgm_scn_&quot;, put (scn_id, z3.) !! &quot;.html&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00193</td>
+<td class="l m pgmdocsource">if (&amp;o_pgmdoc. = 1 and fileexist (&quot;&amp;g_target./rep/&quot; !! trim(pgmscn_name))) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00194</td>
+<td class="l m pgmdocsource">target = catt (pgmscn_name);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00195</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00196</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00197</td>
+<td class="l m pgmdocsource">target = catt (&quot;src/scn/scn_&quot;, put (scn_id, z3.), &quot;.sas&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00198</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00199</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00200</td>
+<td class="l m pgmdocsource">else if (not missing (exa_auton)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00201</td>
+<td class="l m pgmdocsource">pgmexa_name = catt (&quot;pgm_&quot;, put (exa_auton, z2.), &quot;_&quot;, tranwrd (child, &quot;.sas&quot;, &quot;.html&quot;));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00202</td>
+<td class="l m pgmdocsource">if (&amp;o_pgmdoc. = 1 and fileexist (&quot;&amp;g_target./rep/&quot; !! trim(pgmexa_name))) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00203</td>
+<td class="l m pgmdocsource">target = catt (pgmexa_name);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00204</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00205</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00206</td>
+<td class="l m pgmdocsource">target = catt (&quot;src/&quot;, put (coalesce (exa_auton, 99), z2.), &quot;/&quot;, child);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00207</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00208</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00209</td>
+<td class="l m pgmdocsource">keep parent child childText ChildDesc target;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00210</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00211</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00212</td>
+<td class="l m pgmdocsource">proc sort data=work._GrpDoc_3 out=work.__tree0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00213</td>
+<td class="l m pgmdocsource">by child;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00214</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00215</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00216</td>
+<td class="l m pgmdocsource">data work.__tree0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00217</td>
+<td class="l m pgmdocsource">set work.__tree0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00218</td>
+<td class="l m pgmdocsource">_nodeID=_N_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00219</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00220</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00221</td>
+<td class="l m pgmdocsource">data work.__tree1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00222</td>
+<td class="l m pgmdocsource">set work.__tree0(where=(Node1Name=parent)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00223</td>
+<td class="l m pgmdocsource">rename=(child=Node1Name</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00224</td>
+<td class="l m pgmdocsource">ChildText=Node1Label</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00225</td>
+<td class="l m pgmdocsource">ChildDesc=Node1Desc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00226</td>
+<td class="l m pgmdocsource">Target   =Node1Target</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00227</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00228</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00229</td>
+<td class="l m pgmdocsource">drop parent _NodeID;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00230</td>
+<td class="l m pgmdocsource">call symputx (&quot;l_obs&quot;, _N_, &quot;L&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00231</td>
+<td class="l m pgmdocsource">Node1ID=_NodeID;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00232</td>
+<td class="l m pgmdocsource">Node1Sort=_NodeID;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00233</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00234</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00235</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00236</td>
+<td class="l m pgmdocsource">create table work.__tree2 as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00237</td>
+<td class="l m pgmdocsource">select tree1.Node1Name</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00238</td>
+<td class="l m pgmdocsource">,tree1.Node1ID</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00239</td>
+<td class="l m pgmdocsource">,tree1.Node1Sort</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00240</td>
+<td class="l m pgmdocsource">,tree1.Node1Label</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00241</td>
+<td class="l m pgmdocsource">,tree1.Node1Desc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00242</td>
+<td class="l m pgmdocsource">,tree1.Node1Target</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00243</td>
+<td class="l m pgmdocsource">,tree0.child as Node2Name</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00244</td>
+<td class="l m pgmdocsource">,_nodeID as Node2ID</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00245</td>
+<td class="l m pgmdocsource">,_nodeID as Node2Sort</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00246</td>
+<td class="l m pgmdocsource">,tree0.childText as Node2Label</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00247</td>
+<td class="l m pgmdocsource">,tree0.childDesc as Node2Desc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00248</td>
+<td class="l m pgmdocsource">,tree0.Target as Node2Target</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00249</td>
+<td class="l m pgmdocsource">from work.__tree1 as tree1</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00250</td>
+<td class="l m pgmdocsource">left join work.__tree0(where=(child ne parent)) as tree0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00251</td>
+<td class="l m pgmdocsource">on tree1.Node1Name=tree0.parent</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00252</td>
+<td class="l m pgmdocsource">order by Node1ID, Node2Name;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00253</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00254</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00255</td>
+<td class="l m pgmdocsource">%let l_counter=2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00256</td>
+<td class="l m pgmdocsource">%do %until (&amp;l_NewElements. = 0);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00257</td>
+<td class="l m pgmdocsource">%let l_counter=%eval (&amp;l_counter.+1);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00258</td>
+<td class="l m pgmdocsource">%let l_counterm1=%eval (&amp;l_counter.-1);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00259</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00260</td>
+<td class="l m pgmdocsource">create table work.__tree&amp;l_counter. as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00261</td>
+<td class="l m pgmdocsource">select tree&amp;l_counterm1..Node1Name</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00262</td>
+<td class="l m pgmdocsource">,tree&amp;l_counterm1..Node1ID</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00263</td>
+<td class="l m pgmdocsource">,tree&amp;l_counterm1..Node1Sort</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00264</td>
+<td class="l m pgmdocsource">,tree&amp;l_counterm1..Node1Label</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00265</td>
+<td class="l m pgmdocsource">,tree&amp;l_counterm1..Node1Desc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00266</td>
+<td class="l m pgmdocsource">,tree&amp;l_counterm1..Node1target</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00267</td>
+<td class="l m pgmdocsource">%do l_i=2 %to &amp;l_counterm1.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00268</td>
+<td class="l m pgmdocsource">,tree&amp;l_counterm1..Node&amp;l_i.Name</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00269</td>
+<td class="l m pgmdocsource">,tree&amp;l_counterm1..Node&amp;l_i.ID</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00270</td>
+<td class="l m pgmdocsource">,tree&amp;l_counterm1..Node&amp;l_i.Sort</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00271</td>
+<td class="l m pgmdocsource">,tree&amp;l_counterm1..Node&amp;l_i.Label</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00272</td>
+<td class="l m pgmdocsource">,tree&amp;l_counterm1..Node&amp;l_i.Desc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00273</td>
+<td class="l m pgmdocsource">,tree&amp;l_counterm1..Node&amp;l_i.target</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00274</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00275</td>
+<td class="l m pgmdocsource">,tree0.child as Node&amp;l_counter.Name</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00276</td>
+<td class="l m pgmdocsource">,_nodeID as Node&amp;l_counter.ID</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00277</td>
+<td class="l m pgmdocsource">,_nodeID as Node&amp;l_counter.Sort</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00278</td>
+<td class="l m pgmdocsource">,tree0.childText as Node&amp;l_counter.Label</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00279</td>
+<td class="l m pgmdocsource">,tree0.childDesc as Node&amp;l_counter.Desc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00280</td>
+<td class="l m pgmdocsource">,tree0.Target as Node&amp;l_counter.Target</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00281</td>
+<td class="l m pgmdocsource">from work.__tree&amp;l_counterm1. as tree&amp;l_counterm1.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00282</td>
+<td class="l m pgmdocsource">left join work.__tree0(where=(child ne parent)) as tree0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00283</td>
+<td class="l m pgmdocsource">on tree&amp;l_counterm1..Node&amp;l_counterm1.Name=tree0.parent;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00284</td>
+<td class="l m pgmdocsource">select N(Node&amp;l_counter.Name) into :l_NewElements from work.__tree&amp;l_counter.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00285</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00286</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00287</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00288</td>
+<td class="l m pgmdocsource">proc sort data=work.__tree&amp;l_counterm1. out=&amp;d_tree4.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00289</td>
+<td class="l m pgmdocsource">by</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00290</td>
+<td class="l m pgmdocsource">%do l_i=1 %to&amp;l_counterm1.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00291</td>
+<td class="l m pgmdocsource">Node&amp;l_i.ID</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00292</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00293</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00294</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00295</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00296</td>
+<td class="l m pgmdocsource">proc datasets lib=work nolist;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00297</td>
+<td class="l m pgmdocsource">delete</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00298</td>
+<td class="l m pgmdocsource">%do l_i=0 %to &amp;l_counter.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00299</td>
+<td class="l m pgmdocsource">__tree&amp;l_i.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00300</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00301</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00302</td>
+<td class="l m pgmdocsource">run;quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00303</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00304</td>
+<td class="l m pgmdocsource">data work.__tree0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00305</td>
+<td class="l m pgmdocsource">length label $255;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00306</td>
+<td class="l m pgmdocsource">set &amp;d_tree4.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00307</td>
+<td class="l m pgmdocsource">by</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00308</td>
+<td class="l m pgmdocsource">%do l_i=1 %to&amp;l_counterm1.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00309</td>
+<td class="l m pgmdocsource">Node&amp;l_i.ID</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00310</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00311</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00312</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00313</td>
+<td class="l m pgmdocsource">*** Mark leaves on all levels ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00314</td>
+<td class="l m pgmdocsource">if not missing (Node&amp;l_counterm1.ID) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00315</td>
+<td class="l m pgmdocsource">NodeType=&quot;Leaf&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00316</td>
+<td class="l m pgmdocsource">Level=&amp;l_counterm1.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00317</td>
+<td class="l m pgmdocsource">Label=Node&amp;l_counterm1.Label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00318</td>
+<td class="l m pgmdocsource">Target=Node&amp;l_counterm1.Target;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00319</td>
+<td class="l m pgmdocsource">Desc =Node&amp;l_counterm1.Desc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00320</td>
+<td class="l m pgmdocsource">Node&amp;l_counterm1.Sort=9999;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00321</td>
+<td class="l m pgmdocsource">output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00322</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00323</td>
+<td class="l m pgmdocsource">%do l_i=&amp;l_counterm1. %to 2 %by -1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00324</td>
+<td class="l m pgmdocsource">%let l_im1=%eval(&amp;l_i.-1);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00325</td>
+<td class="l m pgmdocsource">if not missing (Node&amp;l_im1.ID) and missing (Node&amp;l_i.ID) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00326</td>
+<td class="l m pgmdocsource">NodeType=&quot;Leaf&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00327</td>
+<td class="l m pgmdocsource">Level=&amp;l_im1.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00328</td>
+<td class="l m pgmdocsource">Label=Node&amp;l_im1.Label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00329</td>
+<td class="l m pgmdocsource">Desc =Node&amp;l_im1.Desc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00330</td>
+<td class="l m pgmdocsource">Target=Node&amp;l_im1.Target;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00331</td>
+<td class="l m pgmdocsource">Node&amp;l_im1.Sort=9999;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00332</td>
+<td class="l m pgmdocsource">output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00333</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00334</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00335</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00336</td>
+<td class="l m pgmdocsource">*** Create nodes for all leaves ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00337</td>
+<td class="l m pgmdocsource">%do l_i=&amp;l_counterm1. %to 2 %by -1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00338</td>
+<td class="l m pgmdocsource">%let l_im1=%eval(&amp;l_i.-1);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00339</td>
+<td class="l m pgmdocsource">if (first.Node&amp;l_im1.ID and not missing (Node&amp;l_i.ID)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00340</td>
+<td class="l m pgmdocsource">NodeType=&quot;Node&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00341</td>
+<td class="l m pgmdocsource">Level   =&amp;l_im1.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00342</td>
+<td class="l m pgmdocsource">Label   =Node&amp;l_im1.Label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00343</td>
+<td class="l m pgmdocsource">Desc    =Node&amp;l_im1.Desc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00344</td>
+<td class="l m pgmdocsource">Target  =&quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00345</td>
+<td class="l m pgmdocsource">%do l_j=&amp;l_i. %to &amp;l_counterm1.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00346</td>
+<td class="l m pgmdocsource">call missing (Node&amp;l_j.Name);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00347</td>
+<td class="l m pgmdocsource">call missing (Node&amp;l_j.ID);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00348</td>
+<td class="l m pgmdocsource">call missing (Node&amp;l_j.Sort);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00349</td>
+<td class="l m pgmdocsource">call missing (Node&amp;l_j.Target);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00350</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00351</td>
+<td class="l m pgmdocsource">output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00352</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00353</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00354</td>
+<td class="l m pgmdocsource">keep Label Target NodeType Level Desc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00355</td>
+<td class="l m pgmdocsource">%do l_i=1 %to&amp;l_counterm1.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00356</td>
+<td class="l m pgmdocsource">Node&amp;l_i.Name Node&amp;l_i.ID Node&amp;l_i.Sort</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00357</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00358</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00359</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00360</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00361</td>
+<td class="l m pgmdocsource">proc sort data=work.__tree0 out=&amp;d_tree4. (drop=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00362</td>
+<td class="l m pgmdocsource">%do l_i=1 %to&amp;l_counterm1.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00363</td>
+<td class="l m pgmdocsource">Node&amp;l_i.Sort</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00364</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00365</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00366</td>
+<td class="l m pgmdocsource">by</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00367</td>
+<td class="l m pgmdocsource">%do l_i=1 %to&amp;l_counterm1.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00368</td>
+<td class="l m pgmdocsource">Node&amp;l_i.Sort</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00369</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00370</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00371</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00372</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00373</td>
+<td class="l m pgmdocsource">proc datasets lib=work nolist;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00374</td>
+<td class="l m pgmdocsource">delete __tree0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00375</td>
+<td class="l m pgmdocsource">run;quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00376</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00377</td>
+<td class="l m pgmdocsource">data &amp;d_tree3.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00378</td>
+<td class="l m pgmdocsource">length label popup target $255;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00379</td>
+<td class="l m pgmdocsource">label  = &quot;&amp;g_nls_reportTree_016&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00380</td>
+<td class="l m pgmdocsource">popup  = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00381</td>
+<td class="l m pgmdocsource">target = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00382</td>
+<td class="l m pgmdocsource">lvl    = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00383</td>
+<td class="l m pgmdocsource">leaf   = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00384</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00385</td>
+<td class="l m pgmdocsource">label  = &quot;&amp;g_nls_reportTree_020&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00386</td>
+<td class="l m pgmdocsource">popup  = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00387</td>
+<td class="l m pgmdocsource">target = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00388</td>
+<td class="l m pgmdocsource">lvl    = 2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00389</td>
+<td class="l m pgmdocsource">leaf   = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00390</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00391</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00392</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00393</td>
+<td class="l m pgmdocsource">data &amp;d_tree4.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00394</td>
+<td class="l m pgmdocsource">length label popup $255;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00395</td>
+<td class="l m pgmdocsource">set &amp;d_tree4.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00396</td>
+<td class="l m pgmdocsource">lvl=level+2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00397</td>
+<td class="l m pgmdocsource">leaf=(NodeType=&quot;Leaf&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00398</td>
+<td class="l m pgmdocsource">if (leaf) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00399</td>
+<td class="l m pgmdocsource">popup = &quot;&amp;g_nls_reportTree_018: &quot; !! &#39;&amp;#x0D;&#39; !! trim(Label);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00400</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00401</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00402</td>
+<td class="l m pgmdocsource">popup = trim (Label) !! &quot;: &quot; !! &#39;&amp;#x0D;&#39; !! trim(Desc);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00403</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00404</td>
+<td class="l m pgmdocsource">output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00405</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00406</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00407</td>
+<td class="l m pgmdocsource">/*-- generate tree structure 4: program documentation Part II --------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00408</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00409</td>
+<td class="l m pgmdocsource">create table work._repdata2 as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00410</td>
+<td class="l m pgmdocsource">select distinct exa.*</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00411</td>
+<td class="l m pgmdocsource">,tsu.*</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00412</td>
+<td class="l m pgmdocsource">,tsu_sasautos as tsu_sasautos0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00413</td>
+<td class="l m pgmdocsource">,cas.cas_obj</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00414</td>
+<td class="l m pgmdocsource">from target.exa left join target.cas</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00415</td>
+<td class="l m pgmdocsource">on exa.exa_id=cas.cas_exaid</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00416</td>
+<td class="l m pgmdocsource">,target.tsu</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00417</td>
+<td class="l m pgmdocsource">order by exa_auton, exa_id;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00418</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00419</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00420</td>
+<td class="l m pgmdocsource">DATA &amp;d_tree5. (KEEP=label popup target lvl leaf rc);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00421</td>
+<td class="l m pgmdocsource">LENGTH label popup target $255 lvl leaf  8;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00422</td>
+<td class="l m pgmdocsource">SET work._repdata2</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00423</td>
+<td class="l m pgmdocsource">%if (&amp;o_pgmdoc_sasunit. ne 1) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00424</td>
+<td class="l m pgmdocsource">(where=(exa_auton &gt;= 2))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00425</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00426</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00427</td>
+<td class="l m pgmdocsource">BY exa_auton exa_id;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00428</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00429</td>
+<td class="l m pgmdocsource">leaf = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00430</td>
+<td class="l m pgmdocsource">IF _n_=1 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00431</td>
+<td class="l m pgmdocsource">label  = &quot;&amp;g_nls_reportTree_019&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00432</td>
+<td class="l m pgmdocsource">popup  = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00433</td>
+<td class="l m pgmdocsource">target = &quot;_PgmDoc_Lists.html&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00434</td>
+<td class="l m pgmdocsource">lvl    = 2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00435</td>
+<td class="l m pgmdocsource">leaf   = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00436</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00437</td>
+<td class="l m pgmdocsource">label  = &quot;&amp;g_nls_reportTree_017&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00438</td>
+<td class="l m pgmdocsource">popup  = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00439</td>
+<td class="l m pgmdocsource">target = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00440</td>
+<td class="l m pgmdocsource">lvl    = 2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00441</td>
+<td class="l m pgmdocsource">leaf   = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00442</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00443</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00444</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00445</td>
+<td class="l m pgmdocsource">IF first.exa_auton THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00446</td>
+<td class="l m pgmdocsource">SELECT (exa_auton);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00447</td>
+<td class="l m pgmdocsource">WHEN (0) label = tsu_sasunit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00448</td>
+<td class="l m pgmdocsource">WHEN (1) label = tsu_sasunit_os;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00449</td>
+<td class="l m pgmdocsource">%DO i=0 %TO 29;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00450</td>
+<td class="l m pgmdocsource">WHEN (&amp;i+2) label = tsu_sasautos&amp;i;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00451</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00452</td>
+<td class="l m pgmdocsource">OTHERWISE label=&quot;&amp;g_nls_reportAuton_015&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00453</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00454</td>
+<td class="l m pgmdocsource">IF exa_auton=0 THEN</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00455</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_009 sasunit:&quot; !! &#39;&amp;#x0D;&#39; !! label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00456</td>
+<td class="l m pgmdocsource">ELSE IF exa_auton=1 THEN</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00457</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_009 os_specific sasunit:&quot; !! &#39;&amp;#x0D;&#39; !! label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00458</td>
+<td class="l m pgmdocsource">ELSE IF exa_auton=2 THEN</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00459</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_009 sasautos:&quot; !! &#39;&amp;#x0D;&#39; !! label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00460</td>
+<td class="l m pgmdocsource">ELSE IF exa_auton&gt;2 THEN</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00461</td>
+<td class="l m pgmdocsource">popup  = &quot;&amp;g_nls_reportTree_009 sasautos&quot; !! left(put(exa_auton-2,1.)) !! &#39;:&amp;#x0D;&#39; !! label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00462</td>
+<td class="l m pgmdocsource">ELSE</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00463</td>
+<td class="l m pgmdocsource">popup = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00464</td>
+<td class="l m pgmdocsource">target = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00465</td>
+<td class="l m pgmdocsource">lvl    = 3;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00466</td>
+<td class="l m pgmdocsource">leaf   = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00467</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00468</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00469</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00470</td>
+<td class="l m pgmdocsource">IF first.exa_id THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00471</td>
+<td class="l m pgmdocsource">if (missing (cas_obj)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00472</td>
+<td class="l m pgmdocsource">label = exa_pgm;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00473</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00474</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00475</td>
+<td class="l m pgmdocsource">label = cas_obj;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00476</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00477</td>
+<td class="l m pgmdocsource">SELECT (exa_auton);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00478</td>
+<td class="l m pgmdocsource">WHEN (0) popup = trim(tsu_sasunit) !! &#39;/&#39; !! label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00479</td>
+<td class="l m pgmdocsource">WHEN (1) popup = trim(tsu_sasunit_os) !! &#39;/&#39; !! label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00480</td>
+<td class="l m pgmdocsource">%DO i=0 %TO 29;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00481</td>
+<td class="l m pgmdocsource">WHEN (&amp;i+2) popup = trim(tsu_sasautos&amp;i) !! &#39;/&#39; !! label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00482</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00483</td>
+<td class="l m pgmdocsource">OTHERWISE popup=label;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00484</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00485</td>
+<td class="l m pgmdocsource">popup = &quot;&amp;g_nls_reportTree_018: &quot; !! &#39;&amp;#x0D;&#39; !! popup;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00486</td>
+<td class="l m pgmdocsource">target = catt (&quot;pgm_&quot;, put (exa_auton, z2.), &quot;_&quot;, tranwrd (trim (exa_pgm), &quot;.sas&quot;, &quot;.html&quot;));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00487</td>
+<td class="l m pgmdocsource">lvl    = 4;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00488</td>
+<td class="l m pgmdocsource">leaf   = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00489</td>
+<td class="l m pgmdocsource">rc     = .;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00490</td>
+<td class="l m pgmdocsource">OUTPUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00491</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00492</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00493</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00494</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00495</td>
+<td class="l m pgmdocsource">/*-- Lookahead für Level -----------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00496</td>
+<td class="l m pgmdocsource">DATA &amp;d_tree. &amp;d_la. (KEEP=lvl RENAME=(lvl=nextlvl));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00497</td>
+<td class="l m pgmdocsource">SET &amp;d_tree1. &amp;d_tree2.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00498</td>
+<td class="l m pgmdocsource">%if (&amp;o_pgmdoc.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00499</td>
+<td class="l m pgmdocsource">&amp;d_tree3. &amp;d_tree4. &amp;d_tree5.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00500</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00501</td>
+<td class="l m pgmdocsource">END=eof;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00502</td>
+<td class="l m pgmdocsource">OUTPUT &amp;d_tree;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00503</td>
+<td class="l m pgmdocsource">IF _n_&gt;1 THEN OUTPUT &amp;d_la;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00504</td>
+<td class="l m pgmdocsource">IF eof THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00505</td>
+<td class="l m pgmdocsource">lvl=1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00506</td>
+<td class="l m pgmdocsource">OUTPUT &amp;d_la;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00507</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00508</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00509</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00510</td>
+<td class="l m pgmdocsource">DATA &amp;d_tree;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00511</td>
+<td class="l m pgmdocsource">MERGE &amp;d_tree &amp;d_la;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00512</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00513</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00514</td>
+<td class="l m pgmdocsource">/*-- generate HTML code ---------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00515</td>
+<td class="l m pgmdocsource">DATA _null_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00516</td>
+<td class="l m pgmdocsource">SET &amp;d_tree END=eof;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00517</td>
+<td class="l m pgmdocsource">FILE &quot;&amp;o_html&quot; LRECL=1024 encoding=&quot;&amp;g_rep_encoding.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00518</td>
+<td class="l m pgmdocsource">length class_suffix $20;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00519</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00520</td>
+<td class="l m pgmdocsource">IF _n_=1 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00521</td>
+<td class="l m pgmdocsource">%_reportHeaderHTML(&amp;l_title.,&amp;i_style.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00522</td>
+<td class="l m pgmdocsource">PUT &quot;&lt;a href=&quot;&quot;overview.html&quot;&quot; title=&quot;&quot;&amp;g_nls_reportTree_015 &amp;g_project&quot;&quot; target=&quot;&quot;basefrm&quot;&quot; class=&quot;&quot;hms-treeview&quot;&quot;&gt;&amp;g_project.&lt;/a&gt;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00523</td>
+<td class="l m pgmdocsource">PUT &quot;&lt;ol class=&quot;&quot;hms-treeview&quot;&quot;&gt;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00524</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00525</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00526</td>
+<td class="l m pgmdocsource">if (not missing (rc)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00527</td>
+<td class="l m pgmdocsource">class_suffix = scan (put (rc, PictNameHTML.), 1, &#39;.&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00528</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00529</td>
+<td class="l m pgmdocsource">if (leaf) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00530</td>
+<td class="l m pgmdocsource">PUT &quot;&lt;li&gt;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00531</td>
+<td class="l m pgmdocsource">PUT &quot;&lt;label class=&quot;&quot;file&quot; class_suffix +(-1) &quot;&quot;&quot;&gt;&lt;a &quot; @;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00532</td>
+<td class="l m pgmdocsource">_target = scan (catt (&quot;&amp;g_target./rep/&quot;, target),1,&quot;#&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00533</td>
+<td class="l m pgmdocsource">if (not missing (target) and fileexist (_target)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00534</td>
+<td class="l m pgmdocsource">PUT &quot;href=&quot;&quot;&quot; target +(-1) &quot;&quot;&quot; &quot; @;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00535</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00536</td>
+<td class="l m pgmdocsource">if (not missing (popup)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00537</td>
+<td class="l m pgmdocsource">PUT &quot;title=&quot;&quot;&quot; popup +(-1) &quot;&quot;&quot; &quot;@;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00538</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00539</td>
+<td class="l m pgmdocsource">PUT &quot;target=&quot;&quot;basefrm&quot;&quot;&gt;&quot; label +(-1) &quot;&lt;/a&gt;&lt;/label&gt;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00540</td>
+<td class="l m pgmdocsource">PUT &quot;&lt;/li&gt;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00541</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00542</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00543</td>
+<td class="l m pgmdocsource">PUT &quot;&lt;li&gt;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00544</td>
+<td class="l m pgmdocsource">PUT &quot;&lt;input type=&quot;&quot;checkbox&quot;&quot; id=&quot;&quot;folder&quot; _N_ z8. &quot;&quot;&quot;/&gt;&lt;label class=&quot;&quot;node&quot; class_suffix +(-1) &quot;&quot;&quot; for=&quot;&quot;folder&quot; _N_ z8. &quot;&quot;&quot;&gt;&lt;a &quot; @;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00545</td>
+<td class="l m pgmdocsource">if (not missing (target)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00546</td>
+<td class="l m pgmdocsource">PUT &quot;href=&quot;&quot;&quot; target +(-1) &quot;&quot;&quot; &quot; @;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00547</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00548</td>
+<td class="l m pgmdocsource">if (not missing (popup)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00549</td>
+<td class="l m pgmdocsource">PUT &quot;title=&quot;&quot;&quot; popup +(-1) &quot;&quot;&quot; &quot; @;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00550</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00551</td>
+<td class="l m pgmdocsource">PUT &quot;target=&quot;&quot;basefrm&quot;&quot;&gt;&quot; label +(-1) &quot;&lt;/a&gt;&lt;/label&gt;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00552</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00553</td>
+<td class="l m pgmdocsource">if (lvl &lt; nextlvl) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00554</td>
+<td class="l m pgmdocsource">PUT &quot;&lt;ol&gt;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00555</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00556</td>
+<td class="l m pgmdocsource">DO i=nextlvl+1 TO lvl;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00557</td>
+<td class="l m pgmdocsource">PUT &quot;&lt;/ol&gt;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00558</td>
+<td class="l m pgmdocsource">PUT &quot;&lt;/li&gt;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00559</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00560</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00561</td>
+<td class="l m pgmdocsource">IF eof THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00562</td>
+<td class="l m pgmdocsource">PUT &#39;&lt;/ol&gt;&lt;/body&gt;&lt;/html&gt;&#39;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00563</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00564</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00565</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00566</td>
+<td class="l m pgmdocsource">PROC DATASETS NOLIST NOWARN LIB=work;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00567</td>
+<td class="l m pgmdocsource">DELETE</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00568</td>
+<td class="l m pgmdocsource">%scan(&amp;d_tree,2,.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00569</td>
+<td class="l m pgmdocsource">%scan(&amp;d_tree1,2,.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00570</td>
+<td class="l m pgmdocsource">%scan(&amp;d_tree2,2,.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00571</td>
+<td class="l m pgmdocsource">%if (&amp;o_pgmdoc.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00572</td>
+<td class="l m pgmdocsource">%scan(&amp;d_tree3,2,.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00573</td>
+<td class="l m pgmdocsource">%scan(&amp;d_tree4,2,.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00574</td>
+<td class="l m pgmdocsource">%scan(&amp;d_tree5,2,.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00575</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00576</td>
+<td class="l m pgmdocsource">%scan(&amp;d_la,2,.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00577</td>
+<td class="l m pgmdocsource">QUIT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00578</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00579</td>
+<td class="l m pgmdocsource">%MEND _reportTreeHTML;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

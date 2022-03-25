@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="de" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Programmdokumentation | SASUnit Examples - SASUnit Testdokumentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX436"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Programmdokumentation | SASUnit Examples - SASUnit Testdokumentation</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Programmdokumentation für Programm crossreference_test.sas</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" scope="col">Ausführliche&nbsp;Beschreibung</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Example for cross reference reports</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Version</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Revision: 535 $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Autor</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Author: klandwich $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Datum</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Date: 2017-09-21 14:15:47 +0200 (Do, 21 Sep 2017) $</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Siehe&nbsp;auch</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Here you can find the SASUnit documentation, release notes and license information.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/example/saspgm/crossreference_test.sas $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Copyright</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For copyright information and terms of usage under the GPL license see included file readme.txt</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">or https://sourceforge.net/p/sasunit/wiki/readme/.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX437"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle2">Quellcode des Programms crossreference_test.sas</td>
+</tr>
+<tr>
+<td class="c systemtitle3" style=" font-size: 10pt;"><a href="src/02/crossreference_test.sas">[Herunterladen]</a>
+</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Datei WORK._PGMSRC_VIEW">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">ObsNum</th>
+<th class="l blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m pgmdocsource">00001</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00002</td>
+<td class="l m pgmdocsource">%initScenario(i_desc=Example for cross reference reports);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00003</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00004</td>
+<td class="l m pgmdocsource">/*-- Testcase 1 ---------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00005</td>
+<td class="l m pgmdocsource">%initTestcase(i_object=CrossReferenceTest1.sas, i_desc=example for cross refence reports)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00006</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00007</td>
+<td class="l m pgmdocsource">ods listing;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00008</td>
+<td class="l m pgmdocsource">%CrossReferenceTest1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00009</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00010</td>
+<td class="l m pgmdocsource">%endTestcall()</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00011</td>
+<td class="l m pgmdocsource">%assertLog(i_errors=0, i_warnings=0);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00012</td>
+<td class="l m pgmdocsource">%endTestcase()</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00013</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00014</td>
+<td class="l m pgmdocsource">/*-- Testcase 2 ---------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00015</td>
+<td class="l m pgmdocsource">%initTestcase(i_object=CrossReferenceTest2.sas, i_desc=example for cross refence reports)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00016</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00017</td>
+<td class="l m pgmdocsource">ods listing;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00018</td>
+<td class="l m pgmdocsource">%CrossReferenceTest2(i_obs=8</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00019</td>
+<td class="l m pgmdocsource">,i_title=My Second Test Case</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00020</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00021</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00022</td>
+<td class="l m pgmdocsource">%endTestcall()</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00023</td>
+<td class="l m pgmdocsource">%assertLog(i_errors=0, i_warnings=0);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00024</td>
+<td class="l m pgmdocsource">%endTestcase()</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00025</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00026</td>
+<td class="l m pgmdocsource">/*-- Testcase 3 ---------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00027</td>
+<td class="l m pgmdocsource">%initTestcase(i_object=CrossReferenceTest3.sas, i_desc=example for cross refence reports)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00028</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00029</td>
+<td class="l m pgmdocsource">ods listing;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00030</td>
+<td class="l m pgmdocsource">%CrossReferenceTest3 (5);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00031</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00032</td>
+<td class="l m pgmdocsource">%endTestcall()</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00033</td>
+<td class="l m pgmdocsource">%assertLog(i_errors=0, i_warnings=0);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00034</td>
+<td class="l m pgmdocsource">%endTestcase()</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00035</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00036</td>
+<td class="l m pgmdocsource">/*-- Testcase 4 ---------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00037</td>
+<td class="l m pgmdocsource">%initTestcase(i_object=CrossReferenceTest4.sas, i_desc=example for cross refence reports)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00038</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00039</td>
+<td class="l m pgmdocsource">ods listing;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00040</td>
+<td class="l m pgmdocsource">%put result=%CrossReferenceTest4 (var1 =2</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00041</td>
+<td class="l m pgmdocsource">,var2 =9</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00042</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00043</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00044</td>
+<td class="l m pgmdocsource">%endTestcall()</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00045</td>
+<td class="l m pgmdocsource">%assertLog(i_errors=0, i_warnings=0);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00046</td>
+<td class="l m pgmdocsource">%endTestcase()</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00047</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00048</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00049</td>
+<td class="l m pgmdocsource">%endScenario();</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

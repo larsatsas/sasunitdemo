@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS-Log für Testfall 016 in Testszenario 004 (boxplot.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Fehler&#160;&#160;&#160;: 1 
+==>
+<a href="#error001">1</a>
+<br>
+Warnungen: 0 
+<br>
+</p>
+<pre>
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+174        %boxplot(data=testdata.blood_pressure, x=visit, y=, group=med, report=&g_work/report16.pdf)
+MAUTOLOCDISPLAY(BOXPLOT):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\boxplot.sas kompiliert
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   select distinct visit into :xvalues separated by '" "' from testdata.blood_pressure;
+MPRINT(BOXPLOT):   select distinct visit into :xvalues2 separated by ' ' from testdata.blood_pressure;
+MPRINT(BOXPLOT):   quit;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+<span style="color:#FF0000"><a name="error001">ERROR: boxplot: Y variable not specified</a></span>
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\assertlogmsg.sas kompiliert
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+175        %assertLogMsg(i_logMsg=ERROR: boxplot: Y variable not specified)
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

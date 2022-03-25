@@ -1,0 +1,13 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(INITTESTCASE):   options linesize=max;
+74         %let nobs=%nobs(xxx);
+MAUTOLOCDISPLAY(NOBS):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\nobs.sas
+75         %endTestcall()
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+

@@ -1,0 +1,21 @@
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(INITTESTCASE):   options linesize=max;
+57         
+58         ods listing;
+59         %put result=%CrossReferenceTest4 (var1 =2
+MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\crossreferencetest4.sas kompiliert
+60                                          ,var2 =9
+61                                          );
+result=11
+62         
+63         %endTestcall()
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+24                                                                                                                       Das SAS System                                                                                               08:02 Monday, July 1, 2019
+
+MPRINT(ENDTESTCALL):   RUN;
+

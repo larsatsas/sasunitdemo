@@ -1,0 +1,64 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(INITTESTCASE):   options linesize=max;
+38         %basedatasets
+NOTE: The macro BASEDATASETS completed compilation without errors.
+      9 instructions 604 bytes.
+MAUTOLOCDISPLAY(BASEDATASETS):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\basedatasets.sas
+MPRINT(BASEDATASETS):   data work.Customer;
+MPRINT(BASEDATASETS):   do i=1 to 5;
+MPRINT(BASEDATASETS):   CustomerNumber=i;
+MPRINT(BASEDATASETS):   CustomerName="Customer " !! put (i,z2.);
+MPRINT(BASEDATASETS):   output;
+MPRINT(BASEDATASETS):   end;
+MPRINT(BASEDATASETS):   drop i;
+MPRINT(BASEDATASETS):   run;
+
+NOTE: The data set WORK.CUSTOMER has 5 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(BASEDATASETS):   data work.Contracts;
+MPRINT(BASEDATASETS):   do i=1 to 8;
+MPRINT(BASEDATASETS):   ContractNumber=i;
+MPRINT(BASEDATASETS):   ContractType=mod (i,3)+1;
+MPRINT(BASEDATASETS):   output;
+MPRINT(BASEDATASETS):   end;
+MPRINT(BASEDATASETS):   drop i;
+MPRINT(BASEDATASETS):   run;
+
+NOTE: The data set WORK.CONTRACTS has 8 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(BASEDATASETS):   data work.CustomerContracts;
+MPRINT(BASEDATASETS):   do i=1 to 8;
+MPRINT(BASEDATASETS):   ContractNumber=i;
+MPRINT(BASEDATASETS):   CustomerNumber=mod (i,5)+1;
+MPRINT(BASEDATASETS):   output;
+MPRINT(BASEDATASETS):   end;
+MPRINT(BASEDATASETS):   drop i;
+MPRINT(BASEDATASETS):   run;
+
+11                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+
+NOTE: The data set WORK.CUSTOMERCONTRACTS has 8 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+39         %endTestCall()
+NOTE: The macro ENDTESTCALL completed compilation without errors.
+      101 instructions 2836 bytes.
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+

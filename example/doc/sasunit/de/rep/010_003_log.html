@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS-Log für Testfall 003 in Testszenario 010 (nobs.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Fehler&#160;&#160;&#160;: 0 
+<br>
+Warnungen: 0 
+<br>
+</p>
+<pre>
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.01 seconds
+20                                                                                                                       Das SAS System                                                                                               08:02 Monday, July 1, 20
+ 
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+44         data work.big;
+45            do i=1 to 1000000;
+46               x=ranuni(0);
+47               output;
+48            end;
+49         run;
+ 
+NOTE: The data set WORK.BIG has 1000000 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.07 seconds
+      cpu time            0.04 seconds
+ 
+ 
+MAUTOLOCDISPLAY(NOBS):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\nobs.sas kompiliert
+50         %let nobs=%nobs(work.big);
+51         %endTestcall()
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

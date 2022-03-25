@@ -1,0 +1,126 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS-Log für Testfall 001 in Testszenario 006 (CrossReferenceTest1.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Fehler&#160;&#160;&#160;: 0 
+<br>
+Warnungen: 0 
+<br>
+</p>
+<pre>
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+25
+10                                                                                                                       Das SAS System                                                                                               08:02 Monday, July 1, 20
+ 
+26         ods listing;
+27         %CrossReferenceTest1;
+NOTE: The macro CROSSREFERENCETEST1 completed compilation without errors.
+      21 instructions 624 bytes.
+MAUTOLOCDISPLAY(CROSSREFERENCETEST1):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\crossreferencetest1.sas kompiliert
+MPRINT(CROSSREFERENCETEST1):   data test;
+MPRINT(CROSSREFERENCETEST1):   set sashelp.class;
+MPRINT(CROSSREFERENCETEST1):   run;
+ 
+NOTE: There were 19 observations read from the data set SASHELP.CLASS.
+NOTE: The data set WORK.TEST has 19 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.00 seconds
+ 
+ 
+NOTE: The macro CROSSREFERENCETEST2 completed compilation without errors.
+      20 instructions 580 bytes.
+MAUTOLOCDISPLAY(CROSSREFERENCETEST2):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\crossreferencetest2.sas kompiliert
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):   data test2;
+NOTE: The macro CROSSREFERENCETEST4 completed compilation without errors.
+      19 instructions 392 bytes.
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):   l_calc =
+MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\crossreferencetest4.sas kompiliert
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST4):   9;
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):  ;
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):   run;
+ 
+NOTE: The data set WORK.TEST2 has 1 observations and 1 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):   proc print data=test2 (obs=4);
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):   title A Test with SASHelp.Class;
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):   run;
+NOTE: There were 1 observations read from the data set WORK.TEST2.
+NOTE: The PROCEDURE PRINT printed page 1.
+NOTE: PROZEDUR PRINT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):   title;
+i_nobs=4
+NOTE: The macro CROSSREFERENCETEST3 completed compilation without errors.
+      12 instructions 384 bytes.
+MAUTOLOCDISPLAY(CROSSREFERENCETEST3):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\crossreferencetest3.sas kompiliert
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   proc freq data=test;
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   table sex*age;
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   title "A Standard Frequency Output";
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   run;
+ 
+11                                                                                                                       Das SAS System                                                                                               08:02 Monday, July 1, 20
+ 
+NOTE: There were 19 observations read from the data set WORK.TEST.
+NOTE: The PROCEDURE FREQ printed page 2.
+NOTE: PROZEDUR FREQ used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   Title;
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   data var;
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   var =
+MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\crossreferencetest4.sas kompiliert
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3.CROSSREFERENCETEST4):   8;
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):  ;
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2.CROSSREFERENCETEST3):   run;
+ 
+NOTE: The data set WORK.VAR has 1 observations and 1 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.03 seconds
+ 
+ 
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST2):  ;
+MPRINT(CROSSREFERENCETEST1):  ;
+MPRINT(CROSSREFERENCETEST1):   data _null_;
+MPRINT(CROSSREFERENCETEST1):   calc =
+MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\crossreferencetest4.sas kompiliert
+MPRINT(CROSSREFERENCETEST1.CROSSREFERENCETEST4):   7;
+MPRINT(CROSSREFERENCETEST1):  ;
+MPRINT(CROSSREFERENCETEST1):   run;
+ 
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+28
+29         %endTestcall()
+NOTE: The macro ENDTESTCALL completed compilation without errors.
+      101 instructions 2836 bytes.
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="de" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Testabdeckung von regression.sas | SASUnit Examples - SASUnit Testdokumentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="SCN012_32"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Testabdeckung von regression.sas | SASUnit Examples - SASUnit Testdokumentation</td>
+</tr>
+<tr>
+<td class="l systemtitle2">Testabdeckung: 100%</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<td class="l m blinddata" colspan="2">Color&nbsp;Legend:</td>
+</tr>
+<tr>
+<th class="c blindheader" scope="col">dummy</th>
+<th class="c blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m blinddata">&nbsp;</td>
+<td class="l m blinddata">&#9679; <span class="l" style=" color: #00BE00;">Abgedeckter Quelltext</span></td>
+</tr>
+<tr>
+<td class="l m blinddata">&nbsp;</td>
+<td class="l m blinddata">&#9679; <span class="l" style=" color: #FF8020;">Nicht abgedeckter Quelltext</span></td>
+</tr>
+<tr>
+<td class="l m blinddata">&nbsp;</td>
+<td class="l m blinddata">&#9679; <span class="l" style=" color: #828282;">Kommentare</span></td>
+</tr>
+<tr>
+<td class="l m blinddata">&nbsp;</td>
+<td class="l m blinddata">&#9679; <span class="l" style=" color: #8020FF;">Quelltext der von der Option MCOVERAGE als nicht abgedeckt markiert wurde</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<table width="100%" style=" border: 0px solid #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="none" frame="void">
+<tr>
+<td class="l usertext"><hr size="1"></td>
+</tr>
+</table>
+<div class="branch">
+<a name="SCN012_33"></a>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Datei WORK._TCG_REPORT">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">RowNumberOut</th>
+<th class="l blindheader" scope="col">pgmSourceColumn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00001</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/**</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00002</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\file</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00003</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\ingroup    SASUNIT_EXAMPLES_PGM</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00004</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00005</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\brief      Linear regression analysis - example for SASUnit</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00006</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00007</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">Calculate a simple linear regression with intercept for the two variables specified and</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00008</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">- write input data and estimated values to the output dataset &out</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00009</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">- write regression parameters to output dataset &parms</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00010</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">- generate a report in RTF format containing a plot of predicted and observed values</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00011</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00012</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">This example contains no validation of macro parameters</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00013</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00014</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\version    \$Revision: 451 $</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00015</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\author     \$Author: klandwich $</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00016</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\date       \$Date: 2015-09-07 08:49:43 +0200 (Mo, 07 Sep 2015) $</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00017</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00018</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\sa         For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00019</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">Here you can find the SASUnit documentation, release notes and license information.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00020</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\sa         \$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/example/saspgm/regression.sas $</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00021</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\copyright  This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00022</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">For copyright information and terms of usage under the GPL license see included file readme.txt</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00023</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">or https://sourceforge.net/p/sasunit/wiki/readme/.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00024</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00025</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      data    input dataset</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00026</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      x       variable for x axis, must be numeric</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00027</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      y       variable for y axis, must be numeric</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00028</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      out     output dataset, contains variables &x, &y and &yhat</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00029</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      yhat    name of the variable with estimated values</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00030</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      parms   output dataset with regression parameters</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00031</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      report  report file (file extension must be .rtf)</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00032</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">*/ /** \cond */</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00033</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00034</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%MACRO regression(</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00035</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">data   =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00036</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,x      =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00037</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,y      =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00038</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,out    =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00039</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,yhat   =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00040</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,parms  =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00041</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,report =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00042</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00043</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00044</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%local dsid;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00045</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00046</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">ods _all_ close;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00047</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">ods rtf file="&report";</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00048</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00049</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- Compute regression analysis ---------------------------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00050</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">proc reg data=&data outest=&parms;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00051</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">model &y = &x;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00052</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">output out=&out(keep=&x &y &yhat) p=&yhat;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00053</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">plot &y * &x;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00054</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">run; quit;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00055</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00056</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">ods rtf close;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00057</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00058</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%MEND regression;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00059</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00060</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/** \endcond */</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="l systemfooter"><hr size="1"></td>
+</tr>
+<tr>
+<td class="r systemfooter2"><small>Erzeugt am     Montag,       1. Juli 2019,  8:04:01 von <a href="http://sourceforge.net/projects/sasunit/" class="link" title="SASUnit" onclick="window.open(this.href); return false;"> SASUnit <img src="SASUnit_Logo.png" title="SASUnit" alt="SASUnit" width=18px height=18px align="absmiddle" border="0"></a> Version 2.0.2 (681) </small></td>
+</tr>
+</table><br>
+</div>
+</body>
+</html>

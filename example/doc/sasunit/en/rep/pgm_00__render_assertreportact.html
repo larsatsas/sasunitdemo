@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Program Documentation | SASUnit Examples - SASUnit Test Documentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX196"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Program Documentation | SASUnit Examples - SASUnit Test Documentation</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Program Documentation for Program _render_assertreportact.sas</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" scope="col">Detailed&nbsp;description</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">renders the layout of the actual column for assertReport</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Version</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Revision: 635 $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Author</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Author: klandwich $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Date</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Date: 2019-02-28 16:50:25 +0100 (Do, 28 Feb 2019) $</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">See&nbsp;also</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Here you can find the SASUnit documentation, release notes and license information.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/saspgm/sasunit/_render_assertreportact.sas $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Copyright</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For copyright information and terms of usage under the GPL license see included file readme.txt</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">or https://sourceforge.net/p/sasunit/wiki/readme/.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">			</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX197"></a>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_name</th>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" colspan="2" scope="colgroup">Parameters</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_sourceColumn</td>
+<td class="l m pgmdocblinddata">name of the column holding the value</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_expectedColumn</td>
+<td class="l m pgmdocblinddata">name of the column holding the expected value.<span class="l" style=" font-style: italic;">(optional: Default=tst_exp)</span></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_html</td>
+<td class="l m pgmdocblinddata">Test report in HTML-format?</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_targetColumn</td>
+<td class="l m pgmdocblinddata">name of the target column holding the ODS formatted value</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX198"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle2">Source Code of Program _render_assertreportact.sas</td>
+</tr>
+<tr>
+<td class="c systemtitle3" style=" font-size: 10pt;"><a href="src/00/_render_assertreportact.sas">[Download]</a>
+</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Data Set WORK._PGMSRC_VIEW">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">ObsNum</th>
+<th class="l blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m pgmdocsource">00001</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00002</td>
+<td class="l m pgmdocsource">%macro _render_assertReportAct (i_sourceColumn=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00003</td>
+<td class="l m pgmdocsource">,i_expectedColumn=tst_exp</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00004</td>
+<td class="l m pgmdocsource">,o_html=0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00005</td>
+<td class="l m pgmdocsource">,o_targetColumn=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00006</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00007</td>
+<td class="l m pgmdocsource">IF &amp;i_sourceColumn. EQ &#39;&nbsp;&#39; OR &amp;i_sourceColumn. EQ &#39;&#39; THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00008</td>
+<td class="l m pgmdocsource">%** While actual report does not exist, render the column in error state ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00009</td>
+<td class="l m pgmdocsource">&amp;i_sourceColumn. = &quot;&amp;g_nls_reportDetail_048&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00010</td>
+<td class="l m pgmdocsource">%_render_dataColumn (i_sourceColumn=&amp;i_sourceColumn.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00011</td>
+<td class="l m pgmdocsource">,i_columnType=datacolumnerror</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00012</td>
+<td class="l m pgmdocsource">,o_targetColumn=&amp;o_targetColumn.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00013</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00014</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00015</td>
+<td class="l m pgmdocsource">ELSE DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00016</td>
+<td class="l m pgmdocsource">href     = catt (&quot;_&quot;, put (scn_id, z3.),&#39;_&#39;,put (cas_id, z3.),&#39;_&#39;,put (tst_id, z3.));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00017</td>
+<td class="l m pgmdocsource">href_act = catt (href,&#39;_man_act&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00018</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00019</td>
+<td class="l m pgmdocsource">href_rep = catt (href,&#39;_man_rep.html&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00020</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00021</td>
+<td class="l m pgmdocsource">IF &amp;i_expectedColumn. NE &#39;&nbsp;&#39; AND &amp;i_expectedColumn. NE &#39; &#39; THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00022</td>
+<td class="l m pgmdocsource">%*** Link to reporting html, if both results exist ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00023</td>
+<td class="l m pgmdocsource">i_linkColumn = href_rep;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00024</td>
+<td class="l m pgmdocsource">i_linkTitle  = &quot;&amp;g_nls_reportDetail_020.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00025</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00026</td>
+<td class="l m pgmdocsource">ELSE DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00027</td>
+<td class="l m pgmdocsource">%*** Link to expected document, if only one results exists ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00028</td>
+<td class="l m pgmdocsource">%*** Document type is contained in tst_exp                 ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00029</td>
+<td class="l m pgmdocsource">i_linkColumn = catt (href_act, &amp;i_sourceColumn.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00030</td>
+<td class="l m pgmdocsource">i_linkTitle  = &quot;&amp;g_nls_reportDetail_023.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00031</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00032</td>
+<td class="l m pgmdocsource">IF tst_res=2 THEN hlp = trim (&amp;i_sourceColumn.) !! &quot; - &amp;g_nls_reportDetail_022!&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00033</td>
+<td class="l m pgmdocsource">ELSE hlp = &amp;i_sourceColumn.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00034</td>
+<td class="l m pgmdocsource">%_render_dataColumn (i_sourceColumn=hlp</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00035</td>
+<td class="l m pgmdocsource">,i_linkTitle=i_linkTitle</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00036</td>
+<td class="l m pgmdocsource">,i_linkColumn=i_linkColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00037</td>
+<td class="l m pgmdocsource">,o_targetColumn=&amp;o_targetColumn.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00038</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00039</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00040</td>
+<td class="l m pgmdocsource">%mend _render_assertReportAct;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

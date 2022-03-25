@@ -1,0 +1,79 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(INITTESTCASE):   options linesize=max;
+47                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+
+103        proc datasets lib=test1 nolist kill;
+NOTE: Deleting TEST1.CLASS1 (memtype=DATA).
+104        quit;
+
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+105        proc datasets lib=test2 nolist kill;
+NOTE: Deleting TEST2.CLASS1 (memtype=DATA).
+106        quit;
+
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MAUTOLOCDISPLAY(GENERATE):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\generate.sas
+107        %generate(data=sashelp.classXXX, by=sex, out=test1.class)
+MPRINT(GENERATE):   data;
+MPRINT(GENERATE):   run;
+
+NOTE: The data set WORK.DATA7 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(GENERATE):   data;
+MPRINT(GENERATE):   run;
+
+NOTE: The data set WORK.DATA8 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+ERROR: File SASHELP.CLASSXXX.DATA does not exist.
+MPRINT(GENERATE):   proc sort data=sashelp.classXXX out=WORK.DATA7;
+MPRINT(GENERATE):   by sex;
+MPRINT(GENERATE):   run;
+
+NOTE: The SAS System stopped processing this step because of errors.
+WARNING: The data set WORK.DATA7 may be incomplete.  When this step was stopped there were 0 observations and 0 variables.
+WARNING: Data set WORK.DATA7 was not replaced because this step was stopped.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.03 seconds
+      cpu time            0.01 seconds
+      
+ERROR: Macro Generate: data= or by= specified incorrectly
+
+
+MPRINT(GENERATE):   proc datasets lib=work nolist;
+48                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+
+MPRINT(GENERATE):   delete DATA7 DATA8;
+MPRINT(GENERATE):   quit;
+
+NOTE: Deleting WORK.DATA7 (memtype=DATA).
+NOTE: Deleting WORK.DATA8 (memtype=DATA).
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+108        %endTestcall()
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+

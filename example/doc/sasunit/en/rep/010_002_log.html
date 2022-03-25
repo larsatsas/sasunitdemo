@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS log for test case 002 in test scenario 010 (nobs.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Errors&#160;&#160;: 0 
+<br>
+Warnings: 0 
+<br>
+</p>
+<pre>
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.03 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+37         %let nobs=%nobs(sashelp.class);
+MAUTOLOCDISPLAY(NOBS):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\nobs.sas
+38         %endTestcall()
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

@@ -1,0 +1,746 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="de" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Programmdokumentation | SASUnit Examples - SASUnit Testdokumentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX154"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Programmdokumentation | SASUnit Examples - SASUnit Testdokumentation</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Programmdokumentation für Programm _render_assertlibraryrep.sas</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" scope="col">Ausführliche&nbsp;Beschreibung</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">create HTML pages for assertLibrary</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Version</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Revision: 635 $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Autor</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Author: klandwich $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Datum</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Date: 2019-02-28 16:50:25 +0100 (Do, 28 Feb 2019) $</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Siehe&nbsp;auch</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Here you can find the SASUnit documentation, release notes and license information.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/saspgm/sasunit/_render_assertlibraryrep.sas $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Copyright</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For copyright information and terms of usage under the GPL license see included file readme.txt</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">or https://sourceforge.net/p/sasunit/wiki/readme/.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX155"></a>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_name</th>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" colspan="2" scope="colgroup">Parameter</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_assertype</td>
+<td class="l m pgmdocblinddata">type of assert beeing done. It is know be the program itself, but nevertheless specified as parameter.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_repdata</td>
+<td class="l m pgmdocblinddata">name of reporting dataset containing information on the assert.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_scnid</td>
+<td class="l m pgmdocblinddata">scenario id of the current test</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_casid</td>
+<td class="l m pgmdocblinddata">test case id of the current test</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_tstid</td>
+<td class="l m pgmdocblinddata">id of the current test</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_style</td>
+<td class="l m pgmdocblinddata">Name of the SAS style and css file to be used.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_html</td>
+<td class="l m pgmdocblinddata">Test report in HTML-format?</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_path</td>
+<td class="l m pgmdocblinddata">output folder</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX156"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle2">Quellcode des Programms _render_assertlibraryrep.sas</td>
+</tr>
+<tr>
+<td class="c systemtitle3" style=" font-size: 10pt;"><a href="src/00/_render_assertlibraryrep.sas">[Herunterladen]</a>
+</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Datei WORK._PGMSRC_VIEW">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">ObsNum</th>
+<th class="l blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m pgmdocsource">00001</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00002</td>
+<td class="l m pgmdocsource">%macro _render_assertLibraryRep (i_assertype=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00003</td>
+<td class="l m pgmdocsource">,i_repdata  =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00004</td>
+<td class="l m pgmdocsource">,i_scnid    =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00005</td>
+<td class="l m pgmdocsource">,i_casid    =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00006</td>
+<td class="l m pgmdocsource">,i_tstid    =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00007</td>
+<td class="l m pgmdocsource">,i_style    =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00008</td>
+<td class="l m pgmdocsource">,o_html     = 0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00009</td>
+<td class="l m pgmdocsource">,o_path     =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00010</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00011</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00012</td>
+<td class="l m pgmdocsource">%local l_path;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00013</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00014</td>
+<td class="l m pgmdocsource">title;footnote;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00015</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00016</td>
+<td class="l m pgmdocsource">%_getTestSubfolder (i_assertType=assertLibrary</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00017</td>
+<td class="l m pgmdocsource">,i_root      =&amp;g_target./tst</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00018</td>
+<td class="l m pgmdocsource">,i_scnid     =&amp;i_scnid.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00019</td>
+<td class="l m pgmdocsource">,i_casid     =&amp;i_casid.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00020</td>
+<td class="l m pgmdocsource">,i_tstid     =&amp;i_tstid.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00021</td>
+<td class="l m pgmdocsource">,r_path      =l_path</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00022</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00023</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00024</td>
+<td class="l m pgmdocsource">libname _test &quot;&amp;l_path&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00025</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00026</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00027</td>
+<td class="l m pgmdocsource">ODS HTML4 FILE=&quot;&amp;o_path/_&amp;i_scnid._&amp;i_casid._&amp;i_tstid._library_exp.html&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00028</td>
+<td class="l m pgmdocsource">style=styles.&amp;i_style.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00029</td>
+<td class="l m pgmdocsource">stylesheet=(URL=&quot;css/&amp;i_style..css&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00030</td>
+<td class="l m pgmdocsource">encoding=&quot;&amp;g_rep_encoding.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00031</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00032</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00033</td>
+<td class="l m pgmdocsource">%_reportFooter(o_html=&amp;o_html.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00034</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00035</td>
+<td class="l m pgmdocsource">%if (%sysfunc (libref(_test))=0) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00036</td>
+<td class="l m pgmdocsource">TITLE &quot;&amp;g_nls_reportLibrary_006&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00037</td>
+<td class="l m pgmdocsource">PROC DOCUMENT NAME=_test._library_exp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00038</td>
+<td class="l m pgmdocsource">REPLAY / ACTIVETITLE ACTIVEFOOTN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00039</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00040</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00041</td>
+<td class="l m pgmdocsource">%else %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00042</td>
+<td class="l m pgmdocsource">DATA _null_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00043</td>
+<td class="l m pgmdocsource">PUT &#39; &#39;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00044</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00045</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00046</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00047</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00048</td>
+<td class="l m pgmdocsource">%_closeHtmlPage(&amp;i_style.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00049</td>
+<td class="l m pgmdocsource">ODS HTML4 FILE=&quot;&amp;o_path/_&amp;i_scnid._&amp;i_casid._&amp;i_tstid._library_act.html&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00050</td>
+<td class="l m pgmdocsource">style=styles.&amp;i_style.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00051</td>
+<td class="l m pgmdocsource">stylesheet=(URL=&quot;css/&amp;i_style..css&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00052</td>
+<td class="l m pgmdocsource">encoding=&quot;&amp;g_rep_encoding.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00053</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00054</td>
+<td class="l m pgmdocsource">%if (%sysfunc (libref(_test))=0) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00055</td>
+<td class="l m pgmdocsource">PROC DOCUMENT NAME=_test._library_act;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00056</td>
+<td class="l m pgmdocsource">REPLAY / ACTIVETITLE ACTIVEFOOTN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00057</td>
+<td class="l m pgmdocsource">QUIT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00058</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00059</td>
+<td class="l m pgmdocsource">%else %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00060</td>
+<td class="l m pgmdocsource">DATA _null_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00061</td>
+<td class="l m pgmdocsource">PUT &#39; &#39;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00062</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00063</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00064</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00065</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00066</td>
+<td class="l m pgmdocsource">%_closeHtmlPage(&amp;i_style.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00067</td>
+<td class="l m pgmdocsource">ODS HTML4 FILE=&quot;&amp;o_path/_&amp;i_scnid._&amp;i_casid._&amp;i_tstid._library_rep.html&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00068</td>
+<td class="l m pgmdocsource">style=styles.&amp;i_style.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00069</td>
+<td class="l m pgmdocsource">stylesheet=(URL=&quot;css/&amp;i_style..css&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00070</td>
+<td class="l m pgmdocsource">encoding=&quot;&amp;g_rep_encoding.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00071</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00072</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00073</td>
+<td class="l m pgmdocsource">%if (%sysfunc (exist (_test._library_rep, DATA))) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00074</td>
+<td class="l m pgmdocsource">%local l_LibraryCheck l_CompareCheck l_id l_ExcludeList;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00075</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00076</td>
+<td class="l m pgmdocsource">%*** format results for report ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00077</td>
+<td class="l m pgmdocsource">data WORK._library_rep;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00078</td>
+<td class="l m pgmdocsource">Length resultColumn $400;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00079</td>
+<td class="l m pgmdocsource">set _test._library_rep;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00080</td>
+<td class="l m pgmdocsource">%_render_iconColumn (i_sourceColumn=CompareFailed</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00081</td>
+<td class="l m pgmdocsource">,o_html=&amp;o_html.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00082</td>
+<td class="l m pgmdocsource">,o_targetColumn=resultColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00083</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00084</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00085</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00086</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00087</td>
+<td class="l m pgmdocsource">select    i_LibraryCheck,  i_CompareCheck,  i_id,  i_ExcludeList</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00088</td>
+<td class="l m pgmdocsource">into :l_LibraryCheck, :l_CompareCheck, :l_id, :l_ExcludeList</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00089</td>
+<td class="l m pgmdocsource">from _test._library_rep (obs=1);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00090</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00091</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00092</td>
+<td class="l m pgmdocsource">options missing=&#39; &#39;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00093</td>
+<td class="l m pgmdocsource">TITLE &quot; &quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00094</td>
+<td class="l m pgmdocsource">Title2 h=3 &quot;LibraryCheck=%trim(&amp;l_LibraryCheck.) - CompareCheck=%trim(&amp;l_CompareCheck.)&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00095</td>
+<td class="l m pgmdocsource">%if (&amp;l_id. ne _NONE_) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00096</td>
+<td class="l m pgmdocsource">Title3 h=3 &quot;ID-Columns: %trim (&amp;l_id.)&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00097</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00098</td>
+<td class="l m pgmdocsource">%if (&amp;l_ExcludeList. ne _NONE_) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00099</td>
+<td class="l m pgmdocsource">Title4 h=3 &quot;&amp;g_nls_reportLibrary_002: %trim (&amp;l_ExcludeList.)&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00100</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00101</td>
+<td class="l m pgmdocsource">proc report data=WORK._library_rep nowd missing</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00102</td>
+<td class="l m pgmdocsource">style (column)={vjust=center];</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00103</td>
+<td class="l m pgmdocsource">columns memname</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00104</td>
+<td class="l m pgmdocsource">(&quot;&amp;g_nls_reportLibrary_003&quot; CmpLibname CmpObs CmpNVar)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00105</td>
+<td class="l m pgmdocsource">(&quot;&amp;g_nls_reportLibrary_004&quot; BaseLibname BaseObs BaseNVar)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00106</td>
+<td class="l m pgmdocsource">resultColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00107</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00108</td>
+<td class="l m pgmdocsource">define memname / id style={font_weight=bold foreground=black];</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00109</td>
+<td class="l m pgmdocsource">define resultColumn / &quot;&amp;g_nls_reportLibrary_005&quot; style(column)={background=white];</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00110</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00111</td>
+<td class="l m pgmdocsource">options missing=.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00112</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00113</td>
+<td class="l m pgmdocsource">%else %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00114</td>
+<td class="l m pgmdocsource">DATA _null_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00115</td>
+<td class="l m pgmdocsource">PUT &#39; &#39;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00116</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00117</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00118</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00119</td>
+<td class="l m pgmdocsource">%_closeHtmlPage(&amp;i_style.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00120</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00121</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00122</td>
+<td class="l m pgmdocsource">LIBNAME _test;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00123</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00124</td>
+<td class="l m pgmdocsource">title;footnote;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00125</td>
+<td class="l m pgmdocsource">%MEND _render_assertLibraryRep;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

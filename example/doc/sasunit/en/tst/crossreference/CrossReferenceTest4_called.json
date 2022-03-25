@@ -1,0 +1,42 @@
+{ "name": "CrossReferenceTest4"
+, "children": [
+{ "name": "crossreference_test"
+},
+{ "name": "crossreferencetest1"
+, "children": [
+{ "name": "crossreference_test"
+}
+]
+},
+{ "name": "crossreferencetest2"
+, "children": [
+{ "name": "crossreference_test"
+},
+{ "name": "crossreferencetest1"
+, "children": [
+{ "name": "crossreference_test"
+}
+]
+}
+]
+},
+{ "name": "crossreferencetest3"
+, "children": [
+{ "name": "crossreference_test"
+},
+{ "name": "crossreferencetest2"
+, "children": [
+{ "name": "crossreference_test"
+},
+{ "name": "crossreferencetest1"
+, "children": [
+{ "name": "crossreference_test"
+}
+]
+}
+]
+}
+]
+}
+]
+}

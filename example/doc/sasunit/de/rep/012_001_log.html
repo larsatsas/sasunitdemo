@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS-Log für Testfall 001 in Testszenario 012 (regression.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Fehler&#160;&#160;&#160;: 0 
+<br>
+Warnungen: 0 
+<br>
+</p>
+<pre>
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+47         %regression(data=testdata, x=x, y=y, out=aus, yhat=est, parms=parameters, report=&g_work/report1.rtf)
+NOTE: The macro REGRESSION completed compilation without errors.
+      24 instructions 780 bytes.
+MAUTOLOCDISPLAY(REGRESSION):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\regression.sas kompiliert
+11                                                                                                                       Das SAS System                                                                                               08:02 Monday, July 1, 20
+ 
+MPRINT(REGRESSION):   ods _all_ close;
+MPRINT(REGRESSION):   ods rtf file="C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD5936_HD1PCMS0240_/report1.rtf";
+NOTE: Writing RTF Body file: C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD5936_HD1PCMS0240_/report1.rtf
+MPRINT(REGRESSION):   proc reg data=testdata outest=parameters;
+MPRINT(REGRESSION):   model y = x;
+MPRINT(REGRESSION):   output out=aus(keep=x y est) p=est;
+MPRINT(REGRESSION):   plot y * x;
+MPRINT(REGRESSION):   run;
+ 
+MPRINT(REGRESSION):   quit;
+NOTE: The data set WORK.PARAMETERS has 1 observations and 7 variables.
+NOTE: The data set WORK.AUS has 10 observations and 3 variables.
+NOTE: PROZEDUR REG used (Total process time):
+      real time           0.42 seconds
+      cpu time            0.32 seconds
+ 
+ 
+MPRINT(REGRESSION):   ods rtf close;
+48         %endtestcall;
+NOTE: The macro ENDTESTCALL completed compilation without errors.
+      101 instructions 2836 bytes.
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under
+                               windows\saspgm\sasunit\endtestcall.sas kompiliert
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

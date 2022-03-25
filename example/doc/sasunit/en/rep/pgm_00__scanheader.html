@@ -1,0 +1,1439 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Program Documentation | SASUnit Examples - SASUnit Test Documentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX297"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Program Documentation | SASUnit Examples - SASUnit Test Documentation</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Program Documentation for Program _scanheader.sas</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" scope="col">Detailed&nbsp;description</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Scan a flatfile for DoxyGen tags.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Tags that are reported under &quot;additional information&quot; are kept in seperate datasets</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Version</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Revision: 651 $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Author</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Author: klandwich $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Date</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Date: 2019-04-24 07:26:11 +0200 (Mi, 24 Apr 2019) $</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">See&nbsp;also</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Here you can find the SASUnit documentation, release notes and license information.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/saspgm/sasunit/_scanheader.sas $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Copyright</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For copyright information and terms of usage under the GPL license see included file readme.txt</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">or https://sourceforge.net/p/sasunit/wiki/readme/.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX298"></a>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_name</th>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" colspan="2" scope="colgroup">Parameters</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">MacroName</td>
+<td class="l m pgmdocblinddata">Name of the macro that resides inside flatfile under FilePath</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">FilePath</td>
+<td class="l m pgmdocblinddata">Path and name of a SASautocall macro</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">LibOutDoc</td>
+<td class="l m pgmdocblinddata">Library of data set holding the header portion of the program documentation (optional: Default=WORK)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">DataOutDoc</td>
+<td class="l m pgmdocblinddata">Name of data set holding the header portion of the program documentation (optional: Default=_ProgramHeader)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">LibOutPgm</td>
+<td class="l m pgmdocblinddata">Library of data set holding the source code portion of the program documentation (optional: Default=WORK)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">DataOutPgm</td>
+<td class="l m pgmdocblinddata">Name of data set holding the source code portion of the program documentation (optional: Default=_ProgramCode)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">LibOutToDo</td>
+<td class="l m pgmdocblinddata">Library of data set holding the todo portion of the program documentation (optional: Default=WORK)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">DataOutToDo</td>
+<td class="l m pgmdocblinddata">Name of data set holding the todo portion of the program documentation (optional: Default=_ToDODoc)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">LibOutTest</td>
+<td class="l m pgmdocblinddata">Library of data set holding the test portion of the program documentation (optional: Default=WORK)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">DataOutTest</td>
+<td class="l m pgmdocblinddata">Name of data set holding the test portion of the program documentation (optional: Default=_TestDoc)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">LibOutBug</td>
+<td class="l m pgmdocblinddata">Library of data set holding the bug portion of the program documentation (optional: Default=WORK)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">DataOutBug</td>
+<td class="l m pgmdocblinddata">Name of data set holding the bug portion of the program documentation (optional: Default=_BugDoc)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">LibOutDep</td>
+<td class="l m pgmdocblinddata">Library of data set holding the dep portion of the program documentation (optional: Default=WORK)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">DataOutDep</td>
+<td class="l m pgmdocblinddata">Name of data set holding the dep portion of the program documentation (optional: Default=_DepDoc)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">LibOutGrp</td>
+<td class="l m pgmdocblinddata">Library of data set holding the grp portion of the program documentation (optional: Default=WORK)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">DataOutGrp</td>
+<td class="l m pgmdocblinddata">Name of data set holding the grp portion of the program documentation (optional: Default=_GrpDoc)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_language</td>
+<td class="l m pgmdocblinddata">Lanuage in which the documentation should be created. (optional: Default=EN)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX299"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle2">Source Code of Program _scanheader.sas</td>
+</tr>
+<tr>
+<td class="c systemtitle3" style=" font-size: 10pt;"><a href="src/00/_scanheader.sas">[Download]</a>
+</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Data Set WORK._PGMSRC_VIEW">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">ObsNum</th>
+<th class="l blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m pgmdocsource">00001</td>
+<td class="l m pgmdocsource">%MACRO _scanHeader (MacroName   =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00002</td>
+<td class="l m pgmdocsource">,FilePath    =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00003</td>
+<td class="l m pgmdocsource">,LinkName    =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00004</td>
+<td class="l m pgmdocsource">,DisplayName =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00005</td>
+<td class="l m pgmdocsource">,LibOutDoc   = WORK</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00006</td>
+<td class="l m pgmdocsource">,DataOutDoc  = _ProgramHeader</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00007</td>
+<td class="l m pgmdocsource">,LibOutPgm   = WORK</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00008</td>
+<td class="l m pgmdocsource">,DataOutPgm  = _ProgramCode</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00009</td>
+<td class="l m pgmdocsource">,LibOutToDo  = WORK</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00010</td>
+<td class="l m pgmdocsource">,DataOutToDo = _ToDoDoc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00011</td>
+<td class="l m pgmdocsource">,LibOutTest  = WORK</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00012</td>
+<td class="l m pgmdocsource">,DataOutTest = _TestDoc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00013</td>
+<td class="l m pgmdocsource">,LibOutBug   = WORK</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00014</td>
+<td class="l m pgmdocsource">,DataOutBug  = _BugDoc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00015</td>
+<td class="l m pgmdocsource">,LibOutDep   = WORK</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00016</td>
+<td class="l m pgmdocsource">,DataOutDep  = _DepDoc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00017</td>
+<td class="l m pgmdocsource">,LibOutGrp   = WORK</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00018</td>
+<td class="l m pgmdocsource">,DataOutGrp  = _GrpDoc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00019</td>
+<td class="l m pgmdocsource">,i_language  = EN</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00020</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00021</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00022</td>
+<td class="l m pgmdocsource">%LOCAL l_sHeaderStartTag l_sHeaderEndTag;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00023</td>
+<td class="l m pgmdocsource">%LET l_sHeaderStartTag       = %str(/)%str(** );</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00024</td>
+<td class="l m pgmdocsource">%LET l_sHeaderEndTag         = %str(*)%str(/);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00025</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00026</td>
+<td class="l m pgmdocsource">Data WORK.__programHeader (keep=macroname displayname linkname tag name description groupname grouptext);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00027</td>
+<td class="l m pgmdocsource">Length macroname displayname linkname $200</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00028</td>
+<td class="l m pgmdocsource">tag $20</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00029</td>
+<td class="l m pgmdocsource">name $100</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00030</td>
+<td class="l m pgmdocsource">description $1000</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00031</td>
+<td class="l m pgmdocsource">headerStmtOpen tagStmtOpen emptyLines defGroupOpen 8</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00032</td>
+<td class="l m pgmdocsource">l_zeile $32000;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00033</td>
+<td class="l m pgmdocsource">Retain headerStmtOpen tagStmtOpen emptyLines defGroupOpen 0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00034</td>
+<td class="l m pgmdocsource">tag name</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00035</td>
+<td class="l m pgmdocsource">patternAuthor     patternBrief   patternCopyright patternDate  patternDefGroup patternDetails</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00036</td>
+<td class="l m pgmdocsource">patternFile       patternInGroup patternLink      patternParam patternReturn   patternRet_Val</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00037</td>
+<td class="l m pgmdocsource">patternSa         patternTodo    patternTest      patternBug   patternRemark   patternVersion</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00038</td>
+<td class="l m pgmdocsource">patternDeprecated</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00039</td>
+<td class="l m pgmdocsource">patternTag patternComment</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00040</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00041</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00042</td>
+<td class="l m pgmdocsource">if (_N_ = 1) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00043</td>
+<td class="l m pgmdocsource">*** Compile Perl RegEx with PRXPARSE;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00044</td>
+<td class="l m pgmdocsource">patternAuthor     = PRXPARSE(&quot;/\\author/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00045</td>
+<td class="l m pgmdocsource">patternBrief      = PRXPARSE(&quot;/\\brief/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00046</td>
+<td class="l m pgmdocsource">patternCopyright  = PRXPARSE(&quot;/\\copyright/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00047</td>
+<td class="l m pgmdocsource">patternDate       = PRXPARSE(&quot;/\\date/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00048</td>
+<td class="l m pgmdocsource">patternDefGroup   = PRXPARSE(&quot;/\\defgroup/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00049</td>
+<td class="l m pgmdocsource">patternDetails    = PRXPARSE(&quot;/\\details/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00050</td>
+<td class="l m pgmdocsource">patternFile       = PRXPARSE(&quot;/\\file/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00051</td>
+<td class="l m pgmdocsource">patternInGroup    = PRXPARSE(&quot;/\\ingroup/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00052</td>
+<td class="l m pgmdocsource">patternLink       = PRXPARSE(&quot;/\\link/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00053</td>
+<td class="l m pgmdocsource">patternParam      = PRXPARSE(&quot;/\\param/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00054</td>
+<td class="l m pgmdocsource">patternReturn     = PRXPARSE(&quot;/\\return/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00055</td>
+<td class="l m pgmdocsource">patternRet_Val    = PRXPARSE(&quot;/\\retval/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00056</td>
+<td class="l m pgmdocsource">patternSa         = PRXPARSE(&quot;/\\sa/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00057</td>
+<td class="l m pgmdocsource">patternTodo       = PRXPARSE(&quot;/\\todo/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00058</td>
+<td class="l m pgmdocsource">patternTest       = PRXPARSE(&quot;/\\test/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00059</td>
+<td class="l m pgmdocsource">patternBug        = PRXPARSE(&quot;/\\bug/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00060</td>
+<td class="l m pgmdocsource">patternRemark     = PRXPARSE(&quot;/\\remark/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00061</td>
+<td class="l m pgmdocsource">patternVersion    = PRXPARSE(&quot;/\\version/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00062</td>
+<td class="l m pgmdocsource">patternDeprecated = PRXPARSE(&quot;/\\deprecated/i&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00063</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00064</td>
+<td class="l m pgmdocsource">pattern        = &quot;/\\author|\\brief|\\copyright|\\date|\\defgroup|\\details|\\file|\\ingroup|\\link|\\param|\\return|\\retval|\\sa|\\todo|\\test|\\bug|\\version|\\remark|\\deprecated/i&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00065</td>
+<td class="l m pgmdocsource">patternTag     = PRXPARSE(pattern);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00066</td>
+<td class="l m pgmdocsource">patternComment = PRXPARSE(&quot;/\*\//&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00067</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00068</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00069</td>
+<td class="l m pgmdocsource">***Input File;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00070</td>
+<td class="l m pgmdocsource">Infile &quot;&amp;FilePath.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00071</td>
+<td class="l m pgmdocsource">Input;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00072</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00073</td>
+<td class="l m pgmdocsource">*** MacroName for lists (todo, test, bug) ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00074</td>
+<td class="l m pgmdocsource">macroname   = &quot;&amp;MacroName.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00075</td>
+<td class="l m pgmdocsource">linkname    = &quot;&amp;LinkName.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00076</td>
+<td class="l m pgmdocsource">displayname = &quot;&amp;DisplayName.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00077</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00078</td>
+<td class="l m pgmdocsource">l_zeile     = compress (compbl (left (_INFILE_)), &quot;0D&quot;x);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00079</td>
+<td class="l m pgmdocsource">if (substr (l_zeile,1,1) = &quot;@&quot;) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00080</td>
+<td class="l m pgmdocsource">substr (l_zeile ,1,1) = &quot;\&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00081</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00082</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00083</td>
+<td class="l m pgmdocsource">***Leerzeile;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00084</td>
+<td class="l m pgmdocsource">if (compress(l_zeile) = &quot;&quot;) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00085</td>
+<td class="l m pgmdocsource">emptyLines = emptyLines+1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00086</td>
+<td class="l m pgmdocsource">if (emptyLines = 2 and tag ne &quot;\brief&quot;) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00087</td>
+<td class="l m pgmdocsource">***reset variables;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00088</td>
+<td class="l m pgmdocsource">tag         = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00089</td>
+<td class="l m pgmdocsource">name        = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00090</td>
+<td class="l m pgmdocsource">description = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00091</td>
+<td class="l m pgmdocsource">tagStmtOpen = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00092</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00093</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00094</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00095</td>
+<td class="l m pgmdocsource">***Stop scanning if sHeaderStartEnd is found;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00096</td>
+<td class="l m pgmdocsource">If (index(_INFILE_,  &quot;&amp;l_sHeaderEndTag&quot;)&gt;0) Then DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00097</td>
+<td class="l m pgmdocsource">HeaderStmtOpen = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00098</td>
+<td class="l m pgmdocsource">defGroupOpen   = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00099</td>
+<td class="l m pgmdocsource">End;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00100</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00101</td>
+<td class="l m pgmdocsource">***Check for tag with more than one line;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00102</td>
+<td class="l m pgmdocsource">If((tagStmtOpen = 1 AND PRXMATCH(patternTag, l_zeile) = 1) OR PRXMATCH(patternComment, l_zeile) = 1) Then Do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00103</td>
+<td class="l m pgmdocsource">tagStmtOpen = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00104</td>
+<td class="l m pgmdocsource">if (PRXMATCH(patternComment, l_zeile) = 1) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00105</td>
+<td class="l m pgmdocsource">***reset variables;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00106</td>
+<td class="l m pgmdocsource">tag         = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00107</td>
+<td class="l m pgmdocsource">name        = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00108</td>
+<td class="l m pgmdocsource">description = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00109</td>
+<td class="l m pgmdocsource">emptyLines  = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00110</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00111</td>
+<td class="l m pgmdocsource">End;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00112</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00113</td>
+<td class="l m pgmdocsource">***Start Scanning if sHeaderStartTag is found;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00114</td>
+<td class="l m pgmdocsource">If (index(l_zeile, &quot;&amp;l_sHeaderStartTag.&quot;)&gt;0) Then Do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00115</td>
+<td class="l m pgmdocsource">headerStmtOpen = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00116</td>
+<td class="l m pgmdocsource">tagPos = Index(l_zeile, &quot;&amp;l_sHeaderStartTag&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00117</td>
+<td class="l m pgmdocsource">l_zeile = Strip(substr(l_zeile, tagPos + length(&quot;&amp;l_sHeaderStartTag&quot;)));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00118</td>
+<td class="l m pgmdocsource">End;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00119</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00120</td>
+<td class="l m pgmdocsource">If (headerStmtOpen = 1) Then Do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00121</td>
+<td class="l m pgmdocsource">***Only Tag on single line: \file;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00122</td>
+<td class="l m pgmdocsource">If (PRXMATCH(patternFile, l_zeile) = 1) Then Do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00123</td>
+<td class="l m pgmdocsource">***reset variables;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00124</td>
+<td class="l m pgmdocsource">tag         = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00125</td>
+<td class="l m pgmdocsource">name        = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00126</td>
+<td class="l m pgmdocsource">description = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00127</td>
+<td class="l m pgmdocsource">blankPos    = index(l_zeile, &#39; &#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00128</td>
+<td class="l m pgmdocsource">tag         = substr(l_zeile, 1, blankPos);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00129</td>
+<td class="l m pgmdocsource">name        = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00130</td>
+<td class="l m pgmdocsource">description = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00131</td>
+<td class="l m pgmdocsource">End;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00132</td>
+<td class="l m pgmdocsource">***Complex sequence of tags around doxygen groups ;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00133</td>
+<td class="l m pgmdocsource">Else If (PRXMATCH(patternDefGroup,   l_zeile) = 1) Then Do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00134</td>
+<td class="l m pgmdocsource">***reset variables;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00135</td>
+<td class="l m pgmdocsource">tag          = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00136</td>
+<td class="l m pgmdocsource">name         = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00137</td>
+<td class="l m pgmdocsource">description  = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00138</td>
+<td class="l m pgmdocsource">tagStmtOpen  = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00139</td>
+<td class="l m pgmdocsource">defGroupOpen = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00140</td>
+<td class="l m pgmdocsource">blankPos     = index(l_zeile, &#39; &#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00141</td>
+<td class="l m pgmdocsource">tag          = substr(l_zeile, 1, blankPos);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00142</td>
+<td class="l m pgmdocsource">l_zeile      = substr(l_zeile, blankPos+1);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00143</td>
+<td class="l m pgmdocsource">description  = strip(l_zeile);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00144</td>
+<td class="l m pgmdocsource">groupname    = scan (description, 1);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00145</td>
+<td class="l m pgmdocsource">blankPos     = index(description, &#39; &#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00146</td>
+<td class="l m pgmdocsource">grouptext    = substr(description, blankPos+1);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00147</td>
+<td class="l m pgmdocsource">End;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00148</td>
+<td class="l m pgmdocsource">***Complex tags with more than one line, 2 columns;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00149</td>
+<td class="l m pgmdocsource">Else If (PRXMATCH(patternBrief, l_zeile)      = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00150</td>
+<td class="l m pgmdocsource">PRXMATCH(patternCopyright, l_zeile)  = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00151</td>
+<td class="l m pgmdocsource">PRXMATCH(patternDetails, l_zeile)    = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00152</td>
+<td class="l m pgmdocsource">PRXMATCH(patternSa, l_zeile)         = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00153</td>
+<td class="l m pgmdocsource">PRXMATCH(patternTodo, l_zeile)       = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00154</td>
+<td class="l m pgmdocsource">PRXMATCH(patternTest, l_zeile)       = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00155</td>
+<td class="l m pgmdocsource">PRXMATCH(patternBug, l_zeile)        = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00156</td>
+<td class="l m pgmdocsource">PRXMATCH(patternReturn, l_zeile)     = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00157</td>
+<td class="l m pgmdocsource">PRXMATCH(patternRemark, l_zeile)     = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00158</td>
+<td class="l m pgmdocsource">PRXMATCH(patternVersion, l_zeile)    = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00159</td>
+<td class="l m pgmdocsource">PRXMATCH(patternInGroup, l_zeile)    = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00160</td>
+<td class="l m pgmdocsource">PRXMATCH(patternAuthor, l_zeile)     = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00161</td>
+<td class="l m pgmdocsource">PRXMATCH(patternDate, l_zeile)       = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00162</td>
+<td class="l m pgmdocsource">PRXMATCH(patternDeprecated, l_zeile) = 1) Then Do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00163</td>
+<td class="l m pgmdocsource">***reset variables;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00164</td>
+<td class="l m pgmdocsource">tag         = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00165</td>
+<td class="l m pgmdocsource">name        = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00166</td>
+<td class="l m pgmdocsource">description = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00167</td>
+<td class="l m pgmdocsource">tagStmtOpen = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00168</td>
+<td class="l m pgmdocsource">blankPos = Index(l_zeile, &#39; &#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00169</td>
+<td class="l m pgmdocsource">if (defGroupOpen</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00170</td>
+<td class="l m pgmdocsource">AND not (PRXMATCH(patternBrief, l_zeile) = 1</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00171</td>
+<td class="l m pgmdocsource">OR PRXMATCH(patternInGroup, l_zeile) = 1</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00172</td>
+<td class="l m pgmdocsource">OR PRXMATCH(patternDefGroup, l_zeile) = 1</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00173</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00174</td>
+<td class="l m pgmdocsource">) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00175</td>
+<td class="l m pgmdocsource">defGroupOpen = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00176</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00177</td>
+<td class="l m pgmdocsource">if (defGroupOpen = 1 AND PRXMATCH(patternBrief, l_zeile) = 1) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00178</td>
+<td class="l m pgmdocsource">tag = &quot;\groupdesc&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00179</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00180</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00181</td>
+<td class="l m pgmdocsource">tag = substr(l_zeile, 1, blankPos);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00182</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00183</td>
+<td class="l m pgmdocsource">l_zeile = Substr(l_zeile, blankPos+1);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00184</td>
+<td class="l m pgmdocsource">description = Strip(l_zeile);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00185</td>
+<td class="l m pgmdocsource">End;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00186</td>
+<td class="l m pgmdocsource">***Complex tags with name and more than one line, 3 columns;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00187</td>
+<td class="l m pgmdocsource">Else If (PRXMATCH(patternParam,   l_zeile)   = 1 OR</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00188</td>
+<td class="l m pgmdocsource">PRXMATCH(patternRet_val, l_zeile)   = 1</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00189</td>
+<td class="l m pgmdocsource">)  Then Do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00190</td>
+<td class="l m pgmdocsource">***reset variables;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00191</td>
+<td class="l m pgmdocsource">tag         = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00192</td>
+<td class="l m pgmdocsource">name        = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00193</td>
+<td class="l m pgmdocsource">description = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00194</td>
+<td class="l m pgmdocsource">tagStmtOpen = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00195</td>
+<td class="l m pgmdocsource">blankPos = Index(l_zeile, &#39; &#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00196</td>
+<td class="l m pgmdocsource">tag = substr(l_zeile, 1, blankPos);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00197</td>
+<td class="l m pgmdocsource">l_zeile = Substr(l_zeile, blankPos+1);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00198</td>
+<td class="l m pgmdocsource">blankPos = Index(l_zeile, &#39; &#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00199</td>
+<td class="l m pgmdocsource">name = Substr(l_zeile, 1, blankPos);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00200</td>
+<td class="l m pgmdocsource">l_zeile = Substr(l_zeile, blankPos+1);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00201</td>
+<td class="l m pgmdocsource">description = Strip(l_zeile);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00202</td>
+<td class="l m pgmdocsource">End;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00203</td>
+<td class="l m pgmdocsource">Else If (tagStmtOpen) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00204</td>
+<td class="l m pgmdocsource">description = Strip(l_zeile);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00205</td>
+<td class="l m pgmdocsource">End;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00206</td>
+<td class="l m pgmdocsource">End;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00207</td>
+<td class="l m pgmdocsource">Run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00208</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00209</td>
+<td class="l m pgmdocsource">data  WORK.__programHeader;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00210</td>
+<td class="l m pgmdocsource">length new_description $3200;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00211</td>
+<td class="l m pgmdocsource">set WORK.__programHeader (where=(not missing(tag)));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00212</td>
+<td class="l m pgmdocsource">obs_sort = _N_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00213</td>
+<td class="l m pgmdocsource">tag_sort = put (tag, $TagSort.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00214</td>
+<td class="l m pgmdocsource">dummy    = &quot;   &quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00215</td>
+<td class="l m pgmdocsource">new_description = tranwrd (description, &quot;°[&quot;, &quot;°[&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00216</td>
+<td class="l m pgmdocsource">new_description = tranwrd (new_description, &quot;]&quot;, &quot;]&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00217</td>
+<td class="l m pgmdocsource">new_description = tranwrd (new_description, &quot;&lt;b&gt;&quot;, &quot;°[style [font_weight=bold]&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00218</td>
+<td class="l m pgmdocsource">new_description = tranwrd (new_description, &quot;&lt;/b&gt;&quot;, &quot;]&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00219</td>
+<td class="l m pgmdocsource">new_description = tranwrd (new_description, &quot;&lt;em&gt;&quot;, &quot;°[style [font_style=italic]&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00220</td>
+<td class="l m pgmdocsource">new_description = tranwrd (new_description, &quot;&lt;/em&gt;&quot;, &quot;]&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00221</td>
+<td class="l m pgmdocsource">new_description = tranwrd (new_description, &quot;\n&quot;, &quot;<br/>
+&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00222</td>
+<td class="l m pgmdocsource">new_description = tranwrd (new_description, &quot;\<br/>
+&quot;, &quot;\n&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00223</td>
+<td class="l m pgmdocsource">new_description = tranwrd (new_description, &quot;&lt;br/&gt;&quot;, &quot;<br/>
+&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00224</td>
+<td class="l m pgmdocsource">new_description = tranwrd (new_description, &quot;&lt;br&gt;&quot;, &quot;<br/>
+&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00225</td>
+<td class="l m pgmdocsource">new_description = tranwrd (new_description, &quot;~ &quot;, &quot;- &quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00226</td>
+<td class="l m pgmdocsource">new_description = tranwrd (new_description, &quot;~&quot;, &quot;&nbsp;&nbsp;&nbsp;&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00227</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00228</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00229</td>
+<td class="l m pgmdocsource">data work._GroupInfo;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00230</td>
+<td class="l m pgmdocsource">length parent child childtext childdesc childpath $256 Type $8 NewGroup 8;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00231</td>
+<td class="l m pgmdocsource">set WORK.__programHeader (where=(tag in (&quot;\defgroup&quot;, &quot;\ingroup&quot;, &quot;\groupdesc&quot;) AND not missing (new_description)));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00232</td>
+<td class="l m pgmdocsource">retain parent child &quot;&amp;macroname&quot; childtext childdesc &quot;&quot; childpath &quot;&amp;FilePath.&quot; Type &quot;Macro&quot; NewGroup 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00233</td>
+<td class="l m pgmdocsource">if (tag = &quot;\defgroup&quot;) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00234</td>
+<td class="l m pgmdocsource">if (newGroup = 1) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00235</td>
+<td class="l m pgmdocsource">output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00236</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00237</td>
+<td class="l m pgmdocsource">child     = groupname;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00238</td>
+<td class="l m pgmdocsource">childtext = grouptext;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00239</td>
+<td class="l m pgmdocsource">newGroup  = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00240</td>
+<td class="l m pgmdocsource">parent    = child;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00241</td>
+<td class="l m pgmdocsource">Type      = &quot;Group&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00242</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00243</td>
+<td class="l m pgmdocsource">if (tag = &quot;\groupdesc&quot;) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00244</td>
+<td class="l m pgmdocsource">childdesc = new_description;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00245</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00246</td>
+<td class="l m pgmdocsource">if (tag = &quot;\ingroup&quot;) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00247</td>
+<td class="l m pgmdocsource">parent = new_description;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00248</td>
+<td class="l m pgmdocsource">if (newGroup = 1) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00249</td>
+<td class="l m pgmdocsource">output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00250</td>
+<td class="l m pgmdocsource">newGroup = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00251</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00252</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00253</td>
+<td class="l m pgmdocsource">child     = macroname;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00254</td>
+<td class="l m pgmdocsource">childtext = &quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00255</td>
+<td class="l m pgmdocsource">Type      = &quot;Macro&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00256</td>
+<td class="l m pgmdocsource">output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00257</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00258</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00259</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00260</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00261</td>
+<td class="l m pgmdocsource">proc sort data=WORK.__programHeader;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00262</td>
+<td class="l m pgmdocsource">by tag_sort obs_sort;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00263</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00264</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00265</td>
+<td class="l m pgmdocsource">proc append base=&amp;LibOutTodo..&amp;DataOutTodo. data=WORK.__programHeader (where=(tag=&quot;\todo&quot;));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00266</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00267</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00268</td>
+<td class="l m pgmdocsource">proc append base=&amp;LibOutTest..&amp;DataOutTest. data=WORK.__programHeader (where=(tag=&quot;\test&quot;));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00269</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00270</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00271</td>
+<td class="l m pgmdocsource">proc append base=&amp;LibOutBug..&amp;DataOutBug.   data=WORK.__programHeader (where=(tag=&quot;\bug&quot;));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00272</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00273</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00274</td>
+<td class="l m pgmdocsource">proc append base=&amp;LibOutDep..&amp;DataOutDep.   data=WORK.__programHeader (where=(tag=&quot;\deprecated&quot;));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00275</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00276</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00277</td>
+<td class="l m pgmdocsource">proc append base=&amp;LibOutGrp..&amp;DataOutGrp.   data=WORK._GroupInfo;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00278</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00279</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00280</td>
+<td class="l m pgmdocsource">data &amp;LibOutDoc..&amp;DataOutDoc.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00281</td>
+<td class="l m pgmdocsource">set WORK.__programHeader (where=(tag_sort ne &quot;___&quot;)  keep=macroname displayname linkname tag tag_sort name description new_description);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00282</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00283</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00284</td>
+<td class="l m pgmdocsource">proc datasets lib=work nolist;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00285</td>
+<td class="l m pgmdocsource">delete __programHeader _GroupInfo;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00286</td>
+<td class="l m pgmdocsource">run;quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00287</td>
+<td class="l m pgmdocsource">%MEND _scanHeader;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

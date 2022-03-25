@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS log for test case 005 in test scenario 008 (generate.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Errors&#160;&#160;: 2 
+==>
+<a href="#error001">1</a>
+<a href="#error002">2</a>
+<br>
+Warnings: 2 
+==>
+<a href="#warning001">1</a>
+<a href="#warning002">2</a>
+<br>
+</p>
+<pre>
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+114        proc datasets lib=test1 nolist kill;
+115        quit;
+ 
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+116        proc datasets lib=test2 nolist kill;
+117        quit;
+ 
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MAUTOLOCDISPLAY(GENERATE):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\generate.sas
+118        %generate(data=sashelp.class, by=sexXXX, out=test1.class)
+MPRINT(GENERATE):   data;
+MPRINT(GENERATE):   run;
+ 
+NOTE: The data set WORK.DATA9 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   data;
+MPRINT(GENERATE):   run;
+ 
+NOTE: The data set WORK.DATA10 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+52                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+ 
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   proc sort data=sashelp.class out=WORK.DATA9;
+MPRINT(GENERATE):   by sexXXX;
+<span style="color:#FF0000"><a name="error001">ERROR: Variable SEXXXX not found.</a></span>
+MPRINT(GENERATE):   run;
+ 
+NOTE: The SAS System stopped processing this step because of errors.
+<span style="color:#FF8040"><a name="warning001">WARNING: The data set WORK.DATA9 may be incomplete.  When this step was stopped there were 0 observations and 0 variables.</a></span>
+<span style="color:#FF8040"><a name="warning002">WARNING: Data set WORK.DATA9 was not replaced because this step was stopped.</a></span>
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+<span style="color:#FF0000"><a name="error002">ERROR: Macro Generate: data= or by= specified incorrectly</a></span>
+ 
+ 
+MPRINT(GENERATE):   proc datasets lib=work nolist;
+MPRINT(GENERATE):   delete DATA9 DATA10;
+MPRINT(GENERATE):   quit;
+ 
+NOTE: Deleting WORK.DATA9 (memtype=DATA).
+NOTE: Deleting WORK.DATA10 (memtype=DATA).
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+119        %endTestcall()
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

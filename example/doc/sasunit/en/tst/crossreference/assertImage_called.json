@@ -1,0 +1,8 @@
+{ "name": "assertImage"
+, "children": [
+{ "name": "assertimage_example_test"
+},
+{ "name": "comparison_test"
+}
+]
+}

@@ -1,0 +1,611 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Program Documentation | SASUnit Examples - SASUnit Test Documentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX6"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Program Documentation | SASUnit Examples - SASUnit Test Documentation</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Program Documentation for Program _asserts.sas</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" scope="col">Detailed&nbsp;description</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Called by assert macros, fills table tst</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Version</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Revision: 635 $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Author</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Author: klandwich $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Date</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Date: 2019-02-28 16:50:25 +0100 (Do, 28 Feb 2019) $</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">See&nbsp;also</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Here you can find the SASUnit documentation, release notes and license information.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/saspgm/sasunit/_asserts.sas $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Copyright</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For copyright information and terms of usage under the GPL license see included file readme.txt</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">or https://sourceforge.net/p/sasunit/wiki/readme/.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX7"></a>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_name</th>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" colspan="2" scope="colgroup">Parameters</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_type</td>
+<td class="l m pgmdocblinddata">type of check, name of the calling assert macro</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_expected</td>
+<td class="l m pgmdocblinddata">expected value</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_actual</td>
+<td class="l m pgmdocblinddata">actual value</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_desc</td>
+<td class="l m pgmdocblinddata">description of the check</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_result</td>
+<td class="l m pgmdocblinddata">result 0 .. OK, 1 .. manual check, 2 .. not OK</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_errMsg</td>
+<td class="l m pgmdocblinddata">optional: custom error message describinng the reason of the failure. Used to show up in jenkins output.<br/>
+</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">Message will be prefixed by &#39;&lt;assertType&gt; failed: &#39;.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">r_casid</td>
+<td class="l m pgmdocblinddata">optional: return number of current test case</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">r_tstid</td>
+<td class="l m pgmdocblinddata">optional: return number of this check within test case</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX8"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle2">Source Code of Program _asserts.sas</td>
+</tr>
+<tr>
+<td class="c systemtitle3" style=" font-size: 10pt;"><a href="src/00/_asserts.sas">[Download]</a>
+</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Data Set WORK._PGMSRC_VIEW">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">ObsNum</th>
+<th class="l blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m pgmdocsource">00001</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00002</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00003</td>
+<td class="l m pgmdocsource">%MACRO _asserts (i_type     =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00004</td>
+<td class="l m pgmdocsource">,i_expected =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00005</td>
+<td class="l m pgmdocsource">,i_actual   =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00006</td>
+<td class="l m pgmdocsource">,i_desc     =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00007</td>
+<td class="l m pgmdocsource">,i_result   =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00008</td>
+<td class="l m pgmdocsource">,i_errMsg   = _NONE_</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00009</td>
+<td class="l m pgmdocsource">,r_casid    = _NONE_</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00010</td>
+<td class="l m pgmdocsource">,r_tstid    = _NONE_</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00011</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00012</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00013</td>
+<td class="l m pgmdocsource">%LOCAL l_errMsg;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00014</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00015</td>
+<td class="l m pgmdocsource">%IF (&amp;r_casid=_NONE_) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00016</td>
+<td class="l m pgmdocsource">%LOCAL l_casid;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00017</td>
+<td class="l m pgmdocsource">%LET r_casid=l_casid;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00018</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00019</td>
+<td class="l m pgmdocsource">%IF (&amp;r_tstid=_NONE_) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00020</td>
+<td class="l m pgmdocsource">%LOCAL l_tstid;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00021</td>
+<td class="l m pgmdocsource">%LET r_tstid=l_tstid;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00022</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00023</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00024</td>
+<td class="l m pgmdocsource">%IF (&amp;i_result. eq 0) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00025</td>
+<td class="l m pgmdocsource">%LET l_errMsg =&amp;i_type.: assert passed.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00026</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00027</td>
+<td class="l m pgmdocsource">%ELSE %IF (&amp;i_result. eq 1) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00028</td>
+<td class="l m pgmdocsource">%IF (%nrbquote(&amp;i_errMsg.) eq _NONE_) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00029</td>
+<td class="l m pgmdocsource">%LET l_errMsg =&amp;i_type.: assert passed, but manual check necessary.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00030</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00031</td>
+<td class="l m pgmdocsource">%ELSE %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00032</td>
+<td class="l m pgmdocsource">%LET l_errMsg =%bquote(&amp;i_type. manual: &amp;i_errMsg.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00033</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00034</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00035</td>
+<td class="l m pgmdocsource">%ELSE %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00036</td>
+<td class="l m pgmdocsource">%IF (%nrbquote(&amp;i_errMsg.) eq _NONE_) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00037</td>
+<td class="l m pgmdocsource">%LET l_errMsg =%bquote(&amp;i_type. failed: expected value equals &amp;i_expected., but actual value equals &amp;i_actual.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00038</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00039</td>
+<td class="l m pgmdocsource">%ELSE %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00040</td>
+<td class="l m pgmdocsource">%LET l_errMsg =%bquote(&amp;i_type. failed: &amp;i_errMsg.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00041</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00042</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00043</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00044</td>
+<td class="l m pgmdocsource">%IF (&amp;g_verbose.) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00045</td>
+<td class="l m pgmdocsource">%PUT --------------------------------------------------------------------------------;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00046</td>
+<td class="l m pgmdocsource">%IF (&amp;i_result. NE 2) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00047</td>
+<td class="l m pgmdocsource">%PUT &amp;G_NOTE.(SASUNIT): &amp;l_errMsg.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00048</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00049</td>
+<td class="l m pgmdocsource">%ELSE %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00050</td>
+<td class="l m pgmdocsource">%PUT &amp;G_ERROR.(SASUNIT): &amp;l_errMsg.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00051</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00052</td>
+<td class="l m pgmdocsource">%PUT --------------------------------------------------------------------------------;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00053</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00054</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00055</td>
+<td class="l m pgmdocsource">PROC SQL NOPRINT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00056</td>
+<td class="l m pgmdocsource">/* determine number of test case */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00057</td>
+<td class="l m pgmdocsource">SELECT max(cas_id) INTO :&amp;r_casid FROM target.cas WHERE cas_scnid=&amp;g_scnid;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00058</td>
+<td class="l m pgmdocsource">%IF &amp;&amp;&amp;r_casid=. %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00059</td>
+<td class="l m pgmdocsource">%PUT --------------------------------------------------------------------------------;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00060</td>
+<td class="l m pgmdocsource">%PUT &amp;g_error.(SASUNIT): _asserts: Error retrieving testcase id;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00061</td>
+<td class="l m pgmdocsource">%PUT --------------------------------------------------------------------------------;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00062</td>
+<td class="l m pgmdocsource">%RETURN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00063</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00064</td>
+<td class="l m pgmdocsource">/* generate a new check number */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00065</td>
+<td class="l m pgmdocsource">SELECT max(tst_id) INTO :&amp;r_tstid</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00066</td>
+<td class="l m pgmdocsource">FROM target.tst</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00067</td>
+<td class="l m pgmdocsource">WHERE</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00068</td>
+<td class="l m pgmdocsource">tst_scnid = &amp;g_scnid AND</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00069</td>
+<td class="l m pgmdocsource">tst_casid = &amp;&amp;&amp;r_casid</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00070</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00071</td>
+<td class="l m pgmdocsource">%IF &amp;&amp;&amp;r_tstid=. %THEN %LET &amp;r_tstid=1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00072</td>
+<td class="l m pgmdocsource">%ELSE                  %LET &amp;r_tstid=%eval(&amp;&amp;&amp;r_tstid+1);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00073</td>
+<td class="l m pgmdocsource">INSERT INTO target.tst VALUES (</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00074</td>
+<td class="l m pgmdocsource">&amp;g_scnid</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00075</td>
+<td class="l m pgmdocsource">,&amp;&amp;&amp;r_casid</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00076</td>
+<td class="l m pgmdocsource">,&amp;&amp;&amp;r_tstid</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00077</td>
+<td class="l m pgmdocsource">,&quot;&amp;i_type&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00078</td>
+<td class="l m pgmdocsource">,%sysfunc(quote(&amp;i_desc%str( )))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00079</td>
+<td class="l m pgmdocsource">,%sysfunc(quote(&amp;i_expected%str( )))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00080</td>
+<td class="l m pgmdocsource">,%sysfunc(quote(&amp;i_actual%str( )))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00081</td>
+<td class="l m pgmdocsource">,&amp;i_result</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00082</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_errMsg&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00083</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00084</td>
+<td class="l m pgmdocsource">QUIT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00085</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00086</td>
+<td class="l m pgmdocsource">%PUT ========================== Check &amp;&amp;&amp;r_casid...&amp;&amp;&amp;r_tstid (&amp;i_type) =====================================;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00087</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00088</td>
+<td class="l m pgmdocsource">%LET &amp;r_casid = %sysfunc(putn(&amp;&amp;&amp;r_casid,z3.));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00089</td>
+<td class="l m pgmdocsource">%LET &amp;r_tstid = %sysfunc(putn(&amp;&amp;&amp;r_tstid,z3.));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00090</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00091</td>
+<td class="l m pgmdocsource">%MEND _asserts;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

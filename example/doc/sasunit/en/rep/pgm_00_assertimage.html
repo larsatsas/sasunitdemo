@@ -1,0 +1,967 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Program Documentation | SASUnit Examples - SASUnit Test Documentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX329"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Program Documentation | SASUnit Examples - SASUnit Test Documentation</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Program Documentation for Program assertImage.sas</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" scope="col">Detailed&nbsp;description</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This assert compares images on equality. It&#39;s an implementation to show how to use assertExternal for a specific purpose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">As compare tool imageMagick is used. Make sure to use version 6.9 or above since before the compare method always returned 0.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Beginning with ImageMagick 6.9 the following return codes are used:</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">0: images match</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">1: images different</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Please refer to &lt;A href=&quot;https://sourceforge.net/p/sasunit/wiki/User&#39;s%20Guide/&quot; target=&quot;_blank&quot;&gt;SASUnit User&#39;s Guide&lt;/A&gt;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Version</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Revision: 674 $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Author</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Author: klandwich $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Date</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Date: 2019-05-22 12:43:14 +0200 (Mi, 22 Mai 2019) $</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">See&nbsp;also</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Here you can find the SASUnit documentation, release notes and license information.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/saspgm/sasunit/assertimage.sas $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Copyright</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For copyright information and terms of usage under the GPL license see included file readme.txt</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">or https://sourceforge.net/p/sasunit/wiki/readme/.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX330"></a>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_name</th>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" colspan="2" scope="colgroup">Parameters</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_script</td>
+<td class="l m pgmdocblinddata">Path of shell script</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_expected</td>
+<td class="l m pgmdocblinddata">Path of first image file (expected)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_actual</td>
+<td class="l m pgmdocblinddata">Path of second image file (actual)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_expected_shell_rc</td>
+<td class="l m pgmdocblinddata">Optional parameter: Expected return value of called script i_script (default = 0)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">0 : image match</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">&gt;0: images do not match</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_modifier</td>
+<td class="l m pgmdocblinddata">Optional parameter: modifiers for the compare (default = &quot;-metric RMSE&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_threshold</td>
+<td class="l m pgmdocblinddata">Optional parameter: further parameter to be passed to the script. Default is 0. To be used especially with</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">modifier -metric ae to specify a number of pixels that may be different</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_desc</td>
+<td class="l m pgmdocblinddata">Optional parameter: description of the assertion to be checked (default = &quot;Comparison of images&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX331"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle2">Source Code of Program assertImage.sas</td>
+</tr>
+<tr>
+<td class="c systemtitle3" style=" font-size: 10pt;"><a href="src/00/assertimage.sas">[Download]</a>
+</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Data Set WORK._PGMSRC_VIEW">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">ObsNum</th>
+<th class="l blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m pgmdocsource">00001</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00002</td>
+<td class="l m pgmdocsource">%MACRO assertImage (i_script             =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00003</td>
+<td class="l m pgmdocsource">,i_expected           =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00004</td>
+<td class="l m pgmdocsource">,i_actual             =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00005</td>
+<td class="l m pgmdocsource">,i_expected_shell_rc  =0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00006</td>
+<td class="l m pgmdocsource">,i_modifier           =-metric RMSE</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00007</td>
+<td class="l m pgmdocsource">,i_threshold          =0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00008</td>
+<td class="l m pgmdocsource">,i_desc               =Comparison of images</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00009</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00010</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00011</td>
+<td class="l m pgmdocsource">/*-- verify correct sequence of calls-----------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00012</td>
+<td class="l m pgmdocsource">%GLOBAL g_inTestCase;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00013</td>
+<td class="l m pgmdocsource">%endTestCall(i_messageStyle=NOTE);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00014</td>
+<td class="l m pgmdocsource">%IF %_checkCallingSequence(i_callerType=assert) NE 0 %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00015</td>
+<td class="l m pgmdocsource">%RETURN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00016</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00017</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00018</td>
+<td class="l m pgmdocsource">%LOCAL  l_actual</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00019</td>
+<td class="l m pgmdocsource">l_casid</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00020</td>
+<td class="l m pgmdocsource">l_cmdFile</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00021</td>
+<td class="l m pgmdocsource">l_errmsg</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00022</td>
+<td class="l m pgmdocsource">l_expected</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00023</td>
+<td class="l m pgmdocsource">l_path</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00024</td>
+<td class="l m pgmdocsource">retVal</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00025</td>
+<td class="l m pgmdocsource">l_result</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00026</td>
+<td class="l m pgmdocsource">l_rc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00027</td>
+<td class="l m pgmdocsource">l_tstid</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00028</td>
+<td class="l m pgmdocsource">xmin</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00029</td>
+<td class="l m pgmdocsource">xsync</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00030</td>
+<td class="l m pgmdocsource">xwait</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00031</td>
+<td class="l m pgmdocsource">l_image1_extension</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00032</td>
+<td class="l m pgmdocsource">l_image2_extension</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00033</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00034</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00035</td>
+<td class="l m pgmdocsource">%LET l_errmsg =;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00036</td>
+<td class="l m pgmdocsource">%LET l_result = 2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00037</td>
+<td class="l m pgmdocsource">%LET l_macname  =&amp;sysmacroname;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00038</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00039</td>
+<td class="l m pgmdocsource">%*************************************************************;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00040</td>
+<td class="l m pgmdocsource">%*** Check if XCMD is allowed                              ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00041</td>
+<td class="l m pgmdocsource">%*************************************************************;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00042</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00043</td>
+<td class="l m pgmdocsource">,NOXCMD</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00044</td>
+<td class="l m pgmdocsource">,(%sysfunc(getoption(XCMD)) = NOXCMD)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00045</td>
+<td class="l m pgmdocsource">,Your SAS Session does not allow XCMD%str(,) therefore assertImage cannot be run.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00046</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;g_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00047</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00048</td>
+<td class="l m pgmdocsource">%THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00049</td>
+<td class="l m pgmdocsource">%LET l_rc    =0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00050</td>
+<td class="l m pgmdocsource">%LET l_result=2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00051</td>
+<td class="l m pgmdocsource">%LET l_errmsg=Your SAS Session does not allow XCMD%str(,) therefore assertImage cannot be run.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00052</td>
+<td class="l m pgmdocsource">%GOTO Update;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00053</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00054</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00055</td>
+<td class="l m pgmdocsource">%*************************************************************;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00056</td>
+<td class="l m pgmdocsource">%*** Check preconditions                                   ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00057</td>
+<td class="l m pgmdocsource">%*************************************************************;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00058</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00059</td>
+<td class="l m pgmdocsource">%*** Check if i_script file exists ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00060</td>
+<td class="l m pgmdocsource">%IF (%length(&amp;i_script.) &lt;= 0) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00061</td>
+<td class="l m pgmdocsource">%LET l_rc = -2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00062</td>
+<td class="l m pgmdocsource">%LET l_errMsg=Parameter i_script is empty!;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00063</td>
+<td class="l m pgmdocsource">%GOTO Update;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00064</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00065</td>
+<td class="l m pgmdocsource">%IF NOT %SYSFUNC(FILEEXIST(&amp;i_script.)) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00066</td>
+<td class="l m pgmdocsource">%LET l_rc = -3;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00067</td>
+<td class="l m pgmdocsource">%LET l_errMsg=Script &amp;i_script. does not exist!;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00068</td>
+<td class="l m pgmdocsource">%GOTO Update;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00069</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00070</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00071</td>
+<td class="l m pgmdocsource">%*** Check if i_expected is a path ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00072</td>
+<td class="l m pgmdocsource">%IF (%length(&amp;i_expected.) &lt;= 0) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00073</td>
+<td class="l m pgmdocsource">%LET l_rc = -4;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00074</td>
+<td class="l m pgmdocsource">%LET l_errMsg=Parameter i_expected is empty!;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00075</td>
+<td class="l m pgmdocsource">%GOTO Update;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00076</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00077</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00078</td>
+<td class="l m pgmdocsource">%*** Check if i_actual is a path ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00079</td>
+<td class="l m pgmdocsource">%IF (%length(&amp;i_actual.) &lt;= 0) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00080</td>
+<td class="l m pgmdocsource">%LET l_rc = -6;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00081</td>
+<td class="l m pgmdocsource">%LET l_errMsg=Parameter i_actual is empty!;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00082</td>
+<td class="l m pgmdocsource">%GOTO Update;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00083</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00084</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00085</td>
+<td class="l m pgmdocsource">%*** get image file extension ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00086</td>
+<td class="l m pgmdocsource">%let l_image1_extension = %str(.)%sysfunc(scan(&amp;i_expected.,-1,.));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00087</td>
+<td class="l m pgmdocsource">%let l_image2_extension = %str(.)%sysfunc(scan(&amp;i_actual.,-1,.));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00088</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00089</td>
+<td class="l m pgmdocsource">%*** get current ids for test case and test ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00090</td>
+<td class="l m pgmdocsource">%_getScenarioTestId (i_scnid=&amp;g_scnid, r_casid=l_casid, r_tstid=l_tstid);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00091</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00092</td>
+<td class="l m pgmdocsource">%*** create subfolder ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00093</td>
+<td class="l m pgmdocsource">%if (&amp;g_runMode.=SASUNIT_BATCH) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00094</td>
+<td class="l m pgmdocsource">%_createTestSubfolder (i_assertType   =assertimage</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00095</td>
+<td class="l m pgmdocsource">,i_scnid        =&amp;g_scnid.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00096</td>
+<td class="l m pgmdocsource">,i_casid        =&amp;l_casid.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00097</td>
+<td class="l m pgmdocsource">,i_tstid        =&amp;l_tstid.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00098</td>
+<td class="l m pgmdocsource">,r_path         =l_path</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00099</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00100</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00101</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00102</td>
+<td class="l m pgmdocsource">%else %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00103</td>
+<td class="l m pgmdocsource">%let l_path=%sysfunc(pathname(WORK));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00104</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00105</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00106</td>
+<td class="l m pgmdocsource">%*** Check if i_expected exists ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00107</td>
+<td class="l m pgmdocsource">%IF %SYSFUNC(FILEEXIST(&amp;i_expected.)) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00108</td>
+<td class="l m pgmdocsource">%_copyFile(&amp;i_expected.                                       /* input file  */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00109</td>
+<td class="l m pgmdocsource">,&amp;l_path./_image_exp&amp;l_image1_extension.            /* output file */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00110</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00111</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00112</td>
+<td class="l m pgmdocsource">%IF %SYSFUNC(FILEEXIST(&amp;i_actual.)) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00113</td>
+<td class="l m pgmdocsource">%_copyFile(&amp;i_actual.                                         /* input file  */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00114</td>
+<td class="l m pgmdocsource">,&amp;l_path./_image_act&amp;l_image2_extension.            /* output file */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00115</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00116</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00117</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00118</td>
+<td class="l m pgmdocsource">%*** Check if i_expected exists ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00119</td>
+<td class="l m pgmdocsource">%IF NOT %SYSFUNC(FILEEXIST(&amp;i_expected.)) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00120</td>
+<td class="l m pgmdocsource">%LET l_rc = -5;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00121</td>
+<td class="l m pgmdocsource">%LET l_errMsg=Image &amp;i_expected. does not exist!;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00122</td>
+<td class="l m pgmdocsource">%GOTO Update;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00123</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00124</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00125</td>
+<td class="l m pgmdocsource">%*** Check if i_actual exists ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00126</td>
+<td class="l m pgmdocsource">%IF NOT %SYSFUNC(FILEEXIST(&amp;i_actual.)) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00127</td>
+<td class="l m pgmdocsource">%LET l_rc = -7;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00128</td>
+<td class="l m pgmdocsource">%LET l_errMsg=Image &amp;i_actual. does not exist!;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00129</td>
+<td class="l m pgmdocsource">%GOTO Update;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00130</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00131</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00132</td>
+<td class="l m pgmdocsource">%*** Check if i_expected_shell_rc is given ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00133</td>
+<td class="l m pgmdocsource">%IF (%length(&amp;i_expected_shell_rc.) &lt;= 0) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00134</td>
+<td class="l m pgmdocsource">%LET l_rc = -8;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00135</td>
+<td class="l m pgmdocsource">%LET l_errMsg=Parameter i_expected_shell_rc is empty!;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00136</td>
+<td class="l m pgmdocsource">%GOTO Update;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00137</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00138</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00139</td>
+<td class="l m pgmdocsource">%*** Parameter i_threshold and i_modifier must not be empty due to changes in  ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00140</td>
+<td class="l m pgmdocsource">%*** implementation of ImageMagick compare routine. Otherwise return codes of  ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00141</td>
+<td class="l m pgmdocsource">%*** assertImage are not stable                                                ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00142</td>
+<td class="l m pgmdocsource">%IF (&quot;&amp;i_threshold.&quot; EQ &quot;&quot;) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00143</td>
+<td class="l m pgmdocsource">%LET i_threshold = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00144</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00145</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00146</td>
+<td class="l m pgmdocsource">%IF (&quot;&amp;i_modifier.&quot; EQ &quot;&quot;) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00147</td>
+<td class="l m pgmdocsource">%LET i_modifier =-metric RMSE;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00148</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00149</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00150</td>
+<td class="l m pgmdocsource">%*************************************************************;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00151</td>
+<td class="l m pgmdocsource">%*** Start tests                                           ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00152</td>
+<td class="l m pgmdocsource">%*************************************************************;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00153</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00154</td>
+<td class="l m pgmdocsource">%_xcmdWithPath(i_cmd_path =&quot;&amp;i_script.&quot; &quot;&amp;i_expected.&quot; &quot;&amp;i_actual.&quot; &quot;&amp;l_path./_image_diff.png&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00155</td>
+<td class="l m pgmdocsource">,i_cmd      =&quot;&amp;i_modifier.&quot; &quot;&amp;i_threshold.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00156</td>
+<td class="l m pgmdocsource">,r_rc       =l_rc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00157</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00158</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00159</td>
+<td class="l m pgmdocsource">%IF &amp;l_rc. = &amp;i_expected_shell_rc. %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00160</td>
+<td class="l m pgmdocsource">%LET l_result = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00161</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00162</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00163</td>
+<td class="l m pgmdocsource">%UPDATE:</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00164</td>
+<td class="l m pgmdocsource">%*** update result in test database ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00165</td>
+<td class="l m pgmdocsource">%_ASSERTS(i_type     = assertImage</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00166</td>
+<td class="l m pgmdocsource">,i_expected = &amp;i_expected_shell_rc.#&amp;l_image1_extension.#&amp;i_expected.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00167</td>
+<td class="l m pgmdocsource">,i_actual   = &amp;l_rc.#&amp;l_image2_extension.#&amp;i_actual.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00168</td>
+<td class="l m pgmdocsource">,i_desc     = &amp;i_desc.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00169</td>
+<td class="l m pgmdocsource">,i_result   = &amp;l_result.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00170</td>
+<td class="l m pgmdocsource">,i_errmsg   = &amp;l_errmsg.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00171</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00172</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00173</td>
+<td class="l m pgmdocsource">%MEND assertImage;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

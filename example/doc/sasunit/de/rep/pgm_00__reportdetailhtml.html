@@ -1,0 +1,1562 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="de" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Programmdokumentation | SASUnit Examples - SASUnit Testdokumentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX253"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Programmdokumentation | SASUnit Examples - SASUnit Testdokumentation</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Programmdokumentation für Programm _reportdetailhtml.sas</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" scope="col">Ausführliche&nbsp;Beschreibung</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">create page with detail information of a test case in HTML format</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Version</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Revision: 675 $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Autor</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Author: klandwich $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Datum</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Date: 2019-05-23 13:33:55 +0200 (Do, 23 Mai 2019) $</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Siehe&nbsp;auch</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Here you can find the SASUnit documentation, release notes and license information.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/saspgm/sasunit/_reportdetailhtml.sas $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Copyright</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For copyright information and terms of usage under the GPL license see included file readme.txt</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">or https://sourceforge.net/p/sasunit/wiki/readme/.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX254"></a>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_name</th>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" colspan="2" scope="colgroup">Parameter</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_repdata</td>
+<td class="l m pgmdocblinddata">input dataset (created in reportSASUnit.sas)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_scnid</td>
+<td class="l m pgmdocblinddata">scenario id of test case</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_casid</td>
+<td class="l m pgmdocblinddata">id of test case</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_html</td>
+<td class="l m pgmdocblinddata">flag to output file in HTML format</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_path</td>
+<td class="l m pgmdocblinddata">path for output file</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_file</td>
+<td class="l m pgmdocblinddata">name of the outputfile without extension</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_style</td>
+<td class="l m pgmdocblinddata">name of the SAS style and css file to be used.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX255"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle2">Quellcode des Programms _reportdetailhtml.sas</td>
+</tr>
+<tr>
+<td class="c systemtitle3" style=" font-size: 10pt;"><a href="src/00/_reportdetailhtml.sas">[Herunterladen]</a>
+</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Datei WORK._PGMSRC_VIEW">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">ObsNum</th>
+<th class="l blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m pgmdocsource">00001</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00002</td>
+<td class="l m pgmdocsource">%MACRO _reportDetailHTML (i_repdata =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00003</td>
+<td class="l m pgmdocsource">,i_scnid   =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00004</td>
+<td class="l m pgmdocsource">,i_casid   =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00005</td>
+<td class="l m pgmdocsource">,o_html    = 0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00006</td>
+<td class="l m pgmdocsource">,o_path    =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00007</td>
+<td class="l m pgmdocsource">,o_file    =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00008</td>
+<td class="l m pgmdocsource">,i_style   =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00009</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00010</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00011</td>
+<td class="l m pgmdocsource">%LOCAL</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00012</td>
+<td class="l m pgmdocsource">l_nls_reportdetail_errors</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00013</td>
+<td class="l m pgmdocsource">_numCases</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00014</td>
+<td class="l m pgmdocsource">_numAsserts</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00015</td>
+<td class="l m pgmdocsource">l_NumAssert</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00016</td>
+<td class="l m pgmdocsource">l_NumTests</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00017</td>
+<td class="l m pgmdocsource">l_TestAssert</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00018</td>
+<td class="l m pgmdocsource">l_cTestAssert</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00019</td>
+<td class="l m pgmdocsource">l_Tests</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00020</td>
+<td class="l m pgmdocsource">l_c_casid</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00021</td>
+<td class="l m pgmdocsource">i_cas</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00022</td>
+<td class="l m pgmdocsource">l_casid</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00023</td>
+<td class="l m pgmdocsource">l_casids</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00024</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00025</td>
+<td class="l m pgmdocsource">%LET l_nls_reportdetail_errors   = %STR(error(s));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00026</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00027</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00028</td>
+<td class="l m pgmdocsource">select count (distinct tst_type) into :_numAsserts from &amp;i_repdata. where scn_id = &amp;i_scnid AND tst_type ne &#39;&nbsp;&#39;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00029</td>
+<td class="l m pgmdocsource">select count (distinct cas_id)   into :_numCases   from &amp;i_repdata. where scn_id = &amp;i_scnid AND tst_type ne &#39;&nbsp;&#39;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00030</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00031</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00032</td>
+<td class="l m pgmdocsource">%if (&amp;_numAsserts. &gt; 0) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00033</td>
+<td class="l m pgmdocsource">%do l_NumAssert=1 %to &amp;_numAsserts.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00034</td>
+<td class="l m pgmdocsource">%local assertType&amp;l_NumAssert.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00035</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00036</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00037</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00038</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00039</td>
+<td class="l m pgmdocsource">select distinct tst_type into :assertType1-:assertType%cmpres(&amp;_numAsserts.) from &amp;i_repdata. where scn_id = &amp;i_scnid AND tst_type ne &#39;&nbsp;&#39;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00040</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00041</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00042</td>
+<td class="l m pgmdocsource">DATA work._test_report;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00043</td>
+<td class="l m pgmdocsource">SET &amp;i_repdata. END=eof;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00044</td>
+<td class="l m pgmdocsource">WHERE scn_id = &amp;i_scnid;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00045</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00046</td>
+<td class="l m pgmdocsource">LENGTH</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00047</td>
+<td class="l m pgmdocsource">scn_abs_path cas_abs_path pgmscn_name pgmexa_name $256</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00048</td>
+<td class="l m pgmdocsource">hlp hlp2    $200</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00049</td>
+<td class="l m pgmdocsource">errcountmsg $50</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00050</td>
+<td class="l m pgmdocsource">LinkTitle1</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00051</td>
+<td class="l m pgmdocsource">LinkTitle2</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00052</td>
+<td class="l m pgmdocsource">LinkTitle3</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00053</td>
+<td class="l m pgmdocsource">href</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00054</td>
+<td class="l m pgmdocsource">href_act</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00055</td>
+<td class="l m pgmdocsource">href_exp</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00056</td>
+<td class="l m pgmdocsource">href_rep</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00057</td>
+<td class="l m pgmdocsource">LinkColumn1</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00058</td>
+<td class="l m pgmdocsource">LinkColumn2</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00059</td>
+<td class="l m pgmdocsource">LinkColumn3 $200</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00060</td>
+<td class="l m pgmdocsource">idColumn $80</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00061</td>
+<td class="l m pgmdocsource">scnDescriptionColumn casDescriptionColumn descriptionColumn $1000</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00062</td>
+<td class="l m pgmdocsource">scnProgramColumn casProgramColumn $1000</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00063</td>
+<td class="l m pgmdocsource">scnLast_runColumn casLast_runColumn $1000</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00064</td>
+<td class="l m pgmdocsource">scnDurationColumn $1000</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00065</td>
+<td class="l m pgmdocsource">assertTypeColumn $200</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00066</td>
+<td class="l m pgmdocsource">expectedColumn $1000</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00067</td>
+<td class="l m pgmdocsource">actualColumn $1000</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00068</td>
+<td class="l m pgmdocsource">resultColumn $1000</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00069</td>
+<td class="l m pgmdocsource">c_autonM2    $2</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00070</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00071</td>
+<td class="l m pgmdocsource">label</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00072</td>
+<td class="l m pgmdocsource">scnDescriptionColumn=&quot;&amp;g_nls_reportDetail_029.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00073</td>
+<td class="l m pgmdocsource">scnProgramColumn    =&quot;&amp;g_nls_reportDetail_030.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00074</td>
+<td class="l m pgmdocsource">scnLast_runColumn   =&quot;&amp;g_nls_reportDetail_031.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00075</td>
+<td class="l m pgmdocsource">scnDurationColumn   =&quot;&amp;g_nls_reportDetail_032.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00076</td>
+<td class="l m pgmdocsource">casDescriptionColumn=&quot;&amp;g_nls_reportDetail_034.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00077</td>
+<td class="l m pgmdocsource">casProgramColumn    =&quot;&amp;g_nls_reportDetail_035.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00078</td>
+<td class="l m pgmdocsource">casLast_runColumn   =&quot;&amp;g_nls_reportDetail_031.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00079</td>
+<td class="l m pgmdocsource">idColumn            =&quot;&amp;g_nls_reportDetail_009.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00080</td>
+<td class="l m pgmdocsource">assertTypeColumn    =&quot;&amp;g_nls_reportDetail_010.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00081</td>
+<td class="l m pgmdocsource">descriptionColumn   =&quot;&amp;g_nls_reportDetail_011.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00082</td>
+<td class="l m pgmdocsource">expectedColumn      =&quot;&amp;g_nls_reportDetail_012.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00083</td>
+<td class="l m pgmdocsource">actualColumn        =&quot;&amp;g_nls_reportDetail_013.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00084</td>
+<td class="l m pgmdocsource">resultColumn        =&quot;&amp;g_nls_reportDetail_014.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00085</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00086</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00087</td>
+<td class="l m pgmdocsource">*** initalizing variables that MAY be used in a specific assert   ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00088</td>
+<td class="l m pgmdocsource">if (_N_=1) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00089</td>
+<td class="l m pgmdocsource">hlp=&quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00090</td>
+<td class="l m pgmdocsource">hlp2=&quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00091</td>
+<td class="l m pgmdocsource">errcountmsg=&quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00092</td>
+<td class="l m pgmdocsource">href=&quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00093</td>
+<td class="l m pgmdocsource">href_act=&quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00094</td>
+<td class="l m pgmdocsource">href_exp=&quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00095</td>
+<td class="l m pgmdocsource">href_rep=&quot;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00096</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00097</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00098</td>
+<td class="l m pgmdocsource">if tst_act=&quot;&quot; then tst_act=&#39;&nbsp;&#39;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00099</td>
+<td class="l m pgmdocsource">if tst_exp=&quot;&quot; then tst_exp=&#39;&nbsp;&#39;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00100</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00101</td>
+<td class="l m pgmdocsource">*** Columns for scenario overview ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00102</td>
+<td class="l m pgmdocsource">scn_abs_path = resolve (&#39;%_abspath(&amp;g_root.,&#39; !! trim(scn_path) !! &#39;)&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00103</td>
+<td class="l m pgmdocsource">idx          = find (scn_abs_path, &#39;/&#39;, -length (scn_abs_path))+1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00104</td>
+<td class="l m pgmdocsource">scn_pgm      = substr (scn_abs_path, idx);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00105</td>
+<td class="l m pgmdocsource">pgmscn_name  = catt (&quot;pgm_scn_&quot;, put (scn_id, z3.));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00106</td>
+<td class="l m pgmdocsource">scn_duration = put (scn_end - scn_start, ??&amp;g_nls_reportScn_013.) !! &quot; s&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00107</td>
+<td class="l m pgmdocsource">c_scnid      = put (scn_id, z3.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00108</td>
+<td class="l m pgmdocsource">c_casid      = put (cas_id, z3.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00109</td>
+<td class="l m pgmdocsource">c_autonM2    = compress (exa_auton-2,2.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00110</td>
+<td class="l m pgmdocsource">if (exa_auton = 0) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00111</td>
+<td class="l m pgmdocsource">cas_abs_path = resolve (&#39;%_abspath(&amp;g_sasunit.,&#39; !! trim(cas_obj) !! &#39;)&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00112</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00113</td>
+<td class="l m pgmdocsource">else if (exa_auton = 1) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00114</td>
+<td class="l m pgmdocsource">cas_abs_path = resolve (&#39;%_abspath(&amp;g_sasunit_os.,&#39; !! trim(cas_obj) !! &#39;)&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00115</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00116</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00117</td>
+<td class="l m pgmdocsource">cas_abs_path = resolve (&#39;%_abspath(&amp;g_sasautos&#39; !! trim(c_autonM2) !! &#39;.,&#39; !! trim(cas_obj) !! &#39;)&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00118</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00119</td>
+<td class="l m pgmdocsource">if (exa_auton &gt;= 2) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00120</td>
+<td class="l m pgmdocsource">cas_obj      = resolve (&#39;%_stdpath(&amp;g_root.,&#39; !! trim(cas_abs_path) !! &#39;)&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00121</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00122</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00123</td>
+<td class="l m pgmdocsource">cas_obj      = resolve (&#39;%_stdpath(&amp;g_sasunitroot./saspgm/sasunit,&#39; !! trim(cas_abs_path) !! &#39;)&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00124</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00125</td>
+<td class="l m pgmdocsource">pgmexa_name = catt (&quot;pgm_&quot;, put (exa_auton, z2.), &quot;_&quot;, tranwrd (exa_pgm, &quot;.sas&quot;, &quot;&quot;));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00126</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00127</td>
+<td class="l m pgmdocsource">%_render_DataColumn (i_sourceColumn=scn_duration</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00128</td>
+<td class="l m pgmdocsource">,o_targetColumn=scnDurationColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00129</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00130</td>
+<td class="l m pgmdocsource">%_render_DataColumn (i_sourceColumn=cas_desc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00131</td>
+<td class="l m pgmdocsource">,o_targetColumn=casDescriptionColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00132</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00133</td>
+<td class="l m pgmdocsource">%_render_DataColumn (i_sourceColumn=tst_desc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00134</td>
+<td class="l m pgmdocsource">,o_targetColumn=descriptionColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00135</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00136</td>
+<td class="l m pgmdocsource">%_render_DataColumn (i_sourceColumn=tst_type</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00137</td>
+<td class="l m pgmdocsource">,o_targetColumn=assertTypeColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00138</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00139</td>
+<td class="l m pgmdocsource">%_render_IconColumn (i_sourceColumn=tst_res</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00140</td>
+<td class="l m pgmdocsource">,o_html=&amp;o_html.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00141</td>
+<td class="l m pgmdocsource">,o_targetColumn=resultColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00142</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00143</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00144</td>
+<td class="l m pgmdocsource">*** Any destination that renders links shares this if ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00145</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00146</td>
+<td class="l m pgmdocsource">LinkTitle1   = trim (&quot;&amp;g_nls_reportDetail_003&quot;) !!&quot; &quot; !! c_scnid;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00147</td>
+<td class="l m pgmdocsource">LinkTitle2   = &quot;&amp;g_nls_reportDetail_004&quot; !! byte(13) !! scn_abs_path;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00148</td>
+<td class="l m pgmdocsource">LinkTitle3   = &quot;&amp;g_nls_reportDetail_005&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00149</td>
+<td class="l m pgmdocsource">LinkTitle4   = &quot;&amp;g_nls_reportDetail_006&quot; !! byte(13) !! cas_abs_path;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00150</td>
+<td class="l m pgmdocsource">LinkTitle5   = &quot;&amp;g_nls_reportDetail_007&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00151</td>
+<td class="l m pgmdocsource">*** HTML-links are destinations specific ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00152</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00153</td>
+<td class="l m pgmdocsource">LinkColumn1  = catt(&quot;cas_overview.html#SCN&quot;, c_scnid, &quot;_&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00154</td>
+<td class="l m pgmdocsource">if (&amp;o_pgmdoc. = 1 and fileexist (&quot;&amp;g_target./rep/&quot; !! trim(pgmscn_name))) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00155</td>
+<td class="l m pgmdocsource">LinkColumn2 = catt (pgmscn_name, &quot;.html&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00156</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00157</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00158</td>
+<td class="l m pgmdocsource">LinkColumn2 = catt (&quot;src/scn/scn_&quot;, put (scn_id, z3.), &quot;.sas&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00159</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00160</td>
+<td class="l m pgmdocsource">LinkColumn3  = c_scnid !! &quot;_log.html&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00161</td>
+<td class="l m pgmdocsource">if (&amp;o_pgmdoc. = 1 and fileexist (&quot;&amp;g_target./rep/&quot; !! trim(pgmexa_name))) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00162</td>
+<td class="l m pgmdocsource">LinkColumn4 = catt (pgmexa_name, &quot;.html&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00163</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00164</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00165</td>
+<td class="l m pgmdocsource">LinkColumn4 = catt (&quot;src/&quot;, put (coalesce (exa_auton,99),z2.), &quot;/&quot;, exa_pgm);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00166</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00167</td>
+<td class="l m pgmdocsource">LinkColumn5  = c_scnid !! &quot;_&quot; !! c_casid !! &quot;_log.html&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00168</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00169</td>
+<td class="l m pgmdocsource">%_render_DataColumn (i_sourceColumn=scn_desc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00170</td>
+<td class="l m pgmdocsource">,o_targetColumn=scnDescriptionColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00171</td>
+<td class="l m pgmdocsource">,i_linkColumn=LinkColumn1</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00172</td>
+<td class="l m pgmdocsource">,i_linkTitle=LinkTitle1</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00173</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00174</td>
+<td class="l m pgmdocsource">%_render_DataColumn (i_sourceColumn=scn_path</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00175</td>
+<td class="l m pgmdocsource">,i_linkColumn=LinkColumn2</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00176</td>
+<td class="l m pgmdocsource">,i_linkTitle=LinkTitle2</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00177</td>
+<td class="l m pgmdocsource">,o_targetColumn=scnProgramColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00178</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00179</td>
+<td class="l m pgmdocsource">%_render_DataColumn (i_sourceColumn=scn_start</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00180</td>
+<td class="l m pgmdocsource">,i_format=&amp;g_nls_reportDetail_050.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00181</td>
+<td class="l m pgmdocsource">,i_linkColumn=LinkColumn3</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00182</td>
+<td class="l m pgmdocsource">,i_linkTitle=LinkTitle3</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00183</td>
+<td class="l m pgmdocsource">,o_targetColumn=scnLast_runColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00184</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00185</td>
+<td class="l m pgmdocsource">%_render_DataColumn (i_sourceColumn=cas_obj</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00186</td>
+<td class="l m pgmdocsource">,i_linkColumn=LinkColumn4</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00187</td>
+<td class="l m pgmdocsource">,i_linkTitle=LinkTitle4</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00188</td>
+<td class="l m pgmdocsource">,o_targetColumn=casProgramColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00189</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00190</td>
+<td class="l m pgmdocsource">%_render_DataColumn (i_sourceColumn=cas_start</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00191</td>
+<td class="l m pgmdocsource">,i_format=&amp;g_nls_reportDetail_050.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00192</td>
+<td class="l m pgmdocsource">,i_linkColumn=LinkColumn5</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00193</td>
+<td class="l m pgmdocsource">,i_linkTitle=LinkTitle5</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00194</td>
+<td class="l m pgmdocsource">,o_targetColumn=casLast_runColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00195</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00196</td>
+<td class="l m pgmdocsource">idColumn =&quot;°[style [PRETEXT=&quot;&quot;&lt;a name=&#39;TST&quot; !! put (tst_id, z3.) !! &quot;&#39;&gt;&lt;/a&gt;&quot;&quot;]&quot; !! put (tst_id, z3.) !! &quot;]&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00197</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00198</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00199</td>
+<td class="l m pgmdocsource">%do l_NumAssert=1 %to &amp;_numAsserts;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00200</td>
+<td class="l m pgmdocsource">if (upcase(tst_type)=&quot;%upcase(&amp;&amp;asserttype&amp;l_NumAssert.)&quot;) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00201</td>
+<td class="l m pgmdocsource">%let l_NumAssertSubstr = &amp;&amp;asserttype&amp;l_NumAssert.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00202</td>
+<td class="l m pgmdocsource">%if (%length(&amp;l_NumAssertSubstr.) &gt; 21) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00203</td>
+<td class="l m pgmdocsource">%let l_NumAssertSubstr = %substr(&amp;l_NumAssertSubstr.,1,21);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00204</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00205</td>
+<td class="l m pgmdocsource">%_render_&amp;l_NumAssertSubstr.Exp (i_sourceColumn=tst_exp</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00206</td>
+<td class="l m pgmdocsource">,o_html=&amp;o_html.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00207</td>
+<td class="l m pgmdocsource">,o_targetColumn=expectedColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00208</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00209</td>
+<td class="l m pgmdocsource">%_render_&amp;l_NumAssertSubstr.Act (i_sourceColumn=tst_act</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00210</td>
+<td class="l m pgmdocsource">,o_html=&amp;o_html.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00211</td>
+<td class="l m pgmdocsource">,o_targetColumn=actualColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00212</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00213</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00214</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00215</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00216</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00217</td>
+<td class="l m pgmdocsource">%*** Reset title and footnotes ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00218</td>
+<td class="l m pgmdocsource">title;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00219</td>
+<td class="l m pgmdocsource">footnote;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00220</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00221</td>
+<td class="l m pgmdocsource">%do i_cas=1 %to &amp;_numCases.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00222</td>
+<td class="l m pgmdocsource">%let l_title=%str(&amp;g_nls_reportCas_001. | &amp;g_project - &amp;g_nls_reportCas_002.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00223</td>
+<td class="l m pgmdocsource">title j=c &quot;&amp;l_title.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00224</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00225</td>
+<td class="l m pgmdocsource">ods html4 file=&quot;&amp;o_path./&amp;o_file._%sysfunc (putn (&amp;i_cas., z3.)).html&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00226</td>
+<td class="l m pgmdocsource">(TITLE=&quot;&amp;l_title.&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00227</td>
+<td class="l m pgmdocsource">headtext=&#39;&lt;link rel=&quot;shortcut icon&quot; href=&quot;./favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;&#39;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00228</td>
+<td class="l m pgmdocsource">metatext=&quot;http-equiv=&quot;&quot;Content-Style-Type&quot;&quot; content=&quot;&quot;text/css&quot;&quot; /&gt;&lt;meta http-equiv=&quot;&quot;Content-Language&quot;&quot; content=&quot;&quot;&amp;i_language.&quot;&quot; /&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00229</td>
+<td class="l m pgmdocsource">style=styles.&amp;i_style. stylesheet=(URL=&quot;css/&amp;i_style..css&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00230</td>
+<td class="l m pgmdocsource">encoding=&quot;&amp;g_rep_encoding.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00231</td>
+<td class="l m pgmdocsource">%_reportPageTopHTML(i_title   = &amp;l_title.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00232</td>
+<td class="l m pgmdocsource">,i_current = 0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00233</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00234</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00235</td>
+<td class="l m pgmdocsource">%LET l_c_scnid = %substr(00&amp;i_cas.,%length(&amp;i_cas));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00236</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00237</td>
+<td class="l m pgmdocsource">*** Reset title and footnotes for each Testcase ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00238</td>
+<td class="l m pgmdocsource">*** First print should contain title but no footnotes ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00239</td>
+<td class="l m pgmdocsource">footnote;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00240</td>
+<td class="l m pgmdocsource">options nocenter;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00241</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00242</td>
+<td class="l m pgmdocsource">data work._test_overview;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00243</td>
+<td class="l m pgmdocsource">set work._test_report (where=(tst_id=1 AND cas_id=&amp;i_cas.));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00244</td>
+<td class="l m pgmdocsource">length Name $20 Value $1000;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00245</td>
+<td class="l m pgmdocsource">Name=&quot;&amp;g_nls_reportDetail_028.&quot;; Value=c_scnid;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00246</td>
+<td class="l m pgmdocsource">Name=&quot;&amp;g_nls_reportDetail_029.&quot;; Value=scnDescriptionColumn;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00247</td>
+<td class="l m pgmdocsource">Name=&quot;&amp;g_nls_reportDetail_030.&quot;; Value=scnProgramColumn;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00248</td>
+<td class="l m pgmdocsource">Name=&quot;&amp;g_nls_reportDetail_031.&quot;; Value=scnLast_runColumn;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00249</td>
+<td class="l m pgmdocsource">Name=&quot;&amp;g_nls_reportDetail_032.&quot;; Value=scnDurationColumn;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00250</td>
+<td class="l m pgmdocsource">Name=&quot;&amp;g_nls_reportDetail_033.&quot;; Value=c_casid;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00251</td>
+<td class="l m pgmdocsource">Name=&quot;&amp;g_nls_reportDetail_034.&quot;; Value=casDescriptionColumn;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00252</td>
+<td class="l m pgmdocsource">Name=&quot;&amp;g_nls_reportDetail_035.&quot;; Value=casProgramColumn;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00253</td>
+<td class="l m pgmdocsource">Name=&quot;&amp;g_nls_reportDetail_031.&quot;; Value=casLast_runColumn;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00254</td>
+<td class="l m pgmdocsource">keep Name Value;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00255</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00256</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00257</td>
+<td class="l m pgmdocsource">proc print data=work._test_overview noobs label</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00258</td>
+<td class="l m pgmdocsource">style(report)=blindTable [borderwidth=0]</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00259</td>
+<td class="l m pgmdocsource">style(column)=blindData</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00260</td>
+<td class="l m pgmdocsource">style(header)=blindHeader;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00261</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00262</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00263</td>
+<td class="l m pgmdocsource">*** Second print should contain no title but footnotes ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00264</td>
+<td class="l m pgmdocsource">title;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00265</td>
+<td class="l m pgmdocsource">%_reportFooter(o_html=&amp;o_html.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00266</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00267</td>
+<td class="l m pgmdocsource">proc report data=work._test_report (where=(cas_id=&amp;i_cas.)) nowd missing</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00268</td>
+<td class="l m pgmdocsource">style(lines)=blindData</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00269</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00270</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00271</td>
+<td class="l m pgmdocsource">columns idColumn assertTypeColumn descriptionColumn expectedColumn actualColumn resultColumn;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00272</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00273</td>
+<td class="l m pgmdocsource">define idColumn     / order style(Column)=rowheader;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00274</td>
+<td class="l m pgmdocsource">define resultColumn / display style(Column)=[background=white];</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00275</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00276</td>
+<td class="l m pgmdocsource">compute before _page_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00277</td>
+<td class="l m pgmdocsource">line @1 &quot;&amp;g_nls_reportDetail_008.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00278</td>
+<td class="l m pgmdocsource">endcomp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00279</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00280</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00281</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00282</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00283</td>
+<td class="l m pgmdocsource">%_closeHtmlPage(&amp;i_style.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00284</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00285</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00286</td>
+<td class="l m pgmdocsource">%*** Reset title and footnotes ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00287</td>
+<td class="l m pgmdocsource">title;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00288</td>
+<td class="l m pgmdocsource">footnote;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00289</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00290</td>
+<td class="l m pgmdocsource">options center;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00291</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00292</td>
+<td class="l m pgmdocsource">%do l_NumAssert=1 %to &amp;_numAsserts;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00293</td>
+<td class="l m pgmdocsource">*** Call all associated submacros for rendering specific assert reports ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00294</td>
+<td class="l m pgmdocsource">%let l_NumAssertSubstr = %lowcase(&amp;&amp;asserttype&amp;l_NumAssert.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00295</td>
+<td class="l m pgmdocsource">%if (%length(&amp;l_NumAssertSubstr.) &gt; 21) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00296</td>
+<td class="l m pgmdocsource">%let l_NumAssertSubstr = %substr(&amp;l_NumAssertSubstr.,1,21);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00297</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00298</td>
+<td class="l m pgmdocsource">%if (%sysfunc (fileexist(&amp;g_sasunit./_render_&amp;l_NumAssertSubstr.rep.sas))) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00299</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00300</td>
+<td class="l m pgmdocsource">select count(distinct cas_id) into :_numCases from work._test_report where tst_type = &quot;&amp;&amp;asserttype&amp;l_NumAssert.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00301</td>
+<td class="l m pgmdocsource">select distinct cas_id        into :l_casids separated by &quot;§&quot; from work._test_report where tst_type = &quot;&amp;&amp;asserttype&amp;l_NumAssert.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00302</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00303</td>
+<td class="l m pgmdocsource">%do i_cas=1 %to &amp;_numCases.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00304</td>
+<td class="l m pgmdocsource">%LET l_casid   = %scan (&amp;l_casids., &amp;i_cas., §);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00305</td>
+<td class="l m pgmdocsource">%LET l_c_casid = %substr(00&amp;l_casid.,%length(&amp;l_casid));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00306</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00307</td>
+<td class="l m pgmdocsource">select count(*) into :l_NumTests from work._test_report where tst_type = &quot;&amp;&amp;asserttype&amp;l_NumAssert.&quot; AND cas_id=&amp;l_casid.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00308</td>
+<td class="l m pgmdocsource">select tst_id into   :l_Tests separated by &quot;§&quot; from work._test_report where tst_type = &quot;&amp;&amp;asserttype&amp;l_NumAssert.&quot; AND cas_id=&amp;l_casid.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00309</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00310</td>
+<td class="l m pgmdocsource">%do l_TestAssert=1 %to &amp;l_NumTests.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00311</td>
+<td class="l m pgmdocsource">%LET l_cTestAssert = %scan(&amp;l_Tests.,&amp;l_TestAssert.,§);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00312</td>
+<td class="l m pgmdocsource">%_render_&amp;l_NumAssertSubstr.rep(i_assertype=&amp;&amp;asserttype&amp;l_NumAssert.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00313</td>
+<td class="l m pgmdocsource">,i_repdata=&amp;i_repdata.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00314</td>
+<td class="l m pgmdocsource">,i_scnid=&amp;i_scnid.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00315</td>
+<td class="l m pgmdocsource">,i_casid=&amp;l_c_casid.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00316</td>
+<td class="l m pgmdocsource">,i_tstid=&amp;l_cTestAssert.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00317</td>
+<td class="l m pgmdocsource">,i_style=&amp;i_style.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00318</td>
+<td class="l m pgmdocsource">,o_html=&amp;o_html.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00319</td>
+<td class="l m pgmdocsource">,o_path=&amp;o_path.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00320</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00321</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00322</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00323</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00324</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00325</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00326</td>
+<td class="l m pgmdocsource">proc datasets lib=work nolist memtype=(view data);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00327</td>
+<td class="l m pgmdocsource">*delete _test_overview _test_report;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00328</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00329</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00330</td>
+<td class="l m pgmdocsource">%MEND _reportDetailHTML;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

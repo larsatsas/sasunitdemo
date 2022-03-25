@@ -1,0 +1,37 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(INITTESTCASE):   options linesize=max;
+47         %regression(data=testdata, x=x, y=y, out=aus, yhat=est, parms=parameters, report=&g_work/report1.rtf)
+NOTE: The macro REGRESSION completed compilation without errors.
+      24 instructions 780 bytes.
+MAUTOLOCDISPLAY(REGRESSION):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\regression.sas
+MPRINT(REGRESSION):   ods _all_ close;
+11                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+
+MPRINT(REGRESSION):   ods rtf file="D:\opt\sasinside\SASWORK\_TD15076_SAS-AAP_/report1.rtf";
+NOTE: Writing RTF Body file: D:\opt\sasinside\SASWORK\_TD15076_SAS-AAP_/report1.rtf
+MPRINT(REGRESSION):   proc reg data=testdata outest=parameters;
+MPRINT(REGRESSION):   model y = x;
+MPRINT(REGRESSION):   output out=aus(keep=x y est) p=est;
+MPRINT(REGRESSION):   plot y * x;
+MPRINT(REGRESSION):   run;
+
+MPRINT(REGRESSION):   quit;
+NOTE: The data set WORK.PARAMETERS has 1 observations and 7 variables.
+NOTE: The data set WORK.AUS has 10 observations and 3 variables.
+NOTE: PROCEDURE REG used (Total process time):
+      real time           0.96 seconds
+      cpu time            0.46 seconds
+      
+
+MPRINT(REGRESSION):   ods rtf close;
+48         %endtestcall;
+NOTE: The macro ENDTESTCALL completed compilation without errors.
+      101 instructions 2836 bytes.
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+

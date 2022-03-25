@@ -1,0 +1,1674 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="de" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Programmdokumentation | SASUnit Examples - SASUnit Testdokumentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX291"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Programmdokumentation | SASUnit Examples - SASUnit Testdokumentation</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Programmdokumentation für Programm _reporttcghtml.sas</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" scope="col">Ausführliche&nbsp;Beschreibung</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Processes the output of the MCOVERAGE and MCOVERAGELOC system options</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">available in SAS 9.3 in order to assess test coverage.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata"><BR></td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">A html representation of a given macro source code file is generated,</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">showing which lines of code were executed during tests.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Version</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Revision: 666 $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Autor</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Author: klandwich $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Datum</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Date: 2019-04-30 11:52:36 +0200 (Di, 30 Apr 2019) $</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Siehe&nbsp;auch</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Here you can find the SASUnit documentation, release notes and license information.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/saspgm/sasunit/_reporttcghtml.sas $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Copyright</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For copyright information and terms of usage under the GPL license see included file readme.txt</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">or https://sourceforge.net/p/sasunit/wiki/readme/.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX292"></a>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_name</th>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" colspan="2" scope="colgroup">Parameter</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_macroName</td>
+<td class="l m pgmdocblinddata">name of the macro for which test coverage is assessed</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_macroLocation</td>
+<td class="l m pgmdocblinddata">path of the folder containing the source code file of the macro</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_mCoverageName</td>
+<td class="l m pgmdocblinddata">name of the SAS dataset with converted coverage analysis text file</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_mCoverageLibrary</td>
+<td class="l m pgmdocblinddata">library of the SAS dataset with converted coverage analysis text file</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_outputFile</td>
+<td class="l m pgmdocblinddata">name of the resulting html file</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_outputPath</td>
+<td class="l m pgmdocblinddata">path of the folder in which the result html file is generated</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_resVarName</td>
+<td class="l m pgmdocblinddata">optional name of macroVariable in wich coverage percentage result is written</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_html</td>
+<td class="l m pgmdocblinddata">Test report in HTML-format?</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_style</td>
+<td class="l m pgmdocblinddata">Name of the SAS style and css file to be used.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX293"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle2">Quellcode des Programms _reporttcghtml.sas</td>
+</tr>
+<tr>
+<td class="c systemtitle3" style=" font-size: 10pt;"><a href="src/00/_reporttcghtml.sas">[Herunterladen]</a>
+</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Datei WORK._PGMSRC_VIEW">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">ObsNum</th>
+<th class="l blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m pgmdocsource">00001</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00002</td>
+<td class="l m pgmdocsource">%macro _reporttcghtml(i_macroName=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00003</td>
+<td class="l m pgmdocsource">,i_macroLocation=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00004</td>
+<td class="l m pgmdocsource">,i_mCoverageName=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00005</td>
+<td class="l m pgmdocsource">,i_mCoverageLibrary=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00006</td>
+<td class="l m pgmdocsource">,o_outputFile=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00007</td>
+<td class="l m pgmdocsource">,o_outputPath=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00008</td>
+<td class="l m pgmdocsource">,o_resVarName=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00009</td>
+<td class="l m pgmdocsource">,o_html=0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00010</td>
+<td class="l m pgmdocsource">,i_style=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00011</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00012</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00013</td>
+<td class="l m pgmdocsource">%local l_MacroName;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00014</td>
+<td class="l m pgmdocsource">%local l_MCoverageName;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00015</td>
+<td class="l m pgmdocsource">%local l_linesize;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00016</td>
+<td class="l m pgmdocsource">%local l_MissingLines;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00017</td>
+<td class="l m pgmdocsource">%local l_title;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00018</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00019</td>
+<td class="l m pgmdocsource">%let l_MacroName=%lowcase(&amp;i_macroName.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00020</td>
+<td class="l m pgmdocsource">%let l_MCoverageName=%lowcase(&amp;i_mCoverageName.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00021</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00022</td>
+<td class="l m pgmdocsource">/*** Check existence of input files */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00023</td>
+<td class="l m pgmdocsource">%IF (NOT %SYSFUNC(EXIST(&amp;i_mCoverageLibrary..&amp;l_MCoverageName.)) OR &amp;l_MCoverageName=) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00024</td>
+<td class="l m pgmdocsource">%PUT  ERROR(SASUNIT): Input dataset with converted coverage data does not exist.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00025</td>
+<td class="l m pgmdocsource">%GOTO _macExit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00026</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00027</td>
+<td class="l m pgmdocsource">%IF (NOT %SYSFUNC(FILEEXIST(&amp;i_macroLocation./&amp;l_MacroName.)) OR &amp;l_MacroName=) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00028</td>
+<td class="l m pgmdocsource">%PUT  ERROR(SASUNIT): Input file with macro code does not exist.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00029</td>
+<td class="l m pgmdocsource">%GOTO _macExit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00030</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00031</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00032</td>
+<td class="l m pgmdocsource">/*** Read records from SAS data set and keep only those of given macro ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00033</td>
+<td class="l m pgmdocsource">/*** Keep only one record per combination of record, type first_line and last_line ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00034</td>
+<td class="l m pgmdocsource">proc sort data=&amp;i_mCoverageLibrary..&amp;l_MCoverageName. (where=(upcase (MacName)=&quot;%scan(%upcase(&amp;l_MacroName.),1,.)&quot;)) out=WORK._MCoverage1 nodupkey;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00035</td>
+<td class="l m pgmdocsource">by Firstline RecordType LastLine;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00036</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00037</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00038</td>
+<td class="l m pgmdocsource">/*** Get the covered rows of the macro ***/;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00039</td>
+<td class="l m pgmdocsource">data WORK._MCoverage2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00040</td>
+<td class="l m pgmdocsource">set WORK._MCoverage1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00041</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00042</td>
+<td class="l m pgmdocsource">/*** Keep value of last record the detect changes from one observation to the other ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00043</td>
+<td class="l m pgmdocsource">lag_LastLine = lag (LastLine);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00044</td>
+<td class="l m pgmdocsource">lag_FirstLine = lag (FirstLine);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00045</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00046</td>
+<td class="l m pgmdocsource">/*** Generate line numbers for covered contributing rows ***/;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00047</td>
+<td class="l m pgmdocsource">/*** 2 3 5 MacName .         will be converted to:                            ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00048</td>
+<td class="l m pgmdocsource">/*** 2 3 5 MacName 2                                                          ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00049</td>
+<td class="l m pgmdocsource">/*** 2 3 5 MacName 3                                                          ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00050</td>
+<td class="l m pgmdocsource">/*** 2 3 5 MacName 4                                                          ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00051</td>
+<td class="l m pgmdocsource">/*** 2 3 5 MacName 5                                                          ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00052</td>
+<td class="l m pgmdocsource">if (RecordType in (2)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00053</td>
+<td class="l m pgmdocsource">do _line_ = FirstLine to LastLine;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00054</td>
+<td class="l m pgmdocsource">output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00055</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00056</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00057</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00058</td>
+<td class="l m pgmdocsource">/*** Generate line numbers for non-contributing rows ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00059</td>
+<td class="l m pgmdocsource">/*** 3 3 5 MacName .         will be converted to:                            ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00060</td>
+<td class="l m pgmdocsource">/*** 3 3 5 MacName 2                                                          ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00061</td>
+<td class="l m pgmdocsource">/*** 3 3 5 MacName 3                                                          ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00062</td>
+<td class="l m pgmdocsource">/*** 3 3 5 MacName 4                                                          ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00063</td>
+<td class="l m pgmdocsource">/*** 3 3 5 MacName 5                                                          ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00064</td>
+<td class="l m pgmdocsource">if (RecordType in (3)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00065</td>
+<td class="l m pgmdocsource">do nonEx = FirstLine to LastLine;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00066</td>
+<td class="l m pgmdocsource">output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00067</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00068</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00069</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00070</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00071</td>
+<td class="l m pgmdocsource">/*** Due to the order of check in above data step, line numbers are not sorted properly ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00072</td>
+<td class="l m pgmdocsource">/*** Sort lines and generate a second data set with non-contributing rows ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00073</td>
+<td class="l m pgmdocsource">proc sort data=WORK._MCoverage2 out=WORK._MCoverage3 NODUPKEY;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00074</td>
+<td class="l m pgmdocsource">by _line_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00075</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00076</td>
+<td class="l m pgmdocsource">proc sort data=WORK._MCoverage2 out=WORK._NonEx NODUPKEY;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00077</td>
+<td class="l m pgmdocsource">by nonEx;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00078</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00079</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00080</td>
+<td class="l m pgmdocsource">/*** Enumerate lines in source code file , flagging all lines before %macro statement with -1 ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00081</td>
+<td class="l m pgmdocsource">data WORK.rowsOfInputFile;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00082</td>
+<td class="l m pgmdocsource">length srcrow $300 nCounter 8;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00083</td>
+<td class="l m pgmdocsource">retain srcrow &quot; &quot; nCounter -1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00084</td>
+<td class="l m pgmdocsource">infile &quot;&amp;i_macroLocation./&amp;l_MacroName.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00085</td>
+<td class="l m pgmdocsource">input;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00086</td>
+<td class="l m pgmdocsource">srcrow = _INFILE_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00087</td>
+<td class="l m pgmdocsource">if (index (compress (upcase (srcrow)), &quot;%nrstr(%MACRO)%scan(%upcase(&amp;l_MacroName.),1,.)(&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00088</td>
+<td class="l m pgmdocsource">OR index (compress (upcase (srcrow)), &quot;%nrstr(%MACRO)%scan(%upcase(&amp;l_MacroName.),1,.);&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00089</td>
+<td class="l m pgmdocsource">) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00090</td>
+<td class="l m pgmdocsource">nCounter = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00091</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00092</td>
+<td class="l m pgmdocsource">if (nCounter &gt;= 0) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00093</td>
+<td class="l m pgmdocsource">nCounter=nCounter+1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00094</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00095</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00096</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00097</td>
+<td class="l m pgmdocsource">/*** Read all lines not explicitly marked as covered          ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00098</td>
+<td class="l m pgmdocsource">/*** This can result in selecting no rows! So we need to      ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00099</td>
+<td class="l m pgmdocsource">/*** preassign a value to missinglines. Does zero sound okay? ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00100</td>
+<td class="l m pgmdocsource">%let MissingLines=0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00101</td>
+<td class="l m pgmdocsource">%let l_MissingLines = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00102</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00103</td>
+<td class="l m pgmdocsource">select distinct nCounter into :l_MissingLines separated by &#39; &#39; from WORK.rowsOfInputFile</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00104</td>
+<td class="l m pgmdocsource">where nCounter not in (select distinct _line_ from WORK._MCoverage3 where _line_ not eq .);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00105</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00106</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00107</td>
+<td class="l m pgmdocsource">/*** If there is an %if-statement with %do and %end an adjustment is made: ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00108</td>
+<td class="l m pgmdocsource">/*** If the %if-expression is evaluated to false then the corresponding    ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00109</td>
+<td class="l m pgmdocsource">/*** %end is not marked as covered... therefore it is marked manually,     ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00110</td>
+<td class="l m pgmdocsource">/*** same procedure for %mend                                              ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00111</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00112</td>
+<td class="l m pgmdocsource">data WORK.MCoverage /*(keep=srcrow nCounter covered srcRowCopy)*/;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00113</td>
+<td class="l m pgmdocsource">length srcrow $300 nCounter 8 srcRowCopy $2048 inExecutedBlock 8 inExecutedMBlock 8;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00114</td>
+<td class="l m pgmdocsource">retain srcrow &quot; &quot; nCounter -1 inExecutedBlock 0 inExecutedMBlock 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00115</td>
+<td class="l m pgmdocsource">label srcrow=&quot;Macrostatements&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00116</td>
+<td class="l m pgmdocsource">infile &quot;&amp;i_macroLocation./&amp;l_MacroName.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00117</td>
+<td class="l m pgmdocsource">input;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00118</td>
+<td class="l m pgmdocsource">if (index (upcase (_INFILE_), &quot;%nrstr(%MACRO )%scan(%upcase(&amp;l_MacroName.),1,.)&quot;)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00119</td>
+<td class="l m pgmdocsource">if not(1 in (&amp;l_MissingLines.)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00120</td>
+<td class="l m pgmdocsource">inExecutedMBlock = inExecutedMBlock + 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00121</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00122</td>
+<td class="l m pgmdocsource">nCounter=0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00123</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00124</td>
+<td class="l m pgmdocsource">if (nCounter &gt;= 0) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00125</td>
+<td class="l m pgmdocsource">nCounter=nCounter+1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00126</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00127</td>
+<td class="l m pgmdocsource">srcrow = cats (&quot;&quot;, _INFILE_, &quot;&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00128</td>
+<td class="l m pgmdocsource">srcRowCopy = _INFILE_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00129</td>
+<td class="l m pgmdocsource">covered = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00130</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00131</td>
+<td class="l m pgmdocsource">if (nCounter in (&amp;l_MissingLines.)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00132</td>
+<td class="l m pgmdocsource">srcrow = cats (&quot;&quot;, _INFILE_, &quot;&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00133</td>
+<td class="l m pgmdocsource">covered = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00134</td>
+<td class="l m pgmdocsource">_temp_row = compress (upcase (_INFILE_));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00135</td>
+<td class="l m pgmdocsource">if (length (_temp_row) &gt; 4) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00136</td>
+<td class="l m pgmdocsource">if ( (substr (_temp_row,1,5) = &#39;%END;&#39;) or (substr (_temp_row,1,5) = &#39;%END &#39;) ) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00137</td>
+<td class="l m pgmdocsource">srcrow = cats (&quot;&quot;, _INFILE_, &quot;&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00138</td>
+<td class="l m pgmdocsource">if inExecutedBlock gt 0 then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00139</td>
+<td class="l m pgmdocsource">covered = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00140</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00141</td>
+<td class="l m pgmdocsource">inExecutedBlock = inExecutedBlock - 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00142</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00143</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00144</td>
+<td class="l m pgmdocsource">if (length (_temp_row) &gt; 4) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00145</td>
+<td class="l m pgmdocsource">if ( (substr (_temp_row,1,6) = &#39;%MEND;&#39;) or (substr (_temp_row,1,5) = &#39;%MEND &#39;) ) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00146</td>
+<td class="l m pgmdocsource">srcrow = cats (&quot;&quot;, _INFILE_, &quot;&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00147</td>
+<td class="l m pgmdocsource">if inExecutedMBlock gt 0 then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00148</td>
+<td class="l m pgmdocsource">covered = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00149</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00150</td>
+<td class="l m pgmdocsource">inExecutedMBlock = inExecutedMBlock - 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00151</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00152</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00153</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00154</td>
+<td class="l m pgmdocsource">else do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00155</td>
+<td class="l m pgmdocsource">_temp_row = compress (upcase (_INFILE_));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00156</td>
+<td class="l m pgmdocsource">if ( (count (_temp_row,&#39;%DO&#39;) gt 0) ) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00157</td>
+<td class="l m pgmdocsource">inExecutedBlock = inExecutedBlock + count (_temp_row,&#39;%DO&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00158</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00159</td>
+<td class="l m pgmdocsource">if (length (_temp_row) &gt; 4) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00160</td>
+<td class="l m pgmdocsource">if ( (substr (_temp_row,1,5) = &#39;%END;&#39;) or (substr (_temp_row,1,5) = &#39;%END &#39;) ) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00161</td>
+<td class="l m pgmdocsource">inExecutedBlock = inExecutedBlock - 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00162</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00163</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00164</td>
+<td class="l m pgmdocsource">if (length (_temp_row) &gt; 4) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00165</td>
+<td class="l m pgmdocsource">if ( (substr (_temp_row,1,6) = &#39;%MEND;&#39;) or (substr (_temp_row,1,5) = &#39;%MEND &#39;) ) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00166</td>
+<td class="l m pgmdocsource">inExecutedMBlock = inExecutedMBlock - 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00167</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00168</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00169</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00170</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00171</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00172</td>
+<td class="l m pgmdocsource">/*** Scan rows for comment lines ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00173</td>
+<td class="l m pgmdocsource">DATA _commentLines;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00174</td>
+<td class="l m pgmdocsource">SET Rowsofinputfile(rename=(srcrow=srcline));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00175</td>
+<td class="l m pgmdocsource">RETAIN inComment oneLineComment endCommentNextLine commentStartsNextLine</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00176</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00177</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00178</td>
+<td class="l m pgmdocsource">IF _N_=1 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00179</td>
+<td class="l m pgmdocsource">inComment  = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00180</td>
+<td class="l m pgmdocsource">oneLineComment = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00181</td>
+<td class="l m pgmdocsource">endCommentNextLine = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00182</td>
+<td class="l m pgmdocsource">commentStartsNextLine = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00183</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00184</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00185</td>
+<td class="l m pgmdocsource">IF oneLineComment = 1 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00186</td>
+<td class="l m pgmdocsource">inComment  = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00187</td>
+<td class="l m pgmdocsource">oneLineComment = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00188</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00189</td>
+<td class="l m pgmdocsource">IF endCommentNextLine = 1 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00190</td>
+<td class="l m pgmdocsource">inComment  = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00191</td>
+<td class="l m pgmdocsource">endCommentNextLine =0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00192</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00193</td>
+<td class="l m pgmdocsource">IF commentStartsNextLine = 1 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00194</td>
+<td class="l m pgmdocsource">inComment  = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00195</td>
+<td class="l m pgmdocsource">commentStartsNextLine =0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00196</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00197</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00198</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00199</td>
+<td class="l m pgmdocsource">IF NOT ((index(srcline, &#39;/*&#39;) &gt; 0) AND (index(srcline, &#39;*/&#39;) &gt; 0))THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00200</td>
+<td class="l m pgmdocsource">IF index(srcline, &#39;*/&#39;) &gt; 0 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00201</td>
+<td class="l m pgmdocsource">endCommentNextLine = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00202</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00203</td>
+<td class="l m pgmdocsource">ELSE DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00204</td>
+<td class="l m pgmdocsource">IF (index(srcline, &#39;/*&#39;) GT 0)  THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00205</td>
+<td class="l m pgmdocsource">IF index(compress(srcline,, &#39;s&#39;),&#39;/*&#39;) EQ 1 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00206</td>
+<td class="l m pgmdocsource">inComment=1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00207</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00208</td>
+<td class="l m pgmdocsource">commentStartsNextLine=1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00209</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00210</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00211</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00212</td>
+<td class="l m pgmdocsource">ELSE DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00213</td>
+<td class="l m pgmdocsource">IF index(compress(srcline,, &#39;s&#39;),&#39;/*&#39;) EQ 1 AND index(compress(srcline,, &#39;s&#39;),&#39;*/&#39;) EQ length(compress(srcline,, &#39;s&#39;))-1 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00214</td>
+<td class="l m pgmdocsource">inComment=1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00215</td>
+<td class="l m pgmdocsource">oneLineComment=1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00216</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00217</td>
+<td class="l m pgmdocsource">ELSE IF count(srcline,&#39;*/&#39;) gt count(srcline,&#39;/*&#39;) THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00218</td>
+<td class="l m pgmdocsource">endCommentNextLine = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00219</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00220</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00221</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00222</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00223</td>
+<td class="l m pgmdocsource">/*** Update WORK.MCoverage to flag the non contributing rows identified by MCOVERAGE OPTION ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00224</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00225</td>
+<td class="l m pgmdocsource">update WORK.MCoverage</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00226</td>
+<td class="l m pgmdocsource">set covered = -2</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00227</td>
+<td class="l m pgmdocsource">where nCounter in (select distinct nonEx from WORK._nonex where nonEx not eq .);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00228</td>
+<td class="l m pgmdocsource">update WORK.MCoverage</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00229</td>
+<td class="l m pgmdocsource">set covered = -1</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00230</td>
+<td class="l m pgmdocsource">where nCounter in ((select distinct nCounter from _commentLines where inComment eq 1 or compress(compress(srcline),&quot;0D&quot;x) eq &#39;&#39;));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00231</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00232</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00233</td>
+<td class="l m pgmdocsource">/*** Get sets of rows of different different types: covered contributing, non-covered contributing and non contributing ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00234</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00235</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00236</td>
+<td class="l m pgmdocsource">create table rowNumbersCovered as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00237</td>
+<td class="l m pgmdocsource">select distinct nCounter as row from WORK.MCoverage where covered EQ  1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00238</td>
+<td class="l m pgmdocsource">create table rowNumbersNonCovered  as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00239</td>
+<td class="l m pgmdocsource">select distinct nCounter as row from WORK.MCoverage where covered EQ  0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00240</td>
+<td class="l m pgmdocsource">create table rowNumbersNonCbuting as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00241</td>
+<td class="l m pgmdocsource">select distinct nCounter as row from WORK.MCoverage where covered LE -1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00242</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00243</td>
+<td class="l m pgmdocsource">select count(*) into:ContributingLocCovered from rowNumbersCovered;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00244</td>
+<td class="l m pgmdocsource">select count(*) into:ContributingLocNonCovered from rowNumbersNonCovered;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00245</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00246</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00247</td>
+<td class="l m pgmdocsource">/*** Calculate the percentage of covered contributing rows ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00248</td>
+<td class="l m pgmdocsource">%let Coverage = %sysevalf (&amp;ContributingLocCovered. / (&amp;ContributingLocCovered. + &amp;ContributingLocNonCovered.));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00249</td>
+<td class="l m pgmdocsource">%let CoveragePCT = %sysfunc (putn (&amp;Coverage., nlpct));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00250</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00251</td>
+<td class="l m pgmdocsource">%if &quot;&amp;o_resVarName.&quot; NE &quot;&quot; %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00252</td>
+<td class="l m pgmdocsource">%let &amp;o_resVarName. = %sysevalf(%sysfunc (round(&amp;Coverage.,0.01))*100);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00253</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00254</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00255</td>
+<td class="l m pgmdocsource">data work._tcg_legend;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00256</td>
+<td class="l m pgmdocsource">length dummy $3 Text $140;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00257</td>
+<td class="l m pgmdocsource">dummy=&quot;   &quot;;Text=&quot;°[unicode 25CF] °[style tcgCoveredData &amp;g_nls_reportAuton_018.]&quot;;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00258</td>
+<td class="l m pgmdocsource">dummy=&quot;   &quot;;Text=&quot;°[unicode 25CF] °[style tcgNonCoveredData &amp;g_nls_reportAuton_019.]&quot;;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00259</td>
+<td class="l m pgmdocsource">dummy=&quot;   &quot;;Text=&quot;°[unicode 25CF] °[style tcgCommentData &amp;g_nls_reportAuton_020.]&quot;;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00260</td>
+<td class="l m pgmdocsource">dummy=&quot;   &quot;;Text=&quot;°[unicode 25CF] °[style tcgNonContribData &amp;g_nls_reportAuton_021.]&quot;;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00261</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00262</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00263</td>
+<td class="l m pgmdocsource">data work._tcg_report;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00264</td>
+<td class="l m pgmdocsource">LENGTH outputRow pgmSourceColumn $2048 RowNumberOut $200;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00265</td>
+<td class="l m pgmdocsource">SET WORK.MCoverage;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00266</td>
+<td class="l m pgmdocsource">RowNumber = _N_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00267</td>
+<td class="l m pgmdocsource">outputRow = trim(srcRowCopy);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00268</td>
+<td class="l m pgmdocsource">outputRow = tranwrd (outputRow,&#39;°[&#39;,&#39;°[&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00269</td>
+<td class="l m pgmdocsource">outputRow = tranwrd (outputRow,&#39;]&#39;,&#39;]&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00270</td>
+<td class="l m pgmdocsource">%_render_dataColumn (i_sourceColumn=RowNumber</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00271</td>
+<td class="l m pgmdocsource">,i_format=Z5.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00272</td>
+<td class="l m pgmdocsource">,i_columnType=tcgCommentData</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00273</td>
+<td class="l m pgmdocsource">,o_targetColumn=RowNumberOut</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00274</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00275</td>
+<td class="l m pgmdocsource">IF covered   = -1 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00276</td>
+<td class="l m pgmdocsource">%_render_dataColumn (i_sourceColumn=outputRow</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00277</td>
+<td class="l m pgmdocsource">,i_columnType=tcgCommentData</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00278</td>
+<td class="l m pgmdocsource">,o_targetColumn=pgmSourceColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00279</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00280</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00281</td>
+<td class="l m pgmdocsource">ELSE IF covered   = 1 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00282</td>
+<td class="l m pgmdocsource">%_render_dataColumn (i_sourceColumn=outputRow</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00283</td>
+<td class="l m pgmdocsource">,i_columnType=tcgCoveredData</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00284</td>
+<td class="l m pgmdocsource">,o_targetColumn=pgmSourceColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00285</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00286</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00287</td>
+<td class="l m pgmdocsource">ELSE IF covered   = 0 THEN DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00288</td>
+<td class="l m pgmdocsource">%_render_dataColumn (i_sourceColumn=outputRow</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00289</td>
+<td class="l m pgmdocsource">,i_columnType=tcgNonCoveredData</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00290</td>
+<td class="l m pgmdocsource">,o_targetColumn=pgmSourceColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00291</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00292</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00293</td>
+<td class="l m pgmdocsource">ELSE DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00294</td>
+<td class="l m pgmdocsource">%_render_dataColumn (i_sourceColumn=outputRow</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00295</td>
+<td class="l m pgmdocsource">,i_columnType=tcgNonContribData</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00296</td>
+<td class="l m pgmdocsource">,o_targetColumn=pgmSourceColumn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00297</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00298</td>
+<td class="l m pgmdocsource">END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00299</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00300</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00301</td>
+<td class="l m pgmdocsource">options nocenter;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00302</td>
+<td class="l m pgmdocsource">title;footnote;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00303</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00304</td>
+<td class="l m pgmdocsource">%let l_title=&amp;g_nls_reportAuton_017. &amp;i_macroName. | &amp;g_project - &amp;g_nls_reportAuton_002.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00305</td>
+<td class="l m pgmdocsource">title  j=c &quot;&amp;l_title.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00306</td>
+<td class="l m pgmdocsource">title2 &quot;&amp;g_nls_reportAuton_016.: &amp;CoveragePCT.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00307</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00308</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00309</td>
+<td class="l m pgmdocsource">ods html4 file=&quot;&amp;o_outputPath./&amp;o_outputFile..html&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00310</td>
+<td class="l m pgmdocsource">(TITLE=&quot;&amp;l_title.&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00311</td>
+<td class="l m pgmdocsource">headtext=&#39;&lt;link rel=&quot;shortcut icon&quot; href=&quot;./favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;&#39;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00312</td>
+<td class="l m pgmdocsource">metatext=&quot;http-equiv=&quot;&quot;Content-Style-Type&quot;&quot; content=&quot;&quot;text/css&quot;&quot; /&gt;&lt;meta http-equiv=&quot;&quot;Content-Language&quot;&quot; content=&quot;&quot;&amp;i_language.&quot;&quot; /&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00313</td>
+<td class="l m pgmdocsource">style=styles.&amp;i_style. stylesheet=(URL=&quot;css/&amp;i_style..css&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00314</td>
+<td class="l m pgmdocsource">encoding=&quot;&amp;g_rep_encoding.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00315</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00316</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00317</td>
+<td class="l m pgmdocsource">proc report data=work._tcg_legend nowd</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00318</td>
+<td class="l m pgmdocsource">style(report)=blindTable [borderwidth=0]</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00319</td>
+<td class="l m pgmdocsource">style(column)=blindData</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00320</td>
+<td class="l m pgmdocsource">style(lines) =blindData</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00321</td>
+<td class="l m pgmdocsource">style(header)=blindHeader;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00322</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00323</td>
+<td class="l m pgmdocsource">columns dummy Text;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00324</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00325</td>
+<td class="l m pgmdocsource">compute before _page_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00326</td>
+<td class="l m pgmdocsource">line @1 &quot;Color Legend:&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00327</td>
+<td class="l m pgmdocsource">endcomp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00328</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00329</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00330</td>
+<td class="l m pgmdocsource">title;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00331</td>
+<td class="l m pgmdocsource">%_reportFooter(o_html=&amp;o_html.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00332</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00333</td>
+<td class="l m pgmdocsource">*** Render separation line between legend and source code ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00334</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00335</td>
+<td class="l m pgmdocsource">ods html4 text=&quot;°[RAW &lt;hr size=&quot;&quot;1&quot;&quot;&gt;]&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00336</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00337</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00338</td>
+<td class="l m pgmdocsource">proc print data=work._tcg_report noobs</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00339</td>
+<td class="l m pgmdocsource">style(report)=blindTable [borderwidth=0]</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00340</td>
+<td class="l m pgmdocsource">style(column)=blindFixedFontData</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00341</td>
+<td class="l m pgmdocsource">style(header)=blindHeader;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00342</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00343</td>
+<td class="l m pgmdocsource">var RowNumberOut pgmSourceColumn;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00344</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00345</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00346</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00347</td>
+<td class="l m pgmdocsource">%_closeHtmlPage(&amp;i_style.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00348</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00349</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00350</td>
+<td class="l m pgmdocsource">options center;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00351</td>
+<td class="l m pgmdocsource">title;footnote;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00352</td>
+<td class="l m pgmdocsource">%_macExit:</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00353</td>
+<td class="l m pgmdocsource">%mend _reporttcghtml;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

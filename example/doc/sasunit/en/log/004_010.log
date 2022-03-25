@@ -1,0 +1,17 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+88                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+
+
+MPRINT(INITTESTCASE):   options linesize=max;
+118        %boxplot(data=testdata.blood_pressure, x=visitXXX, y=sbp, group=med, report=&g_work/report10.pdf)
+MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\boxplot.sas
+ERROR: boxplot: Variable visitXXX does not exist in data set testdata.blood_pressure
+119        %assertLogMsg(i_logMsg=ERROR: boxplot: Variable visitXXX does not exist in data set testdata.blood_pressure)
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;
+

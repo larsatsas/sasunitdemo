@@ -1,0 +1,169 @@
+/*
+   This is a css file of SASUnit.
+      
+   For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/
+   Here you can find the SASUnit documentation, release notes and license information.
+   This file is part of SASUnit, the Unit testing framework for SAS(R) programs.
+   For copyright information and terms of usage under the GPL license see included file readme.txt
+   or https://sourceforge.net/p/sasunit/wiki/readme/.
+*/
+
+/* CSS Tree menu styles */
+/* Inspired by The CSS Ninja Treeview Example */
+.hms-treeview
+{
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+    color: #1A41A8;
+	font-weight: bold;
+	padding: 0;
+	font-size: 11pt;
+}
+
+a.hms-treeview,
+ol.hms-treeview
+{
+	margin: 2px 0px 2px 0px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+    color: #1A41A8;
+	font-weight: bold;
+	padding: 0;
+	font-size: 11pt;
+}
+
+.hms-treeview ol
+{
+	margin: 2px 0px 2px 0px;
+	padding: 0;
+}
+
+.hms-treeview li
+{
+	margin: 2px 0px 2px 10px;
+	list-style: none;
+	font-size: 9pt;
+    white-space:nowrap;
+}
+
+.hms-treeview input
+{
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.hms-treeview a
+{
+    color: #1A41A8;
+	text-decoration: none;
+}
+
+.hms-treeview input + label + ol
+{
+	margin: 2px 0px 2px 10px;
+}
+
+.hms-treeview input ~ ol
+{
+	display: none;
+}
+
+.hms-treeview label::before
+{
+	content: "";
+	width: 16px;
+	vertical-align: middle;
+}
+
+.hms-treeview input:disabled + label
+{
+	cursor: default;
+	opacity: .6;
+}
+
+.hms-treeview input:checked ~ label ~ ol
+{
+	display: block;
+}
+
+.hms-treeview  input:not(:checked) + label.nodemanual::before
+{
+	background: url("../FolderClosedManual.png") no-repeat;
+	background-position: center center;
+}
+
+.hms-treeview  input:not(:checked) + label.nodeok::before
+{
+	background: url("../FolderClosedOK.png") no-repeat;
+	background-position: center center;
+}
+
+.hms-treeview  input:not(:checked) + label.nodeerror::before
+{
+	background: url("../FolderClosedERROR.png") no-repeat;
+	background-position: center center;
+}
+
+.hms-treeview  input:not(:checked) + label.node::before
+{
+	background: url("../FolderClosed.png") no-repeat;
+	background-position: center center;
+}
+
+.hms-treeview input:checked + label.nodemanual::before
+{
+	background: url("../FolderOpenedManual.png") no-repeat;
+	background-position: center center;
+}
+
+.hms-treeview input:checked + label.nodeok::before
+{
+	background: url("../FolderOpenedOK.png") no-repeat;
+	background-position: center center;
+}
+
+.hms-treeview input:checked + label.nodeerror::before
+{
+	background: url("../FolderOpenedERROR.png") no-repeat;
+	background-position: center center;
+}
+
+.hms-treeview input:checked + label.node::before
+{
+	background: url("../FolderOpened.png") no-repeat;
+	background-position: center center;
+}
+
+label.file
+{
+	background: url("../File.png") no-repeat;
+	background-position: center left;
+}
+
+label.fileok
+{
+	background: url("../FileOK.png") no-repeat;
+	background-position: center left;
+}
+
+label.filemanual
+{
+	background: url("../FileMANUAL.png") no-repeat;
+	background-position: center left;
+}
+
+label.fileerror
+{
+	background: url("../FileERROR.png") no-repeat;
+	background-position: center left;
+}
+
+.hms-treeview label,
+.hms-treeview a,
+.hms-treeview label::before
+{
+	display: inline-block;
+	height: 15px;
+}

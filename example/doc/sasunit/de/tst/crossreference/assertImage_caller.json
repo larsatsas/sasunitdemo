@@ -1,0 +1,36 @@
+{ "name": "assertImage"
+, "children": [
+{ "name": "_asserts"
+},
+{ "name": "_checkcallingsequence"
+},
+{ "name": "_copyfile"
+},
+{ "name": "_createtestsubfolder"
+, "children": [
+{ "name": "_gettestsubfolder"
+, "children": [
+{ "name": "_abspath"
+},
+{ "name": "_existdir"
+}
+]
+},
+{ "name": "_mkdir"
+}
+]
+},
+{ "name": "_getscenariotestid"
+},
+{ "name": "_handleerror"
+},
+{ "name": "_xcmdwithpath"
+},
+{ "name": "endtestcall"
+, "children": [
+{ "name": "_delfile"
+}
+]
+}
+]
+}

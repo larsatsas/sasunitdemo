@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>SASUnit Examples | &lt;a href=&quot;http://sourceforge.net/projects/sasunit/&quot; class=&quot;link&quot; title=&quot;SASUnit&quot; target=&quot;_blank&quot;&gt;SASUnit &lt;img src=&quot;SASUnit_Logo.png&quot; alt=&quot;SASUnit&quot; title=&quot;SASUnit&quot; width=26px height=26px align=&quot;top&quot; border=&quot;0&quot;&gt;&lt;/a&gt; Test Documentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="AUTON002_139"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">SASUnit Examples | <a href="http://sourceforge.net/projects/sasunit/" class="link" title="SASUnit" target="_blank">SASUnit <img src="SASUnit_Logo.png" alt="SASUnit" title="SASUnit" width=26px height=26px align="top" border="0"></a> Test Documentation</td>
+</tr>
+<tr>
+<td class="l systemtitle2"><ul class="tabs"> <li id="current"><a href="overview.html">Main Page</a></li> <li ><a href="scn_overview.html">Test Scenarios</a></li> <li ><a href="cas_overview.html">Test Cases</a></li> <li ><a href="auton_overview.html">Units under Test</a></li> </ul></td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th id="ch706b1fk3c" class="c blindheader" scope="col">idColumn</th>
+<th id="ch706b1fk4d" class="c blindheader" scope="col">parameterColumn</th>
+<th id="ch706b1fk5e" class="c blindheader" scope="col">valueColumn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m blinddatastrong" style=" font-size: 10pt;" colspan="3">Properties&nbsp;of&nbsp;this&nbsp;test&nbsp;suite</td>
+</tr>
+<tr>
+<th class="c header" colspan="3" scope="colgroup">Properties&nbsp;of&nbsp;project</th>
+</tr>
+<tr>
+<th id="rh706b1fk1" class="l m rowheader" scope="row">Name of project</th>
+<td class="l m data"><span title="SASUnit Examples" class="l">&g_project</span></td>
+<td class="l m data">SASUnit Examples</td>
+</tr>
+<tr>
+<th id="rh706b1fk2" class="l m rowheader" scope="row">Root directory</th>
+<td class="l m data"><span title="C:\sasunit\example" class="l">&g_root</span></td>
+<td class="l m data"><span title="C:\sasunit\example" class="l"><a href="file:///C:\sasunit\example">C:\sasunit\example</a>
+</span></td>
+</tr>
+<tr>
+<th id="rh706b1fk3" class="l m rowheader" scope="row">Path to test repository</th>
+<td class="l m data"><span title="C:\sasunit\example\doc\sasunit\en" class="l">&g_target</span></td>
+<td class="l m data"><span title="C:\sasunit\example\doc\sasunit\en" class="l"><a href="file:///C:\sasunit\example\doc\sasunit\en">doc/sasunit/en</a>
+</span></td>
+</tr>
+<tr>
+<th id="rh706b1fk4" class="l m rowheader" scope="row">Program libraries<br/>
+(macro autocall paths)</th>
+<td class="l m data"><span title="C:/sasunit/example/saspgm" class="l">&g_sasautos</span></td>
+<td class="l m data"><span title="C:/sasunit/example/saspgm" class="l"><a href="file:///C:/sasunit/example/saspgm">saspgm</a>
+</span></td>
+</tr>
+<tr>
+<th id="rh706b1fk5" class="l m rowheader" scope="row">Folder for test data</th>
+<td class="l m data"><span title="C:/sasunit/example/dat" class="l">&g_testdata</span></td>
+<td class="l m data"><span title="C:/sasunit/example/dat" class="l"><a href="file:///C:/sasunit/example/dat">dat</a>
+</span></td>
+</tr>
+<tr>
+<th id="rh706b1fk6" class="l m rowheader" scope="row">Folder for reference data</th>
+<td class="l m data"><span title="C:/sasunit/example/dat" class="l">&g_refdata</span></td>
+<td class="l m data"><span title="C:/sasunit/example/dat" class="l"><a href="file:///C:/sasunit/example/dat">dat</a>
+</span></td>
+</tr>
+<tr>
+<th id="rh706b1fk7" class="l m rowheader" scope="row">Folder for specification documents</th>
+<td class="l m data"><span title="C:/sasunit/example/doc/spec" class="l">&g_doc</span></td>
+<td class="l m data"><span title="C:/sasunit/example/doc/spec" class="l"><a href="file:///C:/sasunit/example/doc/spec">doc/spec</a>
+</span></td>
+</tr>
+<tr>
+<th class="c header" colspan="3" scope="colgroup">Configuration&nbsp;of&nbsp;SASUnit</th>
+</tr>
+<tr>
+<th id="rh706b1fk8" class="l m rowheader" scope="row">Path to SASUnit macros</th>
+<td class="l m data"><span title="C:/sasunit/saspgm/sasunit" class="l">&g_sasunit</span></td>
+<td class="l m data"><span title="C:/sasunit/saspgm/sasunit" class="l"><a href="file:///C:/sasunit/saspgm/sasunit">C:\sasunit\saspgm\sasunit</a>
+</span></td>
+</tr>
+<tr>
+<th id="rh706b1fk9" class="l m rowheader" scope="row">Path to SASUnit macros</th>
+<td class="l m data"><span title="C:/sasunit/saspgm/sasunit/windows" class="l">&g_sasunit_os</span></td>
+<td class="l m data"><span title="C:/sasunit/saspgm/sasunit/windows" class="l"><a href="file:///C:/sasunit/saspgm/sasunit/windows">C:\sasunit\saspgm\sasunit/windows</a>
+</span></td>
+</tr>
+<tr>
+<th id="rh706b1fk10" class="l m rowheader" scope="row">SASUnit version</th>
+<td class="l m data"><span title="2.0.2" class="l">&g_version</span></td>
+<td class="l m data">2.0.2</td>
+</tr>
+<tr>
+<th id="rh706b1fk11" class="l m rowheader" scope="row">SASUnit data base version</th>
+<td class="l m data"><span title="2.0" class="l">&g_db_version</span></td>
+<td class="l m data">2.0</td>
+</tr>
+<tr>
+<th id="rh706b1fk12" class="l m rowheader" scope="row">SAS log of reporting job</th>
+<td class="l m data">&nbsp;</td>
+<td class="l m data"><span title="C:\sasunit\example\doc\sasunit\en\run_all.log" class="l"><a href="file:///C:\sasunit\example\doc\sasunit\en\run_all.log">doc/sasunit/en/run_all.log</a>
+</span></td>
+</tr>
+<tr>
+<th id="rh706b1fk13" class="l m rowheader" scope="row">SASUnit language</th>
+<td class="l m data">SASUNIT_LANGUAGE</td>
+<td class="l m data">en</td>
+</tr>
+<tr>
+<th id="rh706b1fk14" class="l m rowheader" scope="row">Encoding of HTML reports</th>
+<td class="l m data">&amp;g_rep_encoding</td>
+<td class="l m data">UTF8</td>
+</tr>
+<tr>
+<th id="rh706b1fk15" class="l m rowheader" rowspan="2" scope="rowgroup">SASUnit started with test coverage</th>
+<td class="l m data">SASUNIT_COVERAGEASSESSMENT</td>
+<td class="l m data">Yes</td>
+</tr>
+<tr>
+<td class="l m data">&amp;g_testcoverage</td>
+<td class="l m data">Yes</td>
+</tr>
+<tr>
+<th id="rh706b1fk16" class="l m rowheader" scope="row">SASUnit started in overwrite mode</th>
+<td class="l m data">SASUNIT_OVERWRITE</td>
+<td class="l m data">Yes</td>
+</tr>
+<tr>
+<th id="rh706b1fk17" class="l m rowheader" scope="row">Document call hierarchy</th>
+<td class="l m data">&amp;g_crossref</td>
+<td class="l m data">Yes</td>
+</tr>
+<tr>
+<th id="rh706b1fk18" class="l m rowheader" scope="row">Call hierarchy includes SASUnit macros</th>
+<td class="l m data">&amp;g_crossrefsasunit</td>
+<td class="l m data">Yes</td>
+</tr>
+<tr>
+<th class="c header" colspan="3" scope="colgroup">Test&nbsp;results</th>
+</tr>
+<tr>
+<th id="rh706b1fk19" class="l m rowheader" scope="row">Number of test scenarios (failed)</th>
+<td class="l m data">&nbsp;</td>
+<td class="l m data">12 (3)</td>
+</tr>
+<tr>
+<th id="rh706b1fk20" class="l m rowheader" scope="row">Number of test cases (failed)</th>
+<td class="l m data">&nbsp;</td>
+<td class="l m data">55 (3)</td>
+</tr>
+<tr>
+<th id="rh706b1fk21" class="l m rowheader" scope="row">Number of assertions (failed)</th>
+<td class="l m data">&nbsp;</td>
+<td class="l m data">143 (6)</td>
+</tr>
+<tr>
+<th id="rh706b1fk22" class="l m rowheader" scope="row">Runtime Scenarios</th>
+<td class="l m data">&nbsp;</td>
+<td class="l m data"> 0:00:28</td>
+</tr>
+<tr>
+<th id="rh706b1fk23" class="l m rowheader" scope="row">Runtime SASUnit (Scenarios started)</th>
+<td class="l m data">&nbsp;</td>
+<td class="l m data">0:03:42 (12)</td>
+</tr>
+<tr>
+<th class="c header" colspan="3" scope="colgroup">Properties&nbsp;of&nbsp;run-time&nbsp;environment</th>
+</tr>
+<tr>
+<th id="rh706b1fk24" class="l m rowheader" scope="row">SAS configuration file for test scenarios</th>
+<td class="l m data"><span title="C:/sasunit/example/bin/sasunit.9.4.windows.en.cfg" class="l">&g_sascfg</span></td>
+<td class="l m data"><span title="C:/sasunit/example/bin/sasunit.9.4.windows.en.cfg" class="l"><a href="file:///C:/sasunit/example/bin/sasunit.9.4.windows.en.cfg">bin/sasunit.9.4.windows.en.cfg</a>
+</span></td>
+</tr>
+<tr>
+<th id="rh706b1fk25" class="l m rowheader" rowspan="2" scope="rowgroup">Platform</th>
+<td class="l m data">&amp;SYSSCP</td>
+<td class="l m data">WIN</td>
+</tr>
+<tr>
+<td class="l m data">&amp;SYSSCPL</td>
+<td class="l m data">X64_DSRV16</td>
+</tr>
+<tr>
+<th id="rh706b1fk26" class="l m rowheader" scope="row">SAS Version</th>
+<td class="l m data">&amp;SYSVLONG4</td>
+<td class="l m data">9.04.01M7P08052020</td>
+</tr>
+<tr>
+<th id="rh706b1fk27" class="l m rowheader" scope="row">User ID</th>
+<td class="l m data">&amp;SYSUSERID</td>
+<td class="l m data">sas</td>
+</tr>
+<tr>
+<th id="rh706b1fk28" class="l m rowheader" scope="row">Encoding of SAS session</th>
+<td class="l m data">&amp;SYSENCODING</td>
+<td class="l m data">wlatin1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="l systemfooter"><hr size="1"></td>
+</tr>
+<tr>
+<td class="r systemfooter2"><small>Generated on  Thursday,      24 March 2022,  7:11:42 by <a href="http://sourceforge.net/projects/sasunit/" class="link" title="SASUnit" onclick="window.open(this.href); return false;"> SASUnit <img src="SASUnit_Logo.png" title="SASUnit" alt="SASUnit" width=18px height=18px align="absmiddle" border="0"></a> Version 2.0.2 (681) </small></td>
+</tr>
+</table><br>
+</div>
+</body>
+</html>

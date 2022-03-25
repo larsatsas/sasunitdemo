@@ -1,0 +1,1476 @@
+1                                           Das SAS System                  08:01 Monday, July 1, 2019
+
+NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.4 (TS1M5) 
+      Licensed to HMS GMBH STANDARD PACKAGE 64 BIT WINDOWS, Site 70128358.
+NOTE: This session is executing on the X64_10PRO  platform.
+
+
+
+NOTE: Updated analytical products:
+      
+      SAS/STAT 14.3
+      SAS/ETS 14.3
+      SAS/OR 14.3
+      SAS/IML 14.3
+      SAS/QC 14.3
+
+NOTE: Additional host information:
+
+ X64_10PRO WIN 10.0.17134  Workstation
+
+NOTE: SAS initialization used:
+      real time           0.36 seconds
+      cpu time            0.29 seconds
+      
+NOTE: The macro _SCENARIO completed compilation without errors.
+      58 instructions 1780 bytes.
+MPRINT(_SCENARIO):   LINESIZE=MAX;
+NOTE: The macro _INITERRORHANDLER completed compilation without errors.
+      25 instructions 460 bytes.
+MPRINT(_SCENARIO):  ;
+NOTE: The macro _HANDLEERROR completed compilation without errors.
+      79 instructions 1948 bytes.
+NOTE: The macro _EXISTDIR completed compilation without errors.
+      42 instructions 856 bytes.
+MPRINT(_SCENARIO):   LIBNAME target "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de";
+NOTE: Libref TARGET was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de
+1          /**
+2             \file
+3             \ingroup    SASUNIT_EXAMPLES_TEST
+4          
+5             \brief      Test examples for assertExternal.sas
+6          
+7             \version    \$Revision: 559 $
+8             \author     \$Author: klandwich $
+9             \date       \$Date: 2017-12-18 15:51:42 +0100 (Mo, 18 Dez 2017) $
+10            \sa         \$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/example/saspgm/assertexternal_example_test.sas $
+11            \copyright  Copyright 2010, 2012 HMS Analytical Software GmbH.
+12                        This file is part of SASUnit, the Unit testing framework for SAS(R) programs.
+13                        For terms of usage under the GPL license see included file readme.txt
+14                        or https://sourceforge.net/p/sasunit/wiki/readme.v1.2/.
+15         */ /** \cond */
+16         
+17         %initScenario(i_desc=Test examples for assertExternal.sas);
+2                                                                                                                        Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+NOTE: The macro INITSCENARIO completed compilation without errors.
+      139 instructions 4128 bytes.
+NOTE: The macro _READENVMETADATA completed compilation without errors.
+      235 instructions 5444 bytes.
+MPRINT(INITSCENARIO):  ;
+MPRINT(INITSCENARIO):   filename _CUR_SCN "C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/example/saspgm/assertexternal_example_test.sas";
+MPRINT(INITSCENARIO):   proc sql noprint;
+MPRINT(INITSCENARIO):   select put (max(1,max(scn_id)+1), z3.) into :g_scnID from target.scn;
+MPRINT(INITSCENARIO):   select modate into :l_changed from sashelp.vextfl where fileref="_CUR_SCN";
+MPRINT(INITSCENARIO):   select scn_id into :l_scnID from target.scn where "C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/example/saspgm/assertexternal_example_test.sas" contains trim(scn_path);
+MPRINT(INITSCENARIO):   select scn_id into :g_scnID from target.scn where "C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/example/saspgm/assertexternal_example_test.sas" contains trim(scn_path);
+MPRINT(INITSCENARIO):   quit;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(INITSCENARIO):   filename _CUR_SCN clear;
+NOTE: Fileref _CUR_SCN has been deassigned.
+MPRINT(INITSCENARIO):   proc sql noprint;
+MPRINT(INITSCENARIO):   update target.scn set scn_start =1877587315.746 ,scn_changed ="01JUL19:08:01:24"dt ,scn_desc ="Test examples for assertExternal.sas" where scn_id = 001;
+NOTE: 1 row was updated in TARGET.SCN.
+
+MPRINT(INITSCENARIO):   delete from target.cas where cas_scnid=001;
+NOTE: No rows were deleted from TARGET.CAS.
+
+MPRINT(INITSCENARIO):   delete from target.tst where tst_scnid=001;
+NOTE: No rows were deleted from TARGET.TST.
+
+MPRINT(INITSCENARIO):   quit;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+NOTE: The macro _LOADENVIRONMENT completed compilation without errors.
+      249 instructions 8644 bytes.
+NOTE: The macro _NOBS completed compilation without errors.
+      32 instructions 640 bytes.
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   DATA _null_;
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   SET target.tsu;
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_project' , trim(tsu_project));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_root' , trim(tsu_root));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_sasunitroot' , trim(tsu_sasunitroot));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_sasunit' , trim(tsu_sasunit));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_sasunit_os' , trim(tsu_sasunit_os));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_sasautos' , trim(tsu_sasautos));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_sasautos0' , trim(tsu_sasautos));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos1" , trim(tsu_sasautos1));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos2" , trim(tsu_sasautos2));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos3" , trim(tsu_sasautos3));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos4" , trim(tsu_sasautos4));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos5" , trim(tsu_sasautos5));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos6" , trim(tsu_sasautos6));
+3                                                                                                                        Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos7" , trim(tsu_sasautos7));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos8" , trim(tsu_sasautos8));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos9" , trim(tsu_sasautos9));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos10" , trim(tsu_sasautos10));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos11" , trim(tsu_sasautos11));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos12" , trim(tsu_sasautos12));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos13" , trim(tsu_sasautos13));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos14" , trim(tsu_sasautos14));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos15" , trim(tsu_sasautos15));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos16" , trim(tsu_sasautos16));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos17" , trim(tsu_sasautos17));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos18" , trim(tsu_sasautos18));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos19" , trim(tsu_sasautos19));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos20" , trim(tsu_sasautos20));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos21" , trim(tsu_sasautos21));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos22" , trim(tsu_sasautos22));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos23" , trim(tsu_sasautos23));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos24" , trim(tsu_sasautos24));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos25" , trim(tsu_sasautos25));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos26" , trim(tsu_sasautos26));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos27" , trim(tsu_sasautos27));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos28" , trim(tsu_sasautos28));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ("g_sasautos29" , trim(tsu_sasautos29));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_autoexec' , trim(tsu_autoexec));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_sascfg' , trim(tsu_sascfg));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_sasuser' , trim(tsu_sasuser));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_testdata' , trim(tsu_testdata));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_refdata' , trim(tsu_refdata));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_doc' , trim(tsu_doc));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_testcoverage' , put (tsu_testcoverage, z1.));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_verbose' , put (tsu_verbose, z1.));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_crossref' , put (tsu_crossref, z1.));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_crossrefsasunit', put (tsu_crossrefsasunit, z1.));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_language' , trim(tsu_language));
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   RUN;
+
+NOTE: There were 1 observations read from the data set TARGET.TSU.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+NOTE: The macro _ABSPATH completed compilation without errors.
+      55 instructions 1240 bytes.
+NOTE: The macro _DETECTSYMBOLS completed compilation without errors.
+      41 instructions 1300 bytes.
+MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   proc printto log=work.detect.note.log new;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   run;
+
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   filename _detect catalog "work.detect.note.log";
+MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   data _null_;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   infile _detect truncover;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   input line $char256.;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   call symput ("g_note", scan(line, 1, ':'));
+MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   stop;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   run;
+
+NOTE: The infile _DETECT is:
+      Catalog Name=WORK.DETECT.NOTE.LOG,
+      Katalogseitengröße=4096,
+      Anzahl der Katalogseiten=4,
+      Erstellt=Montag,  1. Juli 2019 08:01:56,
+      Zuletzt geändert=Montag,  1. Juli 2019 08:01:56,
+      Dateiname=C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_\detect.sas7bcat,
+      Erstellt mit Release=9.0401M5,
+      Erstellt mit Betriebssystem=X64_10PRO,
+      Besitzername=VORDEFINIERT\Administratoren,
+      Dateigröße=            17KB,
+      Dateigröße (Byte)=17408
+
+NOTE: 1 record was read from the infile _DETECT.
+      The minimum record length was 49.
+      The maximum record length was 49.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   filename _detect;
+NOTE: Fileref _DETECT has been deassigned.
+MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   proc datasets lib=work nolist;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   delete detect / memtype=catalog;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   quit;
+
+NOTE: Deleting WORK.DETECT (memtype=CATALOG).
+NOTE: PROZEDUR DATASETS used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.03 seconds
+      
+
+MPRINT(INITSCENARIO._LOADENVIRONMENT):  ;
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   LIBNAME testout "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/tst";
+NOTE: Libref TESTOUT was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de\tst
+5                                                                                                                        Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   FILENAME testout "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/tst";
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   LIBNAME testdata "C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/example/dat";
+NOTE: Libref TESTDATA was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\dat
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   FILENAME testdata "C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/example/dat";
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   LIBNAME refdata "C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/example/dat";
+NOTE: Libref REFDATA 1verweist auf dieselbe physische Bibliothek wie TESTDATA.
+NOTE: Libref REFDATA was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\dat
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   FILENAME refdata "C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/example/dat";
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   FILENAME doc "C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/example/doc/spec";
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   OPTIONS MAUTOSOURCE APPEND=(SASAUTOS=("C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/saspgm/sasunit/windows" "C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/example/saspgm" ));
+NOTE: The macro _OSCMDS completed compilation without errors.
+      111 instructions 4216 bytes.
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   * retrieve dateformat from WINDOWS registry *;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   * Set default if anything goes wrong *;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   options noxwait xsync xmin;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   options XWAIT XSYNC NOXMIN;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   data _null_;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   length g_dateformat $40 dateformat $80;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   infile "C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_\retrive_dateformat.txt";
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   input;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   if index (upcase (_INFILE_), "REG_SZ") then do;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   dateformat = lowcase (scan (_INFILE_,3," "));
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   * Building SAS-format name from WIN-Dateformat *;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   * Set default for dateformat *;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   g_dateformat = "nldate.";
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   * Check if monthname is displayed *;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   if (index (dateformat,"mmm")=0) then do;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   * Check order of day month year *;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   index_d=index (dateformat,"d");
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   index_m=index (dateformat,"m");
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   index_y=index (dateformat,"y");
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   if (index_y < index_m) then do;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   if (index_d < index_m) then do;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   g_dateformat = "yyddmm10.";
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   end;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   else do;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   g_dateformat = "yymmdd10.";
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   end;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   end;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   else do;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   if (index_d > index_m) then do;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   g_dateformat = "mmddyy10.";
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   end;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   else do;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   g_dateformat = "ddmmyy10.";
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   end;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   end;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   end;
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   call symputx ("G_DATEFORMAT", trim (g_dateformat));
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   end;
+6                                                                                                                        Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   run;
+
+NOTE: The infile "C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_\retrive_dateformat.txt" is:
+      Dateiname=C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_\retrive_dateformat.txt,
+      RECFM=V,LRECL=32767,Dateigröße (Byte)=91,
+      Zuletzt geändert=01. Juli 2019 08.01 Uhr,
+      Erstellungsuhrzeit=01. Juli 2019 08.01 Uhr
+
+NOTE: 4 records were read from the infile "C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_\retrive_dateformat.txt".
+      The minimum record length was 0.
+      The maximum record length was 45.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(INITSCENARIO._LOADENVIRONMENT):  ;
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   OPTIONS MAUTOSOURCE LINESIZE=MAX NOQUOTELENMAX MPRINT MPRINTNEST MCOMPILENOTE=ALL MAUTOLOCDISPLAY;
+MPRINT(INITSCENARIO._LOADENVIRONMENT):   OPTIONS NOMLOGIC NOMLOGICNEST NOSYMBOLGEN;
+GLOBAL G_AUTOEXEC 
+GLOBAL G_CASLOGFILE 
+GLOBAL G_COPYDIR xcopy /E /I /Y
+GLOBAL G_CROSSREF 1
+GLOBAL G_CROSSREFSASUNIT 1
+GLOBAL G_DATEFORMAT ddmmyy10.
+GLOBAL G_DIRMACRO _dir
+GLOBAL G_DOC C:jenkinsworkspaceSASUnit Build Release ZIPFile under windowsexample/docspec
+GLOBAL G_ENDCOMMAND  
+GLOBAL G_ERROR ERROR
+GLOBAL G_ERROR_CODE 
+GLOBAL G_ERROR_MACRO 
+GLOBAL G_ERROR_MSG 
+GLOBAL G_INFILE_OPTIONS IGNOREDOSEOF
+GLOBAL G_INSCENARIO 0
+GLOBAL G_INTESTCALL 0
+GLOBAL G_INTESTCASE 0
+GLOBAL G_LANGUAGE de
+GLOBAL G_LOG C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/log
+GLOBAL G_LOGFILE 
+GLOBAL G_MAKEDIR md
+GLOBAL G_NOTE NOTE
+GLOBAL G_PRINTFILE 
+GLOBAL G_PROJECT SASUnit Examples
+GLOBAL G_REFDATA C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\dat
+GLOBAL G_REMOVEDIR rd /S /Q
+GLOBAL G_REMOVEFILE del /S /Q
+GLOBAL G_REP_ENCODING UTF8
+GLOBAL G_ROOT C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example
+GLOBAL G_RUNENVIRONMENT SASUNIT_DMS
+GLOBAL G_RUNMODE SASUNIT_BATCH
+GLOBAL G_RUNNINGPROGRAM assertexternal_example_test.sas
+GLOBAL G_RUNNINGPROGRAMFULLNAME C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/example/saspgm/assertexternal_example_test.sas
+GLOBAL G_SASAUTOS C:jenkinsworkspaceSASUnit Build Release ZIPFile under windowsexample/saspgm
+GLOBAL G_SASAUTOS0 C:jenkinsworkspaceSASUnit Build Release ZIPFile under windowsexample/saspgm
+7                                                                                                                        Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+GLOBAL G_SASAUTOS1 
+GLOBAL G_SASAUTOS10 
+GLOBAL G_SASAUTOS11 
+GLOBAL G_SASAUTOS12 
+GLOBAL G_SASAUTOS13 
+GLOBAL G_SASAUTOS14 
+GLOBAL G_SASAUTOS15 
+GLOBAL G_SASAUTOS16 
+GLOBAL G_SASAUTOS17 
+GLOBAL G_SASAUTOS18 
+GLOBAL G_SASAUTOS19 
+GLOBAL G_SASAUTOS2 
+GLOBAL G_SASAUTOS20 
+GLOBAL G_SASAUTOS21 
+GLOBAL G_SASAUTOS22 
+GLOBAL G_SASAUTOS23 
+GLOBAL G_SASAUTOS24 
+GLOBAL G_SASAUTOS25 
+GLOBAL G_SASAUTOS26 
+GLOBAL G_SASAUTOS27 
+GLOBAL G_SASAUTOS28 
+GLOBAL G_SASAUTOS29 
+GLOBAL G_SASAUTOS3 
+GLOBAL G_SASAUTOS4 
+GLOBAL G_SASAUTOS5 
+GLOBAL G_SASAUTOS6 
+GLOBAL G_SASAUTOS7 
+GLOBAL G_SASAUTOS8 
+GLOBAL G_SASAUTOS9 
+GLOBAL G_SASCFG C:jenkinsworkspaceSASUnit Build Release ZIPFile under windowsexample/binsasunit.9.4.windows.de.cfg
+GLOBAL G_SASSTART "C:\Program Files\SASHome2\SASFoundation\9.4/sas.exe"
+GLOBAL G_SASUNIT C:jenkinsworkspaceSASUnit Build Release ZIPFile under windowssaspgmsasunit
+GLOBAL G_SASUNITROOT C:jenkinsworkspaceSASUnit Build Release ZIPFile under windows
+GLOBAL G_SASUNIT_OS C:jenkinsworkspaceSASUnit Build Release ZIPFile under windowssaspgmsasunitwindows
+GLOBAL G_SASUSER 
+GLOBAL G_SCNID 001
+GLOBAL G_SPLASH -nosplash
+GLOBAL G_TARGET C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de
+GLOBAL G_TESTCOVERAGE 1
+GLOBAL G_TESTDATA C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\dat
+GLOBAL G_TESTOUT C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/tst
+GLOBAL G_VERBOSE 0
+GLOBAL G_WARNING WARNING
+GLOBAL G_WORK C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_
+GLOBAL G_XCMD XCMD
+GLOBAL SYS_SQL_IP_ALL -1
+GLOBAL SYS_SQL_IP_STMT 
+MPRINT(INITSCENARIO):  ;
+MPRINT(INITSCENARIO):   options linesize=max;
+NOTE: The macro _NLS completed compilation without errors.
+      13 instructions 848 bytes.
+MAUTOLOCDISPLAY(_NLS):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_nls.sas kompiliert
+MPRINT(INITSCENARIO._NLS):   data work.nls (drop=mark);
+MPRINT(INITSCENARIO._NLS):   infile "C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/saspgm/sasunit/_nls.txt" truncover;
+8                                                                                                                        Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MPRINT(INITSCENARIO._NLS):   input mark $3. @;
+MPRINT(INITSCENARIO._NLS):   if mark ne '###' then do;
+MPRINT(INITSCENARIO._NLS):   if mark='---' then input @4 program $32.;
+MPRINT(INITSCENARIO._NLS):   retain program;
+MPRINT(INITSCENARIO._NLS):   input @1 num 3. +1 language $2. +1 text $128.;
+MPRINT(INITSCENARIO._NLS):   output;
+MPRINT(INITSCENARIO._NLS):   end;
+MPRINT(INITSCENARIO._NLS):   run;
+
+NOTE: The infile "C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/saspgm/sasunit/_nls.txt" is:
+      Dateiname=C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_nls.txt,
+      RECFM=V,LRECL=32767,Dateigröße (Byte)=23172,
+      Zuletzt geändert=01. Juli 2019 08.01 Uhr,
+      Erstellungsuhrzeit=01. Juli 2019 08.01 Uhr
+
+NOTE: 720 records were read from the infile "C:/jenkins/workspace/SASUnit Build Release ZIP-File under windows/saspgm/sasunit/_nls.txt".
+      The minimum record length was 9.
+      The maximum record length was 127.
+NOTE: The data set WORK.NLS has 696 observations and 4 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(INITSCENARIO._NLS):   data _null_;
+MPRINT(INITSCENARIO._NLS):   set work.nls;
+MPRINT(INITSCENARIO._NLS):   where language = "DE";
+MPRINT(INITSCENARIO._NLS):   call execute ('%global g_nls_' !! trim(program) !! '_' !! put (num, z3.) !! ';');
+MPRINT(INITSCENARIO._NLS):   call symput ('g_nls_' !! trim(program) !! '_' !! put (num, z3.), trim (text));
+MPRINT(INITSCENARIO._NLS):   run;
+
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+NOTE: There were 348 observations read from the data set WORK.NLS.
+      WHERE language='DE';
+
+NOTE: CALL EXECUTE routine executed successfully, but no SAS statements were generated.
+MPRINT(INITSCENARIO._NLS):   proc datasets lib=work nolist;
+MPRINT(INITSCENARIO._NLS):   delete nls;
+MPRINT(INITSCENARIO._NLS):   run;
+NOTE: Deleting WORK.NLS (memtype=DATA).
+MPRINT(INITSCENARIO._NLS):   quit;
+NOTE: PROZEDUR DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(INITSCENARIO):  ;
+18         
+19         %MACRO _createtestfiles;
+20            DATA _NULL_;
+21               FILE "&g_work./text1.txt";
+9                                                                                                                        Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+22               PUT "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.";
+23               PUT "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute";
+24               PUT "iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat";
+25               PUT "non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+26               PUT "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat";
+27               PUT "nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis";
+28               PUT "dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod";
+29               PUT "tincidunt ut laoreet dolore magna aliquam erat volutpat.";
+30            RUN;
+31         
+32            DATA _NULL_;
+33               FILE "&g_work./text1_copy.txt";
+34               PUT "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.";
+35               PUT "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute";
+36               PUT "iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat";
+37               PUT "non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+38               PUT "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat";
+39               PUT "nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis";
+40               PUT "dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod";
+41               PUT "tincidunt ut laoreet dolore magna aliquam erat volutpat.";
+42            RUN;
+43         
+44            DATA _NULL_;
+45               FILE "&g_work./text2.txt";
+46               PUT "LOREM IPSUM DOLOR SIT AMET, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.";
+47               PUT "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute";
+48               PUT "iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat";
+49               PUT "non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+50               PUT "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat";
+51               PUT "nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis";
+52               PUT "dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod";
+53               PUT "tincidunt ut laoreet dolore magna aliquam erat volutpat.";
+54            RUN;
+55         %MEND _createtestfiles;
+NOTE: The macro _CREATETESTFILES completed compilation without errors.
+      33 instructions 3500 bytes.
+56         
+57         %MACRO _adaptToOS;
+58            %GLOBAL
+59               assertExternal_script1
+60               assertExternal_script2
+61               assertExternal_mod1
+62               assertExternal_work1
+63               assertExternal_work1Copy
+64               assertExternal_work2
+65            ;
+66            /* Prepare macro variables to adapt to OS specific test */
+67            %IF %lowcase(%SYSGET(SASUNIT_HOST_OS)) EQ windows %THEN %DO;
+68               %LET assertExternal_script1        =%sysfunc(translate(&g_sasunit_os.\assertExternal_cnt.cmd,\,/));
+69               %LET assertExternal_script2        =%sysfunc(translate(&g_sasunit_os.\assertExternal_fc.cmd,\,/));
+70               %LET assertExternal_mod1           =/C;
+71               %LET assertExternal_work1          =%sysfunc(translate(&g_work.\text1.txt,\,/));
+72               %LET assertExternal_work1Copy      =%sysfunc(translate(&g_work.\text1_copy.txt,\,/));
+73               %LET assertExternal_work2          =%sysfunc(translate(&g_work.\text2.txt,\,/));
+10                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+74            %END;
+75            %ELSE %IF %lowcase(%SYSGET(SASUNIT_HOST_OS)) EQ linux %THEN %DO;
+76               %LET assertExternal_script1        = %_abspath(&g_sasunit_os.,assertExternal_wc.sh);
+77               %LET assertExternal_script2        = %_abspath(&g_sasunit_os.,assertExternal_diff.sh);
+78               %LET assertExternal_mod1           =-i;
+79               %LET assertExternal_work1          =%_abspath(&g_work.,text1.txt);
+80               %LET assertExternal_work1Copy      =%_abspath(&g_work.,text1_copy.txt);
+81               %LET assertExternal_work2          =%_abspath(&g_work.,text2.txt);
+82            %END;
+83         %MEND _adaptToOS;
+NOTE: The macro _ADAPTTOOS completed compilation without errors.
+      67 instructions 2052 bytes.
+84         
+85         
+86         /* create test files */
+87         %_createtestfiles;
+MPRINT(_CREATETESTFILES):   DATA _NULL_;
+MPRINT(_CREATETESTFILES):   FILE "C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_/text1.txt";
+MPRINT(_CREATETESTFILES):   PUT "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.";
+MPRINT(_CREATETESTFILES):   PUT "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute";
+MPRINT(_CREATETESTFILES):   PUT "iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat";
+MPRINT(_CREATETESTFILES):   PUT "non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+MPRINT(_CREATETESTFILES):   PUT "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat";
+MPRINT(_CREATETESTFILES):   PUT "nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis";
+MPRINT(_CREATETESTFILES):   PUT "dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod";
+MPRINT(_CREATETESTFILES):   PUT "tincidunt ut laoreet dolore magna aliquam erat volutpat.";
+MPRINT(_CREATETESTFILES):   RUN;
+
+NOTE: The file "C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_/text1.txt" is:
+      Dateiname=C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_\text1.txt,
+      RECFM=V,LRECL=32767,Dateigröße (Byte)=0,
+      Zuletzt geändert=01. Juli 2019 08.01 Uhr,
+      Erstellungsuhrzeit=01. Juli 2019 08.01 Uhr
+
+NOTE: 8 records were written to the file "C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_/text1.txt".
+      The minimum record length was 56.
+      The maximum record length was 121.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(_CREATETESTFILES):   DATA _NULL_;
+MPRINT(_CREATETESTFILES):   FILE "C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_/text1_copy.txt";
+MPRINT(_CREATETESTFILES):   PUT "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.";
+MPRINT(_CREATETESTFILES):   PUT "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute";
+MPRINT(_CREATETESTFILES):   PUT "iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat";
+MPRINT(_CREATETESTFILES):   PUT "non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+MPRINT(_CREATETESTFILES):   PUT "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat";
+MPRINT(_CREATETESTFILES):   PUT "nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis";
+MPRINT(_CREATETESTFILES):   PUT "dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod";
+MPRINT(_CREATETESTFILES):   PUT "tincidunt ut laoreet dolore magna aliquam erat volutpat.";
+MPRINT(_CREATETESTFILES):   RUN;
+
+11                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+NOTE: The file "C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_/text1_copy.txt" is:
+      Dateiname=C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_\text1_copy.txt,
+      RECFM=V,LRECL=32767,Dateigröße (Byte)=0,
+      Zuletzt geändert=01. Juli 2019 08.01 Uhr,
+      Erstellungsuhrzeit=01. Juli 2019 08.01 Uhr
+
+NOTE: 8 records were written to the file "C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_/text1_copy.txt".
+      The minimum record length was 56.
+      The maximum record length was 121.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(_CREATETESTFILES):   DATA _NULL_;
+MPRINT(_CREATETESTFILES):   FILE "C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_/text2.txt";
+MPRINT(_CREATETESTFILES):   PUT "LOREM IPSUM DOLOR SIT AMET, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.";
+MPRINT(_CREATETESTFILES):   PUT "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute";
+MPRINT(_CREATETESTFILES):   PUT "iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat";
+MPRINT(_CREATETESTFILES):   PUT "non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+MPRINT(_CREATETESTFILES):   PUT "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat";
+MPRINT(_CREATETESTFILES):   PUT "nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis";
+MPRINT(_CREATETESTFILES):   PUT "dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod";
+MPRINT(_CREATETESTFILES):   PUT "tincidunt ut laoreet dolore magna aliquam erat volutpat.";
+MPRINT(_CREATETESTFILES):   RUN;
+
+NOTE: The file "C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_/text2.txt" is:
+      Dateiname=C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_\text2.txt,
+      RECFM=V,LRECL=32767,Dateigröße (Byte)=0,
+      Zuletzt geändert=01. Juli 2019 08.01 Uhr,
+      Erstellungsuhrzeit=01. Juli 2019 08.01 Uhr
+
+NOTE: 8 records were written to the file "C:\Users\SASUnit\AppData\Local\Temp\SAS Temporary Files\_TD7520_HD1PCMS0240_/text2.txt".
+      The minimum record length was 56.
+      The maximum record length was 121.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+88         %_adaptToOS;
+NOTE: The macro LOWCASE completed compilation without errors.
+      29 instructions 504 bytes.
+MAUTOLOCDISPLAY(LOWCASE):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\lowcase.sas kompiliert
+89         %let scnid = %substr(00&g_scnid,%length(&g_scnid));
+90         
+91         /* test case 1 ------------------------------------ */
+92         %initTestcase(i_object   = assertexternal.sas
+NOTE: The macro INITTESTCASE completed compilation without errors.
+      175 instructions 5000 bytes.
+MAUTOLOCDISPLAY(INITTESTCASE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\inittestcase.sas kompiliert
+MAUTOLOCDISPLAY(LOWCASE):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\lowcase.sas kompiliert
+93                      ,i_desc     = Successful test with one path and one variable
+94                      );
+12                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+NOTE: The macro _GETAUTOCALLNUMBER completed compilation without errors.
+      67 instructions 1320 bytes.
+MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_getautocallnumber.sas kompiliert
+NOTE: The macro CMPRES completed compilation without errors.
+      43 instructions 816 bytes.
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+NOTE: The macro LEFT completed compilation without errors.
+      43 instructions 772 bytes.
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+NOTE: The macro QTRIM completed compilation without errors.
+      42 instructions 800 bytes.
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+NOTE: The macro VERIFY completed compilation without errors.
+      65 instructions 1332 bytes.
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+13                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+14                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(LOWCASE):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\lowcase.sas kompiliert
+NOTE: The macro _STDPATH completed compilation without errors.
+      77 instructions 1820 bytes.
+MAUTOLOCDISPLAY(_STDPATH):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_stdpath.sas kompiliert
+MPRINT(INITTESTCASE):   PROC SQL NOPRINT;
+MPRINT(INITTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid = 001;
+MPRINT(INITTESTCASE):   SELECT exa_id INTO :l_exaid FROM target.exa WHERE lowcase (exa_pgm) = "assertexternal.sas" and exa_auton=0;
+MPRINT(INITTESTCASE):   INSERT INTO target.cas VALUES ( 001 ,1 ,113 ,"assertexternal.sas" ,"Successful test with one path and one variable" ,
+MAUTOLOCDISPLAY(_ABSPATH):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_abspath.sas kompiliert
+MPRINT(INITTESTCASE):  "" ,1877587315.988 ,. ,. );
+NOTE: 1 row was inserted into TARGET.CAS.
+
+MPRINT(INITTESTCASE):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+========================== test case 1 ======================================================
+MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/log/001_001.log" PRINT="C:\jenkins\workspace\SASUnit Build Release ZIP-File under 
+windows\example\doc\sasunit\de/tst/001_001.lst" ;
+MPRINT(INITTESTCASE):   RUN;
+
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
+MPRINT(ENDTESTCALL):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=001;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
+MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1877587316.022 WHERE cas_scnid = 001 AND cas_id = 1;
+NOTE: 1 row was updated in TARGET.CAS.
+
+MPRINT(ENDTESTCALL):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(ENDTESTCALL):   DATA _null_;
+MPRINT(ENDTESTCALL):   INFILE "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/tst/001_001.lst";
+MPRINT(ENDTESTCALL):   INPUT;
+MPRINT(ENDTESTCALL):   CALL symput ('l_filled','1');
+MPRINT(ENDTESTCALL):   STOP;
+MPRINT(ENDTESTCALL):   RUN;
+
+NOTE: The infile "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/tst/001_001.lst" is:
+      Dateiname=C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de\tst\001_001.lst,
+      RECFM=V,LRECL=32767,Dateigröße (Byte)=0,
+      Zuletzt geändert=01. Juli 2019 08.01 Uhr,
+      Erstellungsuhrzeit=01. Juli 2019 08.01 Uhr
+
+NOTE: 0 records were read from the infile "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/tst/001_001.lst".
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+NOTE: The macro _DELFILE completed compilation without errors.
+      26 instructions 552 bytes.
+MAUTOLOCDISPLAY(_DELFILE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_delfile.sas kompiliert
+MPRINT(ENDTESTCALL):   ODS _ALL_ CLOSE;
+96         
+97         %assertExternal (i_script             =&assertExternal_script1.
+NOTE: The macro ASSERTEXTERNAL completed compilation without errors.
+      161 instructions 4408 bytes.
+16                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MAUTOLOCDISPLAY(ASSERTEXTERNAL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\assertexternal.sas kompiliert
+98                         ,i_expected           =&assertExternal_work1.
+99                         ,i_actual             =2
+100                        ,i_expected_shell_rc  =0
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+101                        ,i_expectedIsPath     =Y
+102                        ,i_desc               =Word count of "Lorem" equals 2
+103                        ,i_threshold          =NONE
+104                        );
+NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
+MPRINT(ASSERTEXTERNAL):  ;
+NOTE: The macro _CHECKCALLINGSEQUENCE completed compilation without errors.
+      96 instructions 2052 bytes.
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_checkcallingsequence.sas kompiliert
+MAUTOLOCDISPLAY(LOWCASE):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\lowcase.sas kompiliert
+MAUTOLOCDISPLAY(_HANDLEERROR):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_handleerror.sas kompiliert
+NOTE: The macro _XCMDWITHPATH completed compilation without errors.
+      80 instructions 2088 bytes.
+MAUTOLOCDISPLAY(_XCMDWITHPATH):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\windows\_xcmdwithpath.sas kompiliert
+MPRINT(ASSERTEXTERNAL._XCMDWITHPATH):   OPTIONS noxwait xsync xmin;
+MPRINT(ASSERTEXTERNAL._XCMDWITHPATH):   OPTIONS XWAIT XSYNC NOXMIN;
+MPRINT(ASSERTEXTERNAL):  ;
+NOTE: The macro _ASSERTS completed compilation without errors.
+      174 instructions 4852 bytes.
+MAUTOLOCDISPLAY(_ASSERTS):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_asserts.sas kompiliert
+MPRINT(ASSERTEXTERNAL._ASSERTS):   PROC SQL NOPRINT;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=001;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 001 AND tst_casid = 1 ;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   INSERT INTO target.tst VALUES ( 001 , 1 ,1 ,"assertExternal" ,"Word count of ""Lorem"" equals 2 " ,"0 " ,"0 " ,0 ,"assertExternal: assert passed." );
+NOTE: 1 row was inserted into TARGET.TST.
+
+MPRINT(ASSERTEXTERNAL._ASSERTS):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+========================== Check        1.1 (assertExternal) =====================================
+MPRINT(ASSERTEXTERNAL):  ;
+MAUTOLOCDISPLAY(ASSERTEXTERNAL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\assertexternal.sas kompiliert
+105        
+106        %assertExternal (i_script             =&assertExternal_script1.
+107                        ,i_expected           =&assertExternal_work1.
+108                        ,i_actual             =3
+109                        ,i_expected_shell_rc  =1
+110                        ,i_expectedIsPath     =Y
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+111                        ,i_desc               =%str(Word count of "Lorem" equals 2, but i_actual=3, so i_expected_shell_rc must be 1)
+112                        ,i_threshold          =NONE
+113                        );
+NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
+MPRINT(ASSERTEXTERNAL):  ;
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_checkcallingsequence.sas kompiliert
+MAUTOLOCDISPLAY(LOWCASE):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\lowcase.sas kompiliert
+17                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MAUTOLOCDISPLAY(_HANDLEERROR):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_handleerror.sas kompiliert
+MAUTOLOCDISPLAY(_XCMDWITHPATH):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\windows\_xcmdwithpath.sas kompiliert
+MPRINT(ASSERTEXTERNAL._XCMDWITHPATH):   OPTIONS noxwait xsync xmin;
+MPRINT(ASSERTEXTERNAL._XCMDWITHPATH):   OPTIONS XWAIT XSYNC NOXMIN;
+MPRINT(ASSERTEXTERNAL):  ;
+MAUTOLOCDISPLAY(_ASSERTS):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_asserts.sas kompiliert
+MPRINT(ASSERTEXTERNAL._ASSERTS):   PROC SQL NOPRINT;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=001;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 001 AND tst_casid = 1 ;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   INSERT INTO target.tst VALUES ( 001 , 1 ,2 ,"assertExternal" ,"Word count of ""Lorem"" equals 2, but i_actual=3, so i_expected_shell_rc must be 1 " ,"1 " ,"1 " ,0 ,"assertExternal: assert passed." );
+NOTE: 1 row was inserted into TARGET.TST.
+
+MPRINT(ASSERTEXTERNAL._ASSERTS):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+========================== Check        1.2 (assertExternal) =====================================
+MPRINT(ASSERTEXTERNAL):  ;
+MAUTOLOCDISPLAY(INITTESTCASE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\inittestcase.sas kompiliert
+114        
+115        /* test case 2 ------------------------------------ */
+116        %initTestcase(i_object   = assertexternal.sas
+117                     ,i_desc     = Tests with with two paths as params und file compare command
+118                     );
+NOTE: The macro ENDTESTCASE completed compilation without errors.
+      82 instructions 2388 bytes.
+MAUTOLOCDISPLAY(ENDTESTCASE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcase.sas kompiliert
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
+MPRINT(INITTESTCASE.ENDTESTCASE):  ;
+MPRINT(INITTESTCASE.ENDTESTCASE):   PROC SQL NOPRINT;
+MPRINT(INITTESTCASE.ENDTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=001;
+MPRINT(INITTESTCASE.ENDTESTCASE):   SELECT count(*) INTO :l_assertLog FROM target.tst WHERE tst_scnid = 001 AND tst_casid = 1 AND tst_type='assertLog';
+NOTE: The macro ASSERTLOG completed compilation without errors.
+      83 instructions 2816 bytes.
+MAUTOLOCDISPLAY(ASSERTLOG):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\assertlog.sas kompiliert
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG):  ;
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_checkcallingsequence.sas kompiliert
+MAUTOLOCDISPLAY(LOWCASE):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\lowcase.sas kompiliert
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG):   PROC SQL NOPRINT;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid = 001;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+18                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+      
+
+NOTE: The macro _CHECKLOG completed compilation without errors.
+      34 instructions 1896 bytes.
+MAUTOLOCDISPLAY(_CHECKLOG):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_checklog.sas kompiliert
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   DATA _null_;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   INFILE "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/log/001_001.log" TRUNCOVER end=eof IGNOREDOSEOF;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   INPUT logline $char255.;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   ATTRIB _errorPatternId LENGTH = 8 _ignoreErrPatternId LENGTH = 8 _warningPatternId LENGTH = 8 _errcount LENGTH = 8 _warncount LENGTH = 8 ;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   RETAIN _errorPatternId 0 _ignoreErrPatternId 0 _warningPatternId 0 _errcount 0 _warncount 0 ;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   IF _n_=1 THEN DO;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   _errorPatternId = prxparse("/^ERROR[: ]/");
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   _warningPatternId = prxparse("/^WARNING[: ]/");
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   _ignoreErrPatternId = prxparse("/^ERROR: Errors printed on page/");
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   END;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   IF prxmatch (_errorPatternId, logline) AND (NOT prxmatch (_ignoreErrPatternId, logline)) THEN DO;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   _errcount = _errcount+1;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   END;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   ELSE IF prxmatch (_warningPatternId, logline) THEN DO;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   _warncount = _warncount+1;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   END;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   IF eof THEN DO;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   CALL symputx ("l_error_count" , put(_errcount,8.));
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   CALL symputx ("l_warning_count", put(_warncount,8.));
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   END;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._CHECKLOG):   RUN;
+
+NOTE: The infile "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/log/001_001.log" is:
+      Dateiname=C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de\log\001_001.log,
+      RECFM=V,LRECL=32767,Dateigröße (Byte)=851,
+      Zuletzt geändert=01. Juli 2019 08.01 Uhr,
+      Erstellungsuhrzeit=01. Juli 2019 08.01 Uhr
+
+NOTE: 15 records were read from the infile "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/log/001_001.log".
+      The minimum record length was 0.
+      The maximum record length was 257.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MAUTOLOCDISPLAY(_ASSERTS):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_asserts.sas kompiliert
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._ASSERTS):   PROC SQL NOPRINT;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=001;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 001 AND tst_casid = 1 ;
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._ASSERTS):   INSERT INTO target.tst VALUES ( 001 , 1 ,3 ,"assertLog" ,"Scan log for errors " ,"0#0 " ,"0#0 " ,0 ,"assertLog: assert passed." );
+NOTE: 1 row was inserted into TARGET.TST.
+
+MPRINT(INITTESTCASE.ENDTESTCASE.ASSERTLOG._ASSERTS):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+19                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+========================== Check        1.3 (assertLog) =====================================
+MPRINT(INITTESTCASE.ENDTESTCASE):   QUIT;
+MPRINT(INITTESTCASE.ENDTESTCASE):   PROC SQL NOPRINT;
+MPRINT(INITTESTCASE.ENDTESTCASE):   SELECT max (tst_res) INTO :l_result FROM target.tst WHERE tst_scnid=001 AND tst_casid=1;
+MPRINT(INITTESTCASE.ENDTESTCASE):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(INITTESTCASE.ENDTESTCASE):   PROC SQL NOPRINT;
+MPRINT(INITTESTCASE.ENDTESTCASE):   UPDATE target.cas SET cas_res = 0 WHERE cas_scnid = 001 AND cas_id = 1;
+NOTE: 1 row was updated in TARGET.CAS.
+
+MPRINT(INITTESTCASE.ENDTESTCASE):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(INITTESTCASE):  ;
+MAUTOLOCDISPLAY(LOWCASE):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\lowcase.sas kompiliert
+MAUTOLOCDISPLAY(_GETAUTOCALLNUMBER):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_getautocallnumber.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+20                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+21                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(CMPRES):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\cmpres.sas kompiliert
+MAUTOLOCDISPLAY(LEFT):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\left.sas kompiliert
+MAUTOLOCDISPLAY(QTRIM):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\qtrim.sas kompiliert
+MAUTOLOCDISPLAY(VERIFY):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\verify.sas kompiliert
+MAUTOLOCDISPLAY(LOWCASE):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\lowcase.sas kompiliert
+MAUTOLOCDISPLAY(_STDPATH):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_stdpath.sas kompiliert
+MPRINT(INITTESTCASE):   PROC SQL NOPRINT;
+MPRINT(INITTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid = 001;
+MPRINT(INITTESTCASE):   SELECT exa_id INTO :l_exaid FROM target.exa WHERE lowcase (exa_pgm) = "assertexternal.sas" and exa_auton=0;
+MPRINT(INITTESTCASE):   INSERT INTO target.cas VALUES ( 001 ,2 ,113 ,"assertexternal.sas" ,"Tests with with two paths as params und file compare command" ,
+MAUTOLOCDISPLAY(_ABSPATH):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_abspath.sas kompiliert
+MPRINT(INITTESTCASE):  "" ,1877587316.224 ,. ,. );
+NOTE: 1 row was inserted into TARGET.CAS.
+
+MPRINT(INITTESTCASE):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+========================== test case 2 ======================================================
+MPRINT(INITTESTCASE):   PROC PRINTTO NEW LOG="C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/log/001_002.log" PRINT="C:\jenkins\workspace\SASUnit Build Release ZIP-File under 
+windows\example\doc\sasunit\de/tst/001_002.lst" ;
+22                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MPRINT(INITTESTCASE):   RUN;
+
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
+MPRINT(ENDTESTCALL):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=001;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
+MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1877587316.243 WHERE cas_scnid = 001 AND cas_id = 2;
+NOTE: 1 row was updated in TARGET.CAS.
+
+MPRINT(ENDTESTCALL):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(ENDTESTCALL):   DATA _null_;
+MPRINT(ENDTESTCALL):   INFILE "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/tst/001_002.lst";
+MPRINT(ENDTESTCALL):   INPUT;
+MPRINT(ENDTESTCALL):   CALL symput ('l_filled','1');
+MPRINT(ENDTESTCALL):   STOP;
+MPRINT(ENDTESTCALL):   RUN;
+
+NOTE: The infile "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/tst/001_002.lst" is:
+      Dateiname=C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de\tst\001_002.lst,
+      RECFM=V,LRECL=32767,Dateigröße (Byte)=0,
+      Zuletzt geändert=01. Juli 2019 08.01 Uhr,
+      Erstellungsuhrzeit=01. Juli 2019 08.01 Uhr
+
+NOTE: 0 records were read from the infile "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/tst/001_002.lst".
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+23                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MAUTOLOCDISPLAY(_DELFILE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_delfile.sas kompiliert
+MPRINT(ENDTESTCALL):   ODS _ALL_ CLOSE;
+MAUTOLOCDISPLAY(ASSERTEXTERNAL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\assertexternal.sas kompiliert
+120        
+121        %assertExternal (i_script             =&assertExternal_script2.
+122                        ,i_expected           =&assertExternal_work1.
+123                        ,i_actual             =&assertExternal_work1Copy.
+124                        ,i_expected_shell_rc  =0
+125                        ,i_expectedIsPath     =Y
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+126                        ,i_actualIsPath       =Y
+127                        ,i_desc               =Compared files match
+128                        ,i_threshold          =NONE
+129                        );
+NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
+MPRINT(ASSERTEXTERNAL):  ;
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_checkcallingsequence.sas kompiliert
+MAUTOLOCDISPLAY(LOWCASE):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\lowcase.sas kompiliert
+MAUTOLOCDISPLAY(_HANDLEERROR):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_handleerror.sas kompiliert
+MAUTOLOCDISPLAY(_XCMDWITHPATH):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\windows\_xcmdwithpath.sas kompiliert
+MPRINT(ASSERTEXTERNAL._XCMDWITHPATH):   OPTIONS noxwait xsync xmin;
+MPRINT(ASSERTEXTERNAL._XCMDWITHPATH):   OPTIONS XWAIT XSYNC NOXMIN;
+MPRINT(ASSERTEXTERNAL):  ;
+MAUTOLOCDISPLAY(_ASSERTS):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_asserts.sas kompiliert
+MPRINT(ASSERTEXTERNAL._ASSERTS):   PROC SQL NOPRINT;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=001;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 001 AND tst_casid = 2 ;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   INSERT INTO target.tst VALUES ( 001 , 2 ,1 ,"assertExternal" ,"Compared files match " ,"0 " ,"0 " ,0 ,"assertExternal: assert passed." );
+NOTE: 1 row was inserted into TARGET.TST.
+
+MPRINT(ASSERTEXTERNAL._ASSERTS):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+========================== Check        2.1 (assertExternal) =====================================
+MPRINT(ASSERTEXTERNAL):  ;
+MAUTOLOCDISPLAY(ASSERTEXTERNAL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\assertexternal.sas kompiliert
+130        
+131        %assertExternal (i_script             =&assertExternal_script2.
+132                        ,i_expected           =&assertExternal_work1.
+133                        ,i_actual             =&assertExternal_work2.
+134                        ,i_expected_shell_rc  =1
+135                        ,i_expectedIsPath     =Y
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+136                        ,i_actualIsPath       =Y
+137                        ,i_desc               =Compared files do not match
+138                        ,i_threshold          =NONE
+139                        );
+NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
+MPRINT(ASSERTEXTERNAL):  ;
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_checkcallingsequence.sas kompiliert
+MAUTOLOCDISPLAY(LOWCASE):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\lowcase.sas kompiliert
+24                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MAUTOLOCDISPLAY(_HANDLEERROR):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_handleerror.sas kompiliert
+MAUTOLOCDISPLAY(_XCMDWITHPATH):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\windows\_xcmdwithpath.sas kompiliert
+MPRINT(ASSERTEXTERNAL._XCMDWITHPATH):   OPTIONS noxwait xsync xmin;
+MPRINT(ASSERTEXTERNAL._XCMDWITHPATH):   OPTIONS XWAIT XSYNC NOXMIN;
+MPRINT(ASSERTEXTERNAL):  ;
+MAUTOLOCDISPLAY(_ASSERTS):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_asserts.sas kompiliert
+MPRINT(ASSERTEXTERNAL._ASSERTS):   PROC SQL NOPRINT;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=001;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 001 AND tst_casid = 2 ;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   INSERT INTO target.tst VALUES ( 001 , 2 ,2 ,"assertExternal" ,"Compared files do not match " ,"1 " ,"1 " ,0 ,"assertExternal: assert passed." );
+NOTE: 1 row was inserted into TARGET.TST.
+
+MPRINT(ASSERTEXTERNAL._ASSERTS):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+========================== Check        2.2 (assertExternal) =====================================
+MPRINT(ASSERTEXTERNAL):  ;
+MAUTOLOCDISPLAY(ASSERTEXTERNAL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\assertexternal.sas kompiliert
+140        
+141        %assertExternal (i_script             =&assertExternal_script2.
+142                        ,i_expected           =&assertExternal_work1.
+143                        ,i_actual             =&assertExternal_work2.
+144                        ,i_expected_shell_rc  =0
+145                        ,i_expectedIsPath     =Y
+146                        ,i_actualIsPath       =Y
+147                        ,i_modifier           =&assertExternal_mod1.
+148                        ,i_desc               =%str(Compared files do not match, but modifier ignore case used -> test is OK)
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+149                        ,i_threshold          =NONE
+150                        );
+NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
+MPRINT(ASSERTEXTERNAL):  ;
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_checkcallingsequence.sas kompiliert
+MAUTOLOCDISPLAY(LOWCASE):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\lowcase.sas kompiliert
+MAUTOLOCDISPLAY(_HANDLEERROR):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_handleerror.sas kompiliert
+MAUTOLOCDISPLAY(_XCMDWITHPATH):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\windows\_xcmdwithpath.sas kompiliert
+MPRINT(ASSERTEXTERNAL._XCMDWITHPATH):   OPTIONS noxwait xsync xmin;
+MPRINT(ASSERTEXTERNAL._XCMDWITHPATH):   OPTIONS XWAIT XSYNC NOXMIN;
+MPRINT(ASSERTEXTERNAL):  ;
+MAUTOLOCDISPLAY(_ASSERTS):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_asserts.sas kompiliert
+MPRINT(ASSERTEXTERNAL._ASSERTS):   PROC SQL NOPRINT;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=001;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 001 AND tst_casid = 2 ;
+MPRINT(ASSERTEXTERNAL._ASSERTS):   INSERT INTO target.tst VALUES ( 001 , 2 ,3 ,"assertExternal" ,"Compared files do not match, but modifier ignore case used -> test is OK " ,"0 " ,"0 " ,0 ,"assertExternal: assert passed." );
+NOTE: 1 row was inserted into TARGET.TST.
+
+MPRINT(ASSERTEXTERNAL._ASSERTS):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+25                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+
+========================== Check        2.3 (assertExternal) =====================================
+MPRINT(ASSERTEXTERNAL):  ;
+151        
+152        
+153        %endScenario();
+NOTE: The macro ENDSCENARIO completed compilation without errors.
+      88 instructions 5584 bytes.
+MAUTOLOCDISPLAY(ENDSCENARIO):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endscenario.sas kompiliert
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
+MPRINT(ENDSCENARIO):  ;
+MAUTOLOCDISPLAY(ENDTESTCASE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcase.sas kompiliert
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
+MPRINT(ENDSCENARIO.ENDTESTCASE):  ;
+MPRINT(ENDSCENARIO.ENDTESTCASE):   PROC SQL NOPRINT;
+MPRINT(ENDSCENARIO.ENDTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=001;
+MPRINT(ENDSCENARIO.ENDTESTCASE):   SELECT count(*) INTO :l_assertLog FROM target.tst WHERE tst_scnid = 001 AND tst_casid = 2 AND tst_type='assertLog';
+MAUTOLOCDISPLAY(ASSERTLOG):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\assertlog.sas kompiliert
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG):  ;
+MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_checkcallingsequence.sas kompiliert
+MAUTOLOCDISPLAY(LOWCASE):  Dieses Makro wurde von der Autocall-Datei C:\Program Files\SASHome2\SASFoundation\9.4\core\sasmacro\lowcase.sas kompiliert
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG):   PROC SQL NOPRINT;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid = 001;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MAUTOLOCDISPLAY(_CHECKLOG):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_checklog.sas kompiliert
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   DATA _null_;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   INFILE "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/log/001_002.log" TRUNCOVER end=eof IGNOREDOSEOF;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   INPUT logline $char255.;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   ATTRIB _errorPatternId LENGTH = 8 _ignoreErrPatternId LENGTH = 8 _warningPatternId LENGTH = 8 _errcount LENGTH = 8 _warncount LENGTH = 8 ;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   RETAIN _errorPatternId 0 _ignoreErrPatternId 0 _warningPatternId 0 _errcount 0 _warncount 0 ;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   IF _n_=1 THEN DO;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   _errorPatternId = prxparse("/^ERROR[: ]/");
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   _warningPatternId = prxparse("/^WARNING[: ]/");
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   _ignoreErrPatternId = prxparse("/^ERROR: Errors printed on page/");
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   END;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   IF prxmatch (_errorPatternId, logline) AND (NOT prxmatch (_ignoreErrPatternId, logline)) THEN DO;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   _errcount = _errcount+1;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   END;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   ELSE IF prxmatch (_warningPatternId, logline) THEN DO;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   _warncount = _warncount+1;
+26                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   END;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   IF eof THEN DO;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   CALL symputx ("l_error_count" , put(_errcount,8.));
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   CALL symputx ("l_warning_count", put(_warncount,8.));
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   END;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._CHECKLOG):   RUN;
+
+NOTE: The infile "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/log/001_002.log" is:
+      Dateiname=C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de\log\001_002.log,
+      RECFM=V,LRECL=32767,Dateigröße (Byte)=487,
+      Zuletzt geändert=01. Juli 2019 08.01 Uhr,
+      Erstellungsuhrzeit=01. Juli 2019 08.01 Uhr
+
+NOTE: 11 records were read from the infile "C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\doc\sasunit\de/log/001_002.log".
+      The minimum record length was 0.
+      The maximum record length was 180.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MAUTOLOCDISPLAY(_ASSERTS):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_asserts.sas kompiliert
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._ASSERTS):   PROC SQL NOPRINT;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=001;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 001 AND tst_casid = 2 ;
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._ASSERTS):   INSERT INTO target.tst VALUES ( 001 , 2 ,4 ,"assertLog" ,"Scan log for errors " ,"0#0 " ,"0#0 " ,0 ,"assertLog: assert passed." );
+NOTE: 1 row was inserted into TARGET.TST.
+
+MPRINT(ENDSCENARIO.ENDTESTCASE.ASSERTLOG._ASSERTS):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+========================== Check        2.4 (assertLog) =====================================
+MPRINT(ENDSCENARIO.ENDTESTCASE):   QUIT;
+MPRINT(ENDSCENARIO.ENDTESTCASE):   PROC SQL NOPRINT;
+MPRINT(ENDSCENARIO.ENDTESTCASE):   SELECT max (tst_res) INTO :l_result FROM target.tst WHERE tst_scnid=001 AND tst_casid=2;
+MPRINT(ENDSCENARIO.ENDTESTCASE):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(ENDSCENARIO.ENDTESTCASE):   PROC SQL NOPRINT;
+MPRINT(ENDSCENARIO.ENDTESTCASE):   UPDATE target.cas SET cas_res = 0 WHERE cas_scnid = 001 AND cas_id = 2;
+NOTE: 1 row was updated in TARGET.CAS.
+
+MPRINT(ENDSCENARIO.ENDTESTCASE):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+27                                                                                                                       Das SAS System                                                                                               08:01 Monday, July 1, 2019
+
+MPRINT(ENDSCENARIO):  ;
+MPRINT(ENDSCENARIO):   proc sql noprint;
+MPRINT(ENDSCENARIO):   select max (cas_res) into :l_result from target.cas WHERE cas_scnid=001;
+MPRINT(ENDSCENARIO):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(ENDSCENARIO):   PROC SQL NOPRINT;
+MPRINT(ENDSCENARIO):   UPDATE target.scn SET scn_res = 0 ,scn_end = 1877587316.469 WHERE scn_id = 001;
+NOTE: 1 row was updated in TARGET.SCN.
+
+MPRINT(ENDSCENARIO):   QUIT;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(ENDSCENARIO):   proc datasets lib=work memtype=VIEW nolist;
+MPRINT(ENDSCENARIO):   delete _tst_V;
+MPRINT(ENDSCENARIO):   run;
+
+NOTE: The file WORK._TST_V (memtype=VIEW) was not found, but appears on a DELETE statement.
+MPRINT(ENDSCENARIO):   quit;
+
+NOTE: PROZEDUR DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+154        /** \endcond */
+
+NOTE: The macro _TERMSCENARIO completed compilation without errors.
+      5 instructions 88 bytes.
+MAUTOLOCDISPLAY(_TERMSCENARIO):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\_termscenario.sas kompiliert
+MAUTOLOCDISPLAY(ENDSCENARIO):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endscenario.sas kompiliert
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
+MPRINT(_TERMSCENARIO.ENDSCENARIO):  ;
+MAUTOLOCDISPLAY(ENDTESTCASE):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcase.sas kompiliert
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
+MPRINT(_TERMSCENARIO.ENDSCENARIO.ENDTESTCASE):  ;
+NOTE(SASUNIT): endTestcall already run by user. This call was issued from endScenario.
+MPRINT(_TERMSCENARIO.ENDSCENARIO):  ;
+NOTE(SASUNIT): endScenarios already run by user. This call was issued from _termScenario.
+MPRINT(_TERMSCENARIO):  ;
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           1.16 seconds
+      cpu time            0.79 seconds
+      

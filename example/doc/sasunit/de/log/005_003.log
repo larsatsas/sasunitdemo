@@ -1,0 +1,13 @@
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.02 seconds
+38                                                                                                                       Das SAS System
+
+      cpu time            0.03 seconds
+      
+
+MPRINT(INITTESTCASE):   options linesize=max;
+181        %endTestcall()
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+

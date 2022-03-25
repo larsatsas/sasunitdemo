@@ -1,0 +1,82 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS-Log für Testfall 001 in Testszenario 007 (basedatasets.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Fehler&#160;&#160;&#160;: 0 
+<br>
+Warnungen: 0 
+<br>
+</p>
+<pre>
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+38         %basedatasets
+NOTE: The macro BASEDATASETS completed compilation without errors.
+      9 instructions 604 bytes.
+MAUTOLOCDISPLAY(BASEDATASETS):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\basedatasets.sas kompiliert
+MPRINT(BASEDATASETS):   data work.Customer;
+MPRINT(BASEDATASETS):   do i=1 to 5;
+MPRINT(BASEDATASETS):   CustomerNumber=i;
+MPRINT(BASEDATASETS):   CustomerName="Customer " !! put (i,z2.);
+MPRINT(BASEDATASETS):   output;
+MPRINT(BASEDATASETS):   end;
+MPRINT(BASEDATASETS):   drop i;
+MPRINT(BASEDATASETS):   run;
+ 
+NOTE: The data set WORK.CUSTOMER has 5 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(BASEDATASETS):   data work.Contracts;
+MPRINT(BASEDATASETS):   do i=1 to 8;
+MPRINT(BASEDATASETS):   ContractNumber=i;
+MPRINT(BASEDATASETS):   ContractType=mod (i,3)+1;
+MPRINT(BASEDATASETS):   output;
+MPRINT(BASEDATASETS):   end;
+MPRINT(BASEDATASETS):   drop i;
+MPRINT(BASEDATASETS):   run;
+ 
+NOTE: The data set WORK.CONTRACTS has 8 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(BASEDATASETS):   data work.CustomerContracts;
+MPRINT(BASEDATASETS):   do i=1 to 8;
+MPRINT(BASEDATASETS):   ContractNumber=i;
+MPRINT(BASEDATASETS):   CustomerNumber=mod (i,5)+1;
+MPRINT(BASEDATASETS):   output;
+MPRINT(BASEDATASETS):   end;
+MPRINT(BASEDATASETS):   drop i;
+MPRINT(BASEDATASETS):   run;
+11                                                                                                                       Das SAS System                                                                                               08:02 Monday, July 1, 20
+ 
+ 
+NOTE: The data set WORK.CUSTOMERCONTRACTS has 8 observations and 2 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+ 
+ 
+39         %endTestCall()
+NOTE: The macro ENDTESTCALL completed compilation without errors.
+      101 instructions 2836 bytes.
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

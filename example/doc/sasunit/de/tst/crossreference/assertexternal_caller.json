@@ -1,0 +1,18 @@
+{ "name": "assertexternal"
+, "children": [
+{ "name": "_asserts"
+},
+{ "name": "_checkcallingsequence"
+},
+{ "name": "_handleerror"
+},
+{ "name": "_xcmdwithpath"
+},
+{ "name": "endtestcall"
+, "children": [
+{ "name": "_delfile"
+}
+]
+}
+]
+}

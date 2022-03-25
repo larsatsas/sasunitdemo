@@ -1,0 +1,979 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="de" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Testabdeckung von boxplot.sas | SASUnit Examples - SASUnit Testdokumentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="SCN012_20"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Testabdeckung von boxplot.sas | SASUnit Examples - SASUnit Testdokumentation</td>
+</tr>
+<tr>
+<td class="l systemtitle2">Testabdeckung: 98%</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<td class="l m blinddata" colspan="2">Color&nbsp;Legend:</td>
+</tr>
+<tr>
+<th class="c blindheader" scope="col">dummy</th>
+<th class="c blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m blinddata">&nbsp;</td>
+<td class="l m blinddata">&#9679; <span class="l" style=" color: #00BE00;">Abgedeckter Quelltext</span></td>
+</tr>
+<tr>
+<td class="l m blinddata">&nbsp;</td>
+<td class="l m blinddata">&#9679; <span class="l" style=" color: #FF8020;">Nicht abgedeckter Quelltext</span></td>
+</tr>
+<tr>
+<td class="l m blinddata">&nbsp;</td>
+<td class="l m blinddata">&#9679; <span class="l" style=" color: #828282;">Kommentare</span></td>
+</tr>
+<tr>
+<td class="l m blinddata">&nbsp;</td>
+<td class="l m blinddata">&#9679; <span class="l" style=" color: #8020FF;">Quelltext der von der Option MCOVERAGE als nicht abgedeckt markiert wurde</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<table width="100%" style=" border: 0px solid #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="none" frame="void">
+<tr>
+<td class="l usertext"><hr size="1"></td>
+</tr>
+</table>
+<div class="branch">
+<a name="SCN012_21"></a>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Datei WORK._TCG_REPORT">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">RowNumberOut</th>
+<th class="l blindheader" scope="col">pgmSourceColumn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00001</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/**</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00002</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\file</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00003</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\ingroup    SASUNIT_EXAMPLES_PGM</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00004</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00005</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\brief      Create boxplot for two groups</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00006</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00007</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">Specification for chart:</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00008</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">- two overlayed boxplots, one per group, the two plots shall be</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00009</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">slightly offset for readability.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00010</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">- boxplot for the smaller value of &group has gray color with dashed median line</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00011</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">- boxplot for the greater value of &group has black color with continuous median line</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00012</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">- lower border of boxes are at 25th percentile, higher border at 75th percentile</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00013</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">- whiskers shall be drawn from maximum and minimum value</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00014</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">- labels for variables &x und &y shall be written to the axes</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00015</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">- there shall be a legend for the group variable</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00016</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">- report format ist PDF</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00017</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00018</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\version    \$Revision: 540 $</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00019</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\author     \$Author: klandwich $</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00020</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\date       \$Date: 2017-10-31 10:50:14 +0100 (Di, 31 Okt 2017) $</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00021</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00022</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\sa         For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00023</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">Here you can find the SASUnit documentation, release notes and license information.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00024</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\sa         \$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/example/saspgm/boxplot.sas $</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00025</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\copyright  This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00026</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">For copyright information and terms of usage under the GPL license see included file readme.txt</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00027</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">or https://sourceforge.net/p/sasunit/wiki/readme/.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00028</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00029</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      data    input data sets</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00030</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      x       variable for x axis, must be numeric and equidistant und must have at least two values,</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00031</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">missing values are not allowed</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00032</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      y       variable for y axis, must be numeric</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00033</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      group   variable for grouping, must be dichotomous,</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00034</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">missing values are not allowed</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00035</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      report  output report file (file name extension must be pdf)</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00036</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">*/ /** \cond */</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00037</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00038</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%MACRO boxplot(</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00039</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">data   =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00040</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,x      =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00041</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,y      =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00042</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,group  =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00043</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,report =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00044</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00045</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00046</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%local dsid grouptype xvalues xvalues2;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00047</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00048</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- check input data set ----------------------------------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00049</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let dsid=%sysfunc(open(&data));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00050</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if &dsid=0 %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00051</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: Data set &data does not exist;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00052</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00053</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00054</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- check whether x variable has been specified -----------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00055</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if "&x"="" %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00056</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: X variable not specified;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00057</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let dsid=%sysfunc(close(&dsid));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00058</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00059</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00060</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- check for existence of x variable ---------------------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00061</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if %sysfunc(varnum(&dsid,&x))=0 %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00062</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: Variable &x does not exist in data set &data ;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00063</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let dsid=%sysfunc(close(&dsid));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00064</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00065</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00066</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00067</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- check whether x variable is numeric -------------------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00068</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if %sysfunc(vartype(&dsid,%sysfunc(varnum(&dsid,&x)))) NE N %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00069</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: Variable &x in data set &data must be numeric;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00070</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let dsid=%sysfunc(close(&dsid));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00071</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00072</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00073</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- determine values of x variable for axis ---------------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00074</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">proc sql noprint;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00075</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">select distinct &x into :xvalues separated by '" "' from &data;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00076</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">select distinct &x into :xvalues2 separated by ' ' from &data;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00077</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">quit;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00078</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- check whether y variable has been specified -----------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00079</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if "&y"="" %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00080</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: Y variable not specified;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00081</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let dsid=%sysfunc(close(&dsid));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00082</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00083</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00084</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- check for existence of y variable ---------------------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00085</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if %sysfunc(varnum(&dsid,&y))=0 %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00086</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: Variable &y does not exist in data set &data ;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00087</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let dsid=%sysfunc(close(&dsid));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00088</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00089</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00090</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- check wheter y variable ist numeric -------------------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00091</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if %sysfunc(vartype(&dsid,%sysfunc(varnum(&dsid,&y)))) NE N %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00092</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: Variable &y in data set &data must be numeric;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00093</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let dsid=%sysfunc(close(&dsid));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00094</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00095</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00096</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- check whether group variable has been specified -------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00097</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if "&group"="" %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00098</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: Group variable must be specified;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00099</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let dsid=%sysfunc(close(&dsid));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00100</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00101</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00102</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- check for existence of group variable -----------------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00103</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if %sysfunc(varnum(&dsid,&group))=0 %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00104</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: Variable &group does not exist in data set &data ;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00105</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let dsid=%sysfunc(close(&dsid));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00106</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00107</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00108</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00109</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- check for number of groups and determine variable type and group sequence -*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00110</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let grouptype=%sysfunc(vartype(&dsid,%sysfunc(varnum(&dsid,&group))));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00111</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%local count lower;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00112</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">proc sql noprint;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00113</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">select count(distinct &group) into :count from &data;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00114</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">select min(&group) into :lower from &data;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00115</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">quit;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00116</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if &lower=. %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00117</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: Missing values in group variable are not allowed;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00118</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let dsid=%sysfunc(close(&dsid));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00119</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00120</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%*** This is code not covered by any test case and left intentionally here to ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00121</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%*** demonstrate the functionality of the test coverage                       ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00122</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">proc sql noprint; drop table &d_1; quit;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00123</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00124</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if &count NE 2 %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00125</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: Variable &group must have exactly two values;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00126</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let dsid=%sysfunc(close(&dsid));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00127</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00128</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00129</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00130</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let dsid=%sysfunc(close(&dsid));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00131</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00132</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- calculate distance between the x values ---------------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00133</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%local d_1;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00134</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">DATA; RUN;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00135</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let d_1=&syslast;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00136</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00137</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">proc sql noprint;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00138</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">create table &d_1 as select distinct &x from &data;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00139</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">quit;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00140</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00141</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">data &d_1;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00142</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">set &d_1;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00143</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">&x = &x - lag(&x);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00144</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">if _n_>1 then output;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00145</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">run;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00146</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00147</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%local xdiff1 xdiff2 xmin xmax misscount;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00148</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">proc sql noprint;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00149</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">select mean(&x), min(&x) into :xdiff1, :xdiff2 from &d_1;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00150</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">select min(&x), max(&x) into :xmin, :xmax from &data;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00151</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let misscount=0;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00152</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">select count(*) into :misscount from &data where &x is missing;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00153</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">quit;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00154</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if &xdiff1=. %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00155</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: x variable must have at least two values;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00156</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">proc sql noprint; drop table &d_1; quit;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00157</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00158</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00159</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if &misscount>0 %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00160</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: Missing values in x variable are not allowed;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00161</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">proc sql noprint; drop table &d_1; quit;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00162</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00163</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00164</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00165</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let xmin=%sysevalf(&xmin-&xdiff1);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00166</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let xmax=%sysevalf(&xmax+&xdiff1);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00167</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00168</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">run;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00169</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if &xdiff1 ne &xdiff2 %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00170</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%put ERROR: boxplot: Values of x variable are not equidistant;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00171</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">proc sql noprint; drop table &d_1; quit;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00172</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%return;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00173</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00174</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00175</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- calculate offset between the plots of the two groups --------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00176</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%local d_plot;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00177</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">data;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00178</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">SET &data (KEEP=&x &y &group);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00179</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">IF &group = %if &grouptype=N %then &lower; %else "&lower"; THEN DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00180</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">&x = &x - 0.11*&xdiff1;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00181</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00182</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">ELSE DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00183</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">&x = &x + 0.11*&xdiff1;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00184</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00185</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">RUN;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00186</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%let d_plot=&syslast;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00187</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00188</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- create chart ------------------------------------------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00189</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">GOPTIONS FTEXT="Helvetica" HTEXT=12pt hsize=16cm vsize=16cm;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00190</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">SYMBOL1 WIDTH = 3 BWIDTH = 3 COLOR = gray  LINE = 2 VALUE = none INTERPOL = BOXJT00 MODE = include;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00191</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">SYMBOL2 WIDTH = 3 BWIDTH = 3 COLOR = black LINE = 1 VALUE = none INTERPOL = BOXJT00 MODE = include;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00192</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">AXIS1 LABEL=(ANGLE=90) MINOR=none;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00193</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">AXIS2 ORDER=(&xmin &xvalues2 &xmax) VALUE=(" " "&xvalues" " ") MINOR=none;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00194</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">LEGEND1 FRAME;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00195</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00196</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">ODS PDF FILE="&report";</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00197</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">ODS LISTING CLOSE;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00198</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">PROC GPLOT DATA=&d_plot;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00199</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">PLOT &y * &x = &group / VAXIS=Axis1 HAXIS=Axis2 LEGEND=Legend1 NOFRAME;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00200</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">RUN;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00201</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">QUIT;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00202</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">ODS PDF CLOSE;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00203</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">ODS LISTING;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00204</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00205</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">proc sql noprint;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00206</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">drop table &d_plot;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00207</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">drop table &d_1;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00208</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">quit;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00209</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00210</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%MEND boxplot;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00211</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/** \endcond */</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="l systemfooter"><hr size="1"></td>
+</tr>
+<tr>
+<td class="r systemfooter2"><small>Erzeugt am     Montag,       1. Juli 2019,  8:03:58 von <a href="http://sourceforge.net/projects/sasunit/" class="link" title="SASUnit" onclick="window.open(this.href); return false;"> SASUnit <img src="SASUnit_Logo.png" title="SASUnit" alt="SASUnit" width=18px height=18px align="absmiddle" border="0"></a> Version 2.0.2 (681) </small></td>
+</tr>
+</table><br>
+</div>
+</body>
+</html>

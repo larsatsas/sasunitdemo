@@ -1,0 +1,6 @@
+{ "name": "CrossReferenceTest3"
+, "children": [
+{ "name": "crossreferencetest4"
+}
+]
+}

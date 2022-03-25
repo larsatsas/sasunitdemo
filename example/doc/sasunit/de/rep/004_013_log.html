@@ -1,0 +1,122 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS-Log für Testfall 013 in Testszenario 004 (boxplot.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Fehler&#160;&#160;&#160;: 1 
+==>
+<a href="#error001">1</a>
+<br>
+Warnungen: 0 
+<br>
+</p>
+<pre>
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+143        data work.blood_pressure;
+144           set testdata.blood_pressure;
+145           if visit=5 then visit=6;
+146        run;
+ 
+NOTE: There were 240 observations read from the data set TESTDATA.BLOOD_PRESSURE.
+NOTE: The data set WORK.BLOOD_PRESSURE has 240 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.03 seconds
+ 
+ 
+MAUTOLOCDISPLAY(BOXPLOT):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\boxplot.sas kompiliert
+147        %boxplot(data=blood_pressure, x=visit, y=sbp, group=med, report=&g_work/report13.pdf)
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   select distinct visit into :xvalues separated by '" "' from blood_pressure;
+MPRINT(BOXPLOT):   select distinct visit into :xvalues2 separated by ' ' from blood_pressure;
+MPRINT(BOXPLOT):   quit;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   select count(distinct med) into :count from blood_pressure;
+MPRINT(BOXPLOT):   select min(med) into :lower from blood_pressure;
+MPRINT(BOXPLOT):   quit;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(BOXPLOT):   DATA;
+MPRINT(BOXPLOT):   RUN;
+ 
+NOTE: The data set WORK.DATA20 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   create table WORK.DATA20 as select distinct visit from blood_pressure;
+NOTE: Table WORK.DATA20 created, with 6 rows and 1 columns.
+ 
+100                                                                                                                      Das SAS System                                                                                               08:02 Monday, July 1, 20
+ 
+MPRINT(BOXPLOT):   quit;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(BOXPLOT):   data WORK.DATA20;
+MPRINT(BOXPLOT):   set WORK.DATA20;
+MPRINT(BOXPLOT):   visit = visit - lag(visit);
+MPRINT(BOXPLOT):   if _n_&gt;1 then output;
+MPRINT(BOXPLOT):   run;
+ 
+NOTE: Missing values were generated as a result of performing an operation on missing values.
+      Each place is given by: (Number of times) at (Line):(Column).
+      1 bei 147:125
+NOTE: There were 6 observations read from the data set WORK.DATA20.
+NOTE: The data set WORK.DATA20 has 5 observations and 1 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   select mean(visit), min(visit) into :xdiff1, :xdiff2 from WORK.DATA20;
+MPRINT(BOXPLOT):   select min(visit), max(visit) into :xmin, :xmax from blood_pressure;
+MPRINT(BOXPLOT):   select count(*) into :misscount from blood_pressure where visit is missing;
+MPRINT(BOXPLOT):   quit;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(BOXPLOT):   run;
+<span style="color:#FF0000"><a name="error001">ERROR: boxplot: Values of x variable are not equidistant</a></span>
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   drop table WORK.DATA20;
+NOTE: Table WORK.DATA20 has been dropped.
+MPRINT(BOXPLOT):   quit;
+NOTE: PROZEDUR SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\assertlogmsg.sas kompiliert
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+148        %assertLogMsg(i_logMsg=ERROR: boxplot: Values of x variable are not equidistant)
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

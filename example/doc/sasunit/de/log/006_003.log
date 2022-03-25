@@ -1,0 +1,44 @@
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(INITTESTCASE):   options linesize=max;
+47         
+48         ods listing;
+49         %CrossReferenceTest3 (5);
+MAUTOLOCDISPLAY(CROSSREFERENCETEST3):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\crossreferencetest3.sas kompiliert
+MPRINT(CROSSREFERENCETEST3):   proc freq data=test;
+MPRINT(CROSSREFERENCETEST3):   table sex*age;
+MPRINT(CROSSREFERENCETEST3):   title "A Standard Frequency Output";
+MPRINT(CROSSREFERENCETEST3):   run;
+
+NOTE: There were 19 observations read from the data set WORK.TEST.
+20                                                                                                                       Das SAS System                                                                                               08:02 Monday, July 1, 2019
+
+NOTE: The PROCEDURE FREQ printed page 5.
+NOTE: PROZEDUR FREQ used (Total process time):
+      real time           0.02 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(CROSSREFERENCETEST3):   Title;
+MPRINT(CROSSREFERENCETEST3):   data var;
+MPRINT(CROSSREFERENCETEST3):   var =
+MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\crossreferencetest4.sas kompiliert
+MPRINT(CROSSREFERENCETEST3.CROSSREFERENCETEST4):   8;
+MPRINT(CROSSREFERENCETEST3):  ;
+MPRINT(CROSSREFERENCETEST3):   run;
+
+NOTE: The data set WORK.VAR has 1 observations and 1 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+      
+
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+50         
+51         %endTestcall()
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+

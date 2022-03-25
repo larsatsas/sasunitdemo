@@ -1,0 +1,75 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(INITTESTCASE):   options linesize=max;
+114        proc datasets lib=test1 nolist kill;
+115        quit;
+
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+116        proc datasets lib=test2 nolist kill;
+117        quit;
+
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MAUTOLOCDISPLAY(GENERATE):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\generate.sas
+118        %generate(data=sashelp.class, by=sexXXX, out=test1.class)
+MPRINT(GENERATE):   data;
+MPRINT(GENERATE):   run;
+
+NOTE: The data set WORK.DATA9 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(GENERATE):   data;
+MPRINT(GENERATE):   run;
+
+NOTE: The data set WORK.DATA10 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+52                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+
+      cpu time            0.00 seconds
+      
+
+MPRINT(GENERATE):   proc sort data=sashelp.class out=WORK.DATA9;
+MPRINT(GENERATE):   by sexXXX;
+ERROR: Variable SEXXXX not found.
+MPRINT(GENERATE):   run;
+
+NOTE: The SAS System stopped processing this step because of errors.
+WARNING: The data set WORK.DATA9 may be incomplete.  When this step was stopped there were 0 observations and 0 variables.
+WARNING: Data set WORK.DATA9 was not replaced because this step was stopped.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+ERROR: Macro Generate: data= or by= specified incorrectly
+
+
+MPRINT(GENERATE):   proc datasets lib=work nolist;
+MPRINT(GENERATE):   delete DATA9 DATA10;
+MPRINT(GENERATE):   quit;
+
+NOTE: Deleting WORK.DATA9 (memtype=DATA).
+NOTE: Deleting WORK.DATA10 (memtype=DATA).
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+119        %endTestcall()
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+

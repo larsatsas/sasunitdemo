@@ -1,0 +1,2104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Program Documentation | SASUnit Examples - SASUnit Test Documentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX279"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Program Documentation | SASUnit Examples - SASUnit Test Documentation</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Program Documentation for Program _reportpgmdoc.sas</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" scope="col">Detailed&nbsp;description</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Create program documentation</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Loops over all examinees. SASUnit macros may be included by specifying o_pdmdoc_sasunit.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Each examinee is scaned for specific tags. This information is gather in a seperate documentation per examinee</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">The following tags will be collect into lists on an additional page:</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">- todo</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">- bug</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">- test</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">- remark</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">- deprecated</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Version</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Revision: 651 $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Author</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Author: klandwich $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Date</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Date: 2019-04-24 07:26:11 +0200 (Mi, 24 Apr 2019) $</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">See&nbsp;also</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Here you can find the SASUnit documentation, release notes and license information.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/saspgm/sasunit/_reportpgmdoc.sas $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Copyright</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For copyright information and terms of usage under the GPL license see included file readme.txt</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">or https://sourceforge.net/p/sasunit/wiki/readme/.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Return</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">program documentation</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX280"></a>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_name</th>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" colspan="2" scope="colgroup">Parameters</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_language</td>
+<td class="l m pgmdocblinddata">Language of the report (DE, EN) - refer to _nls</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_repdata</td>
+<td class="l m pgmdocblinddata">Name of reporting dataset</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_html</td>
+<td class="l m pgmdocblinddata">Test report in HTML-format?</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_pdf</td>
+<td class="l m pgmdocblinddata">Test report in PDF-format?</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_path</td>
+<td class="l m pgmdocblinddata">Folder where the documentation should be created in</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">o_pgmdoc_sasunit</td>
+<td class="l m pgmdocblinddata">Create program documentation for SASUnit macros</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_style</td>
+<td class="l m pgmdocblinddata">Name of the SAS style and css file to be used.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX281"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle2">Source Code of Program _reportpgmdoc.sas</td>
+</tr>
+<tr>
+<td class="c systemtitle3" style=" font-size: 10pt;"><a href="src/00/_reportpgmdoc.sas">[Download]</a>
+</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Data Set WORK._PGMSRC_VIEW">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">ObsNum</th>
+<th class="l blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m pgmdocsource">00001</td>
+<td class="l m pgmdocsource">%macro _reportpgmdoc (i_language=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00002</td>
+<td class="l m pgmdocsource">,i_repdata=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00003</td>
+<td class="l m pgmdocsource">,o_html=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00004</td>
+<td class="l m pgmdocsource">,o_pdf=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00005</td>
+<td class="l m pgmdocsource">,o_path=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00006</td>
+<td class="l m pgmdocsource">,o_pgmdoc_sasunit=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00007</td>
+<td class="l m pgmdocsource">,i_style=</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00008</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00009</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00010</td>
+<td class="l m pgmdocsource">%local</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00011</td>
+<td class="l m pgmdocsource">l_anzMacros</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00012</td>
+<td class="l m pgmdocsource">i</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00013</td>
+<td class="l m pgmdocsource">l_Path</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00014</td>
+<td class="l m pgmdocsource">l_outputPath</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00015</td>
+<td class="l m pgmdocsource">l_macroName</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00016</td>
+<td class="l m pgmdocsource">l_pageName</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00017</td>
+<td class="l m pgmdocsource">l_anzToDo</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00018</td>
+<td class="l m pgmdocsource">l_anzTest</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00019</td>
+<td class="l m pgmdocsource">l_anzBug</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00020</td>
+<td class="l m pgmdocsource">l_anzDep</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00021</td>
+<td class="l m pgmdocsource">l_anzScns</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00022</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00023</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00024</td>
+<td class="l m pgmdocsource">%if (%sysfunc(exist (WORK._bugdoc))) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00025</td>
+<td class="l m pgmdocsource">proc delete data=WORK._bugdoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00026</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00027</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00028</td>
+<td class="l m pgmdocsource">%if (%sysfunc(exist (WORK._testdoc))) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00029</td>
+<td class="l m pgmdocsource">proc delete data=WORK._testdoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00030</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00031</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00032</td>
+<td class="l m pgmdocsource">%if (%sysfunc(exist (WORK._tododoc))) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00033</td>
+<td class="l m pgmdocsource">proc delete data=WORK._tododoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00034</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00035</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00036</td>
+<td class="l m pgmdocsource">%if (%sysfunc(exist (WORK._depdoc))) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00037</td>
+<td class="l m pgmdocsource">proc delete data=WORK._depdoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00038</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00039</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00040</td>
+<td class="l m pgmdocsource">%if (%sysfunc(exist (WORK._grpdoc))) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00041</td>
+<td class="l m pgmdocsource">proc delete data=WORK._grpdoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00042</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00043</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00044</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00045</td>
+<td class="l m pgmdocsource">proc format lib=work;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00046</td>
+<td class="l m pgmdocsource">value $HeaderText</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00047</td>
+<td class="l m pgmdocsource">&quot;\brief&quot;           = &quot;&amp;g_nls_reportPgmDoc_001.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00048</td>
+<td class="l m pgmdocsource">&quot;\details&quot;         = &quot;&amp;g_nls_reportPgmDoc_001.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00049</td>
+<td class="l m pgmdocsource">&quot;\author&quot;          = &quot;&amp;g_nls_reportPgmDoc_002.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00050</td>
+<td class="l m pgmdocsource">&quot;\date&quot;            = &quot;&amp;g_nls_reportPgmDoc_003.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00051</td>
+<td class="l m pgmdocsource">&quot;\sa&quot;              = &quot;&amp;g_nls_reportPgmDoc_004.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00052</td>
+<td class="l m pgmdocsource">&quot;\bug&quot;             = &quot;&amp;g_nls_reportPgmDoc_005.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00053</td>
+<td class="l m pgmdocsource">&quot;\test&quot;            = &quot;&amp;g_nls_reportPgmDoc_006.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00054</td>
+<td class="l m pgmdocsource">&quot;\todo&quot;            = &quot;&amp;g_nls_reportPgmDoc_007.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00055</td>
+<td class="l m pgmdocsource">&quot;\version&quot;         = &quot;&amp;g_nls_reportPgmDoc_008.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00056</td>
+<td class="l m pgmdocsource">&quot;\param&quot;           = &quot;&amp;g_nls_reportPgmDoc_009.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00057</td>
+<td class="l m pgmdocsource">&quot;\return&quot;          = &quot;&amp;g_nls_reportPgmDoc_010.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00058</td>
+<td class="l m pgmdocsource">&quot;\retval&quot;          = &quot;&amp;g_nls_reportPgmDoc_011.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00059</td>
+<td class="l m pgmdocsource">&quot;\remark&quot;          = &quot;&amp;g_nls_reportPgmDoc_012.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00060</td>
+<td class="l m pgmdocsource">&quot;\copyright&quot;       = &quot;&amp;g_nls_reportPgmDoc_013.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00061</td>
+<td class="l m pgmdocsource">&quot;_label_todolist_&quot; = &quot;&amp;g_nls_reportPgmDoc_014.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00062</td>
+<td class="l m pgmdocsource">&quot;_label_testlist_&quot; = &quot;&amp;g_nls_reportPgmDoc_015.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00063</td>
+<td class="l m pgmdocsource">&quot;_label_buglist_&quot;  = &quot;&amp;g_nls_reportPgmDoc_016.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00064</td>
+<td class="l m pgmdocsource">&quot;_label_deplist_&quot;  = &quot;&amp;g_nls_reportPgmDoc_020.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00065</td>
+<td class="l m pgmdocsource">&quot;\deprecated&quot;      = &quot;&amp;g_nls_reportPgmDoc_023.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00066</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00067</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00068</td>
+<td class="l m pgmdocsource">value $TagSort</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00069</td>
+<td class="l m pgmdocsource">&quot;\brief&quot;      = &quot;000&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00070</td>
+<td class="l m pgmdocsource">&quot;\details&quot;    = &quot;000&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00071</td>
+<td class="l m pgmdocsource">&quot;\version&quot;    = &quot;001&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00072</td>
+<td class="l m pgmdocsource">&quot;\author&quot;     = &quot;002&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00073</td>
+<td class="l m pgmdocsource">&quot;\date&quot;       = &quot;003&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00074</td>
+<td class="l m pgmdocsource">&quot;\sa&quot;         = &quot;004&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00075</td>
+<td class="l m pgmdocsource">&quot;\bug&quot;        = &quot;005&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00076</td>
+<td class="l m pgmdocsource">&quot;\test&quot;       = &quot;006&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00077</td>
+<td class="l m pgmdocsource">&quot;\todo&quot;       = &quot;007&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00078</td>
+<td class="l m pgmdocsource">&quot;\remark&quot;     = &quot;008&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00079</td>
+<td class="l m pgmdocsource">&quot;\deprecated&quot; = &quot;009&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00080</td>
+<td class="l m pgmdocsource">&quot;\copyright&quot;  = &quot;00A&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00081</td>
+<td class="l m pgmdocsource">&quot;\return&quot;     = &quot;00F&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00082</td>
+<td class="l m pgmdocsource">&quot;\param&quot;      = &quot;010&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00083</td>
+<td class="l m pgmdocsource">&quot;\retval&quot;     = &quot;011&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00084</td>
+<td class="l m pgmdocsource">other         = &quot;___&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00085</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00086</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00087</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00088</td>
+<td class="l m pgmdocsource">%*** Get all macros to be documented ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00089</td>
+<td class="l m pgmdocsource">data work.exa;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00090</td>
+<td class="l m pgmdocsource">set target.exa</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00091</td>
+<td class="l m pgmdocsource">%if (&amp;o_pgmdoc_sasunit. = 0) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00092</td>
+<td class="l m pgmdocsource">(where=(exa_auton &gt;= 2))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00093</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00094</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00095</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00096</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00097</td>
+<td class="l m pgmdocsource">*** Make entries unique if a folder is used twice in sasautos ****;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00098</td>
+<td class="l m pgmdocsource">proc sort data=work.exa;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00099</td>
+<td class="l m pgmdocsource">by exa_filename exa_auton;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00100</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00101</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00102</td>
+<td class="l m pgmdocsource">data work.exa;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00103</td>
+<td class="l m pgmdocsource">set work.exa;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00104</td>
+<td class="l m pgmdocsource">by exa_filename exa_auton;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00105</td>
+<td class="l m pgmdocsource">exa_auton = coalesce (exa_auton, 99);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00106</td>
+<td class="l m pgmdocsource">if (first.exa_filename);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00107</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00108</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00109</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00110</td>
+<td class="l m pgmdocsource">select count (*) into :l_anzMacros</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00111</td>
+<td class="l m pgmdocsource">from work.exa;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00112</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00113</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00114</td>
+<td class="l m pgmdocsource">%do i=1 %to &amp;l_anzMacros.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00115</td>
+<td class="l m pgmdocsource">%local l_macroFileName&amp;i. l_macroName&amp;i. l_macroDisplayName&amp;i. l_macroLink&amp;i. l_pageName&amp;i.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00116</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00117</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00118</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00119</td>
+<td class="l m pgmdocsource">select exa_filename into :l_macroFileName1-:l_macroFileName%cmpres(&amp;l_anzMacros.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00120</td>
+<td class="l m pgmdocsource">from work.exa</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00121</td>
+<td class="l m pgmdocsource">order by exa_id</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00122</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00123</td>
+<td class="l m pgmdocsource">select catt (&quot;src/&quot;, put (exa_auton, z2.), &quot;/&quot;, exa_pgm) into :l_macroLink1-:l_macroLink%cmpres(&amp;l_anzMacros.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00124</td>
+<td class="l m pgmdocsource">from work.exa</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00125</td>
+<td class="l m pgmdocsource">order by exa_id</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00126</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00127</td>
+<td class="l m pgmdocsource">select catt (&quot;pgm_&quot;, put (exa_auton, z2.), &quot;_&quot;, tranwrd (exa_pgm, &quot;.sas&quot;, &quot;&quot;)) into :l_pageName1-:l_pageName%cmpres(&amp;l_anzMacros.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00128</td>
+<td class="l m pgmdocsource">from work.exa</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00129</td>
+<td class="l m pgmdocsource">order by exa_id</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00130</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00131</td>
+<td class="l m pgmdocsource">create table work._macros as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00132</td>
+<td class="l m pgmdocsource">select distinct exa_id, exa_pgm, cas_obj, exa_auton</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00133</td>
+<td class="l m pgmdocsource">from work.exa left join target.cas</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00134</td>
+<td class="l m pgmdocsource">on exa_id=cas_exaid</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00135</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00136</td>
+<td class="l m pgmdocsource">select trim(exa_pgm) into :l_macroName1-:l_macroName%cmpres(&amp;l_anzMacros.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00137</td>
+<td class="l m pgmdocsource">from work._macros</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00138</td>
+<td class="l m pgmdocsource">order by exa_id</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00139</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00140</td>
+<td class="l m pgmdocsource">select trim (coalesce (cas_obj, exa_pgm)) into :l_macroDisplayName1-:l_macroDisplayName%cmpres(&amp;l_anzMacros.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00141</td>
+<td class="l m pgmdocsource">from work._macros</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00142</td>
+<td class="l m pgmdocsource">order by exa_id</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00143</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00144</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00145</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00146</td>
+<td class="l m pgmdocsource">options nocenter;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00147</td>
+<td class="l m pgmdocsource">ods listing close;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00148</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00149</td>
+<td class="l m pgmdocsource">%do i=1 %to &amp;l_anzMacros;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00150</td>
+<td class="l m pgmdocsource">%if (%sysfunc (fileexist(&amp;&amp;l_macroFileName&amp;i.))) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00151</td>
+<td class="l m pgmdocsource">%_scanHeader (MacroName        = &amp;&amp;l_macroName&amp;i.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00152</td>
+<td class="l m pgmdocsource">,FilePath         = &amp;&amp;l_macroFileName&amp;i.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00153</td>
+<td class="l m pgmdocsource">,LinkName         = &amp;&amp;l_pageName&amp;i.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00154</td>
+<td class="l m pgmdocsource">,DisplayName      = &amp;&amp;l_macroDisplayName&amp;i.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00155</td>
+<td class="l m pgmdocsource">,LiboutDoc        = WORK</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00156</td>
+<td class="l m pgmdocsource">,DataOutDoc       = _Pgm&amp;i.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00157</td>
+<td class="l m pgmdocsource">,i_language       = &amp;i_language.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00158</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00159</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00160</td>
+<td class="l m pgmdocsource">data work._pgmsrc&amp;i.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00161</td>
+<td class="l m pgmdocsource">length Text $400 CommentOpen idxCommentOpen idxCommentClose 8;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00162</td>
+<td class="l m pgmdocsource">retain CommentOpen 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00163</td>
+<td class="l m pgmdocsource">infile &quot;&amp;&amp;l_macroFileName&amp;i.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00164</td>
+<td class="l m pgmdocsource">input;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00165</td>
+<td class="l m pgmdocsource">Text=_INFILE_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00166</td>
+<td class="l m pgmdocsource">if (idxCommentClose &gt; 0) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00167</td>
+<td class="l m pgmdocsource">CommentOpen=0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00168</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00169</td>
+<td class="l m pgmdocsource">keep Text;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00170</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00171</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00172</td>
+<td class="l m pgmdocsource">data work._pgmsrc_view / view=work._pgmsrc_view;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00173</td>
+<td class="l m pgmdocsource">set work._pgmsrc&amp;i.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00174</td>
+<td class="l m pgmdocsource">length ObsNum $80;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00175</td>
+<td class="l m pgmdocsource">ObsNum = put (_N_,z5.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00176</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00177</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00178</td>
+<td class="l m pgmdocsource">%let l_title=&amp;g_nls_reportPgmDoc_022. | &amp;g_project - &amp;g_nls_reportPgmDoc_021.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00179</td>
+<td class="l m pgmdocsource">title j=c &quot;&amp;l_title.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00180</td>
+<td class="l m pgmdocsource">title2 j=c &quot;&amp;&amp;g_nls_reportPgmDoc_017. &amp;&amp;l_macroDisplayName&amp;i..&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00181</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00182</td>
+<td class="l m pgmdocsource">%let l_pageName = &amp;&amp;l_pageName&amp;i..;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00183</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00184</td>
+<td class="l m pgmdocsource">ods html4 file=&quot;&amp;o_Path./&amp;l_pageName..html&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00185</td>
+<td class="l m pgmdocsource">(TITLE=&quot;&amp;l_title.&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00186</td>
+<td class="l m pgmdocsource">headtext=&#39;&lt;link rel=&quot;shortcut icon&quot; href=&quot;./favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;&#39;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00187</td>
+<td class="l m pgmdocsource">metatext=&quot;http-equiv=&quot;&quot;Content-Style-Type&quot;&quot; content=&quot;&quot;text/css&quot;&quot; /&gt;&lt;meta http-equiv=&quot;&quot;Content-Language&quot;&quot; content=&quot;&quot;&amp;i_language.&quot;&quot; /&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00188</td>
+<td class="l m pgmdocsource">style=styles.&amp;i_style. stylesheet=(URL=&quot;css/&amp;i_style..css&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00189</td>
+<td class="l m pgmdocsource">encoding=&quot;&amp;g_rep_encoding.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00190</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00191</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00192</td>
+<td class="l m pgmdocsource">%_reportPgmHeader (i_lib=WORK, i_data=_Pgm&amp;i., i_language=&amp;i_language.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00193</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00194</td>
+<td class="l m pgmdocsource">title2 j=c &quot;&amp;g_nls_reportPgmDoc_018. &amp;&amp;l_macroDisplayName&amp;i..&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00195</td>
+<td class="l m pgmdocsource">title3 j=c height=10pt link=&quot;&amp;&amp;l_macroLink&amp;i.&quot; &quot;[&amp;g_nls_reportAuton_027.]&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00196</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00197</td>
+<td class="l m pgmdocsource">proc print data=work._pgmsrc_view noobs</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00198</td>
+<td class="l m pgmdocsource">style(report)=blindTable [borderwidth=0]</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00199</td>
+<td class="l m pgmdocsource">style(column)=pgmDocSource</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00200</td>
+<td class="l m pgmdocsource">style(header)=blindHeader;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00201</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00202</td>
+<td class="l m pgmdocsource">var ObsNum Text;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00203</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00204</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00205</td>
+<td class="l m pgmdocsource">%_closeHtmlPage(&amp;i_style.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00206</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00207</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00208</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00209</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00210</td>
+<td class="l m pgmdocsource">%*** Get all scenarios to be documented         ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00211</td>
+<td class="l m pgmdocsource">%*** if they do not reside in an autocall path, ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00212</td>
+<td class="l m pgmdocsource">%*** then we need to document them separately   ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00213</td>
+<td class="l m pgmdocsource">proc sort data=target.scn out=work.scn;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00214</td>
+<td class="l m pgmdocsource">by scn_id;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00215</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00216</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00217</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00218</td>
+<td class="l m pgmdocsource">select count (*) into :l_anzScns</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00219</td>
+<td class="l m pgmdocsource">from work.scn;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00220</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00221</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00222</td>
+<td class="l m pgmdocsource">%do i=1 %to &amp;l_anzScns.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00223</td>
+<td class="l m pgmdocsource">%local l_scnFileName&amp;i. l_scnName&amp;i. l_scnDisplayName&amp;i. l_scnLink&amp;i. l_scnPageName&amp;i.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00224</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00225</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00226</td>
+<td class="l m pgmdocsource">data work.scn;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00227</td>
+<td class="l m pgmdocsource">set work.scn;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00228</td>
+<td class="l m pgmdocsource">scn_abs_path = resolve (&#39;%_abspath(&amp;g_root,&#39; !! trim(scn_path) !! &#39;)&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00229</td>
+<td class="l m pgmdocsource">scn_pgm      = scan (scn_path, -1, &#39;/&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00230</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00231</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00232</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00233</td>
+<td class="l m pgmdocsource">select scn_abs_path into :l_scnFileName1-:l_scnFileName%cmpres(&amp;l_anzScns.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00234</td>
+<td class="l m pgmdocsource">from work.scn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00235</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00236</td>
+<td class="l m pgmdocsource">select catt (&quot;src/scn/scn_&quot;, put (scn_id, z3.), &quot;.sas&quot;) into :l_scnLink1-:l_scnLink%cmpres(&amp;l_anzScns.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00237</td>
+<td class="l m pgmdocsource">from work.scn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00238</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00239</td>
+<td class="l m pgmdocsource">select catt (&quot;pgm_scn_&quot;, put (scn_id, z3.)) into :l_scnPageName1-:l_scnPageName%cmpres(&amp;l_anzScns.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00240</td>
+<td class="l m pgmdocsource">from work.scn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00241</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00242</td>
+<td class="l m pgmdocsource">select trim(scn_pgm) into :l_scnName1-:l_scnName%cmpres(&amp;l_anzScns.)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00243</td>
+<td class="l m pgmdocsource">from work.scn</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00244</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00245</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00246</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00247</td>
+<td class="l m pgmdocsource">options nocenter;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00248</td>
+<td class="l m pgmdocsource">ods listing close;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00249</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00250</td>
+<td class="l m pgmdocsource">data __ToDoDoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00251</td>
+<td class="l m pgmdocsource">set _ToDoDoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00252</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00253</td>
+<td class="l m pgmdocsource">data __TestDoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00254</td>
+<td class="l m pgmdocsource">set _TestDoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00255</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00256</td>
+<td class="l m pgmdocsource">data __BugDoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00257</td>
+<td class="l m pgmdocsource">set _BugDoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00258</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00259</td>
+<td class="l m pgmdocsource">data __DepDoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00260</td>
+<td class="l m pgmdocsource">set _DepDoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00261</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00262</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00263</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00264</td>
+<td class="l m pgmdocsource">create table _ToDoDoc as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00265</td>
+<td class="l m pgmdocsource">select * from __ToDoDoc where macroname not in (select distinct scn_pgm from work.scn);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00266</td>
+<td class="l m pgmdocsource">create table _TestDoc as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00267</td>
+<td class="l m pgmdocsource">select * from __TestDoc where macroname not in (select distinct scn_pgm from work.scn);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00268</td>
+<td class="l m pgmdocsource">create table _BugDoc as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00269</td>
+<td class="l m pgmdocsource">select * from __BugDoc where macroname not in (select distinct scn_pgm from work.scn);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00270</td>
+<td class="l m pgmdocsource">create table _DepDoc as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00271</td>
+<td class="l m pgmdocsource">select * from __DepDoc where macroname not in (select distinct scn_pgm from work.scn);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00272</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00273</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00274</td>
+<td class="l m pgmdocsource">%do i=1 %to &amp;l_anzScns;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00275</td>
+<td class="l m pgmdocsource">%if (%sysfunc (fileexist(&amp;&amp;l_scnFileName&amp;i.))) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00276</td>
+<td class="l m pgmdocsource">%_scanHeader (MacroName        = &amp;&amp;l_scnName&amp;i.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00277</td>
+<td class="l m pgmdocsource">,FilePath         = &amp;&amp;l_scnFileName&amp;i.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00278</td>
+<td class="l m pgmdocsource">,LinkName         = &amp;&amp;l_scnPageName&amp;i.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00279</td>
+<td class="l m pgmdocsource">,DisplayName      = &amp;&amp;l_scnName&amp;i.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00280</td>
+<td class="l m pgmdocsource">,LiboutDoc        = WORK</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00281</td>
+<td class="l m pgmdocsource">,DataOutDoc       = _Pgm&amp;i.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00282</td>
+<td class="l m pgmdocsource">,i_language       = &amp;i_language.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00283</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00284</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00285</td>
+<td class="l m pgmdocsource">data work._pgmsrc&amp;i.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00286</td>
+<td class="l m pgmdocsource">length Text $400 CommentOpen idxCommentOpen idxCommentClose 8;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00287</td>
+<td class="l m pgmdocsource">retain CommentOpen 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00288</td>
+<td class="l m pgmdocsource">infile &quot;&amp;&amp;l_scnFileName&amp;i.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00289</td>
+<td class="l m pgmdocsource">input;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00290</td>
+<td class="l m pgmdocsource">Text=_INFILE_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00291</td>
+<td class="l m pgmdocsource">if (idxCommentClose &gt; 0) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00292</td>
+<td class="l m pgmdocsource">CommentOpen=0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00293</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00294</td>
+<td class="l m pgmdocsource">keep Text;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00295</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00296</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00297</td>
+<td class="l m pgmdocsource">data work._pgmsrc_view / view=work._pgmsrc_view;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00298</td>
+<td class="l m pgmdocsource">set work._pgmsrc&amp;i.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00299</td>
+<td class="l m pgmdocsource">length ObsNum $80;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00300</td>
+<td class="l m pgmdocsource">ObsNum = put (_N_,z5.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00301</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00302</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00303</td>
+<td class="l m pgmdocsource">%let l_title=&amp;g_nls_reportPgmDoc_022. | &amp;g_project - &amp;g_nls_reportPgmDoc_021.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00304</td>
+<td class="l m pgmdocsource">title j=c &quot;&amp;l_title.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00305</td>
+<td class="l m pgmdocsource">title2 j=c &quot;&amp;&amp;g_nls_reportPgmDoc_017. &amp;&amp;l_scnName&amp;i..&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00306</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00307</td>
+<td class="l m pgmdocsource">%let l_pageName = &amp;&amp;l_scnPageName&amp;i..;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00308</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00309</td>
+<td class="l m pgmdocsource">ods html4 file=&quot;&amp;o_Path./&amp;l_pageName..html&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00310</td>
+<td class="l m pgmdocsource">(TITLE=&quot;&amp;l_title.&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00311</td>
+<td class="l m pgmdocsource">headtext=&#39;&lt;link rel=&quot;shortcut icon&quot; href=&quot;./favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;&#39;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00312</td>
+<td class="l m pgmdocsource">metatext=&quot;http-equiv=&quot;&quot;Content-Style-Type&quot;&quot; content=&quot;&quot;text/css&quot;&quot; /&gt;&lt;meta http-equiv=&quot;&quot;Content-Language&quot;&quot; content=&quot;&quot;&amp;i_language.&quot;&quot; /&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00313</td>
+<td class="l m pgmdocsource">style=styles.&amp;i_style. stylesheet=(URL=&quot;css/&amp;i_style..css&quot;)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00314</td>
+<td class="l m pgmdocsource">encoding=&quot;&amp;g_rep_encoding.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00315</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00316</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00317</td>
+<td class="l m pgmdocsource">%_reportPgmHeader (i_lib=WORK, i_data=_Pgm&amp;i., i_language=&amp;i_language.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00318</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00319</td>
+<td class="l m pgmdocsource">title2 j=c &quot;&amp;g_nls_reportPgmDoc_018. &amp;&amp;l_scnName&amp;i..&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00320</td>
+<td class="l m pgmdocsource">title3 j=c height=10pt link=&quot;&amp;&amp;l_scnLink&amp;i.&quot; &quot;[&amp;g_nls_reportAuton_027.]&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00321</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00322</td>
+<td class="l m pgmdocsource">proc print data=work._pgmsrc_view noobs</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00323</td>
+<td class="l m pgmdocsource">style(report)=blindTable [borderwidth=0]</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00324</td>
+<td class="l m pgmdocsource">style(column)=pgmDocSource</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00325</td>
+<td class="l m pgmdocsource">style(header)=blindHeader;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00326</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00327</td>
+<td class="l m pgmdocsource">var ObsNum Text;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00328</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00329</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00330</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00331</td>
+<td class="l m pgmdocsource">%_closeHtmlPage(&amp;i_style.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00332</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00333</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00334</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00335</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00336</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00337</td>
+<td class="l m pgmdocsource">ods html4 file=&quot;&amp;o_Path./_PgmDoc_Lists.html&quot; style=styles.&amp;i_style. stylesheet=(url=&quot;css/&amp;i_style..css&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00338</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00339</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00340</td>
+<td class="l m pgmdocsource">%let l_anzToDo=%_nobs(_ToDoDoc);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00341</td>
+<td class="l m pgmdocsource">%let l_anzTest=%_nobs(_TestDoc);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00342</td>
+<td class="l m pgmdocsource">%let l_anzBug =%_nobs(_BugDoc);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00343</td>
+<td class="l m pgmdocsource">%let l_anzDep =%_nobs(_DepDoc);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00344</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00345</td>
+<td class="l m pgmdocsource">title j=c &quot;&amp;g_nls_reportPgmDoc_019.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00346</td>
+<td class="l m pgmdocsource">%if (%eval(&amp;l_anzToDo.+&amp;l_anzTest.+&amp;l_anzBug.+&amp;l_anzDep.)) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00347</td>
+<td class="l m pgmdocsource">%if (&amp;l_anzToDo.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00348</td>
+<td class="l m pgmdocsource">%PrintDocList(lib=WORK</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00349</td>
+<td class="l m pgmdocsource">,data=_ToDoDoc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00350</td>
+<td class="l m pgmdocsource">,title=%sysfunc (putc (_label_todolist_, $Headertext.))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00351</td>
+<td class="l m pgmdocsource">,style=pgmDocToDoHeader</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00352</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00353</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00354</td>
+<td class="l m pgmdocsource">%if (&amp;l_anzTest.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00355</td>
+<td class="l m pgmdocsource">%PrintDocList(lib=WORK</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00356</td>
+<td class="l m pgmdocsource">,data=_TestDoc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00357</td>
+<td class="l m pgmdocsource">,title=%sysfunc (putc (_label_testlist_, $Headertext.))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00358</td>
+<td class="l m pgmdocsource">,style=pgmDocTestHeader</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00359</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00360</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00361</td>
+<td class="l m pgmdocsource">%if (&amp;l_anzBug.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00362</td>
+<td class="l m pgmdocsource">%PrintDocList(lib=WORK</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00363</td>
+<td class="l m pgmdocsource">,data=_BugDoc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00364</td>
+<td class="l m pgmdocsource">,title=%sysfunc (putc (_label_buglist_,  $Headertext.))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00365</td>
+<td class="l m pgmdocsource">,style=pgmDocBugHeader</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00366</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00367</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00368</td>
+<td class="l m pgmdocsource">%if (&amp;l_anzDep.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00369</td>
+<td class="l m pgmdocsource">%PrintDocList(lib=WORK</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00370</td>
+<td class="l m pgmdocsource">,data=_DepDoc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00371</td>
+<td class="l m pgmdocsource">,title=%sysfunc (putc (_label_deplist_,  $Headertext.))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00372</td>
+<td class="l m pgmdocsource">,style=pgmDocDepHeader</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00373</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00374</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00375</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00376</td>
+<td class="l m pgmdocsource">%else %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00377</td>
+<td class="l m pgmdocsource">data test;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00378</td>
+<td class="l m pgmdocsource">Text=&quot;&quot;;output;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00379</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00380</td>
+<td class="l m pgmdocsource">proc print data=test noobs label</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00381</td>
+<td class="l m pgmdocsource">style(report)=blindTable [borderwidth=0]</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00382</td>
+<td class="l m pgmdocsource">style(column)=blindHeader</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00383</td>
+<td class="l m pgmdocsource">style(header)=blindHeader;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00384</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00385</td>
+<td class="l m pgmdocsource">var Text;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00386</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00387</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00388</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00389</td>
+<td class="l m pgmdocsource">%if (&amp;o_html.) %then %do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00390</td>
+<td class="l m pgmdocsource">%_closeHtmlPage(&amp;i_style.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00391</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00392</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00393</td>
+<td class="l m pgmdocsource">%*** eliminate empty groups              ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00394</td>
+<td class="l m pgmdocsource">%*** Loop until no more rows are deleted ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00395</td>
+<td class="l m pgmdocsource">%let l_sqlobs=1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00396</td>
+<td class="l m pgmdocsource">%do %until (&amp;l_sqlobs. = 0);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00397</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00398</td>
+<td class="l m pgmdocsource">create table work._GrpDoc2Delete as</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00399</td>
+<td class="l m pgmdocsource">select distinct parent</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00400</td>
+<td class="l m pgmdocsource">from work._GrpDoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00401</td>
+<td class="l m pgmdocsource">delete * from work._GrpDoc where Type=&quot;Group&quot; and child not in (select distinct parent from work._GrpDoc2Delete);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00402</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00403</td>
+<td class="l m pgmdocsource">%let l_sqlobs=&amp;sqlobs.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00404</td>
+<td class="l m pgmdocsource">proc sql noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00405</td>
+<td class="l m pgmdocsource">drop table work._GrpDoc2Delete;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00406</td>
+<td class="l m pgmdocsource">quit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00407</td>
+<td class="l m pgmdocsource">%end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00408</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00409</td>
+<td class="l m pgmdocsource">proc sort data=work._GrpDoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00410</td>
+<td class="l m pgmdocsource">by parent child;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00411</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00412</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00413</td>
+<td class="l m pgmdocsource">data work._GrpDoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00414</td>
+<td class="l m pgmdocsource">set work._GrpDoc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00415</td>
+<td class="l m pgmdocsource">by parent child;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00416</td>
+<td class="l m pgmdocsource">if (missing (childText)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00417</td>
+<td class="l m pgmdocsource">childText=child;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00418</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00419</td>
+<td class="l m pgmdocsource">keep parent child childText ChildDesc childPath;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00420</td>
+<td class="l m pgmdocsource">if last.child;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00421</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00422</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00423</td>
+<td class="l m pgmdocsource">options center;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00424</td>
+<td class="l m pgmdocsource">ods listing;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00425</td>
+<td class="l m pgmdocsource">%mend;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00426</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00427</td>
+<td class="l m pgmdocsource">%macro PrintDocList (lib=, data=, title=, style=);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00428</td>
+<td class="l m pgmdocsource">proc sort data=&amp;lib..&amp;data.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00429</td>
+<td class="l m pgmdocsource">by macroname obs_sort;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00430</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00431</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00432</td>
+<td class="l m pgmdocsource">data work._view / view=work._view;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00433</td>
+<td class="l m pgmdocsource">set &amp;lib..&amp;data.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00434</td>
+<td class="l m pgmdocsource">ReportColumns= catt (&#39;°[style [url=&quot;&#39;, linkname,  &#39;.html&quot;] &#39;, displayname, &#39;]&#39;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00435</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00436</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00437</td>
+<td class="l m pgmdocsource">proc report data=work._view nowd missing</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00438</td>
+<td class="l m pgmdocsource">style(report)=pgmDocBlindData {width=60em]</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00439</td>
+<td class="l m pgmdocsource">style(header)=blindHeader</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00440</td>
+<td class="l m pgmdocsource">style(lines)=&amp;style.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00441</td>
+<td class="l m pgmdocsource">style(column)=pgmDocBlindData [textalign=left]</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00442</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00443</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00444</td>
+<td class="l m pgmdocsource">column ReportColumns obs_sort new_description;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00445</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00446</td>
+<td class="l m pgmdocsource">define ReportColumns / group style(column)=pgmDocBlindDataStrong [width=20em];</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00447</td>
+<td class="l m pgmdocsource">define obs_sort / group noprint;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00448</td>
+<td class="l m pgmdocsource">define new_description / display;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00449</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00450</td>
+<td class="l m pgmdocsource">compute before;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00451</td>
+<td class="l m pgmdocsource">line &quot;&amp;title.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00452</td>
+<td class="l m pgmdocsource">endcomp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00453</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00454</td>
+<td class="l m pgmdocsource">title;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00455</td>
+<td class="l m pgmdocsource">%mend;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

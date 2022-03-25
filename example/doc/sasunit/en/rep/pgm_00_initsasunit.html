@@ -1,0 +1,3117 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="en" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Program Documentation | SASUnit Examples - SASUnit Test Documentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="IDX372"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Program Documentation | SASUnit Examples - SASUnit Test Documentation</td>
+</tr>
+<tr>
+<td class="c systemtitle2">Program Documentation for Program initsasunit.sas</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" scope="col">Detailed&nbsp;description</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Initialization of a test suite that may comprise several test scenarios.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">An existing test repository is opened or a new test repository is created.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">It conists of two steps:</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">- validate configuration of initSASUnit</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">- Setting up SASUnit session</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Version</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Revision: 681 $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Author</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Author: klandwich $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Date</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$Date: 2019-06-28 10:45:46 +0200 (Fr, 28 Jun 2019) $</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">See&nbsp;also</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">Here you can find the SASUnit documentation, release notes and license information.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">\$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/saspgm/sasunit/initsasunit.sas $</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+<tr>
+<td class="c pgmdocheader" scope="col">Copyright</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">For copyright information and terms of usage under the GPL license see included file readme.txt</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">or https://sourceforge.net/p/sasunit/wiki/readme/.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddata">&nbsp;</td>
+</tr>
+<tr>
+<td class="c blindheader" scope="col">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX373"></a>
+<div>
+<div align="left">
+<table class="table" style=" width: 90em;" cellspacing="0" cellpadding="0" rules="all" frame="box" summary="Procedure Report: Detailed and/or summarized report">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="c blindheader" scope="col">new_name</th>
+<th class="c blindheader" scope="col">new_description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="c pgmdocheader" colspan="2" scope="colgroup">Parameters</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_root</td>
+<td class="l m pgmdocblinddata">optional: root path for all other paths except i_sasunit, is used for paths that do not begin</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">with a drive letter or a slash/backslash</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">io_target</td>
+<td class="l m pgmdocblinddata">Path for the test repository and the generated documentation, has to exist</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_overwrite</td>
+<td class="l m pgmdocblinddata">0 (default) .. create test repository only in case it does not already exist</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">1 .. test repository is always created newly</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_project</td>
+<td class="l m pgmdocblinddata">optional: (in case test repository already exists): name of project</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_sasunit</td>
+<td class="l m pgmdocblinddata">optional: absolute installation path of SAS programs from SASUnit. It is checked whether installationpath</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">is starting with path in environment variable SASUNIT_ROOT set by script file</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_sasautos</td>
+<td class="l m pgmdocblinddata">optional: i_sasautos, i_sasautos1 .. i_sasautos9: search paths for the programs</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">under test and other sas macros invoked in test scenarios or programs under test</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">(the filename SASAUTOS predefined by SAS is always included at the beginning of</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">the search path)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_autoexec</td>
+<td class="l m pgmdocblinddata">optional: a SAS program that is always invoked before a start of a test scenario</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_sascfg</td>
+<td class="l m pgmdocblinddata">optional: a SAS configuration file that is used for every invocation of a</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">test scenario</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_sasuser</td>
+<td class="l m pgmdocblinddata">optional: Template for a SASUSER directory including configuration catalogs.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">A temporary SASUSER directory is created, existing only for the duration of a</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">test scenario, in which all files are copied out of the specified directory.</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_testdata</td>
+<td class="l m pgmdocblinddata">optional: directory containing test data, has to exist in case parameter is set</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">(is accessed readonly)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_refdata</td>
+<td class="l m pgmdocblinddata">optional: directory containing reference data, has to exist in case parameter is set</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">(is accessed readonly)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_doc</td>
+<td class="l m pgmdocblinddata">optional: directory containing specification documents, etc., has to exist</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">in case parameter is set (is accessed readonly)</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_testcoverage</td>
+<td class="l m pgmdocblinddata">optional: controls whether assessment of test coverage is activated</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">0 .. no assessment of test coverage</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">1 (default) .. assessment of test coverage is activated</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_verbose</td>
+<td class="l m pgmdocblinddata">optional: controls whether results of asserts are written to the SAS log</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">0 (default).. no results written to SAS log</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">1 .. results are written to SAS log</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_crossref</td>
+<td class="l m pgmdocblinddata">optional: controls whether the cross reference is created</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">0 .. cross reference will not be created</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">1 (default).. cross reference will be created</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_crossrefsasunit</td>
+<td class="l m pgmdocblinddata">optional: controls whether the SASUnit core macros are included in the scan for dependencies</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">0 (default) .. SASUnit core macros are not included</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">1 .. SASUnit core macros are included</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">i_language</td>
+<td class="l m pgmdocblinddata">optional: specifying the language that should be used. This parameter is necessary to avoid using the respective environment variable under linux</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">supported values: &quot;en&quot; / &quot;de&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocblinddatastrong">&nbsp;</td>
+<td class="l m pgmdocblinddata">default: %sysget(SASUNIT_LANGUAGE)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<div class="branch">
+<a name="IDX374"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle2">Source Code of Program initsasunit.sas</td>
+</tr>
+<tr>
+<td class="c systemtitle3" style=" font-size: 10pt;"><a href="src/00/initsasunit.sas">[Download]</a>
+</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Data Set WORK._PGMSRC_VIEW">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">ObsNum</th>
+<th class="l blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m pgmdocsource">00001</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00002</td>
+<td class="l m pgmdocsource">%MACRO initSASUnit(i_root            =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00003</td>
+<td class="l m pgmdocsource">,io_target         =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00004</td>
+<td class="l m pgmdocsource">,i_overwrite       = 0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00005</td>
+<td class="l m pgmdocsource">,i_project         =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00006</td>
+<td class="l m pgmdocsource">,i_sasunit         =%sysget(SASUNIT_ROOT)/saspgm/sasunit</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00007</td>
+<td class="l m pgmdocsource">,i_sasautos        =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00008</td>
+<td class="l m pgmdocsource">,i_sasautos1       =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00009</td>
+<td class="l m pgmdocsource">,i_sasautos2       =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00010</td>
+<td class="l m pgmdocsource">,i_sasautos3       =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00011</td>
+<td class="l m pgmdocsource">,i_sasautos4       =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00012</td>
+<td class="l m pgmdocsource">,i_sasautos5       =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00013</td>
+<td class="l m pgmdocsource">,i_sasautos6       =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00014</td>
+<td class="l m pgmdocsource">,i_sasautos7       =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00015</td>
+<td class="l m pgmdocsource">,i_sasautos8       =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00016</td>
+<td class="l m pgmdocsource">,i_sasautos9       =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00017</td>
+<td class="l m pgmdocsource">,i_sasautos10      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00018</td>
+<td class="l m pgmdocsource">,i_sasautos11      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00019</td>
+<td class="l m pgmdocsource">,i_sasautos12      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00020</td>
+<td class="l m pgmdocsource">,i_sasautos13      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00021</td>
+<td class="l m pgmdocsource">,i_sasautos14      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00022</td>
+<td class="l m pgmdocsource">,i_sasautos15      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00023</td>
+<td class="l m pgmdocsource">,i_sasautos16      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00024</td>
+<td class="l m pgmdocsource">,i_sasautos17      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00025</td>
+<td class="l m pgmdocsource">,i_sasautos18      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00026</td>
+<td class="l m pgmdocsource">,i_sasautos19      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00027</td>
+<td class="l m pgmdocsource">,i_sasautos20      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00028</td>
+<td class="l m pgmdocsource">,i_sasautos21      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00029</td>
+<td class="l m pgmdocsource">,i_sasautos22      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00030</td>
+<td class="l m pgmdocsource">,i_sasautos23      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00031</td>
+<td class="l m pgmdocsource">,i_sasautos24      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00032</td>
+<td class="l m pgmdocsource">,i_sasautos25      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00033</td>
+<td class="l m pgmdocsource">,i_sasautos26      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00034</td>
+<td class="l m pgmdocsource">,i_sasautos27      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00035</td>
+<td class="l m pgmdocsource">,i_sasautos28      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00036</td>
+<td class="l m pgmdocsource">,i_sasautos29      =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00037</td>
+<td class="l m pgmdocsource">,i_autoexec        =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00038</td>
+<td class="l m pgmdocsource">,i_sascfg          =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00039</td>
+<td class="l m pgmdocsource">,i_sasuser         =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00040</td>
+<td class="l m pgmdocsource">,i_testdata        =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00041</td>
+<td class="l m pgmdocsource">,i_refdata         =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00042</td>
+<td class="l m pgmdocsource">,i_doc             =</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00043</td>
+<td class="l m pgmdocsource">,i_testcoverage    = 1</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00044</td>
+<td class="l m pgmdocsource">,i_verbose         = 0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00045</td>
+<td class="l m pgmdocsource">,i_crossref        = 1</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00046</td>
+<td class="l m pgmdocsource">,i_crossrefsasunit = 0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00047</td>
+<td class="l m pgmdocsource">,i_language        = %sysget(SASUNIT_LANGUAGE)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00048</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00049</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00050</td>
+<td class="l m pgmdocsource">%GLOBAL g_version g_revision g_db_version g_verbose g_error g_warning g_note g_runMode g_language;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00051</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00052</td>
+<td class="l m pgmdocsource">%LET g_version    = 2.0.2;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00053</td>
+<td class="l m pgmdocsource">%LET g_db_version = 2.0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00054</td>
+<td class="l m pgmdocsource">%LET g_revision   = $Revision: 681 $;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00055</td>
+<td class="l m pgmdocsource">%LET g_revision   = %scan(&amp;g_revision,2,%str( $:));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00056</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00057</td>
+<td class="l m pgmdocsource">/******************************************************************************/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00058</td>
+<td class="l m pgmdocsource">/*** Step one                                                               ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00059</td>
+<td class="l m pgmdocsource">/***    Check supported OSes and SAS Versions                               ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00060</td>
+<td class="l m pgmdocsource">/***    Validate configuration of initSASUnit                               ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00061</td>
+<td class="l m pgmdocsource">/***       Check all paths for existence                                    ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00062</td>
+<td class="l m pgmdocsource">/***       Check boolean parameters vs default value                        ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00063</td>
+<td class="l m pgmdocsource">/******************************************************************************/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00064</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00065</td>
+<td class="l m pgmdocsource">/*-- check for operation system and SAS version -------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00066</td>
+<td class="l m pgmdocsource">%IF (%_checkRunEnvironment(&amp;i_verbose.) ne 0) %THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00067</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00068</td>
+<td class="l m pgmdocsource">%LOCAL</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00069</td>
+<td class="l m pgmdocsource">l_macname</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00070</td>
+<td class="l m pgmdocsource">l_current_dbversion</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00071</td>
+<td class="l m pgmdocsource">l_target_abs</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00072</td>
+<td class="l m pgmdocsource">l_newdb</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00073</td>
+<td class="l m pgmdocsource">l_rc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00074</td>
+<td class="l m pgmdocsource">l_project</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00075</td>
+<td class="l m pgmdocsource">l_root</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00076</td>
+<td class="l m pgmdocsource">l_sasunitroot l_sasunit l_sasunit_os l_abspath_sasunit_os</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00077</td>
+<td class="l m pgmdocsource">l_abs</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00078</td>
+<td class="l m pgmdocsource">l_autoexec    l_autoexec_abs</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00079</td>
+<td class="l m pgmdocsource">l_sascfg      l_sascfg_abs</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00080</td>
+<td class="l m pgmdocsource">l_sasuser     l_sasuser_abs</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00081</td>
+<td class="l m pgmdocsource">l_testdata    l_testdata_abs</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00082</td>
+<td class="l m pgmdocsource">l_refdata     l_refdata_abs</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00083</td>
+<td class="l m pgmdocsource">l_doc         l_doc_abs</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00084</td>
+<td class="l m pgmdocsource">l_sasautos    l_sasautos1  l_sasautos2  l_sasautos3  l_sasautos4  l_sasautos5  l_sasautos6  l_sasautos7  l_sasautos8  l_sasautos9</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00085</td>
+<td class="l m pgmdocsource">l_sasautos10  l_sasautos11 l_sasautos12 l_sasautos13 l_sasautos14 l_sasautos15 l_sasautos16 l_sasautos17 l_sasautos18 l_sasautos19</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00086</td>
+<td class="l m pgmdocsource">l_sasautos20  l_sasautos21 l_sasautos22 l_sasautos23 l_sasautos24 l_sasautos25 l_sasautos26 l_sasautos27 l_sasautos28 l_sasautos29</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00087</td>
+<td class="l m pgmdocsource">l_sasautos_abs</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00088</td>
+<td class="l m pgmdocsource">i</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00089</td>
+<td class="l m pgmdocsource">l_work</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00090</td>
+<td class="l m pgmdocsource">l_sysrc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00091</td>
+<td class="l m pgmdocsource">l_cmdfile</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00092</td>
+<td class="l m pgmdocsource">l_overwrite</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00093</td>
+<td class="l m pgmdocsource">l_testcoverage</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00094</td>
+<td class="l m pgmdocsource">_root _sasunit</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00095</td>
+<td class="l m pgmdocsource">;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00096</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00097</td>
+<td class="l m pgmdocsource">/*-- check value of parameters i_verbose, i_crossref and i_crossrefsasunit,</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00098</td>
+<td class="l m pgmdocsource">if one of them has a value other than default,</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00099</td>
+<td class="l m pgmdocsource">they will be set to 1/0 in order to assure that values will only be 0 or 1 ------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00100</td>
+<td class="l m pgmdocsource">%IF (&amp;i_crossrefsasunit. NE 0) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00101</td>
+<td class="l m pgmdocsource">%LET i_crossrefsasunit = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00102</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00103</td>
+<td class="l m pgmdocsource">%IF (&amp;i_crossref. NE 1) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00104</td>
+<td class="l m pgmdocsource">%LET i_crossref = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00105</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00106</td>
+<td class="l m pgmdocsource">%IF (&amp;i_verbose. NE 0) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00107</td>
+<td class="l m pgmdocsource">%LET i_verbose = 1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00108</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00109</td>
+<td class="l m pgmdocsource">%LET g_verbose   = &amp;i_verbose;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00110</td>
+<td class="l m pgmdocsource">%IF (&amp;i_testcoverage. NE 1)%THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00111</td>
+<td class="l m pgmdocsource">%LET i_testcoverage = 0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00112</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00113</td>
+<td class="l m pgmdocsource">%IF (&amp;i_overwrite NE 0) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00114</td>
+<td class="l m pgmdocsource">%LET i_overwrite=1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00115</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00116</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00117</td>
+<td class="l m pgmdocsource">/*-- check shell values vs. parameters ------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00118</td>
+<td class="l m pgmdocsource">%LET l_testcoverage=%sysget (SASUNIT_COVERAGEASSESSMENT);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00119</td>
+<td class="l m pgmdocsource">%IF (&amp;l_testcoverage. ne ) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00120</td>
+<td class="l m pgmdocsource">%IF (&amp;l_testcoverage. ne &amp;i_testcoverage.) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00121</td>
+<td class="l m pgmdocsource">%PUT &amp;G_WARNING.:(SASUNIT) Shell variable SASUNIT_COVERAGEASSESSMENT not passed correctly to parameter i_testcoverage!;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00122</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00123</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00124</td>
+<td class="l m pgmdocsource">%LET l_overwrite=%sysget(SASUNIT_OVERWRITE);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00125</td>
+<td class="l m pgmdocsource">%IF (&amp;l_overwrite. ne ) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00126</td>
+<td class="l m pgmdocsource">%IF (&amp;l_overwrite. ne &amp;i_overwrite.) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00127</td>
+<td class="l m pgmdocsource">%PUT &amp;G_WARNING.:(SASUNIT) Shell variable SASUNIT_OVERWRITE not passed correctly to parameter i_overwrite!;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00128</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00129</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00130</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00131</td>
+<td class="l m pgmdocsource">/*-- Resolve relative root path like ../. to an absolute root path ----------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00132</td>
+<td class="l m pgmdocsource">libname _tmp &quot;&amp;i_root.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00133</td>
+<td class="l m pgmdocsource">%let l_root=%sysfunc (pathname(_tmp));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00134</td>
+<td class="l m pgmdocsource">libname _tmp clear;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00135</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00136</td>
+<td class="l m pgmdocsource">/*-- Get SASUnit root path from environment variable ----------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00137</td>
+<td class="l m pgmdocsource">libname _tmp &quot;%sysget(SASUNIT_ROOT)&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00138</td>
+<td class="l m pgmdocsource">%let l_sasunitroot=%sysfunc (pathname(_tmp));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00139</td>
+<td class="l m pgmdocsource">libname _tmp clear;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00140</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00141</td>
+<td class="l m pgmdocsource">/*-- Get SASUnit macro paths ----------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00142</td>
+<td class="l m pgmdocsource">libname _tmp &quot;&amp;i_sasunit.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00143</td>
+<td class="l m pgmdocsource">%let l_sasunit=%sysfunc (pathname(_tmp));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00144</td>
+<td class="l m pgmdocsource">libname _tmp clear;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00145</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00146</td>
+<td class="l m pgmdocsource">/* Read values from test db if it exists */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00147</td>
+<td class="l m pgmdocsource">%IF (%sysfunc (exist (target.tsu))) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00148</td>
+<td class="l m pgmdocsource">PROC SQL NOPRINT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00149</td>
+<td class="l m pgmdocsource">SELECT tsu_root     INTO :_root      FROM target.tsu;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00150</td>
+<td class="l m pgmdocsource">SELECT tsu_project  INTO :l_project  FROM target.tsu;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00151</td>
+<td class="l m pgmdocsource">SELECT tsu_sasunit  INTO :_sasunit   FROM target.tsu;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00152</td>
+<td class="l m pgmdocsource">SELECT tsu_sasautos INTO :l_sasautos FROM target.tsu;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00153</td>
+<td class="l m pgmdocsource">%DO i=1 %TO 29;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00154</td>
+<td class="l m pgmdocsource">SELECT tsu_sasautos&amp;i. INTO :l_sasautos&amp;i. FROM target.tsu;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00155</td>
+<td class="l m pgmdocsource">%END; /* i=1 %TO 29 */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00156</td>
+<td class="l m pgmdocsource">SELECT tsu_autoexec INTO :l_autoexec FROM target.tsu;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00157</td>
+<td class="l m pgmdocsource">SELECT tsu_sascfg   INTO :l_sascfg   FROM target.tsu;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00158</td>
+<td class="l m pgmdocsource">SELECT tsu_sasuser  INTO :l_sasuser  FROM target.tsu;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00159</td>
+<td class="l m pgmdocsource">SELECT tsu_testdata INTO :l_testdata FROM target.tsu;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00160</td>
+<td class="l m pgmdocsource">SELECT tsu_refdata  INTO :l_refdata  FROM target.tsu;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00161</td>
+<td class="l m pgmdocsource">SELECT tsu_doc      INTO :l_doc      FROM target.tsu;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00162</td>
+<td class="l m pgmdocsource">QUIT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00163</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00164</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00165</td>
+<td class="l m pgmdocsource">/*-- initialize error --------------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00166</td>
+<td class="l m pgmdocsource">%_initErrorHandler;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00167</td>
+<td class="l m pgmdocsource">%LET l_macname=&amp;sysmacroname;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00168</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00169</td>
+<td class="l m pgmdocsource">/*-- if test coverage should be assessed: check SAS version --------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00170</td>
+<td class="l m pgmdocsource">%IF (&amp;i_testcoverage. EQ 1) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00171</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00172</td>
+<td class="l m pgmdocsource">,TestCoverageNotSupported</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00173</td>
+<td class="l m pgmdocsource">,(&amp;sysver. = 9.2)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00174</td>
+<td class="l m pgmdocsource">,Error SAS Option MCOVERAGE is only supported since SAS 9.3</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00175</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00176</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00177</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00178</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00179</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00180</td>
+<td class="l m pgmdocsource">/*-- root folder -------------------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00181</td>
+<td class="l m pgmdocsource">%IF &quot;&amp;l_root&quot; = &quot;&quot; %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00182</td>
+<td class="l m pgmdocsource">%LET l_root=&amp;_root;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00183</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00184</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00185</td>
+<td class="l m pgmdocsource">,InvalidRoot</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00186</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_root&quot; NE &quot;&quot; AND NOT %_existdir(&amp;l_root)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00187</td>
+<td class="l m pgmdocsource">,%str(Error in parameter i_root: folder must exist when specified)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00188</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00189</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00190</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00191</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00192</td>
+<td class="l m pgmdocsource">/*-- check for target directory ----------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00193</td>
+<td class="l m pgmdocsource">%LET l_target_abs=%_abspath(&amp;i_root,&amp;io_target);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00194</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00195</td>
+<td class="l m pgmdocsource">,InvalidTargetDir</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00196</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_target_abs&quot; EQ &quot;&quot; OR NOT %_existDir(&amp;l_target_abs)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00197</td>
+<td class="l m pgmdocsource">,Error in parameter io_target: target directory does not exist</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00198</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00199</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00200</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00201</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00202</td>
+<td class="l m pgmdocsource">LIBNAME target &quot;&amp;l_target_abs&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00203</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00204</td>
+<td class="l m pgmdocsource">,ErrorTargetLib</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00205</td>
+<td class="l m pgmdocsource">,%quote(&amp;syslibrc.) NE 0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00206</td>
+<td class="l m pgmdocsource">,Error in parameter io_target: target directory &amp;l_target_abs. cannot be assigned as a SAS library</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00207</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00208</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00209</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00210</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00211</td>
+<td class="l m pgmdocsource">,ErrorTargetLibNotWritable</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00212</td>
+<td class="l m pgmdocsource">,%quote(&amp;syserr.) NE 0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00213</td>
+<td class="l m pgmdocsource">,Error in parameter io_target: target directory not writeable</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00214</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00215</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00216</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00217</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00218</td>
+<td class="l m pgmdocsource">/*-- project name ------------------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00219</td>
+<td class="l m pgmdocsource">%IF &quot;&amp;i_project&quot; = &quot;&quot; %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00220</td>
+<td class="l m pgmdocsource">%LET l_project=&amp;l_project;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00221</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00222</td>
+<td class="l m pgmdocsource">%ELSE %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00223</td>
+<td class="l m pgmdocsource">%LET l_project=&amp;i_project;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00224</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00225</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00226</td>
+<td class="l m pgmdocsource">,MissingProjectName</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00227</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_project&quot; EQ &quot;&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00228</td>
+<td class="l m pgmdocsource">,Parameter i_project must be specified</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00229</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00230</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00231</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00232</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00233</td>
+<td class="l m pgmdocsource">/*-- sasunit root folder -------------------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00234</td>
+<td class="l m pgmdocsource">%LET l_sasunitroot=&amp;l_sasunitroot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00235</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00236</td>
+<td class="l m pgmdocsource">,InvalidRoot</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00237</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_sasunitroot&quot; NE &quot;&quot; AND NOT %_existdir(&amp;l_sasunitroot)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00238</td>
+<td class="l m pgmdocsource">,%str(Error in parameter l_sasunitroot: folder must exist when specified)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00239</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00240</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00241</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00242</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00243</td>
+<td class="l m pgmdocsource">/*-- sasunit folder ----------------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00244</td>
+<td class="l m pgmdocsource">%IF &quot;&amp;l_sasunit&quot; = &quot;&quot; %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00245</td>
+<td class="l m pgmdocsource">%LET l_sasunit=&amp;_sasunit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00246</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00247</td>
+<td class="l m pgmdocsource">%LET l_abs=%_abspath(&amp;l_root.,&amp;l_sasunit.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00248</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00249</td>
+<td class="l m pgmdocsource">,InvalidSASUnitDir</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00250</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_abs.&quot; EQ &quot;&quot; OR NOT %sysfunc(fileexist(&amp;l_abs./_scenario.sas))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00251</td>
+<td class="l m pgmdocsource">,Error in parameter i_sasunit: SASUnit macro programs not found</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00252</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00253</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00254</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00255</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00256</td>
+<td class="l m pgmdocsource">/*-- check for correct sasunit path ----------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00257</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00258</td>
+<td class="l m pgmdocsource">,WrongSASUnitPath</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00259</td>
+<td class="l m pgmdocsource">,%index (&amp;l_sasunit.,&amp;l_sasunitroot.) NE 1</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00260</td>
+<td class="l m pgmdocsource">,Invalid path to SASUnit - SASUnit root is &amp;l_sasunitroot. - SASUnit path is &amp;l_sasunit.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00261</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00262</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00263</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00264</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00265</td>
+<td class="l m pgmdocsource">/*-- check autocall paths ----------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00266</td>
+<td class="l m pgmdocsource">%LET l_sasautos=&amp;l_sasautos;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00267</td>
+<td class="l m pgmdocsource">%IF &quot;&amp;i_sasautos&quot; NE &quot;&quot; %THEN %LET l_sasautos=&amp;i_sasautos;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00268</td>
+<td class="l m pgmdocsource">%LET l_sasautos_abs=%_abspath(&amp;l_root,&amp;l_sasautos);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00269</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00270</td>
+<td class="l m pgmdocsource">,InvalidSASAutos</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00271</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_sasautos_abs&quot; NE &quot;&quot; AND NOT %_existdir(&amp;l_sasautos_abs)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00272</td>
+<td class="l m pgmdocsource">,Error in parameter i_sasautos: folder not found</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00273</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00274</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00275</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00276</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00277</td>
+<td class="l m pgmdocsource">%DO i=1 %TO 29;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00278</td>
+<td class="l m pgmdocsource">%LET l_sasautos&amp;i.=&amp;&amp;l_sasautos&amp;i..;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00279</td>
+<td class="l m pgmdocsource">%IF &quot;&amp;&amp;i_sasautos&amp;i&quot; NE &quot;&quot; %THEN %LET l_sasautos&amp;i.=&amp;&amp;i_sasautos&amp;i..;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00280</td>
+<td class="l m pgmdocsource">%LET l_sasautos_abs=%_abspath(&amp;l_root,&amp;&amp;l_sasautos&amp;i..);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00281</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00282</td>
+<td class="l m pgmdocsource">,InvalidSASAutosN</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00283</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_sasautos_abs&quot; NE &quot;&quot; AND NOT %_existdir(&amp;l_sasautos_abs)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00284</td>
+<td class="l m pgmdocsource">,Error in parameter i_sasautos&amp;i: folder not found</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00285</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00286</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00287</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00288</td>
+<td class="l m pgmdocsource">%END; /* i=1 %TO 29 */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00289</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00290</td>
+<td class="l m pgmdocsource">/*-- check if autoexec exists where specified --------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00291</td>
+<td class="l m pgmdocsource">%LET l_autoexec=&amp;l_autoexec;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00292</td>
+<td class="l m pgmdocsource">%*** because we need to specify a real blank (%str( )) as parameter, ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00293</td>
+<td class="l m pgmdocsource">%*** we need to use a different method of assignment.                ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00294</td>
+<td class="l m pgmdocsource">%IF &quot;&amp;i_autoexec&quot; NE &quot;&quot; %THEN %LET l_autoexec=%trim(&amp;i_autoexec);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00295</td>
+<td class="l m pgmdocsource">%LET l_autoexec_abs=%_abspath(&amp;l_root,&amp;l_autoexec);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00296</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00297</td>
+<td class="l m pgmdocsource">,AutoexecNotFound</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00298</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_autoexec&quot; NE &quot;&quot; AND NOT %sysfunc(fileexist(&amp;l_autoexec_abs%str( )))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00299</td>
+<td class="l m pgmdocsource">,Error in parameter i_autoexec: file not found</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00300</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00301</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00302</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00303</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00304</td>
+<td class="l m pgmdocsource">/*-- check if sascfg exists where specified ----------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00305</td>
+<td class="l m pgmdocsource">%LET l_sascfg=&amp;l_sascfg;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00306</td>
+<td class="l m pgmdocsource">%IF &quot;&amp;i_sascfg&quot; NE &quot;&quot; %THEN %LET l_sascfg=&amp;i_sascfg;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00307</td>
+<td class="l m pgmdocsource">%LET l_sascfg_abs=%_abspath(&amp;l_root,&amp;l_sascfg);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00308</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00309</td>
+<td class="l m pgmdocsource">,SASCfgNotFound</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00310</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_sascfg&quot; NE &quot;&quot; AND NOT %sysfunc(fileexist(&amp;l_sascfg_abs%str( )))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00311</td>
+<td class="l m pgmdocsource">,Error in parameter i_sascfg: file not found</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00312</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00313</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00314</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00315</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00316</td>
+<td class="l m pgmdocsource">/*-- check sasuser folder ----------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00317</td>
+<td class="l m pgmdocsource">%LET l_sasuser=&amp;l_sasuser;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00318</td>
+<td class="l m pgmdocsource">%IF &quot;&amp;i_sasuser&quot; NE &quot;&quot; %THEN %LET l_sasuser=&amp;i_sasuser;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00319</td>
+<td class="l m pgmdocsource">%LET l_sasuser_abs=%_abspath(&amp;l_root,&amp;l_sasuser);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00320</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00321</td>
+<td class="l m pgmdocsource">,InvalidSasuser</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00322</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_sasuser_abs&quot; NE &quot;&quot; AND NOT %_existdir(&amp;l_sasuser_abs)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00323</td>
+<td class="l m pgmdocsource">,Error in parameter i_sasuser: folder not found</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00324</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00325</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00326</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00327</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00328</td>
+<td class="l m pgmdocsource">/*-- check test data folder --------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00329</td>
+<td class="l m pgmdocsource">%LET l_testdata=&amp;l_testdata;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00330</td>
+<td class="l m pgmdocsource">%IF &quot;&amp;i_testdata&quot; NE &quot;&quot; %THEN %LET l_testdata=&amp;i_testdata;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00331</td>
+<td class="l m pgmdocsource">%LET l_testdata_abs=%_abspath(&amp;l_root,&amp;l_testdata);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00332</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00333</td>
+<td class="l m pgmdocsource">,InvalidTestdata</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00334</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_testdata_abs&quot; NE &quot;&quot; AND NOT %_existdir(&amp;l_testdata_abs)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00335</td>
+<td class="l m pgmdocsource">,Error in parameter i_testdata: folder not found</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00336</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00337</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00338</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00339</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00340</td>
+<td class="l m pgmdocsource">/*-- check reference data folder ---------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00341</td>
+<td class="l m pgmdocsource">%LET l_refdata=&amp;l_refdata;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00342</td>
+<td class="l m pgmdocsource">%IF &quot;&amp;i_refdata&quot; NE &quot;&quot; %THEN %LET l_refdata=&amp;i_refdata;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00343</td>
+<td class="l m pgmdocsource">%LET l_refdata_abs=%_abspath(&amp;l_root,&amp;l_refdata);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00344</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00345</td>
+<td class="l m pgmdocsource">,InvalidRefdata</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00346</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_refdata_abs&quot; NE &quot;&quot; AND NOT %_existdir(&amp;l_refdata_abs)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00347</td>
+<td class="l m pgmdocsource">,Error in parameter i_refdata: folder not found</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00348</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00349</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00350</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00351</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00352</td>
+<td class="l m pgmdocsource">/*-- check folder for specification documents --------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00353</td>
+<td class="l m pgmdocsource">%LET l_doc=&amp;l_doc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00354</td>
+<td class="l m pgmdocsource">%IF &quot;&amp;i_doc&quot; NE &quot;&quot; %THEN %LET l_doc=&amp;i_doc;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00355</td>
+<td class="l m pgmdocsource">%LET l_doc_abs=%_abspath(&amp;l_root,&amp;l_doc);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00356</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00357</td>
+<td class="l m pgmdocsource">,InvalidDoc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00358</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_doc_abs&quot; NE &quot;&quot; AND NOT %_existdir(&amp;l_doc_abs)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00359</td>
+<td class="l m pgmdocsource">,Error in parameter i_doc: folder not found</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00360</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00361</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00362</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00363</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00364</td>
+<td class="l m pgmdocsource">/*-- set macro symbols for os commands ---------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00365</td>
+<td class="l m pgmdocsource">%IF (&amp;sysscp. = WIN) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00366</td>
+<td class="l m pgmdocsource">%LET l_sasunit_os = &amp;l_sasunit./windows;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00367</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00368</td>
+<td class="l m pgmdocsource">%ELSE %IF (%upcase(&amp;sysscpl.) = LINUX) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00369</td>
+<td class="l m pgmdocsource">%LET l_sasunit_os = &amp;l_sasunit./linux;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00370</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00371</td>
+<td class="l m pgmdocsource">%ELSE %IF (%upcase(&amp;sysscpl.) = AIX) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00372</td>
+<td class="l m pgmdocsource">%LET l_sasunit_os = &amp;l_sasunit./unix_aix;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00373</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00374</td>
+<td class="l m pgmdocsource">%LET l_abspath_sasunit_os=%_abspath(&amp;l_sasunitroot.,&amp;l_sasunit_os.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00375</td>
+<td class="l m pgmdocsource">OPTIONS APPEND=(SASAUTOS=(&quot;&amp;l_sasunit.&quot; &quot;&amp;l_abspath_sasunit_os.&quot;));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00376</td>
+<td class="l m pgmdocsource">OPTIONS NOQUOTELENMAX;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00377</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00378</td>
+<td class="l m pgmdocsource">/*-- os-specific sasunit folder ----------------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00379</td>
+<td class="l m pgmdocsource">%LET l_sasunit_os=&amp;l_sasunit_os;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00380</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00381</td>
+<td class="l m pgmdocsource">,InvalidSASUnitDir</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00382</td>
+<td class="l m pgmdocsource">,&quot;&amp;l_abspath_sasunit_os.&quot; EQ &quot;&quot; OR NOT %sysfunc(fileexist(&amp;l_abspath_sasunit_os./_oscmds.sas))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00383</td>
+<td class="l m pgmdocsource">,Error in parameter i_sasunit: os-specific SASUnit macro programs not found</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00384</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00385</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00386</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00387</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00388</td>
+<td class="l m pgmdocsource">%_readEnvMetadata;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00389</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00390</td>
+<td class="l m pgmdocsource">/******************************************************************************/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00391</td>
+<td class="l m pgmdocsource">/*** End of Step one                                                        ***/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00392</td>
+<td class="l m pgmdocsource">/******************************************************************************/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00393</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00394</td>
+<td class="l m pgmdocsource">/*-- Under linux g_language is used in _oscmds -------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00395</td>
+<td class="l m pgmdocsource">/*-- Moving this call after _loadenvironment causes other errors -------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00396</td>
+<td class="l m pgmdocsource">/*-- So g_language is simply set here ----------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00397</td>
+<td class="l m pgmdocsource">%let g_language=&amp;i_language.;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00398</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00399</td>
+<td class="l m pgmdocsource">%_oscmds;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00400</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00401</td>
+<td class="l m pgmdocsource">%_detectSymbols(r_error_symbol=g_error, r_warning_symbol=g_warning, r_note_symbol=g_note);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00402</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00403</td>
+<td class="l m pgmdocsource">%LET l_current_dbversion=0;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00404</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00405</td>
+<td class="l m pgmdocsource">/*-- does the test database exist already? -----------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00406</td>
+<td class="l m pgmdocsource">%IF &amp;i_overwrite %THEN %LET l_newdb=1;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00407</td>
+<td class="l m pgmdocsource">%ELSE %LET l_newdb=%eval(NOT %sysfunc(exist(target.tsu)));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00408</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00409</td>
+<td class="l m pgmdocsource">*** Check tsu db version                      ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00410</td>
+<td class="l m pgmdocsource">*** Is there a need to recreate the database? ***;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00411</td>
+<td class="l m pgmdocsource">%IF &amp;l_newdb. ne 1 %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00412</td>
+<td class="l m pgmdocsource">data _null_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00413</td>
+<td class="l m pgmdocsource">if (exist (&quot;target.tsu&quot;)) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00414</td>
+<td class="l m pgmdocsource">did = open (&quot;target.tsu&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00415</td>
+<td class="l m pgmdocsource">if varnum (did, &quot;tsu_dbVersion&quot;) then do;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00416</td>
+<td class="l m pgmdocsource">rc            = fetch (did);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00417</td>
+<td class="l m pgmdocsource">tsu_dbVersion = getvarc (did, varnum (did, &quot;tsu_dbVersion&quot;));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00418</td>
+<td class="l m pgmdocsource">call symput (&quot;l_current_dbversion&quot;, trim(tsu_dbVersion));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00419</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00420</td>
+<td class="l m pgmdocsource">did = close(did);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00421</td>
+<td class="l m pgmdocsource">end;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00422</td>
+<td class="l m pgmdocsource">run;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00423</td>
+<td class="l m pgmdocsource">%LET l_newdb=%eval (&quot;&amp;l_current_dbversion.&quot; NE &quot;&amp;g_db_version.&quot;);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00424</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00425</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00426</td>
+<td class="l m pgmdocsource">/*-- create test database if necessary ---------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00427</td>
+<td class="l m pgmdocsource">%IF &amp;l_newdb %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00428</td>
+<td class="l m pgmdocsource">PROC SQL NOPRINT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00429</td>
+<td class="l m pgmdocsource">CREATE TABLE target.tsu(COMPRESS=CHAR)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00430</td>
+<td class="l m pgmdocsource">(                                         /* test suite */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00431</td>
+<td class="l m pgmdocsource">tsu_project         CHAR(1000)        /* see i_project */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00432</td>
+<td class="l m pgmdocsource">,tsu_root            CHAR(1000)        /* see i_root */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00433</td>
+<td class="l m pgmdocsource">,tsu_target          CHAR(1000)        /* see io_target */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00434</td>
+<td class="l m pgmdocsource">,tsu_sasunitroot     CHAR(1000)        /* root path to sasunit files */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00435</td>
+<td class="l m pgmdocsource">,tsu_sasunit         CHAR(1000)        /* see i_sasunit */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00436</td>
+<td class="l m pgmdocsource">,tsu_sasunit_os      CHAR(1000)        /* os-specific sasunit macros */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00437</td>
+<td class="l m pgmdocsource">,tsu_sasautos        CHAR(1000)        /* see i_sasautos */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00438</td>
+<td class="l m pgmdocsource">%DO i=1 %TO 29;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00439</td>
+<td class="l m pgmdocsource">,tsu_sasautos&amp;i      CHAR(1000)        /* see i_sasautos&lt;n&gt; */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00440</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00441</td>
+<td class="l m pgmdocsource">,tsu_autoexec        CHAR(1000)        /* see i_autoexec */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00442</td>
+<td class="l m pgmdocsource">,tsu_sascfg          CHAR(1000)        /* see i_sascfg */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00443</td>
+<td class="l m pgmdocsource">,tsu_sasuser         CHAR(1000)        /* see i_sasuser */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00444</td>
+<td class="l m pgmdocsource">,tsu_testdata        CHAR(1000)        /* see i_testdata */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00445</td>
+<td class="l m pgmdocsource">,tsu_refdata         CHAR(1000)        /* see i_refdata */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00446</td>
+<td class="l m pgmdocsource">,tsu_doc             CHAR(1000)        /* see i_doc */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00447</td>
+<td class="l m pgmdocsource">,tsu_lastinit        INT FORMAT=datetime21.2 /* date and time of last initialization */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00448</td>
+<td class="l m pgmdocsource">,tsu_lastrep         INT FORMAT=datetime21.2 /* date and time of last report generation*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00449</td>
+<td class="l m pgmdocsource">,tsu_testcoverage    INT FORMAT=8.     /* see i_testcoverage */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00450</td>
+<td class="l m pgmdocsource">,tsu_dbversion       CHAR(8)           /* Version String to force creation of a new test data base */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00451</td>
+<td class="l m pgmdocsource">,tsu_verbose         INT FORMAT=8.     /* see i_verbose */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00452</td>
+<td class="l m pgmdocsource">,tsu_crossref        INT FORMAT=8.     /* see i_crossref */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00453</td>
+<td class="l m pgmdocsource">,tsu_crossrefsasunit INT FORMAT=8.     /* see i_crossrefsasunit */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00454</td>
+<td class="l m pgmdocsource">,tsu_language        CHAR(10)          /* see i_language */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00455</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00456</td>
+<td class="l m pgmdocsource">INSERT INTO target.tsu VALUES (</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00457</td>
+<td class="l m pgmdocsource">&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00458</td>
+<td class="l m pgmdocsource">,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00459</td>
+<td class="l m pgmdocsource">,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,0,0,&amp;i_testcoverage.,&quot;&quot;,&amp;i_verbose.,&amp;i_crossref.,&amp;i_crossrefsasunit.,&quot;&amp;i_language.&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00460</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00461</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00462</td>
+<td class="l m pgmdocsource">CREATE TABLE target.scn(COMPRESS=CHAR)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00463</td>
+<td class="l m pgmdocsource">(                                            /* test scenario */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00464</td>
+<td class="l m pgmdocsource">scn_id           INT FORMAT=z3.          /* number of scenario */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00465</td>
+<td class="l m pgmdocsource">,scn_path         CHAR(1000)              /* path to program file */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00466</td>
+<td class="l m pgmdocsource">,scn_desc         CHAR(1000)              /* description of program (brief tag in comment header) */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00467</td>
+<td class="l m pgmdocsource">,scn_start        INT FORMAT=datetime21.2 /* starting date and time of the last run */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00468</td>
+<td class="l m pgmdocsource">,scn_end          INT FORMAT=datetime21.2 /* ending date and time of the last run */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00469</td>
+<td class="l m pgmdocsource">,scn_changed      INT FORMAT=datetime21.2 /* modification date and time of the last run */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00470</td>
+<td class="l m pgmdocsource">,scn_rc           INT                     /* return code of SAS session of last run */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00471</td>
+<td class="l m pgmdocsource">,scn_errorcount   INT                     /* number of detected errors in the scenario log */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00472</td>
+<td class="l m pgmdocsource">,scn_warningcount INT                     /* number of detected warnings in the scenario log */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00473</td>
+<td class="l m pgmdocsource">,scn_res          INT                     /* overall test result of last run: 0 .. OK, 1 .. not OK, 2 .. manual */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00474</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00475</td>
+<td class="l m pgmdocsource">CREATE TABLE target.cas(COMPRESS=CHAR)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00476</td>
+<td class="l m pgmdocsource">(                                      /* test case */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00477</td>
+<td class="l m pgmdocsource">cas_scnid INT FORMAT=z3.           /* reference to test scenario */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00478</td>
+<td class="l m pgmdocsource">,cas_id    INT FORMAT=z3.           /* sequential number of test case within test scenario */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00479</td>
+<td class="l m pgmdocsource">,cas_exaid INT FORMAT=z3.           /* reference to examinee */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00480</td>
+<td class="l m pgmdocsource">,cas_obj   CHAR(255)                /* file name of program under test: only name if found in autocall paths, or fully qualified path otherwise */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00481</td>
+<td class="l m pgmdocsource">,cas_desc  CHAR(1000)               /* description of test case */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00482</td>
+<td class="l m pgmdocsource">,cas_spec  CHAR(1000)               /* optional: specification document, fully qualified path or only filename to be found in folder &amp;g_doc */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00483</td>
+<td class="l m pgmdocsource">,cas_start INT FORMAT=datetime21.2  /* starting date and time of the last run */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00484</td>
+<td class="l m pgmdocsource">,cas_end   INT FORMAT=datetime21.2  /* ending date and time of the last run */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00485</td>
+<td class="l m pgmdocsource">,cas_res   INT                      /* overall test result of last run: 0 .. OK, 1 .. not OK, 2 .. manual */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00486</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00487</td>
+<td class="l m pgmdocsource">CREATE TABLE target.tst(COMPRESS=CHAR)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00488</td>
+<td class="l m pgmdocsource">(                                    /* Test */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00489</td>
+<td class="l m pgmdocsource">tst_scnid  INT FORMAT=z3.        /* reference to test scenario */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00490</td>
+<td class="l m pgmdocsource">,tst_casid  INT FORMAT=z3.        /* reference to test case */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00491</td>
+<td class="l m pgmdocsource">,tst_id     INT FORMAT=z3.        /* sequential number of test within test case */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00492</td>
+<td class="l m pgmdocsource">,tst_type   CHAR(32)              /* type of test (name of assert macro) */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00493</td>
+<td class="l m pgmdocsource">,tst_desc   CHAR(1000)            /* description of test */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00494</td>
+<td class="l m pgmdocsource">,tst_exp    CHAR(255)             /* expected result */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00495</td>
+<td class="l m pgmdocsource">,tst_act    CHAR(255)             /* actual result */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00496</td>
+<td class="l m pgmdocsource">,tst_res    INT                   /* test result of the last run: 0 .. OK, 1 .. manual, 2 .. not OK */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00497</td>
+<td class="l m pgmdocsource">,tst_errmsg CHAR(1000)            /* custom error message for asserts */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00498</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00499</td>
+<td class="l m pgmdocsource">CREATE TABLE target.exa(COMPRESS=CHAR)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00500</td>
+<td class="l m pgmdocsource">(                                        /* all possible examinees */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00501</td>
+<td class="l m pgmdocsource">exa_id       INT FORMAT=z3.          /* number of examinees */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00502</td>
+<td class="l m pgmdocsource">,exa_auton    INT                     /* Number of autocall path */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00503</td>
+<td class="l m pgmdocsource">,exa_pgm      CHAR(1000)              /* name of program file */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00504</td>
+<td class="l m pgmdocsource">,exa_changed  INT FORMAT=datetime21.2 /* Change Datetime value of examinee */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00505</td>
+<td class="l m pgmdocsource">,exa_filename CHAR(1000)              /* absolute path and name of program file */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00506</td>
+<td class="l m pgmdocsource">,exa_path     CHAR(1000)              /* path of program file relative to SASUnit Root */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00507</td>
+<td class="l m pgmdocsource">,exa_tcg_pct  INT FORMAT=NLPCT.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00508</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00509</td>
+<td class="l m pgmdocsource">QUIT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00510</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00511</td>
+<td class="l m pgmdocsource">,ErrorCreateDB</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00512</td>
+<td class="l m pgmdocsource">,&amp;syserr. NE 0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00513</td>
+<td class="l m pgmdocsource">,Error on creation of test database</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00514</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00515</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00516</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00517</td>
+<td class="l m pgmdocsource">%END; /* %if &amp;l_newdb */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00518</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00519</td>
+<td class="l m pgmdocsource">%IF (&amp;g_runMode. = SASUNIT_BATCH) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00520</td>
+<td class="l m pgmdocsource">/*-- recreate empty folders if necessary -------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00521</td>
+<td class="l m pgmdocsource">%IF &amp;l_newdb %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00522</td>
+<td class="l m pgmdocsource">/*-- regenerate empty folders ------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00523</td>
+<td class="l m pgmdocsource">%LET l_cmdfile=%sysfunc(pathname(WORK))/remove_dir.cmd;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00524</td>
+<td class="l m pgmdocsource">DATA _null_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00525</td>
+<td class="l m pgmdocsource">FILE &quot;&amp;l_cmdfile.&quot; encoding=pcoem850; /* wg. Umlauten in Pfaden */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00526</td>
+<td class="l m pgmdocsource">PUT &quot;&amp;g_removedir &quot;&quot;&amp;l_target_abs/log&quot;&quot;&amp;g_endcommand&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00527</td>
+<td class="l m pgmdocsource">PUT &quot;&amp;g_removedir &quot;&quot;&amp;l_target_abs/tst&quot;&quot;&amp;g_endcommand&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00528</td>
+<td class="l m pgmdocsource">PUT &quot;&amp;g_removedir &quot;&quot;&amp;l_target_abs/rep&quot;&quot;&amp;g_endcommand&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00529</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00530</td>
+<td class="l m pgmdocsource">%_executeCMDFile(&amp;l_cmdfile.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00531</td>
+<td class="l m pgmdocsource">%LET l_rc=%_delfile(&amp;l_cmdfile.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00532</td>
+<td class="l m pgmdocsource">%LET rc = %sysfunc (sleep(2,1));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00533</td>
+<td class="l m pgmdocsource">%LET l_cmdfile=%sysfunc(pathname(WORK))/make_dir.cmd;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00534</td>
+<td class="l m pgmdocsource">DATA _null_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00535</td>
+<td class="l m pgmdocsource">FILE &quot;&amp;l_cmdfile.&quot; encoding=pcoem850; /* wg. Umlauten in Pfaden */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00536</td>
+<td class="l m pgmdocsource">PUT &quot;&amp;g_makedir &quot;&quot;&amp;l_target_abs/log&quot;&quot;&amp;g_endcommand&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00537</td>
+<td class="l m pgmdocsource">PUT &quot;&amp;g_makedir &quot;&quot;&amp;l_target_abs/tst&quot;&quot;&amp;g_endcommand&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00538</td>
+<td class="l m pgmdocsource">PUT &quot;&amp;g_makedir &quot;&quot;&amp;l_target_abs/rep&quot;&quot;&amp;g_endcommand&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00539</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00540</td>
+<td class="l m pgmdocsource">%_executeCMDFile(&amp;l_cmdfile.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00541</td>
+<td class="l m pgmdocsource">%LET l_rc=%_delfile(&amp;l_cmdfile.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00542</td>
+<td class="l m pgmdocsource">%END; /* %if &amp;l_newdb */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00543</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00544</td>
+<td class="l m pgmdocsource">/*-- folder for crossreference json files has to be always recreated -----------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00545</td>
+<td class="l m pgmdocsource">%LET l_cmdfile=%sysfunc(pathname(WORK))/remove_dir.cmd;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00546</td>
+<td class="l m pgmdocsource">DATA _null_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00547</td>
+<td class="l m pgmdocsource">FILE &quot;&amp;l_cmdfile.&quot; encoding=pcoem850; /* wg. Umlauten in Pfaden */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00548</td>
+<td class="l m pgmdocsource">PUT &quot;&amp;g_removedir &quot;&quot;&amp;l_target_abs/tst/crossreference&quot;&quot;&amp;g_endcommand&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00549</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00550</td>
+<td class="l m pgmdocsource">%_executeCMDFile(&amp;l_cmdfile.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00551</td>
+<td class="l m pgmdocsource">%LET l_rc=%_delfile(&amp;l_cmdfile.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00552</td>
+<td class="l m pgmdocsource">%LET rc = %sysfunc (sleep(2,1));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00553</td>
+<td class="l m pgmdocsource">%LET l_cmdfile=%sysfunc(pathname(WORK))/make_dir.cmd;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00554</td>
+<td class="l m pgmdocsource">DATA _null_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00555</td>
+<td class="l m pgmdocsource">FILE &quot;&amp;l_cmdfile.&quot; encoding=pcoem850; /* wg. Umlauten in Pfaden */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00556</td>
+<td class="l m pgmdocsource">PUT &quot;&amp;g_makedir &quot;&quot;&amp;l_target_abs/tst/crossreference&quot;&quot;&amp;g_endcommand&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00557</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00558</td>
+<td class="l m pgmdocsource">%_executeCMDFile(&amp;l_cmdfile.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00559</td>
+<td class="l m pgmdocsource">%LET l_rc=%_delfile(&amp;l_cmdfile.);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00560</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00561</td>
+<td class="l m pgmdocsource">/*-- check folders -----------------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00562</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00563</td>
+<td class="l m pgmdocsource">,NoLogDir</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00564</td>
+<td class="l m pgmdocsource">,NOT %_existdir(&amp;l_target_abs./log)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00565</td>
+<td class="l m pgmdocsource">,folder &amp;l_target_abs./log does not exist</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00566</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00567</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00568</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00569</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00570</td>
+<td class="l m pgmdocsource">,NoTstDir</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00571</td>
+<td class="l m pgmdocsource">,NOT %_existdir(&amp;l_target_abs./tst)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00572</td>
+<td class="l m pgmdocsource">,folder &amp;l_target_abs./tst does not exist</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00573</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00574</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00575</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00576</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00577</td>
+<td class="l m pgmdocsource">,NoRepDir</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00578</td>
+<td class="l m pgmdocsource">,NOT %_existdir(&amp;l_target_abs./rep)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00579</td>
+<td class="l m pgmdocsource">,folder &amp;l_target_abs./rep does not exist</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00580</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00581</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00582</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00583</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00584</td>
+<td class="l m pgmdocsource">/*-- update parameters ----------------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00585</td>
+<td class="l m pgmdocsource">PROC SQL NOPRINT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00586</td>
+<td class="l m pgmdocsource">UPDATE target.tsu</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00587</td>
+<td class="l m pgmdocsource">SET tsu_sasautos  = &quot;&amp;l_sasautos&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00588</td>
+<td class="l m pgmdocsource">%DO i=1 %TO 29;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00589</td>
+<td class="l m pgmdocsource">,tsu_sasautos&amp;i. = &quot;&amp;&amp;l_sasautos&amp;i&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00590</td>
+<td class="l m pgmdocsource">%END; /* i=1 %TO 29 */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00591</td>
+<td class="l m pgmdocsource">,tsu_project         = &quot;&amp;l_project&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00592</td>
+<td class="l m pgmdocsource">,tsu_target          = &quot;&amp;io_target&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00593</td>
+<td class="l m pgmdocsource">,tsu_root            = &quot;&amp;l_root&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00594</td>
+<td class="l m pgmdocsource">,tsu_sasunitroot     = &quot;&amp;l_sasunitroot&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00595</td>
+<td class="l m pgmdocsource">,tsu_sasunit         = &quot;&amp;l_sasunit&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00596</td>
+<td class="l m pgmdocsource">,tsu_sasunit_os      = &quot;&amp;l_sasunit_os&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00597</td>
+<td class="l m pgmdocsource">,tsu_autoexec        = &quot;&amp;l_autoexec&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00598</td>
+<td class="l m pgmdocsource">,tsu_sascfg          = &quot;&amp;l_sascfg&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00599</td>
+<td class="l m pgmdocsource">,tsu_sasuser         = &quot;&amp;l_sasuser&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00600</td>
+<td class="l m pgmdocsource">,tsu_testdata        = &quot;&amp;l_testdata&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00601</td>
+<td class="l m pgmdocsource">,tsu_refdata         = &quot;&amp;l_refdata&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00602</td>
+<td class="l m pgmdocsource">,tsu_doc             = &quot;&amp;l_doc&quot;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00603</td>
+<td class="l m pgmdocsource">,tsu_testcoverage    =&amp;i_testcoverage.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00604</td>
+<td class="l m pgmdocsource">,tsu_verbose         =&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00605</td>
+<td class="l m pgmdocsource">,tsu_crossref        =&amp;i_crossref.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00606</td>
+<td class="l m pgmdocsource">,tsu_crossrefsasunit =&amp;i_crossrefsasunit.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00607</td>
+<td class="l m pgmdocsource">,tsu_language        =&quot;&amp;i_language.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00608</td>
+<td class="l m pgmdocsource">QUIT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00609</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00610</td>
+<td class="l m pgmdocsource">/*-- load relevant information from test database to global macro symbols ----*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00611</td>
+<td class="l m pgmdocsource">%_loadEnvironment (i_withLibrefs   =0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00612</td>
+<td class="l m pgmdocsource">,i_appendSASAutos=Y</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00613</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00614</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00615</td>
+<td class="l m pgmdocsource">/* Correct Termstring in Textfiles */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00616</td>
+<td class="l m pgmdocsource">%_prepareTextFiles;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00617</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00618</td>
+<td class="l m pgmdocsource">%IF &quot;&amp;g_error_code&quot; NE &quot;&quot; %THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00619</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00620</td>
+<td class="l m pgmdocsource">%IF (&amp;g_runMode. = SASUNIT_BATCH) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00621</td>
+<td class="l m pgmdocsource">/*-- check spawning of a SAS process -----------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00622</td>
+<td class="l m pgmdocsource">/* a file will be created in the work library of the parent (this) process</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00623</td>
+<td class="l m pgmdocsource">to check whether spawning works */</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00624</td>
+<td class="l m pgmdocsource">%LET l_work = %sysfunc(pathname(work));</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00625</td>
+<td class="l m pgmdocsource">PROC DATASETS NOLIST NOWARN LIB=work;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00626</td>
+<td class="l m pgmdocsource">DELETE check;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00627</td>
+<td class="l m pgmdocsource">QUIT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00628</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00629</td>
+<td class="l m pgmdocsource">DATA _null_;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00630</td>
+<td class="l m pgmdocsource">FILE &quot;&amp;l_work/check_spawning.sas&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00631</td>
+<td class="l m pgmdocsource">PUT &quot;LIBNAME awork &quot;&quot;&amp;l_work&quot;&quot;;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00632</td>
+<td class="l m pgmdocsource">PUT &quot;DATA awork.check; RUN;&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00633</td>
+<td class="l m pgmdocsource">RUN;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00634</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00635</td>
+<td class="l m pgmdocsource">%_runProgramSpawned(i_program          =&amp;l_work./check_spawning.sas</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00636</td>
+<td class="l m pgmdocsource">,i_scnid            =000</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00637</td>
+<td class="l m pgmdocsource">,i_generateMcoverage=0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00638</td>
+<td class="l m pgmdocsource">,r_sysrc            =l_sysrc</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00639</td>
+<td class="l m pgmdocsource">,i_pgmIsScenario    =0</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00640</td>
+<td class="l m pgmdocsource">);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00641</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00642</td>
+<td class="l m pgmdocsource">%IF %_handleError(&amp;l_macname.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00643</td>
+<td class="l m pgmdocsource">,ErrorSASCall2</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00644</td>
+<td class="l m pgmdocsource">,NOT %sysfunc(exist(work.check))</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00645</td>
+<td class="l m pgmdocsource">,Error spawning SAS process in initialization</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00646</td>
+<td class="l m pgmdocsource">,i_verbose=&amp;i_verbose.</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00647</td>
+<td class="l m pgmdocsource">)</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00648</td>
+<td class="l m pgmdocsource">%THEN %GOTO errexit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00649</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00650</td>
+<td class="l m pgmdocsource">PROC DATASETS NOLIST NOWARN LIB=work;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00651</td>
+<td class="l m pgmdocsource">DELETE check;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00652</td>
+<td class="l m pgmdocsource">QUIT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00653</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00654</td>
+<td class="l m pgmdocsource">%LET l_rc=%_delFile(&amp;l_work/run.sas);</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00655</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00656</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00657</td>
+<td class="l m pgmdocsource">%_createExamineeTable;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00658</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00659</td>
+<td class="l m pgmdocsource">PROC SQL NOPRINT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00660</td>
+<td class="l m pgmdocsource">/*-- save time of initialization ---------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00661</td>
+<td class="l m pgmdocsource">UPDATE target.tsu SET tsu_lastinit = %sysfunc(datetime());</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00662</td>
+<td class="l m pgmdocsource">/*-- update column tsu_dbVersion ------------------------------------------*/</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00663</td>
+<td class="l m pgmdocsource">UPDATE target.tsu SET tsu_dbVersion = &quot;&amp;g_db_version.&quot;;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00664</td>
+<td class="l m pgmdocsource">QUIT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00665</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00666</td>
+<td class="l m pgmdocsource">%IF (&amp;g_runMode. = SASUNIT_INTERACTIVE) %THEN %DO;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00667</td>
+<td class="l m pgmdocsource">%_reportCreateStyle;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00668</td>
+<td class="l m pgmdocsource">%_reportCreateTagset;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00669</td>
+<td class="l m pgmdocsource">%END;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00670</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00671</td>
+<td class="l m pgmdocsource">%PUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00672</td>
+<td class="l m pgmdocsource">%PUT ============================ SASUnit has been initialized successfully ==========================;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00673</td>
+<td class="l m pgmdocsource">%PUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00674</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00675</td>
+<td class="l m pgmdocsource">%GOTO exit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00676</td>
+<td class="l m pgmdocsource">%errexit:</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00677</td>
+<td class="l m pgmdocsource">%PUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00678</td>
+<td class="l m pgmdocsource">%PUT &amp;g_error: ===================== Error! Testsuite aborted! ===========================================;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00679</td>
+<td class="l m pgmdocsource">%PUT;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00680</td>
+<td class="l m pgmdocsource">LIBNAME target;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00681</td>
+<td class="l m pgmdocsource">endsas;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00682</td>
+<td class="l m pgmdocsource">%exit:</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00683</td>
+<td class="l m pgmdocsource">%MEND initSASUnit;</td>
+</tr>
+<tr>
+<td class="l m pgmdocsource">00684</td>
+<td class="l m pgmdocsource">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+</body>
+</html>

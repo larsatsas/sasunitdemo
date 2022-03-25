@@ -1,0 +1,720 @@
+---reportSASUnit
+  1 DE SAS-Log aus initSASUnit
+  1 EN SAS log from initSASUnit
+  2 DE SAS-Log für Testszenario
+  2 EN SAS log for test scenario
+  3 DE SAS-Log für Testfall
+  3 EN SAS log for test case
+  4 DE in Testszenario
+  4 EN in test scenario
+  5 DE Fehler! reportSASUnit wird abgebrochen!
+  5 EN Error! reportSASUnit has been canceled
+---reportTree
+  1 DE Szenarien
+  1 EN Scenarios
+  2 DE Alle Testszenarien
+  2 EN All test scenarios
+  3 DE Testfälle des Testszenarios
+  3 EN Test cases of test scenario
+  4 DE Prüfungen zu Testfall
+  4 EN Assertions for test case
+  5 DE Prüfung
+  5 EN Assertion
+  6 DE Prüflinge
+  6 EN Units under Test
+  7 DE Alle Prüflinge nach Suchpfaden
+  7 EN All units under test by program library 
+  8 DE Sonstige
+  8 EN Others
+  9 DE Prüflinge in Programmbibliothek
+  9 EN Units under test in program library
+ 10 DE Prüflinge ohne Programmbibliothek
+ 10 EN Units under test without program library
+ 11 DE Testfälle für Prüfling
+ 11 EN Test cases for unit under test
+ 12 DE Prüfungen zu Szenario
+ 12 EN Assertions for test scenario
+ 13 DE Testfall
+ 13 EN test case
+ 14 DE Prüfung
+ 14 EN Assertion
+ 15 DE SASUnit - Hauptseite des Projekts
+ 15 EN SASUnit - main page of project
+ 16 DE Programmdokumentation
+ 16 EN Program documentation
+ 17 DE Dateien
+ 17 EN Files
+ 18 DE Programmdokumentation für Prüfling
+ 18 EN Program documentation for unit under test
+ 19 DE Zusätzliche Informationen
+ 19 EN Additional information
+ 20 DE Gruppen
+ 20 EN Groups
+---reportAuton
+  1 DE Prüflinge
+  1 EN Units under Test
+  2 DE SASUnit Testdokumentation
+  2 EN SASUnit Test Documentation
+  3 DE Programmbibliothek
+  3 EN Program Library
+  4 DE Programmbibliothek unter
+  4 EN Program library at
+  5 DE Prüfling
+  5 EN Unit under Test
+  6 DE Szenario
+  6 EN Test Scenario
+  7 DE Testfälle
+  7 EN Test Cases
+  8 DE Ergebnis
+  8 EN Result
+  9 DE Zu prüfendes Programm unter
+  9 EN Unit under test at
+ 10 DE Details zu Testszenario
+ 10 EN Details for test scenario
+ 11 DE Fehler
+ 11 EN Error
+ 12 DE manuell
+ 12 EN manual
+ 13 DE Fehler in der Testausführung, siehe Log
+ 13 EN Error in execution of test scenario, see log
+ 14 DE Prüfungen
+ 14 EN Assertions
+ 15 DE (ohne)
+ 15 EN (none)
+ 16 DE Testabdeckung
+ 16 EN Test Coverage
+ 17 DE Testabdeckung von
+ 17 EN Test Coverage of
+ 18 DE Abgedeckter Quelltext
+ 18 EN Covered code
+ 19 DE Nicht abgedeckter Quelltext
+ 19 EN Non covered code
+ 20 DE Kommentare
+ 20 EN Comments
+ 21 DE Quelltext der von der Option MCOVERAGE als nicht abgedeckt markiert wurde
+ 21 EN Code marked as non contributing by option mcoverage
+ 22 DE Aufrufhierarchie
+ 22 EN Calling Sequence
+ 23 DE Ruft auf
+ 23 EN Calling
+ 24 DE Aufgerufen von 
+ 24 EN Called by
+ 25 DE ruft folgende Programme auf
+ 25 EN calls these programs
+ 26 DE wird von folgenden Programmen aufgerufen
+ 26 EN is called by these programs
+ 27 DE Herunterladen
+ 27 EN Download
+ 28 DE Programmdokumentation
+ 28 EN Program Documentation
+---reportCas
+  1 DE Testfälle nach Szenarien
+  1 EN Test Cases by Scenario
+  2 DE SASUnit Testdokumentation
+  2 EN SASUnit Test Documentation
+  3 DE Szenario
+  3 EN Scenario
+  4 DE Programm
+  4 EN Program
+  5 DE Programm des Testszenarios unter
+  5 EN Program of test scenario at
+  6 DE SAS-Log für diesen Lauf des Testszenarios anzeigen
+  6 EN Show sas log for this run of the test scenario 
+  7 DE EURDFDT20.
+  7 EN DATETIME20.
+  8 DE Dauer
+  8 EN Duration
+  9 DE commax12.1
+  9 EN 12.1
+ 10 DE Testfälle
+ 10 EN Test Cases
+ 11 DE Nr.
+ 11 EN No.
+ 12 DE Testfall
+ 12 EN Test Case
+ 13 DE Prüfling
+ 13 EN Unit under Test
+ 14 DE letzter Lauf
+ 14 EN Last Run
+ 15 DE Dauer
+ 15 EN Duration
+ 16 DE Ergebnis
+ 16 EN Result
+ 17 DE Details zum Testfall
+ 17 EN Details for Test Case
+ 18 DE zu prüfendes Programm unter
+ 18 EN Unit under test at
+ 19 DE Fehler
+ 19 EN Error
+ 20 DE manuell
+ 20 EN manual
+ 21 DE Fehler in der Testausführung, siehe Log
+ 21 EN Error in execution of test scenario, see log
+ 22 DE Letzter Lauf
+ 22 EN Last Run
+---reportCmp
+  1 DE Tatsächlich erstellte SAS-Tabelle
+  1 EN SAS table actually created
+  2 DE Tatsächlich erzeugte SAS-Tabelle nicht gefunden
+  2 EN SAS table not created
+  3 DE Erwartete SAS-Tabelle
+  3 EN SAS table to be expected
+  4 DE Erwartete SAS-Tabelle nicht gefunden
+  4 EN expected SAS table not found
+  5 DE assertColumns - Vergleich zweier Dateien
+  5 EN assertColumns - Comparison Report
+---reportDetail
+  1 DE Details zu Testfall 
+  1 EN Details for Test Case
+  2 DE SASUnit Testdokumentation
+  2 EN SASUnit Test Documentation
+  3 DE Übersicht für Szenario
+  3 EN Overview for Test Scenario
+  4 DE Programm des Testszenarios unter
+  4 EN Program for Test Scenario at
+  5 DE SAS-Log für diesen Lauf des Testszenarios anzeigen
+  5 EN Show SAS-Log for this run of the test scenario
+  6 DE zu prüfendes Programm unter
+  6 EN Unit under test at
+  7 DE SAS-Log für diesen Lauf des Testfalls anzeigen
+  7 EN Show SAS-Log for this run of the test case
+  8 DE Prüfungen
+  8 EN Assertions
+  9 DE Nr.
+  9 EN No.
+ 10 DE Prüfart
+ 10 EN Assertion
+ 11 DE Prüfzweck
+ 11 EN Description
+ 12 DE erwartet
+ 12 EN Expected
+ 13 DE tatsächlich
+ 13 EN Actual
+ 14 DE Ergebnis
+ 14 EN Result
+ 15 DE erwartete Tabelle öffnen
+ 15 EN Show expected table
+ 16 DE tatsächlich erzeugte Tabelle öffnen
+ 16 EN Open actual table
+ 17 DE Vergleichsbericht öffnen
+ 17 EN Open comparison report
+ 18 DE erwartete Bibliothek öffnen
+ 18 EN Open expected Library
+ 19 DE tatsächlich erzeugte Bibliothek öffnen
+ 19 EN Open actual library
+ 20 DE erwarteten (oben) und tatsächlichen (unten) Bericht öffnen
+ 20 EN Open expected (above) and actual (below) report
+ 21 DE erwarteten Bericht öffnen
+ 21 EN Open expected report
+ 22 DE nicht neu erzeugt
+ 22 EN not generated anew
+ 23 DE tatsächlich erzeugten Bericht öffnen
+ 23 EN Open actual report
+ 25 DE Fehler
+ 25 EN Error
+ 26 DE manuell
+ 26 EN manual
+ 27 DE Fehler in der Testausführung, siehe Log
+ 27 EN Error in execution of test, see log
+ 28 DE Szenario Nr.
+ 28 EN Scenario No.
+ 29 DE Szenario
+ 29 EN Scenario
+ 30 DE Programm
+ 30 EN Program
+ 31 DE letzter Lauf
+ 31 EN Last Run
+ 32 DE Dauer
+ 32 EN Duration
+ 33 DE Testfall Nr.
+ 33 EN Test Case No.
+ 34 DE Testfall
+ 34 EN Test Case
+ 35 DE Prüfling
+ 35 EN Unit under Test
+ 36 DE Fehler
+ 36 EN Errors
+ 37 DE Warnungen
+ 37 EN Warnings
+ 38 DE Tabelle
+ 38 EN Table listing
+ 39 DE Vergleich
+ 39 EN Comparison
+ 40 DE Bibliothek
+ 40 EN Library
+ 41 DE Log prüfen
+ 41 EN scan log
+ 42 DE vorhanden
+ 42 EN present
+ 43 DE nicht vorhanden
+ 43 EN not present
+ 44 DE Meldung
+ 44 EN Message
+ 45 DE Meldung gefunden
+ 45 EN Message found
+ 46 DE Meldung nicht gefunden
+ 46 EN Message not found
+ 47 DE Logmeldung prüfen
+ 47 EN scan for log message
+ 48 DE fehlt
+ 48 EN missing
+ 49 DE commax12.1
+ 49 EN comma12.1
+ 50 DE EURDFDT20.
+ 50 EN DATETIME20.
+---reportFooter
+  1 DE Erzeugt am
+  1 EN Generated on
+  2 DE eurdfdwn.
+  2 EN downame.
+  3 DE eurdfwdx.
+  3 EN worddatx.
+  4 DE von
+  4 EN by
+---reportFrame
+  1 DE SASUnit Testdokumentation
+  1 EN SASUnit Test Documentation
+  2 DE Frames sind deaktiviert. Klicken Sie hier, um zur Hauptseite zu gelangen.
+  2 EN Frames are disabled. Click here to go to the main page.
+---reportHome
+  1 DE Testdokumentation
+  1 EN Test Documentation
+  2 DE Eigenschaften dieser Testsuite
+  2 EN Properties of this test suite
+  3 DE Projektname
+  3 EN Name of project
+  4 DE Wurzelverzeichnis
+  4 EN Root directory
+  5 DE Pfad zur Testdatenbank
+  5 EN Path to test repository
+  6 DE Programmbibliotheken^n(Makro-Autocall-Pfade)
+  6 EN Program libraries^n(macro autocall paths)
+  7 DE Autoexec-Programm für Testszenarien
+  7 EN Autoexec-program for test scenarios
+  8 DE SAS-Konfigurationsdatei für Testszenarien
+  8 EN SAS configuration file for test scenarios
+  9 DE SASUSER-Verzeichnis für Testszenarien
+  9 EN SASUSER folder for test scenarios
+ 10 DE Verzeichnis mit Testdaten
+ 10 EN Folder for test data
+ 11 DE Verzeichnis mit Referenzdaten
+ 11 EN Folder for reference data
+ 12 DE Verzeichnis mit Spezifikationsdokumenten
+ 12 EN Folder for specification documents
+ 13 DE Pfad zu den SASUnit-Makros
+ 13 EN Path to SASUnit macros
+ 14 DE SAS-Log des Reporting-Jobs
+ 14 EN SAS log of reporting job
+ 15 DE Plattform
+ 15 EN Platform
+ 16 DE Anzahl Testszenarien (fehlerhaft)
+ 16 EN Number of test scenarios (failed)
+ 17 DE Anzahl Testfälle (fehlerhaft)
+ 17 EN Number of test cases (failed)
+ 18 DE Anzahl Prüfungen (fehlerhaft)
+ 18 EN Number of assertions (failed)
+ 19 DE SAS Version
+ 19 EN SAS Version
+ 20 DE Benutzer ID
+ 20 EN User ID
+ 21 DE SASUnit Sprache
+ 21 EN SASUnit language
+ 22 DE SASUnit Datenbankversion
+ 22 EN SASUnit data base version
+ 23 DE Encoding der SAS-Sitzung
+ 23 EN Encoding of SAS session
+ 24 DE Eigenschaften des Projekts
+ 24 EN Properties of project
+ 25 DE SASUnit - Konfiguration
+ 25 EN Configuration of SASUnit
+ 26 DE Eigenschaften der Laufzeitumgebung
+ 26 EN Properties of run-time environment
+ 27 DE Ja
+ 27 EN Yes
+ 28 DE Nein
+ 28 EN No
+ 29 DE Testabdeckung ermitteln
+ 29 EN SASUnit started with test coverage
+ 30 DE SASUnit mit Überschreiben gestartet
+ 30 EN SASUnit started in overwrite mode
+ 31 DE Aufrufhierarchie erstellen
+ 31 EN Document call hierarchy
+ 32 DE Aufrufhierarchie mit SASUnit Makros
+ 32 EN Call hierarchy includes SASUnit macros
+ 33 DE Encoding der HTML-Berichte
+ 33 EN Encoding of HTML reports
+ 34 DE Laufzeit der Szenarien
+ 34 EN Runtime Scenarios
+ 35 DE Laufzeit SASUnit (gestartete Szenarien)
+ 35 EN Runtime SASUnit (Scenarios started)
+ 36 DE Testergebnisse
+ 36 EN Test results
+ 37 DE SASUnit Version
+ 37 EN SASUnit version
+---reportLibrary
+  1 DE Prüfbericht - Vergleich der beiden Bibliotheken
+  1 EN Test Report - Comparison of two Libraries
+  2 DE Nicht verglichene Dateien
+  2 EN Datasets not compared
+  3 DE Erwartete Bibliothek
+  3 EN Expected library
+  4 DE Tatsächliche Bibliothek
+  4 EN Actual library
+  5 DE Ergebnis
+  5 EN Result
+  6 DE Inhalt der erwarteten Bibliothek
+  6 EN Contents of the expected library
+  7 DE Inhalt der tatsächlichen Bibliothek
+  7 EN Contents of the actual library
+---reportLog
+  1 DE Fehler&#160;&#160;&#160;
+  1 EN Errors&#160;&#160;
+  2 DE Warnungen
+  2 EN Warnings
+---reportMan
+  1 DE Testszenario 
+  1 EN Test scenario
+  2 DE Testfall
+  2 EN Test case
+  3 DE Prüfung
+  3 EN Assertion
+  4 DE Vergleich der Berichte
+  4 EN Comparison of reports
+---reportPageTop
+  1 DE "Hauptseite" "Szenarien" "Testfälle" "Prüflinge"
+  1 EN "Main Page" "Test Scenarios" "Test Cases" "Units under Test"
+---reportScn
+  1 DE Szenarien
+  1 EN Test Scenarios
+  2 DE SASUnit Testdokumentation
+  2 EN SASUnit Test Documentation
+  3 DE Nr.
+  3 EN No.
+  4 DE Szenario
+  4 EN Test Scenario
+  5 DE Programm
+  5 EN Program
+  6 DE letzter Lauf
+  6 EN Last Run
+  7 DE Dauer
+  7 EN Duration
+  8 DE Ergebnis
+  8 EN Result
+  9 DE Details zu Testszenario
+  9 EN Details for test scenario
+ 10 DE Programm des Testszenarios unter
+ 10 EN Program of test scenario at
+ 11 DE SAS-Log für diesen Lauf anzeigen
+ 11 EN Show SAS log for this run
+ 12 DE EURDFDT20.
+ 12 EN DATETIME20.
+ 13 DE commax12.1
+ 13 EN comma12.1
+ 14 DE Fehler
+ 14 EN Error
+ 15 DE manuell
+ 15 EN manual
+ 16 DE Fehler in der Testausführung, siehe Log
+ 16 EN Error in execution of test scenario, see log
+---reportTableExist
+  1 DE Libref ist nicht gültig
+  1 EN Libref is invalid
+  2 DE Tabelle / View / Katalog existiert nicht
+  2 EN Table / view / catalog does not exist
+  3 DE Tabelle / View / Katalog existiert
+  3 EN Table / view / catalog exists
+  4 DE Tabelle
+  4 EN Table
+  5 DE View
+  5 EN View
+  6 DE Katalog
+  6 EN Catalog
+  7 DE existiert
+  7 EN exists
+  8 DE existiert nicht
+  8 EN does not exist
+  9 DE Parameter i_target ist nicht gültig
+  9 EN Parameter i_target is invalid
+ 10 DE Erstelldatum
+ 10 EN Creation date
+ 11 DE Änderungsdatum
+ 11 EN Modification date
+---reportRecordCount
+  1 DE Libref nicht gültig oder data set existiert nicht
+  1 EN Libref not valid or data set does not exist
+  2 DE Proc SQL endete mit Fehlern
+  2 EN Proc SQL ended with errors
+  3 DE Variable i_recordsExp ist keine Zahl
+  3 EN Variable i_recordsExp not a number
+  4 DE Variable i_recordsExp < 0
+  4 EN Variable i_recordsExp < 0
+  5 DE Der Parameter i_operator ist nicht gültig
+  5 EN Parameter i_operator not valid
+---reportForeignKey
+  1 DE Libref der Stammtabelle nicht gültig oder die Datei existiert nicht
+  1 EN Libref of master table not valid or data set does not exist
+  2 DE Libref der Nachschlagetabelle nicht gültig oder die Datei existiert nicht
+  2 EN Libref of lookup table not valid or data set does not exist
+  3 DE Anzahl der gefundenen Schlüssel in i_mstKey ungleich der spezifizierten Anzahl
+  3 EN Number of keys found in i_mstKey not equal to specified number
+  4 DE Anzahl der gefundenen Schlüssel in i_lookupKey ungleich der spezifizierten Anzahl
+  4 EN Number of keys found in i_lookupKey not equal to specified number
+  5 DE Schlüsselspalte in der Stammtabelle nicht gefunden
+  5 EN Key in master table not found
+  6 DE Schlüsselspalte in der Nachschlagetabelle nicht gefunden
+  6 EN Key in lookup table not found
+  7 DE Variablentypen der Stamm- und Nachschlagetabelle stimmen nicht überein
+  7 EN Variable types of keys in master and lookup table do not match
+  8 DE Schlüssel der Nachschlagetabelle ist nicht eindeutig, bitte Parameter i_unique und die Nachschlagetabelle Tabelle prüfen
+  8 EN Specified key of lookup table not unique, check parameter i_unique and lookup table
+  9 DE Funktion open nicht erfolgreich
+  9 EN Open function failed
+ 11 DE Assert Foreign Key - Ergebnisse
+ 11 EN Assert Foreign Key - Results
+ 12 DE Es wurde keine SAS-Tabelle erzeugt
+ 12 EN No SAS table created
+ 13 DE In der Stammtabelle als Schlüssel verwendete Werte, die nicht in der Nachschlagetabelle vorkommen
+ 13 EN Values that are used as keys in the master table, which were not found in lookup table
+ 14 DE Schlüssel der Nachschlagetabelle, die in der Stammtabelle nicht verwendet werden
+ 14 EN Keys of lookup table, which are not used in master table
+ 15 DE Leere Tabelle wurde erzeugt
+ 15 EN Table created but it contains no records
+ 16 DE Nachschlagetabelle
+ 16 EN lookup dataset
+ 17 DE eindeutig
+ 17 EN unique
+ 18 DE nicht eindeutig
+ 18 EN non unique
+ 19 DE Parameter maxObsRprtFail: MAX oder numerisch GE 0 
+ 19 EN Parameter maxObsRprtFail: MAX or numeric GE 0
+ 20 DE Parameter maxObsRprtFail < 0
+ 20 EN Parameter maxObsRprtFail < 0
+ 21 DE i_listingVars nicht in der Stammtabelle gefunden
+ 21 EN i_listingVars not found in Master Table
+ 22 DE Ungültiges Argument für Parameter treatMissings
+ 22 EN Invalid argument for parameter treatMissings
+ 23 DE Parameter treatMissingsMst auf disallow gesetzt, aber fehlende Werte gefunden
+ 23 EN Parameter treatMissingsMst set to disallow, but missing values found in master table
+ 24 DE Wert für Parameter unique nicht gültig
+ 24 EN Value for parameter unique not valid
+ 25 DE Schlüssel in der Nachschlagetabelle nicht gefunden
+ 25 EN key(s) in lookup table not found
+---reportRowExpression
+  1 DE Assert Row Expression - Ergebnisse
+  1 EN Assert Row Expression - Results
+  2 DE Tabelle mit bedingungsverletzenden Datensätzen
+  2 EN Data set containing condition violating observations
+  3 DE Keine bedingungsverletzenden Datensätze vorhanden
+  3 EN No condition violating observations present
+  4 DE Bedingungsverletzende Datensätze
+  4 EN Condition violating observations
+  5 DE Öffnen der Tabelle mit bedingungsverletzenden Datensätze
+  5 EN Open table containing condition violating observations
+---reportPrimaryKey
+  1 DE Assert Primary Key - Ergebnisse
+  1 EN Assert Primary Key - Results
+  2 DE Tabelle mit bedingungsverletzenden Datensätzen
+  2 EN Data set containing condition violating observations
+  3 DE Keine bedingungsverletzenden Datensätze vorhanden
+  3 EN No condition violating observations present
+  4 DE Bedingungsverletzende Datensätze
+  4 EN Condition violating observations
+  5 DE Öffnen der Tabelle mit bedingungsverletzenden Datensätze
+  5 EN Open table containing condition violating observations
+  6 DE Schlüssel ist eindeutig
+  6 EN Key is unique
+  7 DE Schlüssel ist NICHT eindeutig
+  7 EN Key is NOT unique
+  8 DE Bitte einen Wert für Paramter i_library abgeben!
+  8 EN Please specify a value for parameter i_library!
+  9 DE Bitte einen Wert für Paramter i_dataset!abgeben!
+  9 EN Please specify a value for parameter i_dataset!
+ 10 DE Bitte einen Wert für Paramter i_variables!abgeben!
+ 10 EN Please specify a value for parameter i_variables!
+ 11 DE Der Wert für Parameter i_library ist kein gültiger Libref
+ 11 EN Value for parameter i_library is no valid libref!
+ 12 DE Die Inputdatei existiert!
+ 12 EN Input dataset does not exist!
+ 13 DE Es wurden keine Schlüsselvariablen angegeben!
+ 13 EN No variables specified to check primary key condition!
+ 14 DE Der Wert für Parameter o_maxReportObs muss MAX oder eine Zahl größer Null sein!
+ 14 EN Parameter o_maxReportObs must be MAX or numeric GE 0!
+ 15 DE Der Wert für Parameter o_maxReportObs muss eine Zahl größer Null sein!
+ 15 EN Parameter o_maxReportObs must be numeric GE 0!
+ 16 DE Es wurden keine Variables für die Ausgabedatei angegeben!
+ 16 EN No variables specified for printing the dataset!
+ 17 DE Der Wert für Parameter o_treatMissings muss IGNORE, DISALLOW oder VALUE sein!
+ 17 EN Parameter o_treatMissing must be IGNORE, DISALLOW or VALUE!
+ 18 DE Der Wert für Parameter i_variables enthält ungültige Spaltennamen!
+ 18 EN Parameter i_variables contains invalid column names!
+ 19 DE Der Wert für Parameter o_listingVars enthält ungültige Spaltennamen!
+ 19 EN Parameter o_listingVars contains invalid column names!
+ 20 DE Die Datei enthält fehlende Wert für die Schlüsselspalten, obwohl o_treatMissings auf DISALLOW gesetzt ist!
+ 20 EN Dataset contains missing values for key columns despite o_treatMissings is set to DISALLOW!
+ 21 DE Tabelle nach Anwendung des Parameters o_treatMissings
+ 21 EN Dataset after applying parameter o_treatMissings.
+ 22 DE Alle Schlüsselvariablen enthälen fehlende Werte.
+ 22 EN All key variables contain missing values.
+ 23 DE Tabelle existiert nicht.
+ 23 EN Table does not exist.
+---reportText
+  1 DE Erwarteter Text
+  1 EN Expected text
+  2 DE Erwarteten Text öffnen
+  2 EN Open expected text
+  3 DE Vergleich
+  3 EN Comparison
+  4 DE Tatsächlicher Text
+  4 EN Actual text
+  5 DE Tatsächlichen Text öffnen
+  5 EN Open actual text
+  6 DE Vergleichsbericht öffnen
+  6 EN Open comparison report
+  7 DE Shell-Script nicht gefunden!
+  7 EN Shell script not found!
+  8 DE Input Textdokument i_expected nicht gefunden!
+  8 EN Input text file i_expected not found!
+  9 DE Input Textdokument i_actual nicht gefunden!
+  9 EN Input text file i_actual not found!
+ 10 DE Parameter Shell-Skript (i_script) ist leer
+ 10 EN Parameter shell script (i_script) is empty
+ 11 DE Parameter erwartetes Bild (i_expected) ist leer
+ 11 EN Parameter expected image (i_expected) is empty
+ 12 DE Parameter tatsäschliches Bild (i_actual) ist leer
+ 12 EN Parameter actual image (i_actual) is empty
+ 13 DE Parameter erwarteter Rückgabewert (i_expected_shell_rc) ist leer
+ 13 EN Parameter expected shell rc (i_expected_shell_rc) is empty
+---reportExternal
+  1 DE Shell-Script nicht gefunden!
+  1 EN Shell script not found!
+  2 DE Der Pfad in Param1 existiert nicht
+  2 EN Param1 is path, but was not found
+  3 DE Der Pfad in Param2 existiert nicht
+  3 EN Param2 is path, but was not found
+---reportImage
+  1 DE Shell-Script nicht gefunden!
+  1 EN Shell script not found!
+  2 DE Das in i_actual spezifizierte Bild wurde nicht gefunden
+  2 EN The image specified in i_actual was not found
+  3 DE Das in i_expected spezifizierte Bild wurde nicht gefunden
+  3 EN The image specified in i_expected was not found
+  4 DE Tatsächliches Bild
+  4 EN Actual image
+  5 DE Tatsächliches Bild öffnen
+  5 EN Open actual image
+  6 DE Bildvergleich öffnen
+  6 EN Open image comparison
+  7 DE Erwartetes Bild
+  7 EN Expected image
+  8 DE Erwartetes Bild öffnen
+  8 EN Open expected image
+  9 DE Parameter Shell-Skript (i_script) ist leer
+  9 EN Parameter shell script (i_script) is empty
+ 10 DE Parameter erwartetes Bild (i_expected) ist leer
+ 10 EN Parameter expected image (i_expected) is empty
+ 11 DE Parameter tatsäschliches Bild (i_actual) ist leer
+ 11 EN Parameter actual image (i_actual) is empty
+ 12 DE Parameter erwarteter Rückgabewert (i_expected_shell_rc) ist leer
+ 12 EN Parameter expected shell rc (i_expected_shell_rc) is empty
+ 13 DE Erwarteter Rückgabewert
+ 13 EN Expected return code
+ 14 DE Typ des Bildes
+ 14 EN Image type
+---reportPgmDoc
+  1 DE Ausführliche Beschreibung
+  1 EN Detailed description
+  2 DE Autor
+  2 EN Author
+  3 DE Datum
+  3 EN Date
+  4 DE Siehe auch
+  4 EN See also
+  5 DE Fehler
+  5 EN Bug
+  6 DE Ausstehende Tests
+  6 EN Test
+  7 DE Ausstehende Aufgaben
+  7 EN To Do
+  8 DE Version
+  8 EN Version
+  9 DE Parameter
+  9 EN Parameters
+ 10 DE Rückgabe
+ 10 EN Return
+ 11 DE Rückgabewert
+ 11 EN Return value
+ 12 DE Kommentar
+ 12 EN Comment
+ 13 DE Copyright
+ 13 EN Copyright
+ 14 DE Ausstehende Aufgaben
+ 14 EN To Do List
+ 15 DE Ausstehende Tests
+ 15 EN Test List
+ 16 DE Bekannte Fehler
+ 16 EN Bug List
+ 17 DE Programmdokumentation für Programm
+ 17 EN Program Documentation for Program
+ 18 DE Quellcode des Programms
+ 18 EN Source Code of Program
+ 19 DE Zusätzliche Informationen
+ 19 EN Additional information
+ 20 DE Veraltete Elemente
+ 20 EN Deprecated List
+ 21 DE SASUnit Testdokumentation
+ 21 EN SASUnit Test Documentation
+ 22 DE Programmdokumentation
+ 22 EN Program Documentation
+ 23 DE Veraltet
+ 23 EN Deprecated
+ 24 DE Keine Programmdokumentation gefunden
+ 24 EN No program documentation found
+---endScenario
+  1 DE SASUnit Ergebnisse
+  1 EN SASUnit quick results
+  2 DE Testszenario
+  2 EN Test scenario
+  3 DE Testfälle
+  3 EN Test cases
+  4 DE Prüfungen
+  4 EN Assertions
+  5 DE Id
+  5 EN Id
+  6 DE Pfad
+  6 EN path
+  7 DE Beschreibung
+  7 EN Description
+  8 DE Start
+  8 EN Start
+  9 DE Ende
+  9 EN End
+ 10 DE Bearbeitungszeitpunkt
+ 10 EN Modification Datetimestamp
+ 11 DE Rückgabewert
+ 11 EN Return value
+ 12 DE Anzahl Fehler
+ 12 EN Error count
+ 13 DE Anzahl Warnungen
+ 13 EN Warning count
+ 14 DE Ergebnis
+ 14 EN Result
+ 15 DE Szenario-Id
+ 15 EN Scenario id
+ 16 DE Prüfling-Id
+ 16 EN Examinee id
+ 17 DE Prüfling
+ 17 EN Examinee
+ 18 DE Spezifikation
+ 18 EN Specification
+ 19 DE Testfall-Id
+ 19 EN Testcase id
+ 20 DE Prüfungsart
+ 20 EN Test type
+ 21 DE Erwartetes Ergebnis
+ 21 EN Expcected result
+ 22 DE Tatsächliches Ergebnis
+ 22 EN Actual result
+ 23 DE Prüfungsmeldung
+ 23 EN Test message
+ 24 DE Vergleichsergebnis
+ 24 EN Comparison result

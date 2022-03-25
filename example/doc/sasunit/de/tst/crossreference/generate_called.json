@@ -1,0 +1,6 @@
+{ "name": "generate"
+, "children": [
+{ "name": "generate_test"
+}
+]
+}

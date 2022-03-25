@@ -1,0 +1,15 @@
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(TESTCASE.INITTESTCASE):   options linesize=max;
+NOTE: The macro GETVARS completed compilation without errors.
+      52 instructions 1116 bytes.
+MAUTOLOCDISPLAY(GETVARS):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\getvars.sas kompiliert
+NOTE: The macro ENDTESTCALL completed compilation without errors.
+      101 instructions 2836 bytes.
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+MPRINT(TESTCASE.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(TESTCASE.ENDTESTCALL):   RUN;
+

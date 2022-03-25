@@ -1,0 +1,152 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS log for test case 006 in test scenario 008 (generate.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Errors&#160;&#160;: 2 
+==>
+<a href="#error001">1</a>
+<a href="#error002">2</a>
+<br>
+Warnings: 0 
+<br>
+</p>
+<pre>
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+125        proc datasets lib=test1 nolist kill;
+126        quit;
+ 
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+127        proc datasets lib=test2 nolist kill;
+128        quit;
+ 
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+56                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+ 
+MAUTOLOCDISPLAY(GENERATE):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\generate.sas
+129        %generate(data=sashelp.class, by=sex, out=test3.class)
+MPRINT(GENERATE):   data;
+MPRINT(GENERATE):   run;
+ 
+NOTE: The data set WORK.DATA11 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   data;
+MPRINT(GENERATE):   run;
+ 
+NOTE: The data set WORK.DATA12 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   proc sort data=sashelp.class out=WORK.DATA11;
+MPRINT(GENERATE):   by sex;
+MPRINT(GENERATE):   run;
+ 
+NOTE: There were 19 observations read from the data set SASHELP.CLASS.
+NOTE: The data set WORK.DATA11 has 19 observations and 5 variables.
+NOTE: PROCEDURE SORT used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(GENERATE):   proc means noprint data=WORK.DATA11(keep=sex);
+MPRINT(GENERATE):   by sex;
+MPRINT(GENERATE):   output out=WORK.DATA12;
+MPRINT(GENERATE):   run;
+ 
+NOTE: There were 19 observations read from the data set WORK.DATA11.
+NOTE: The data set WORK.DATA12 has 2 observations and 3 variables.
+NOTE: PROCEDURE MEANS used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   data _null_;
+MPRINT(GENERATE):   set WORK.DATA12 nobs=count;
+MPRINT(GENERATE):   call symput ("count", compress(put(count,8.)));
+MPRINT(GENERATE):   stop;
+MPRINT(GENERATE):   run;
+ 
+NOTE: There were 1 observations read from the data set WORK.DATA12.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+57                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+ 
+ 
+MPRINT(GENERATE):   data _null_;
+MPRINT(GENERATE):   set WORK.DATA12 end=eof;
+MPRINT(GENERATE):   array t(1) $ 200 _temporary_;
+MPRINT(GENERATE):   t(1) = 'Dataset for';
+MPRINT(GENERATE):   t(1) = trim(t(1)) !! " sex=" !! trim(left(vvalue(sex)));
+MPRINT(GENERATE):   t(1) = trim(t(1)) !! ' (' !! compress(put(_freq_,8.)) !! ' observations)';
+MPRINT(GENERATE):   call symput ('label' !! compress(put(_n_,8.)), trim(t(1)));
+MPRINT(GENERATE):   run;
+ 
+NOTE: There were 2 observations read from the data set WORK.DATA12.
+NOTE: DATA statement used (Total process time):
+      real time           0.10 seconds
+      cpu time            0.00 seconds
+ 
+ 
+<span style="color:#FF0000"><a name="error001">ERROR: Libref TEST3 is not assigned.</a></span>
+<span style="color:#FF0000"><a name="error002">ERROR: Libref TEST3 is not assigned.</a></span>
+MPRINT(GENERATE):   data test3.class1 (label="Dataset for sex=F (9 observations)") test3.class2 (label="Dataset for sex=M (10 observations)") ;
+MPRINT(GENERATE):   set WORK.DATA11;
+MPRINT(GENERATE):   by sex;
+MPRINT(GENERATE):   array t(1) _temporary_;
+MPRINT(GENERATE):   if first.sex then t(1)+1;
+MPRINT(GENERATE):   select(t(1));
+MPRINT(GENERATE):   when(1) output test3.class1;
+MPRINT(GENERATE):   when(2) output test3.class2;
+MPRINT(GENERATE):   end;
+MPRINT(GENERATE):   run;
+ 
+NOTE: The SAS System stopped processing this step because of errors.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(GENERATE):   proc datasets lib=work nolist;
+MPRINT(GENERATE):   delete DATA11 DATA12;
+MPRINT(GENERATE):   quit;
+ 
+NOTE: Deleting WORK.DATA11 (memtype=DATA).
+NOTE: Deleting WORK.DATA12 (memtype=DATA).
+NOTE: PROCEDURE DATASETS used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+130        %endTestcall()
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

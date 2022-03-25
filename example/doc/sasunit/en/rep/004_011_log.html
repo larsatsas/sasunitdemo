@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS log for test case 011 in test scenario 004 (boxplot.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Errors&#160;&#160;: 1 
+==>
+<a href="#error001">1</a>
+<br>
+Warnings: 0 
+<br>
+</p>
+<pre>
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+125        %boxplot(data=testdata.blood_pressure, x=, y=sbp, group=med, report=&g_work/report11.pdf)
+MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\boxplot.sas
+<span style="color:#FF0000"><a name="error001">ERROR: boxplot: X variable not specified</a></span>
+126        %assertLogMsg(i_logMsg=ERROR: boxplot: X variable not specified)
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

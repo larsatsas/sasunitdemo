@@ -1,0 +1,3 @@
+Comparing files D:\OPT\SASINSIDE\SASWORK\_TD20196_SAS-AAP_\text1.txt and D:\OPT\SASINSIDE\SASWORK\_TD20196_SAS-AAP_\TEXT1_BLANKS.TXT
+FC: no differences encountered
+

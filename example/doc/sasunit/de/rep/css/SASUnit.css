@@ -1,0 +1,76 @@
+/*
+   This is a css file of SASUnit.
+      
+   For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/
+   Here you can find the SASUnit documentation, release notes and license information.
+   This file is part of SASUnit, the Unit testing framework for SAS(R) programs.
+   For copyright information and terms of usage under the GPL license see included file readme.txt
+   or https://sourceforge.net/p/sasunit/wiki/readme/.
+*/
+
+@IMPORT "SASUnit_PROC_TEMPLATE.css";
+@IMPORT "Treeview.css";
+
+/* Updating SAS Styles */
+a:link {
+text-decoration:none;
+}
+
+a:visited {
+text-decoration:none;
+}
+
+a:active {
+text-decoration:none;
+}
+
+/* tabs styles, based on http://webdesign.about.com/od/layout/ss/css-3-tabs.htm */
+.tabs
+{
+	list-style:none; 
+	padding:0; 
+	margin-top: 10px; 
+	margin-bottom: 10px; 
+	border: none;
+	float: left;
+	width: 100%;
+	background: white;
+	color: black;
+    border-bottom: 3px solid white;
+}
+
+.tabs ul {
+    padding:0px 0px 0px 0px; 
+    margin:0; 
+    border: none;
+}
+
+.tabs ol {
+    padding:0; 
+    margin:0; 
+    border: none;
+}
+
+.tabs li {
+    float:left; 
+    margin-right:0; 	
+    font-size: small;
+    font-weight: bold;
+	background: white;
+}
+
+.tabs li a {
+    display:block;
+    padding: 5px 9px;
+    text-decoration:none;
+    height: 16px;
+    border-bottom: 3px solid white;
+}
+
+.tabs li a:hover {
+    border-bottom: 3px solid #CCCCCC;
+}
+
+.tabs li#current a {
+    border-bottom: 3px solid #84B0C7;
+}

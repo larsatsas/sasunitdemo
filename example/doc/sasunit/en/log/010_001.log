@@ -1,0 +1,19 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+10                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 2022
+
+MPRINT(INITTESTCASE):   options linesize=max;
+28         %let nobs=%nobs(sashelp.class);
+NOTE: The macro NOBS completed compilation without errors.
+      31 instructions 620 bytes.
+MAUTOLOCDISPLAY(NOBS):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\nobs.sas
+29         %endTestcall()
+NOTE: The macro ENDTESTCALL completed compilation without errors.
+      101 instructions 2836 bytes.
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+

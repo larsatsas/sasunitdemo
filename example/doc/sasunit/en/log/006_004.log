@@ -1,0 +1,19 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(INITTESTCASE):   options linesize=max;
+57         
+58         ods listing;
+59         %put result=%CrossReferenceTest4 (var1 =2
+MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\crossreferencetest4.sas
+60                                          ,var2 =9
+61                                          );
+result=11
+62         
+63         %endTestcall()
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+

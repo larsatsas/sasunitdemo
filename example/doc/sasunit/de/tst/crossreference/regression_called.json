@@ -1,0 +1,6 @@
+{ "name": "regression"
+, "children": [
+{ "name": "regression_test"
+}
+]
+}

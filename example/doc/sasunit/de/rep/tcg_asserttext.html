@@ -1,0 +1,891 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<meta name="Generator" content="SAS Software Version 9.4, see www.sas.com">
+<meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Language" content="de" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Testabdeckung von asserttext.sas | SASUnit Examples - SASUnit Testdokumentation</title>
+<link rel="stylesheet" type="text/css" href="css/SASUnit.css">
+<style type="text/css">
+<!--
+.l {text-align: left }
+.c {text-align: center }
+.r {text-align: right }
+.d {text-align: right }
+.j {text-align: justify }
+.t {vertical-align: top }
+.m {vertical-align: middle }
+.b {vertical-align: bottom }
+TD, TH {vertical-align: top }
+.stacked_cell{padding: 0 }
+-->
+</style>
+<script language="javascript" type="text/javascript">
+<!-- 
+function startup(){
+
+}
+function shutdown(){
+
+}
+
+//-->
+</script>
+
+</head>
+<body onload="startup()" onunload="shutdown()" class="body">
+
+<script language="javascript" type="text/javascript">
+<!-- 
+var _info = navigator.userAgent
+var _ie = (_info.indexOf("MSIE") > 0
+          && _info.indexOf("Win") > 0
+          && _info.indexOf("Windows 3.1") < 0);
+var _ie64 = _info.indexOf("x64") > 0
+
+//-->
+</script>
+
+<div class="branch">
+<a name="SCN012_16"></a>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="c systemtitle">Testabdeckung von asserttext.sas | SASUnit Examples - SASUnit Testdokumentation</td>
+</tr>
+<tr>
+<td class="l systemtitle2">Testabdeckung: 65%</td>
+</tr>
+</table><br>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Report: Detail- und/oder verdichteter Bericht">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<td class="l m blinddata" colspan="2">Color&nbsp;Legend:</td>
+</tr>
+<tr>
+<th class="c blindheader" scope="col">dummy</th>
+<th class="c blindheader" scope="col">Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m blinddata">&nbsp;</td>
+<td class="l m blinddata">&#9679; <span class="l" style=" color: #00BE00;">Abgedeckter Quelltext</span></td>
+</tr>
+<tr>
+<td class="l m blinddata">&nbsp;</td>
+<td class="l m blinddata">&#9679; <span class="l" style=" color: #FF8020;">Nicht abgedeckter Quelltext</span></td>
+</tr>
+<tr>
+<td class="l m blinddata">&nbsp;</td>
+<td class="l m blinddata">&#9679; <span class="l" style=" color: #828282;">Kommentare</span></td>
+</tr>
+<tr>
+<td class="l m blinddata">&nbsp;</td>
+<td class="l m blinddata">&#9679; <span class="l" style=" color: #8020FF;">Quelltext der von der Option MCOVERAGE als nicht abgedeckt markiert wurde</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+</div>
+<table width="100%" style=" border: 0px solid #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="none" frame="void">
+<tr>
+<td class="l usertext"><hr size="1"></td>
+</tr>
+</table>
+<div class="branch">
+<a name="SCN012_17"></a>
+<div>
+<div align="left">
+<table class="blindtable" style=" border: 0px none #000000; border-spacing: 0px;" cellspacing="0" cellpadding="0" rules="all" frame="box" border="0" summary="Procedure Print: Datei WORK._TCG_REPORT">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="l blindheader" scope="col">RowNumberOut</th>
+<th class="l blindheader" scope="col">pgmSourceColumn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00001</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/**</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00002</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\file</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00003</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\ingroup    SASUNIT_ASSERT</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00004</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00005</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\brief      This assert does a text compare for text files. The logic doing the compare is found in a script file.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00006</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00007</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\details    The actual compare is done via a script file found in folder saspgm/sasunit/OS.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00008</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">For windows the script file is assertText_fc.cmd. The fc command is used to do the compare.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00009</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">For Linux the script file is called assertText_diff.sh. Here the diff command is used to do the compare.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00010</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">Usage of other diff-tools is possible by changing the implementation of the script file.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00011</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00012</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">Please refer to <A href="https://sourceforge.net/p/sasunit/wiki/User's%20Guide/" target="_blank">SASUnit User's Guide</A></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00013</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00014</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\version    \$Revision: 642 $</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00015</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\author     \$Author: klandwich $</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00016</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\date       \$Date: 2019-03-26 07:51:01 +0100 (Di, 26 MÃ¤r 2019) $</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00017</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00018</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\sa         For further information please refer to https://sourceforge.net/p/sasunit/wiki/User%27s%20Guide/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00019</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">Here you can find the SASUnit documentation, release notes and license information.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00020</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\sa         \$HeadURL: https://svn.code.sf.net/p/sasunit/code/trunk/saspgm/sasunit/asserttext.sas $</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00021</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\copyright  This file is part of SASUnit, the Unit testing framework for SAS(R) programs.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00022</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">For copyright information and terms of usage under the GPL license see included file readme.txt</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00023</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">or https://sourceforge.net/p/sasunit/wiki/readme/.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00024</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00025</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      i_script               Path of shell script</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00026</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      i_expected             Path of first text file (expected)</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00027</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      i_actual               Path of second text file (actual)</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00028</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      i_expected_shell_rc    Optional parameter: Expected return value of called script i_script (default = 0)</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00029</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      i_modifier             Optional parameter: modifiers for the compare (default = ' ')</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00030</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      i_desc                 Optional parameter: description of the assertion to be checked (default = "Comparion of texts")</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00031</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">\param      i_threshold            Optional parameter: further parameter to be passed to the script (default = 1)</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00032</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00033</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">*/ /** \cond */</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00034</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00035</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%MACRO assertText (i_script            =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00036</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_expected          =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00037</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_actual            =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00038</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_expected_shell_rc =0</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00039</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_modifier          =</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00040</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_desc              =Comparison of texts</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00041</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_threshold         =1</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00042</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00043</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00044</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/*-- verify correct sequence of calls-----------------------------------------*/</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00045</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%GLOBAL g_inTestCase;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00046</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%endTestCall(i_messageStyle=NOTE);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00047</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%IF %_checkCallingSequence(i_callerType=assert) NE 0 %THEN %DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00048</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%RETURN;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00049</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00050</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00051</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%LOCAL  l_actual</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00052</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">l_casid</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00053</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">l_cmdFile</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00054</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">l_errmsg</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00055</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">l_expected</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00056</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">l_path</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00057</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">retVal</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00058</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">l_result</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00059</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">l_rc</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00060</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">l_tstid</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00061</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">l_macname</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00062</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00063</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00064</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%LET l_errmsg  =;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00065</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%LET l_rc      =2;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00066</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%LET l_result  =2;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00067</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%LET l_macname =&sysmacroname;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00068</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00069</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*************************************************************;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00070</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*** Check if XCMD is allowed                              ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00071</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*************************************************************;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00072</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%IF %_handleError(&l_macname.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00073</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">,NOXCMD</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00074</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">,(%sysfunc(getoption(XCMD)) = NOXCMD)</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00075</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">,Your SAS Session does not allow XCMD%str(,) therefore assertText cannot be run.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00076</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">,i_verbose=&g_verbose.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00077</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">)</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00078</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%THEN %DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00079</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_rc    =0;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00080</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_result=2;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00081</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_errmsg=Your SAS Session does not allow XCMD%str(,) therefore assertText cannot be run.;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00082</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%GOTO Update;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00083</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00084</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00085</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*************************************************************;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00086</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*** Check preconditions                                   ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00087</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*************************************************************;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00088</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00089</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*** Check if i_script file exists ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00090</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%IF (%length(&i_script.) <= 0) %THEN %DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00091</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_rc = -2;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00092</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_errMsg=Parameter i_script is empty!;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00093</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%GOTO Update;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00094</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00095</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%IF NOT %SYSFUNC(FILEEXIST(&i_script.)) %THEN %DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00096</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_rc = -3;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00097</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_errMsg=Script file &i_script. does not exist!;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00098</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%GOTO Update;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00099</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00100</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00101</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*** Check if i_expected is a path ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00102</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%IF (%length(&i_expected.) <= 0) %THEN %DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00103</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_rc = -4;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00104</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_errMsg=Parameter i_expected is empty!;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00105</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%GOTO Update;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00106</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00107</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00108</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*** Check if i_actual is a path ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00109</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%IF (%length(&i_actual.) <= 0) %THEN %DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00110</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_rc = -6;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00111</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_errMsg=Parameter i_actual is empty!;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00112</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%GOTO Update;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00113</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00114</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00115</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%*** get current ids for test case and test ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00116</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%_getScenarioTestId (i_scnid=&g_scnid, r_casid=l_casid, r_tstid=l_tstid);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00117</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00118</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*** create subfolder ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00119</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%if (&g_runMode.=SASUNIT_BATCH) %then %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00120</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%_createTestSubfolder (i_assertType   =asserttext</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00121</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_scnid        =&g_scnid.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00122</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_casid        =&l_casid.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00123</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_tstid        =&l_tstid.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00124</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,r_path         =l_path</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00125</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00126</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00127</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00128</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%else %do;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00129</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%let l_path=%sysfunc(pathname(WORK));</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00130</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%end;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00131</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00132</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%IF %SYSFUNC(FILEEXIST(&i_expected.)) %THEN %DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00133</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%_copyFile(i_file = &i_expected.                       /* input file */</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00134</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,o_file = &l_path./_text_exp.txt             /* output file */</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00135</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00136</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00137</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00138</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%IF %SYSFUNC(FILEEXIST(&i_actual.)) %THEN %DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00139</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%_copyFile(i_file = &i_actual.                         /* input file */</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00140</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,o_file = &l_path./_text_act.txt             /* output file */</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00141</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00142</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00143</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00144</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*** Check if i_expected exists ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00145</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%IF NOT %SYSFUNC(FILEEXIST(&i_expected.)) %THEN %DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00146</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_rc = -5;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00147</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_errMsg=Path &i_expected. does not exist!;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00148</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%GOTO Update;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00149</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00150</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00151</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*** Check if i_actual exists ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00152</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%IF NOT %SYSFUNC(FILEEXIST(&i_actual.)) %THEN %DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00153</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_rc = -7;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00154</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_errMsg=Path &i_actual. does not exist!;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00155</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%GOTO Update;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00156</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00157</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00158</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*** Check if i_expected_shell_rc is given ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00159</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%IF (%length(&i_expected_shell_rc.) <= 0) %THEN %DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00160</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_rc = -8;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00161</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%LET l_errMsg=Parameter i_expected_shell_rc is empty!;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00162</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%GOTO Update;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00163</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #FF8020;">%END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00164</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00165</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%*************************************************************;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00166</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%*** Start tests                                           ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00167</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%*************************************************************;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00168</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00169</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%_xcmdWithPath(i_cmd_path ="&i_script." "&i_expected." "&i_actual." "&l_path./_text_diff.txt"</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00170</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_cmd      ="&i_modifier." "&i_threshold."</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00171</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,r_rc       =l_rc</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00172</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00173</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00174</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%IF &l_rc. = &i_expected_shell_rc. %THEN %DO;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00175</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%LET l_result = 0;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00176</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%END;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00177</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00178</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%UPDATE:</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00179</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #8020FF;">%*** update result in test database ***;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00180</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%_ASSERTS(i_type     = assertText</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00181</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_expected = &i_expected_shell_rc.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00182</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_actual   = &l_rc.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00183</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_desc     = &i_desc. ^nCompared files:^n&i_expected.^nand^n&i_actual.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00184</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_result   = &l_result.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00185</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">,i_errmsg   = &l_errmsg.</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00186</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">);</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00187</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;"></span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00188</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #00BE00;">%MEND assertText;</span></td>
+</tr>
+<tr>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">00189</span></td>
+<td class="l m blindfixedfontdata"><span class="l" style=" color: #828282;">/** \endcond */</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<table class="systitleandfootercontainer" width="100%" cellspacing="1" cellpadding="1" rules="none" frame="void" summary="Page Layout">
+<tr>
+<td class="l systemfooter"><hr size="1"></td>
+</tr>
+<tr>
+<td class="r systemfooter2"><small>Erzeugt am     Montag,       1. Juli 2019,  8:03:57 von <a href="http://sourceforge.net/projects/sasunit/" class="link" title="SASUnit" onclick="window.open(this.href); return false;"> SASUnit <img src="SASUnit_Logo.png" title="SASUnit" alt="SASUnit" width=18px height=18px align="absmiddle" border="0"></a> Version 2.0.2 (681) </small></td>
+</tr>
+</table><br>
+</div>
+</body>
+</html>

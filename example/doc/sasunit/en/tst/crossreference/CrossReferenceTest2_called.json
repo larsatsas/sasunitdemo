@@ -1,0 +1,12 @@
+{ "name": "CrossReferenceTest2"
+, "children": [
+{ "name": "crossreference_test"
+},
+{ "name": "crossreferencetest1"
+, "children": [
+{ "name": "crossreference_test"
+}
+]
+}
+]
+}

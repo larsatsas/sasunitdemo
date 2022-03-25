@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS log for test case 022 in test scenario 004 (boxplot.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Errors&#160;&#160;: 1 
+==>
+<a href="#error001">1</a>
+<br>
+Warnings: 0 
+<br>
+</p>
+<pre>
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+233        data work.blood_pressure3;
+234           set testdata.blood_pressure;
+235           if med=0 then do;
+236              med=.;
+237              output;
+238           end;
+239        run;
+ 
+NOTE: There were 240 observations read from the data set TESTDATA.BLOOD_PRESSURE.
+NOTE: The data set WORK.BLOOD_PRESSURE3 has 120 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\boxplot.sas
+240        %boxplot(data=blood_pressure3, x=visit, y=sbp, group=med, report=&g_work/report22.pdf)
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   select distinct visit into :xvalues separated by '" "' from blood_pressure3;
+MPRINT(BOXPLOT):   select distinct visit into :xvalues2 separated by ' ' from blood_pressure3;
+MPRINT(BOXPLOT):   quit;
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   select count(distinct med) into :count from blood_pressure3;
+MPRINT(BOXPLOT):   select min(med) into :lower from blood_pressure3;
+MPRINT(BOXPLOT):   quit;
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+137                                                                                                                      The SAS System                                                                                           07:09 Thursday, March 24, 20
+ 
+<span style="color:#FF0000"><a name="error001">ERROR: boxplot: Missing values in group variable are not allowed</a></span>
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+241        %assertLogMsg(i_logMsg=ERROR: boxplot: Missing values in group variable are not allowed)
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

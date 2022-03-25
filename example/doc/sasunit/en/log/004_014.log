@@ -1,0 +1,105 @@
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+104                                                                                                                      The SAS System                                                                                           07:09 Thursday, March 24, 2022
+
+      
+
+MPRINT(INITTESTCASE):   options linesize=max;
+154        data work.blood_pressure;
+155           set testdata.blood_pressure;
+156           output;
+157           visit=.;
+158           output;
+159        run;
+
+NOTE: There were 240 observations read from the data set TESTDATA.BLOOD_PRESSURE.
+NOTE: The data set WORK.BLOOD_PRESSURE has 480 observations and 5 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\boxplot.sas
+160        %boxplot(data=blood_pressure, x=visit, y=sbp, group=med, report=&g_work/report14.pdf)
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   select distinct visit into :xvalues separated by '" "' from blood_pressure;
+MPRINT(BOXPLOT):   select distinct visit into :xvalues2 separated by ' ' from blood_pressure;
+MPRINT(BOXPLOT):   quit;
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   select count(distinct med) into :count from blood_pressure;
+MPRINT(BOXPLOT):   select min(med) into :lower from blood_pressure;
+MPRINT(BOXPLOT):   quit;
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(BOXPLOT):   DATA;
+MPRINT(BOXPLOT):   RUN;
+
+NOTE: The data set WORK.DATA21 has 1 observations and 0 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   create table WORK.DATA21 as select distinct visit from blood_pressure;
+NOTE: Table WORK.DATA21 created, with 7 rows and 1 columns.
+
+MPRINT(BOXPLOT):   quit;
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+105                                                                                                                      The SAS System                                                                                           07:09 Thursday, March 24, 2022
+
+      
+
+MPRINT(BOXPLOT):   data WORK.DATA21;
+MPRINT(BOXPLOT):   set WORK.DATA21;
+MPRINT(BOXPLOT):   visit = visit - lag(visit);
+MPRINT(BOXPLOT):   if _n_>1 then output;
+MPRINT(BOXPLOT):   run;
+
+NOTE: Missing values were generated as a result of performing an operation on missing values.
+      Each place is given by: (Number of times) at (Line):(Column).
+      2 at 160:125   
+NOTE: There were 7 observations read from the data set WORK.DATA21.
+NOTE: The data set WORK.DATA21 has 6 observations and 1 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+      
+
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   select mean(visit), min(visit) into :xdiff1, :xdiff2 from WORK.DATA21;
+MPRINT(BOXPLOT):   select min(visit), max(visit) into :xmin, :xmax from blood_pressure;
+MPRINT(BOXPLOT):   select count(*) into :misscount from blood_pressure where visit is missing;
+MPRINT(BOXPLOT):   quit;
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+ERROR: boxplot: Missing values in x variable are not allowed
+MPRINT(BOXPLOT):   proc sql noprint;
+MPRINT(BOXPLOT):   drop table WORK.DATA21;
+NOTE: Table WORK.DATA21 has been dropped.
+MPRINT(BOXPLOT):   quit;
+NOTE: PROCEDURE SQL used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+      
+
+MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\assertlogmsg.sas
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+161        %assertLogMsg(i_logMsg=ERROR: boxplot: Missing values in x variable are not allowed)
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ASSERTLOGMSG.ENDTESTCALL):   RUN;
+

@@ -1,0 +1,6 @@
+{ "name": "nobs"
+, "children": [
+{ "name": "nobs_test"
+}
+]
+}

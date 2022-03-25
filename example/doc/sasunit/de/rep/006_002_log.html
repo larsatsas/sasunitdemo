@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS-Log für Testfall 002 in Testszenario 006 (CrossReferenceTest2.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Fehler&#160;&#160;&#160;: 0 
+<br>
+Warnungen: 0 
+<br>
+</p>
+<pre>
+NOTE: PROZEDUR PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+35
+36         ods listing;
+37         %CrossReferenceTest2(i_obs=8
+MAUTOLOCDISPLAY(CROSSREFERENCETEST2):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\crossreferencetest2.sas kompiliert
+38                             ,i_title=My Second Test Case
+39                             );
+MPRINT(CROSSREFERENCETEST2):   data test2;
+MPRINT(CROSSREFERENCETEST2):   l_calc =
+MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\crossreferencetest4.sas kompiliert
+MPRINT(CROSSREFERENCETEST2.CROSSREFERENCETEST4):   9;
+MPRINT(CROSSREFERENCETEST2):  ;
+MPRINT(CROSSREFERENCETEST2):   run;
+ 
+NOTE: The data set WORK.TEST2 has 1 observations and 1 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(CROSSREFERENCETEST2):   proc print data=test2 (obs=8);
+MPRINT(CROSSREFERENCETEST2):   title My Second Test Case;
+MPRINT(CROSSREFERENCETEST2):   run;
+NOTE: There were 1 observations read from the data set WORK.TEST2.
+NOTE: The PROCEDURE PRINT printed page 3.
+NOTE: PROZEDUR PRINT used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(CROSSREFERENCETEST2):   title;
+i_nobs=8
+MAUTOLOCDISPLAY(CROSSREFERENCETEST3):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\crossreferencetest3.sas kompiliert
+MPRINT(CROSSREFERENCETEST2.CROSSREFERENCETEST3):   proc freq data=test;
+MPRINT(CROSSREFERENCETEST2.CROSSREFERENCETEST3):   table sex*age;
+MPRINT(CROSSREFERENCETEST2.CROSSREFERENCETEST3):   title "A Standard Frequency Output";
+MPRINT(CROSSREFERENCETEST2.CROSSREFERENCETEST3):   run;
+ 
+NOTE: There were 19 observations read from the data set WORK.TEST.
+16                                                                                                                       Das SAS System                                                                                               08:02 Monday, July 1, 20
+ 
+NOTE: The PROCEDURE FREQ printed page 4.
+NOTE: PROZEDUR FREQ used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(CROSSREFERENCETEST2.CROSSREFERENCETEST3):   Title;
+MPRINT(CROSSREFERENCETEST2.CROSSREFERENCETEST3):   data var;
+MPRINT(CROSSREFERENCETEST2.CROSSREFERENCETEST3):   var =
+MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\example\saspgm\crossreferencetest4.sas kompiliert
+MPRINT(CROSSREFERENCETEST2.CROSSREFERENCETEST3.CROSSREFERENCETEST4):   8;
+MPRINT(CROSSREFERENCETEST2.CROSSREFERENCETEST3):  ;
+MPRINT(CROSSREFERENCETEST2.CROSSREFERENCETEST3):   run;
+ 
+NOTE: The data set WORK.VAR has 1 observations and 1 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(CROSSREFERENCETEST2):  ;
+MAUTOLOCDISPLAY(ENDTESTCALL):  Dieses Makro wurde von der Autocall-Datei C:\jenkins\workspace\SASUnit Build Release ZIP-File under windows\saspgm\sasunit\endtestcall.sas kompiliert
+40
+41         %endTestcall()
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

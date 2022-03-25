@@ -1,0 +1,62 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="de">
+<meta name="GENERATOR" content="SAS &sysver">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>SAS log for test case 003 in test scenario 006 (CrossReferenceTest3.sas)</title>
+</head>
+<body>
+<p style="background-color:#EAEAEA; font-family:Fixedsys,Courier,monospace">
+Errors&#160;&#160;: 0 
+<br>
+Warnings: 0 
+<br>
+</p>
+<pre>
+NOTE: PROCEDURE PRINTTO used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MPRINT(INITTESTCASE):   options linesize=max;
+47
+48         ods listing;
+49         %CrossReferenceTest3 (5);
+MAUTOLOCDISPLAY(CROSSREFERENCETEST3):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\crossreferencetest3.sas
+MPRINT(CROSSREFERENCETEST3):   proc freq data=test;
+MPRINT(CROSSREFERENCETEST3):   table sex*age;
+MPRINT(CROSSREFERENCETEST3):   title "A Standard Frequency Output";
+MPRINT(CROSSREFERENCETEST3):   run;
+ 
+NOTE: There were 19 observations read from the data set WORK.TEST.
+NOTE: The PROCEDURE FREQ printed page 5.
+NOTE: PROCEDURE FREQ used (Total process time):
+      real time           0.01 seconds
+20                                                                                                                       The SAS System                                                                                           07:09 Thursday, March 24, 20
+ 
+      cpu time            0.00 seconds
+ 
+ 
+MPRINT(CROSSREFERENCETEST3):   Title;
+MPRINT(CROSSREFERENCETEST3):   data var;
+MPRINT(CROSSREFERENCETEST3):   var =
+MAUTOLOCDISPLAY(CROSSREFERENCETEST4):  This macro was compiled from the autocall file C:\sasunit\example\saspgm\crossreferencetest4.sas
+MPRINT(CROSSREFERENCETEST3.CROSSREFERENCETEST4):   8;
+MPRINT(CROSSREFERENCETEST3):  ;
+MPRINT(CROSSREFERENCETEST3):   run;
+ 
+NOTE: The data set WORK.VAR has 1 observations and 1 variables.
+NOTE: DATA statement used (Total process time):
+      real time           0.00 seconds
+      cpu time            0.01 seconds
+ 
+ 
+MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\sasunit\saspgm\sasunit\endtestcall.sas
+50
+51         %endTestcall()
+MPRINT(ENDTESTCALL):   PROC PRINTTO LOG=LOG PRINT=PRINT ;
+MPRINT(ENDTESTCALL):   RUN;
+ 
+</pre>
+</body>
+</html>

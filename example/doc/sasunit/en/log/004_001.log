@@ -1,7 +1,7 @@
 NOTE: PROCEDURE PRINTTO used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
-10                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+10                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
       
 
@@ -43,7 +43,7 @@ NOTE: Table WORK.DATA1 created, with 6 rows and 1 columns.
 
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
       
 
@@ -57,11 +57,11 @@ NOTE: Missing values were generated as a result of performing an operation on mi
       Each place is given by: (Number of times) at (Line):(Column).
       1 at 30:125   
 NOTE: There were 6 observations read from the data set WORK.DATA1.
-11                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+11                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 NOTE: The data set WORK.DATA1 has 5 observations and 1 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.01 seconds
       
 
@@ -71,7 +71,7 @@ MPRINT(BOXPLOT):   select min(visit), max(visit) into :xmin, :xmax from testdata
 MPRINT(BOXPLOT):   select count(*) into :misscount from testdata.blood_pressure where visit is missing;
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
       
 
@@ -90,7 +90,7 @@ NOTE: There were 240 observations read from the data set TESTDATA.BLOOD_PRESSURE
 NOTE: The data set WORK.DATA2 has 240 observations and 3 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(BOXPLOT):   GOPTIONS FTEXT="Helvetica" HTEXT=12pt hsize=16cm vsize=16cm;
@@ -99,8 +99,8 @@ MPRINT(BOXPLOT):   SYMBOL2 WIDTH = 3 BWIDTH = 3 COLOR = black LINE = 1 VALUE = n
 MPRINT(BOXPLOT):   AXIS1 LABEL=(ANGLE=90) MINOR=none;
 MPRINT(BOXPLOT):   AXIS2 ORDER=(-1 0 1 2 3 4 5 6) VALUE=(" " "0" "1" "2" "3" "4" "5" " ") MINOR=none;
 MPRINT(BOXPLOT):   LEGEND1 FRAME;
-MPRINT(BOXPLOT):   ODS PDF FILE="D:\opt\sasinside\SASWORK\_TD5912_SAS-AAP_/report1.pdf";
-NOTE: Writing ODS PDF output to DISK destination "D:\opt\sasinside\SASWORK\_TD5912_SAS-AAP_\report1.pdf", printer "PDF".
+MPRINT(BOXPLOT):   ODS PDF FILE="D:\opt\sasinside\SASWORK\_TD29304_SAS-AAP_/report1.pdf";
+NOTE: Writing ODS PDF output to DISK destination "D:\opt\sasinside\SASWORK\_TD29304_SAS-AAP_\report1.pdf", printer "PDF".
 MPRINT(BOXPLOT):   ODS LISTING CLOSE;
 MPRINT(BOXPLOT):   PROC GPLOT DATA=WORK.DATA2;
 MPRINT(BOXPLOT):   PLOT sbp * visit = med / VAXIS=Axis1 HAXIS=Axis2 LEGEND=Legend1 NOFRAME;
@@ -110,14 +110,14 @@ MPRINT(BOXPLOT):   QUIT;
 
 NOTE: There were 240 observations read from the data set WORK.DATA2.
 NOTE: PROCEDURE GPLOT used (Total process time):
-      real time           1.06 seconds
-      cpu time            0.09 seconds
+      real time           0.05 seconds
+      cpu time            0.04 seconds
       
-12                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+12                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 
 MPRINT(BOXPLOT):   ODS PDF CLOSE;
-NOTE: ODS PDF printed 1 page to D:\opt\sasinside\SASWORK\_TD5912_SAS-AAP_\report1.pdf.
+NOTE: ODS PDF printed 1 page to D:\opt\sasinside\SASWORK\_TD29304_SAS-AAP_\report1.pdf.
 MPRINT(BOXPLOT):   ODS LISTING;
 MPRINT(BOXPLOT):   proc sql noprint;
 MPRINT(BOXPLOT):   drop table WORK.DATA2;
@@ -127,7 +127,7 @@ NOTE: Table WORK.DATA1 has been dropped.
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 31         %assertReport(i_actual=&g_work/report1.pdf, i_expected=,

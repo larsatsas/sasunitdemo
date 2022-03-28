@@ -26,7 +26,7 @@ NOTE: Deleting TEST1.CLASS2 (memtype=DATA).
  
 NOTE: PROCEDURE DATASETS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 57         proc datasets lib=test2 nolist kill;
@@ -48,10 +48,10 @@ NOTE: There were 360 observations read from the data set SASHELP.PRDSALE.
       WHERE (region='EAST') and (year=1993);
 NOTE: The data set TEST2.PRDSALE1 has 360 observations and 10 variables.
 NOTE: PROCEDURE SORT used (Total process time):
-      real time           0.01 seconds
-      cpu time            0.00 seconds
+      real time           0.00 seconds
+      cpu time            0.01 seconds
  
-23                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
+23                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 20
  
  
 63         proc sort data=sashelp.prdsale out=test2.prdsale2 (label="Dataset for region=EAST, year=1994 (360 observations)");
@@ -64,7 +64,7 @@ NOTE: There were 360 observations read from the data set SASHELP.PRDSALE.
 NOTE: The data set TEST2.PRDSALE2 has 360 observations and 10 variables.
 NOTE: PROCEDURE SORT used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 67         proc sort data=sashelp.prdsale out=test2.prdsale3 (label="Dataset for region=WEST, year=1993 (360 observations)");
@@ -90,7 +90,7 @@ NOTE: There were 360 observations read from the data set SASHELP.PRDSALE.
 NOTE: The data set TEST2.PRDSALE4 has 360 observations and 10 variables.
 NOTE: PROCEDURE SORT used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 MAUTOLOCDISPLAY(GENERATE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\generate.sas
@@ -101,18 +101,18 @@ MPRINT(GENERATE):   run;
 NOTE: The data set WORK.DATA3 has 1 observations and 0 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(GENERATE):   data;
 MPRINT(GENERATE):   run;
  
-24                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
+24                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 20
  
 NOTE: The data set WORK.DATA4 has 1 observations and 0 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(GENERATE):   proc sort data=sashelp.prdsale out=WORK.DATA3;
@@ -135,7 +135,7 @@ NOTE: There were 1440 observations read from the data set WORK.DATA3.
 NOTE: The data set WORK.DATA4 has 4 observations and 4 variables.
 NOTE: PROCEDURE MEANS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(GENERATE):   data _null_;
@@ -163,10 +163,10 @@ MPRINT(GENERATE):   run;
  
 NOTE: There were 4 observations read from the data set WORK.DATA4.
 NOTE: DATA statement used (Total process time):
-25                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 20
+25                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 20
  
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MPRINT(GENERATE):   data test1.prdsale1 (label="Dataset for region=EAST, year=1993 (360 observations)") TEST1.PRDSALE2 (label="Dataset for region=EAST, year=1994 (360 observations)") TEST1.PRDSALE3 (label="Dataset for region=WEST, year=1993 (360
@@ -189,8 +189,8 @@ NOTE: The data set TEST1.PRDSALE2 has 360 observations and 10 variables.
 NOTE: The data set TEST1.PRDSALE3 has 360 observations and 10 variables.
 NOTE: The data set TEST1.PRDSALE4 has 360 observations and 10 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.04 seconds
-      cpu time            0.00 seconds
+      real time           0.01 seconds
+      cpu time            0.01 seconds
  
  
 MPRINT(GENERATE):   proc datasets lib=work nolist;
@@ -201,7 +201,7 @@ NOTE: Deleting WORK.DATA3 (memtype=DATA).
 NOTE: Deleting WORK.DATA4 (memtype=DATA).
 NOTE: PROCEDURE DATASETS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
  
  
 MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas

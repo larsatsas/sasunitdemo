@@ -1,4 +1,4 @@
-1                                           The SAS System                09:39 Friday, March 25, 2022
+1                                           The SAS System                10:42 Monday, March 28, 2022
 
 NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
 NOTE: SAS (r) Proprietary Software 9.4 (TS1M7) 
@@ -21,7 +21,7 @@ NOTE: Additional host information:
 
 NOTE: SAS initialization used:
       real time           0.37 seconds
-      cpu time            0.38 seconds
+      cpu time            0.26 seconds
       
 NOTE: The macro _SCENARIO completed compilation without errors.
       58 instructions 1780 bytes.
@@ -54,7 +54,7 @@ NOTE: Libref TARGET was successfully assigned as follows:
 15                          Primary key ist ContractNumber and CustomerNumber.
 16                     - All foreign key relations are checked
 17                     - A combined dataset is created
-2                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 2022
+2                                                                                                                        The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 18                        - Combined datasets should containg 8 rows.\n Primary key is ContractNumber and CustomerNumber.
 19                        - Checking if there are customers without contracts and vice versa.
@@ -93,7 +93,7 @@ NOTE: PROCEDURE SQL used (Total process time):
 MPRINT(INITSCENARIO):   filename _CUR_SCN clear;
 NOTE: Fileref _CUR_SCN has been deassigned.
 MPRINT(INITSCENARIO):   proc sql noprint;
-MPRINT(INITSCENARIO):   update target.scn set scn_start =1963820369.26 ,scn_changed ="01JUL19:02:01:24"dt ,scn_desc ="Tests for building a database" where scn_id = 007;
+MPRINT(INITSCENARIO):   update target.scn set scn_start =1964083349.042 ,scn_changed ="01JUL19:02:01:24"dt ,scn_desc ="Tests for building a database" where scn_id = 007;
 NOTE: 1 row was updated in TARGET.SCN.
 
 MPRINT(INITSCENARIO):   delete from target.cas where cas_scnid=007;
@@ -105,12 +105,12 @@ NOTE: No rows were deleted from TARGET.TST.
 MPRINT(INITSCENARIO):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.02 seconds
-      cpu time            0.03 seconds
+      cpu time            0.00 seconds
       
 
 NOTE: The macro _LOADENVIRONMENT completed compilation without errors.
       249 instructions 8644 bytes.
-3                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 2022
+3                                                                                                                        The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 NOTE: The macro _NOBS completed compilation without errors.
       32 instructions 640 bytes.
@@ -166,11 +166,11 @@ MPRINT(INITSCENARIO._LOADENVIRONMENT):   call symput ('g_language' , trim(tsu_la
 MPRINT(INITSCENARIO._LOADENVIRONMENT):   RUN;
 
 NOTE: There were 1 observations read from the data set TARGET.TSU.
-4                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 2022
+4                                                                                                                        The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 NOTE: The macro _ABSPATH completed compilation without errors.
@@ -197,9 +197,9 @@ NOTE: The infile _DETECT is:
       Catalog Name=WORK.DETECT.NOTE.LOG,
       Catalog Page Size=4096,
       Number of Catalog Pages=4,
-      Created=Fri, Mar 25, 2022 09:39:29 AM,
-      Last Modified=Fri, Mar 25, 2022 09:39:29 AM,
-      Filename=D:\opt\sasinside\SASWORK\_TD24868_SAS-AAP_\detect.sas7bcat,
+      Created=Mon, Mar 28, 2022 10:42:29 AM,
+      Last Modified=Mon, Mar 28, 2022 10:42:29 AM,
+      Filename=D:\opt\sasinside\SASWORK\_TD29548_SAS-AAP_\detect.sas7bcat,
       Release Created=9.0401M7,
       Host Created=X64_DSRV16,
       Owner Name=BUILTIN\Administrators,
@@ -214,7 +214,7 @@ NOTE: DATA statement used (Total process time):
       cpu time            0.00 seconds
       
 
-5                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 2022
+5                                                                                                                        The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(INITSCENARIO._LOADENVIRONMENT._DETECTSYMBOLS):   filename _detect;
 NOTE: Fileref _DETECT has been deassigned.
@@ -255,7 +255,7 @@ MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   options noxwait xsync xmin;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   options XWAIT XSYNC NOXMIN;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   data _null_;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   length g_dateformat $40 dateformat $80;
-MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   infile "D:\opt\sasinside\SASWORK\_TD24868_SAS-AAP_\retrive_dateformat.txt";
+MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   infile "D:\opt\sasinside\SASWORK\_TD29548_SAS-AAP_\retrive_dateformat.txt";
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   input;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   if index (upcase (_INFILE_), "REG_SZ") then do;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   dateformat = lowcase (scan (_INFILE_,3," "));
@@ -270,7 +270,7 @@ MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   index_m=index (dateformat,"m");
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   index_y=index (dateformat,"y");
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   if (index_y < index_m) then do;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   if (index_d < index_m) then do;
-6                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 2022
+6                                                                                                                        The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   g_dateformat = "yyddmm10.";
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   end;
@@ -291,13 +291,13 @@ MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   call symputx ("G_DATEFORMAT", t
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   end;
 MPRINT(INITSCENARIO._LOADENVIRONMENT._OSCMDS):   run;
 
-NOTE: The infile "D:\opt\sasinside\SASWORK\_TD24868_SAS-AAP_\retrive_dateformat.txt" is:
-      Filename=D:\opt\sasinside\SASWORK\_TD24868_SAS-AAP_\retrive_dateformat.txt,
+NOTE: The infile "D:\opt\sasinside\SASWORK\_TD29548_SAS-AAP_\retrive_dateformat.txt" is:
+      Filename=D:\opt\sasinside\SASWORK\_TD29548_SAS-AAP_\retrive_dateformat.txt,
       RECFM=V,LRECL=32767,File Size (bytes)=89,
-      Last Modified=25Mar2022:09:39:29,
-      Create Time=25Mar2022:09:39:29
+      Last Modified=28Mar2022:10:42:29,
+      Create Time=28Mar2022:10:42:29
 
-NOTE: 4 records were read from the infile "D:\opt\sasinside\SASWORK\_TD24868_SAS-AAP_\retrive_dateformat.txt".
+NOTE: 4 records were read from the infile "D:\opt\sasinside\SASWORK\_TD29548_SAS-AAP_\retrive_dateformat.txt".
       The minimum record length was 0.
       The maximum record length was 45.
 NOTE: DATA statement used (Total process time):
@@ -326,7 +326,7 @@ GLOBAL G_INSCENARIO 0
 GLOBAL G_INTESTCALL 0
 GLOBAL G_INTESTCASE 0
 GLOBAL G_LANGUAGE en
-7                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 2022
+7                                                                                                                        The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 GLOBAL G_LOG C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log
 GLOBAL G_LOGFILE 
@@ -382,7 +382,7 @@ GLOBAL G_SASUNIT_OS C:Userssasworksasunitdemosaspgmsasunitwindows
 GLOBAL G_SASUSER 
 GLOBAL G_SCNID 007
 GLOBAL G_SPLASH -nosplash
-8                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 2022
+8                                                                                                                        The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 GLOBAL G_TARGET C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en
 GLOBAL G_TESTCOVERAGE 1
@@ -390,7 +390,7 @@ GLOBAL G_TESTDATA C:\Users\sas\work\sasunitdemo\example\dat
 GLOBAL G_TESTOUT C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst
 GLOBAL G_VERBOSE 0
 GLOBAL G_WARNING WARNING
-GLOBAL G_WORK D:\opt\sasinside\SASWORK\_TD24868_SAS-AAP_
+GLOBAL G_WORK D:\opt\sasinside\SASWORK\_TD29548_SAS-AAP_
 GLOBAL G_XCMD XCMD
 GLOBAL SYS_SQL_IP_ALL -1
 GLOBAL SYS_SQL_IP_STMT 
@@ -422,7 +422,7 @@ NOTE: 720 records were read from the infile "C:/Users/sas/work/sasunitdemo/saspg
 NOTE: The data set WORK.NLS has 696 observations and 4 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(INITSCENARIO._NLS):   data _null_;
@@ -438,7 +438,7 @@ NOTE: DATA statement used (Total process time):
       
 NOTE: There were 348 observations read from the data set WORK.NLS.
       WHERE language='EN';
-9                                                                                                                        The SAS System                                                                                             09:39 Friday, March 25, 2022
+9                                                                                                                        The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 
 NOTE: CALL EXECUTE routine executed successfully, but no SAS statements were generated.
@@ -449,7 +449,7 @@ NOTE: Deleting WORK.NLS (memtype=DATA).
 MPRINT(INITSCENARIO._NLS):   quit;
 NOTE: PROCEDURE DATASETS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(INITSCENARIO):  ;
@@ -486,7 +486,7 @@ MPRINT(INITTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE c
 MPRINT(INITTESTCASE):   SELECT exa_id INTO :l_exaid FROM target.exa WHERE lowcase (exa_pgm) = "basedatasets.sas" and exa_auton=2;
 MPRINT(INITTESTCASE):   INSERT INTO target.cas VALUES ( 007 ,1 ,149 ,"basedatasets.sas" ,"Creation of base datasets" ,
 MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_abspath.sas
-MPRINT(INITTESTCASE):  "" ,1963820369.509 ,. ,. );
+MPRINT(INITTESTCASE):  "" ,1964083349.287 ,. ,. );
 NOTE: 1 row was inserted into TARGET.CAS.
 
 MPRINT(INITTESTCASE):   QUIT;
@@ -494,7 +494,7 @@ NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
       cpu time            0.01 seconds
       
-10                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+10                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 
 ========================== test case 1 ======================================================
@@ -514,7 +514,7 @@ NOTE: PROCEDURE SQL used (Total process time):
       
 
 MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
-MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963820369.539 WHERE cas_scnid = 007 AND cas_id = 1;
+MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1964083349.315 WHERE cas_scnid = 007 AND cas_id = 1;
 NOTE: 1 row was updated in TARGET.CAS.
 
 MPRINT(ENDTESTCALL):   QUIT;
@@ -533,8 +533,8 @@ MPRINT(ENDTESTCALL):   RUN;
 NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/007_001.lst" is:
       Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\tst\007_001.lst,
       RECFM=V,LRECL=32767,File Size (bytes)=0,
-      Last Modified=25Mar2022:09:39:29,
-      Create Time=25Mar2022:09:39:29
+      Last Modified=28Mar2022:10:42:29,
+      Create Time=28Mar2022:10:42:29
 
 NOTE: 0 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/007_001.lst".
 NOTE: DATA statement used (Total process time):
@@ -542,7 +542,7 @@ NOTE: DATA statement used (Total process time):
       cpu time            0.00 seconds
       
 
-12                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+12                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 NOTE: The macro _DELFILE completed compilation without errors.
       26 instructions 552 bytes.
@@ -577,7 +577,7 @@ NOTE: Numeric values have been converted to character values at the places given
       44:112   44:152   
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(ASSERTTABLEEXISTS):  ;
@@ -587,7 +587,7 @@ MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Us
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=007;
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 007 AND tst_casid = 1 ;
-MPRINT(ASSERTTABLEEXISTS._ASSERTS):   INSERT INTO target.tst VALUES ( 007 , 1 ,1 ,"assertTableExists" ,"Table was successfuly created? " ,"DATA:work.Customer:0 " ,"1#      1963820369.518#      1963820369.518 " ,0 ,"assertTableExists: assert passed." );
+MPRINT(ASSERTTABLEEXISTS._ASSERTS):   INSERT INTO target.tst VALUES ( 007 , 1 ,1 ,"assertTableExists" ,"Table was successfuly created? " ,"DATA:work.Customer:0 " ,"1#      1964083349.296#      1964083349.296 " ,0 ,"assertTableExists: assert passed." );
 NOTE: 1 row was inserted into TARGET.TST.
 
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   QUIT;
@@ -598,7 +598,7 @@ NOTE: PROCEDURE SQL used (Total process time):
 
 ========================== Check        1.1 (assertTableExists) =====================================
 45         %assertRecordCount (i_libref    =work
-13                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+13                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 NOTE: The macro ASSERTRECORDCOUNT completed compilation without errors.
       141 instructions 4004 bytes.
@@ -639,7 +639,7 @@ MPRINT(ASSERTRECORDCOUNT):   select count(*) into :l_actual from work.Customer w
 MPRINT(ASSERTRECORDCOUNT):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTRECORDCOUNT):   *** update result in test database ***;
@@ -654,7 +654,7 @@ MPRINT(ASSERTRECORDCOUNT._ASSERTS):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
-14                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+14                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
       
 
@@ -702,7 +702,7 @@ MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   SELECT max(cas_id) INTO :l_casid_
 MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   PROC SQL NOPRINT;
@@ -710,10 +710,10 @@ MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   *** determine number of the curre
 MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   SELECT max(tst_id) INTO :l_tstid_gti FROM target.tst WHERE tst_scnid = 007 AND tst_casid= 1;
 MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
-15                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+15                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(ASSERTPRIMARYKEY):  ;
@@ -766,7 +766,7 @@ MPRINT(ASSERTPRIMARYKEY):   PROC SQL NOPRINT;
 MPRINT(ASSERTPRIMARYKEY):   select count (*) into :l_anzahlObs from work._notUnique;
 MPRINT(ASSERTPRIMARYKEY):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
-16                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+16                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
       real time           0.00 seconds
       cpu time            0.00 seconds
@@ -806,7 +806,7 @@ NOTE: 1 row was inserted into TARGET.TST.
 MPRINT(ASSERTPRIMARYKEY._ASSERTS):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 ========================== Check        1.3 (assertPrimaryKey) =====================================
@@ -819,10 +819,10 @@ NOTE: Deleting WORK._NOTUNIQUE (memtype=DATA).
 MPRINT(ASSERTPRIMARYKEY):   quit;
 NOTE: PROCEDURE DATASETS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
-17                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+17                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MAUTOLOCDISPLAY(ASSERTTABLEEXISTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\asserttableexists.sas
 55         
@@ -857,13 +857,13 @@ MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Us
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=007;
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 007 AND tst_casid = 1 ;
-MPRINT(ASSERTTABLEEXISTS._ASSERTS):   INSERT INTO target.tst VALUES ( 007 , 1 ,4 ,"assertTableExists" ,"Table was successfuly created? " ,"DATA:work.Contracts:0 " ,"1#      1963820369.524#      1963820369.524 " ,0 ,"assertTableExists: assert passed." );
+MPRINT(ASSERTTABLEEXISTS._ASSERTS):   INSERT INTO target.tst VALUES ( 007 , 1 ,4 ,"assertTableExists" ,"Table was successfuly created? " ,"DATA:work.Contracts:0 " ,"1#      1964083349.302#      1964083349.302 " ,0 ,"assertTableExists: assert passed." );
 NOTE: 1 row was inserted into TARGET.TST.
 
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 ========================== Check        1.4 (assertTableExists) =====================================
@@ -878,7 +878,7 @@ NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTes
 MPRINT(ASSERTRECORDCOUNT):  ;
 MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checkcallingsequence.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
-18                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+18                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTRECORDCOUNT):   DATA _NULL_;
 MPRINT(ASSERTRECORDCOUNT):   IF (INPUT(8, 32.) =.) then call symput('l_actual',"-3");
@@ -890,7 +890,7 @@ NOTE: Numeric values have been converted to character values at the places given
       64:1   
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTRECORDCOUNT):   DATA _NULL_;
@@ -934,7 +934,7 @@ NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTes
 MPRINT(ASSERTPRIMARYKEY):  ;
 MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checkcallingsequence.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
-19                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+19                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MAUTOLOCDISPLAY(TRIM):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\trim.sas
 MPRINT(ASSERTPRIMARYKEY):   PROC CONTENTS data=work.Contracts out=work._Variables NOPRINT;
@@ -943,7 +943,7 @@ MPRINT(ASSERTPRIMARYKEY):   RUN;
 NOTE: The data set WORK._VARIABLES has 2 observations and 41 variables.
 NOTE: PROCEDURE CONTENTS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTPRIMARYKEY):   QUIT;
@@ -951,7 +951,7 @@ MPRINT(ASSERTPRIMARYKEY):   PROC SQL NOPRINT;
 MPRINT(ASSERTPRIMARYKEY):   select count (*) into :l_anzahlObs from work._Variables where upcase(name) in ("CONTRACTNUMBER");
 MPRINT(ASSERTPRIMARYKEY):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.00 seconds
+      real time           0.04 seconds
       cpu time            0.00 seconds
       
 
@@ -971,7 +971,7 @@ MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   SELECT max(tst_id) INTO :l_tstid_
 MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(ASSERTPRIMARYKEY):  ;
@@ -990,7 +990,7 @@ MPRINT(ASSERTPRIMARYKEY):   libname _apk "C:/Users/sas/work/sasunitdemo/example/
 NOTE: Libref _APK was successfully assigned as follows: 
       Engine:        V9 
       Physical Name: C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\tst\_007_001_006_assertprimarykey
-20                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+20                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTPRIMARYKEY):   proc sort data=work.Contracts out=work._sorted;
 MPRINT(ASSERTPRIMARYKEY):   by ContractNumber;
@@ -1012,8 +1012,8 @@ MPRINT(ASSERTPRIMARYKEY):   run;
 NOTE: There were 8 observations read from the data set WORK._SORTED.
 NOTE: The data set WORK._NOTUNIQUE has 0 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.01 seconds
+      real time           0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(ASSERTPRIMARYKEY):   PROC SQL NOPRINT;
@@ -1043,10 +1043,10 @@ NOTE: There were 0 observations read from the data set WORK._NOTUNIQUE.
 NOTE: The data set _APK._NOTUNIQUE has 0 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
-21                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+21                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTPRIMARYKEY):   libname _apk clear;
 NOTE: Libref _APK has been deassigned.
@@ -1060,7 +1060,7 @@ NOTE: 1 row was inserted into TARGET.TST.
 MPRINT(ASSERTPRIMARYKEY._ASSERTS):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 ========================== Check        1.6 (assertPrimaryKey) =====================================
@@ -1102,14 +1102,14 @@ MPRINT(ASSERTRECORDEXISTS._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ASSERTRECORDEXISTS._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=007;
 MPRINT(ASSERTRECORDEXISTS._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 007 AND tst_casid = 1 ;
 MPRINT(ASSERTRECORDEXISTS._ASSERTS):   INSERT INTO target.tst VALUES ( 007 , 1 ,7 ,"assertRecordExists" ,"Do we have at least one record per contract type 1? " ,"> 0 " ,"2 " ,0 ,"assertRecordExists: assert passed." );
-22                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+22                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 NOTE: 1 row was inserted into TARGET.TST.
 
 MPRINT(ASSERTRECORDEXISTS._ASSERTS):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 ========================== Check        1.7 (assertRecordExists) =====================================
@@ -1129,7 +1129,7 @@ MPRINT(ASSERTRECORDEXISTS):   SELECT COUNT(*) FORMAT=best12. INTO :l_countMatche
 MPRINT(ASSERTRECORDEXISTS):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_asserts.sas
@@ -1158,7 +1158,7 @@ MPRINT(ASSERTRECORDEXISTS):  ;
 MAUTOLOCDISPLAY(_CHECKCALLINGSEQUENCE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checkcallingsequence.sas
 MAUTOLOCDISPLAY(LOWCASE):  This macro was compiled from the autocall file D:\opt\sasinside\SASHome\SASFoundation\9.4\core\sasmacro\lowcase.sas
 MPRINT(ASSERTRECORDEXISTS):   PROC SQL NOPRINT;
-23                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+23                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTRECORDEXISTS):   SELECT COUNT(*) FORMAT=best12. INTO :l_countMatches FROM work.Contracts(WHERE=(ContractType=3)) ;
 MPRINT(ASSERTRECORDEXISTS):   QUIT;
@@ -1214,10 +1214,10 @@ MPRINT(ASSERTTABLEEXISTS):  ;
 MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_asserts.sas
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=007;
-24                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+24                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 007 AND tst_casid = 1 ;
-MPRINT(ASSERTTABLEEXISTS._ASSERTS):   INSERT INTO target.tst VALUES ( 007 , 1 ,10 ,"assertTableExists" ,"Table was successfuly created? " ,"DATA:work.CustomerContracts:0 " ,"1#      1963820369.529#      1963820369.529 " ,0 ,"assertTableExists: assert 
+MPRINT(ASSERTTABLEEXISTS._ASSERTS):   INSERT INTO target.tst VALUES ( 007 , 1 ,10 ,"assertTableExists" ,"Table was successfuly created? " ,"DATA:work.CustomerContracts:0 " ,"1#      1964083349.307#      1964083349.307 " ,0 ,"assertTableExists: assert 
 passed." );
 NOTE: 1 row was inserted into TARGET.TST.
 
@@ -1258,7 +1258,7 @@ MPRINT(ASSERTRECORDCOUNT):   RUN;
 
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTRECORDCOUNT):   PROC SQL noprint;
@@ -1266,11 +1266,11 @@ MPRINT(ASSERTRECORDCOUNT):   select count(*) into :l_actual from work.CustomerCo
 MPRINT(ASSERTRECORDCOUNT):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(ASSERTRECORDCOUNT):   *** update result in test database ***;
-25                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+25                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_asserts.sas
 MPRINT(ASSERTRECORDCOUNT._ASSERTS):   PROC SQL NOPRINT;
@@ -1326,7 +1326,7 @@ NOTE: PROCEDURE SQL used (Total process time):
 
 MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   PROC SQL NOPRINT;
 MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   *** determine number of the current test case ****;
-26                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+26                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   SELECT max(tst_id) INTO :l_tstid_gti FROM target.tst WHERE tst_scnid = 007 AND tst_casid= 1;
 MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   QUIT;
@@ -1372,7 +1372,7 @@ NOTE: There were 8 observations read from the data set WORK._SORTED.
 NOTE: The data set WORK._NOTUNIQUE has 0 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTPRIMARYKEY):   PROC SQL NOPRINT;
@@ -1382,7 +1382,7 @@ NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
       
-27                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+27                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 
 MPRINT(ASSERTPRIMARYKEY):   data _apk._sorted;
@@ -1438,7 +1438,7 @@ NOTE: PROCEDURE DATASETS used (Total process time):
 94         
 95         %assertForeignKey (i_mstrLib  =work
 NOTE: The macro ASSERTFOREIGNKEY completed compilation without errors.
-28                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+28                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
       690 instructions 18980 bytes.
 MAUTOLOCDISPLAY(ASSERTFOREIGNKEY):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertforeignkey.sas
@@ -1491,10 +1491,10 @@ MPRINT(ASSERTFOREIGNKEY):   SELECT count(*) into :l_cnt1 FROM work.Contracts ;
 MPRINT(ASSERTFOREIGNKEY):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
-29                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+29                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTFOREIGNKEY):   PROC SQL noprint;
 MPRINT(ASSERTFOREIGNKEY):   SELECT count(*) into: l_cnt2 FROM work.distKeysLookUp ;
@@ -1547,10 +1547,10 @@ MPRINT(ASSERTFOREIGNKEY._GETSCENARIOTESTID):   SELECT max(tst_id) INTO :l_tstid_
 MPRINT(ASSERTFOREIGNKEY._GETSCENARIOTESTID):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
-30                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+30                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTFOREIGNKEY):  ;
 MAUTOLOCDISPLAY(_CREATETESTSUBFOLDER):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_createtestsubfolder.sas
@@ -1588,7 +1588,7 @@ NOTE: Copying WORK.KEYNOTFNDLOOKUP to TAR_AFK.KEYNOTFNDLOOKUP (memtype=DATA).
 NOTE: There were 0 observations read from the data set WORK.KEYNOTFNDLOOKUP.
 NOTE: The data set TAR_AFK.KEYNOTFNDLOOKUP has 0 observations and 1 variables.
 NOTE: PROCEDURE COPY used (Total process time):
-      real time           0.03 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
       
 
@@ -1606,7 +1606,7 @@ NOTE: DATA statement used (Total process time):
 
 MPRINT(ASSERTFOREIGNKEY):   proc copy in = work out = tar_afk;
 MPRINT(ASSERTFOREIGNKEY):   select keyNotFndMstr;
-31                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+31                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTFOREIGNKEY):   run;
 
@@ -1614,7 +1614,7 @@ NOTE: Copying WORK.KEYNOTFNDMSTR to TAR_AFK.KEYNOTFNDMSTR (memtype=DATA).
 NOTE: There were 0 observations read from the data set WORK.KEYNOTFNDMSTR.
 NOTE: The data set TAR_AFK.KEYNOTFNDMSTR has 0 observations and 1 variables.
 NOTE: PROCEDURE COPY used (Total process time):
-      real time           0.01 seconds
+      real time           0.00 seconds
       cpu time            0.00 seconds
       
 
@@ -1662,7 +1662,7 @@ MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:
 109                          ,i_lookupKey=CustomerNumber
 110                          ,i_desc     =Check CustomerNumber
 111                          );
-32                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+32                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
 MPRINT(ASSERTFOREIGNKEY):  ;
@@ -1686,8 +1686,8 @@ NOTE: Table WORK.MASTER_MISSING created, with 0 rows and 2 columns.
 MPRINT(ASSERTFOREIGNKEY):   ;
 MPRINT(ASSERTFOREIGNKEY):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
+      real time           0.01 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTFOREIGNKEY):   PROC SQL noprint;
@@ -1697,7 +1697,7 @@ NOTE: Table WORK.DISTKEYSLOOKUP created, with 5 rows and 1 columns.
 MPRINT(ASSERTFOREIGNKEY):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTFOREIGNKEY):   PROC SQL noprint;
@@ -1718,7 +1718,7 @@ NOTE: PROCEDURE SQL used (Total process time):
 
 MPRINT(ASSERTFOREIGNKEY):   proc sort data = work.mstrCopy out =work.mstrSorted;
 MPRINT(ASSERTFOREIGNKEY):   by CustomerNumber;
-33                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+33                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTFOREIGNKEY):   run;
 
@@ -1726,7 +1726,7 @@ NOTE: There were 8 observations read from the data set WORK.MSTRCOPY.
 NOTE: The data set WORK.MSTRSORTED has 8 observations and 2 variables.
 NOTE: PROCEDURE SORT used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(ASSERTFOREIGNKEY):   data work.keyNotFndMstr work.keyNotFndLookUp;
@@ -1742,7 +1742,7 @@ NOTE: The data set WORK.KEYNOTFNDMSTR has 0 observations and 2 variables.
 NOTE: The data set WORK.KEYNOTFNDLOOKUP has 0 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.01 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getscenariotestid.sas
@@ -1774,7 +1774,7 @@ MPRINT(ASSERTFOREIGNKEY._CREATETESTSUBFOLDER):  ;
 MAUTOLOCDISPLAY(_MKDIR):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\windows\_mkdir.sas
 MPRINT(ASSERTFOREIGNKEY._CREATETESTSUBFOLDER._MKDIR):   options noxwait xsync xmin;
 MPRINT(ASSERTFOREIGNKEY._CREATETESTSUBFOLDER._MKDIR):   options XWAIT XSYNC NOXMIN;
-34                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+34                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTFOREIGNKEY._CREATETESTSUBFOLDER):  ;
 MPRINT(ASSERTFOREIGNKEY):  ;
@@ -1791,7 +1791,7 @@ NOTE: There were 0 observations read from the data set WORK.KEYNOTFNDLOOKUP.
 NOTE: The data set WORK.KEYNOTFNDLOOKUP has 0 observations and 1 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTFOREIGNKEY):   proc copy in = work out = tar_afk;
@@ -1803,7 +1803,7 @@ NOTE: There were 0 observations read from the data set WORK.KEYNOTFNDLOOKUP.
 NOTE: The data set TAR_AFK.KEYNOTFNDLOOKUP has 0 observations and 1 variables.
 NOTE: PROCEDURE COPY used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(ASSERTFOREIGNKEY):   data keyNotFndMstr;
@@ -1815,7 +1815,7 @@ NOTE: There were 0 observations read from the data set WORK.KEYNOTFNDMSTR.
 NOTE: The data set WORK.KEYNOTFNDMSTR has 0 observations and 1 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTFOREIGNKEY):   proc copy in = work out = tar_afk;
@@ -1830,7 +1830,7 @@ NOTE: PROCEDURE COPY used (Total process time):
       cpu time            0.00 seconds
       
 
-35                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+35                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTFOREIGNKEY):   libname tar_afk clear;
 NOTE: Libref TAR_AFK has been deassigned.
@@ -1844,7 +1844,7 @@ NOTE: 1 row was inserted into TARGET.TST.
 MPRINT(ASSERTFOREIGNKEY._ASSERTS):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 ========================== Check        1.14 (assertForeignKey) =====================================
@@ -1886,7 +1886,7 @@ NOTE: PROCEDURE SQL used (Total process time):
 NOTE: The macro _CHECKLOG completed compilation without errors.
       34 instructions 1896 bytes.
 MAUTOLOCDISPLAY(_CHECKLOG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_checklog.sas
-36                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+36                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTLOG._CHECKLOG):   DATA _null_;
 MPRINT(ASSERTLOG._CHECKLOG):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/007_001.log" TRUNCOVER end=eof IGNOREDOSEOF;
@@ -1913,8 +1913,8 @@ MPRINT(ASSERTLOG._CHECKLOG):   RUN;
 NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/007_001.log" is:
       Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\log\007_001.log,
       RECFM=V,LRECL=32767,File Size (bytes)=2658,
-      Last Modified=25Mar2022:09:39:29,
-      Create Time=25Mar2022:09:39:29
+      Last Modified=28Mar2022:10:42:29,
+      Create Time=28Mar2022:10:42:29
 
 NOTE: 64 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/007_001.log".
       The minimum record length was 0.
@@ -1942,7 +1942,7 @@ NOTE: PROCEDURE SQL used (Total process time):
 NOTE: The macro ENDTESTCASE completed compilation without errors.
       82 instructions 2388 bytes.
 MAUTOLOCDISPLAY(ENDTESTCASE):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcase.sas
-37                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+37                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MAUTOLOCDISPLAY(ENDTESTCALL):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\endtestcall.sas
 NOTE(SASUNIT): endTestcall already run by user. This call was issued from endTestcase.
@@ -1953,7 +1953,7 @@ MPRINT(ENDTESTCASE):   SELECT count(*) INTO :l_assertLog FROM target.tst WHERE t
 MPRINT(ENDTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ENDTESTCASE):   PROC SQL NOPRINT;
@@ -1991,14 +1991,14 @@ MPRINT(INITTESTCASE):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE c
 MPRINT(INITTESTCASE):   SELECT exa_id INTO :l_exaid FROM target.exa WHERE lowcase (exa_pgm) = "combineddataset.sas" and exa_auton=2;
 MPRINT(INITTESTCASE):   INSERT INTO target.cas VALUES ( 007 ,2 ,152 ,"combineddataset.sas" ,"Creating combined dataset" ,
 MAUTOLOCDISPLAY(_ABSPATH):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_abspath.sas
-MPRINT(INITTESTCASE):  "" ,1963820370.64 ,. ,. );
+MPRINT(INITTESTCASE):  "" ,1964083350.242 ,. ,. );
 NOTE: 1 row was inserted into TARGET.CAS.
 
 MPRINT(INITTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
-38                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+      cpu time            0.01 seconds
+38                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
       
 
@@ -2019,16 +2019,16 @@ NOTE: PROCEDURE SQL used (Total process time):
       
 
 MPRINT(ENDTESTCALL):   PROC SQL NOPRINT;
-MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1963820370.688 WHERE cas_scnid = 007 AND cas_id = 2;
+MPRINT(ENDTESTCALL):   UPDATE target.cas SET cas_end = 1964083350.296 WHERE cas_scnid = 007 AND cas_id = 2;
 NOTE: 1 row was updated in TARGET.CAS.
 
 MPRINT(ENDTESTCALL):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
-39                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+39                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ENDTESTCALL):   DATA _null_;
 MPRINT(ENDTESTCALL):   INFILE "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/007_002.lst";
@@ -2040,8 +2040,8 @@ MPRINT(ENDTESTCALL):   RUN;
 NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/007_002.lst" is:
       Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\tst\007_002.lst,
       RECFM=V,LRECL=32767,File Size (bytes)=0,
-      Last Modified=25Mar2022:09:39:30,
-      Create Time=25Mar2022:09:39:30
+      Last Modified=28Mar2022:10:42:30,
+      Create Time=28Mar2022:10:42:30
 
 NOTE: 0 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/tst/007_002.lst".
 NOTE: DATA statement used (Total process time):
@@ -2084,9 +2084,9 @@ MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Us
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=007;
 MPRINT(ASSERTTABLEEXISTS._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 007 AND tst_casid = 2 ;
-40                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+40                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
-MPRINT(ASSERTTABLEEXISTS._ASSERTS):   INSERT INTO target.tst VALUES ( 007 , 2 ,1 ,"assertTableExists" ,"Table was successfuly created? " ,"DATA:work.CombinedDataset:0 " ,"1#      1963820370.665#      1963820370.665 " ,0 ,"assertTableExists: assert 
+MPRINT(ASSERTTABLEEXISTS._ASSERTS):   INSERT INTO target.tst VALUES ( 007 , 2 ,1 ,"assertTableExists" ,"Table was successfuly created? " ,"DATA:work.CombinedDataset:0 " ,"1#      1964083350.275#      1964083350.275 " ,0 ,"assertTableExists: assert 
 passed." );
 NOTE: 1 row was inserted into TARGET.TST.
 
@@ -2118,7 +2118,7 @@ NOTE: Numeric values have been converted to character values at the places given
       129:1   
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTRECORDCOUNT):   DATA _NULL_;
@@ -2135,12 +2135,12 @@ MPRINT(ASSERTRECORDCOUNT):   select count(*) into :l_actual from work.CombinedDa
 MPRINT(ASSERTRECORDCOUNT):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(ASSERTRECORDCOUNT):   *** update result in test database ***;
 MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_asserts.sas
-41                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+41                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTRECORDCOUNT._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ASSERTRECORDCOUNT._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=007;
@@ -2171,7 +2171,7 @@ MPRINT(ASSERTPRIMARYKEY):   RUN;
 NOTE: The data set WORK._VARIABLES has 4 observations and 41 variables.
 NOTE: PROCEDURE CONTENTS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTPRIMARYKEY):   QUIT;
@@ -2180,7 +2180,7 @@ MPRINT(ASSERTPRIMARYKEY):   select count (*) into :l_anzahlObs from work._Variab
 MPRINT(ASSERTPRIMARYKEY):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MAUTOLOCDISPLAY(_GETSCENARIOTESTID):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\_getscenariotestid.sas
@@ -2196,12 +2196,12 @@ NOTE: PROCEDURE SQL used (Total process time):
 MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   PROC SQL NOPRINT;
 MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   *** determine number of the current test case ****;
 MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   SELECT max(tst_id) INTO :l_tstid_gti FROM target.tst WHERE tst_scnid = 007 AND tst_casid= 2;
-42                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+42                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTPRIMARYKEY._GETSCENARIOTESTID):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTPRIMARYKEY):  ;
@@ -2228,7 +2228,7 @@ NOTE: There were 8 observations read from the data set WORK.COMBINEDDATASET.
 NOTE: The data set WORK._SORTED has 8 observations and 4 variables.
 NOTE: PROCEDURE SORT used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(ASSERTPRIMARYKEY):   data work._notUnique;
@@ -2249,10 +2249,10 @@ MPRINT(ASSERTPRIMARYKEY):   select count (*) into :l_anzahlObs from work._notUni
 MPRINT(ASSERTPRIMARYKEY):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
-43                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+43                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTPRIMARYKEY):   data _apk._sorted;
 MPRINT(ASSERTPRIMARYKEY):   set work._sorted (OBS=MAX);
@@ -2273,7 +2273,7 @@ NOTE: There were 0 observations read from the data set WORK._NOTUNIQUE.
 NOTE: The data set _APK._NOTUNIQUE has 0 observations and 4 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(ASSERTPRIMARYKEY):   libname _apk clear;
@@ -2308,7 +2308,7 @@ NOTE: PROCEDURE DATASETS used (Total process time):
 134        %assertRowExpression(i_libref  =work
 NOTE: The macro ASSERTROWEXPRESSION completed compilation without errors.
       212 instructions 6056 bytes.
-44                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+44                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MAUTOLOCDISPLAY(ASSERTROWEXPRESSION):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertrowexpression.sas
 135                            ,i_memname =CustomerContracts
@@ -2361,10 +2361,10 @@ MPRINT(ASSERTROWEXPRESSION):   select count (*) into :l_actual from work.Custome
 MPRINT(ASSERTROWEXPRESSION):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
-45                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+45                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTROWEXPRESSION):   options obs=MAX;
 MPRINT(ASSERTROWEXPRESSION):   data _areLib.ViolatingObservations;
@@ -2376,7 +2376,7 @@ NOTE: There were 0 observations read from the data set WORK.CUSTOMERCONTRACTS.
 NOTE: The data set _ARELIB.VIOLATINGOBSERVATIONS has 0 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTROWEXPRESSION):   options obs=MAX;
@@ -2417,10 +2417,10 @@ MPRINT(ASSERTROWEXPRESSION._GETSCENARIOTESTID):   SELECT max(cas_id) INTO :l_cas
 MPRINT(ASSERTROWEXPRESSION._GETSCENARIOTESTID):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
-46                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+46                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTROWEXPRESSION._GETSCENARIOTESTID):   PROC SQL NOPRINT;
 MPRINT(ASSERTROWEXPRESSION._GETSCENARIOTESTID):   *** determine number of the current test case ****;
@@ -2452,7 +2452,7 @@ MPRINT(ASSERTROWEXPRESSION):   select count (*) into :l_actual from work.Custome
 MPRINT(ASSERTROWEXPRESSION):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ASSERTROWEXPRESSION):   options obs=MAX;
@@ -2476,7 +2476,7 @@ MAUTOLOCDISPLAY(_ASSERTS):  This macro was compiled from the autocall file C:\Us
 MPRINT(ASSERTROWEXPRESSION._ASSERTS):   PROC SQL NOPRINT;
 MPRINT(ASSERTROWEXPRESSION._ASSERTS):   SELECT max(cas_id) INTO :l_casid FROM target.cas WHERE cas_scnid=007;
 MPRINT(ASSERTROWEXPRESSION._ASSERTS):   SELECT max(tst_id) INTO :l_tstid FROM target.tst WHERE tst_scnid = 007 AND tst_casid = 2 ;
-47                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+47                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ASSERTROWEXPRESSION._ASSERTS):   INSERT INTO target.tst VALUES ( 007 , 2 ,5 ,"assertRowExpression" ,"There should be no contracts without customer " ,"8 " ,"8 " ,0 ,"assertRowExpression: assert passed." );
 NOTE: 1 row was inserted into TARGET.TST.
@@ -2484,7 +2484,7 @@ NOTE: 1 row was inserted into TARGET.TST.
 MPRINT(ASSERTROWEXPRESSION._ASSERTS):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 ========================== Check        2.5 (assertRowExpression) =====================================
@@ -2530,9 +2530,9 @@ MPRINT(ASSERTLOG._CHECKLOG):   RUN;
 NOTE: The infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/007_002.log" is:
       Filename=C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en\log\007_002.log,
       RECFM=V,LRECL=32767,File Size (bytes)=1368,
-      Last Modified=25Mar2022:09:39:30,
-      Create Time=25Mar2022:09:39:30
-48                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+      Last Modified=28Mar2022:10:42:30,
+      Create Time=28Mar2022:10:42:30
+48                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 
 NOTE: 26 records were read from the infile "C:\Users\sas\work\sasunitdemo\example\doc\sasunit\en/log/007_002.log".
@@ -2553,7 +2553,7 @@ NOTE: 1 row was inserted into TARGET.TST.
 MPRINT(ASSERTLOG._ASSERTS):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 ========================== Check        2.6 (assertLog) =====================================
@@ -2586,9 +2586,9 @@ NOTE: 1 row was updated in TARGET.CAS.
 MPRINT(ENDTESTCASE):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
-49                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+49                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 
 148        
@@ -2607,7 +2607,7 @@ NOTE: Deleting WORK.COMBINEDDATASET (memtype=DATA).
 
 NOTE: PROCEDURE DATASETS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 156        
@@ -2633,18 +2633,18 @@ NOTE: PROCEDURE SQL used (Total process time):
       
 
 MPRINT(ENDSCENARIO):   PROC SQL NOPRINT;
-MPRINT(ENDSCENARIO):   UPDATE target.scn SET scn_res = 0 ,scn_end = 1963820371.068 WHERE scn_id = 007;
+MPRINT(ENDSCENARIO):   UPDATE target.scn SET scn_res = 0 ,scn_end = 1964083350.651 WHERE scn_id = 007;
 NOTE: 1 row was updated in TARGET.SCN.
 
 MPRINT(ENDSCENARIO):   QUIT;
 NOTE: PROCEDURE SQL used (Total process time):
-      real time           0.00 seconds
-      cpu time            0.00 seconds
+      real time           0.01 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(ENDSCENARIO):   proc datasets lib=work memtype=VIEW nolist;
 MPRINT(ENDSCENARIO):   delete _tst_V;
-50                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+50                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(ENDSCENARIO):   run;
 
@@ -2676,6 +2676,6 @@ MPRINT(_TERMSCENARIO):  ;
 
 NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
 NOTE: The SAS System used:
-      real time           2.27 seconds
-      cpu time            1.59 seconds
+      real time           2.08 seconds
+      cpu time            1.42 seconds
       

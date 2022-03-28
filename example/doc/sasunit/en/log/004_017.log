@@ -23,10 +23,10 @@ MPRINT(BOXPLOT):   select distinct visit into :xvalues separated by '" "' from b
 MPRINT(BOXPLOT):   select distinct visit into :xvalues2 separated by ' ' from blood_pressure;
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
-117                                                                                                                      The SAS System                                                                                             09:39 Friday, March 25, 2022
+117                                                                                                                      The SAS System                                                                                             10:42 Monday, March 28, 2022
 
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 ERROR: boxplot: Variable sbpc in data set blood_pressure must be numeric

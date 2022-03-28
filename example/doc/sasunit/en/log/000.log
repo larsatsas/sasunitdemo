@@ -1,4 +1,4 @@
-1                                           The SAS System                09:38 Friday, March 25, 2022
+1                                           The SAS System                10:41 Monday, March 28, 2022
 
 NOTE: Copyright (c) 2016 by SAS Institute Inc., Cary, NC, USA. 
 NOTE: SAS (r) Proprietary Software 9.4 (TS1M7) 
@@ -20,23 +20,23 @@ NOTE: Additional host information:
  X64_DSRV16 WIN 10.0.14393  Server
 
 NOTE: SAS initialization used:
-      real time           0.41 seconds
-      cpu time            0.34 seconds
+      real time           0.69 seconds
+      cpu time            0.29 seconds
       
-1          LIBNAME awork "D:\opt\sasinside\SASWORK\_TD14940_SAS-AAP_";
+1          LIBNAME awork "D:\opt\sasinside\SASWORK\_TD22952_SAS-AAP_";
 NOTE: Libref AWORK was successfully assigned as follows: 
       Engine:        V9 
-      Physical Name: D:\opt\sasinside\SASWORK\_TD14940_SAS-AAP_
+      Physical Name: D:\opt\sasinside\SASWORK\_TD22952_SAS-AAP_
 2          DATA awork.check; RUN;
 
 NOTE: The data set AWORK.CHECK has 1 observations and 0 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.01 seconds
+      real time           0.16 seconds
       cpu time            0.01 seconds
       
 
 NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
 NOTE: The SAS System used:
-      real time           0.42 seconds
-      cpu time            0.35 seconds
+      real time           0.86 seconds
+      cpu time            0.31 seconds
       

@@ -1,7 +1,7 @@
 NOTE: PROCEDURE PRINTTO used (Total process time):
       real time           0.01 seconds
       cpu time            0.01 seconds
-104                                                                                                                      The SAS System                                                                                             09:39 Friday, March 25, 2022
+104                                                                                                                      The SAS System                                                                                             10:42 Monday, March 28, 2022
 
       
 
@@ -56,8 +56,8 @@ NOTE: Table WORK.DATA21 created, with 7 rows and 1 columns.
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
-105                                                                                                                      The SAS System                                                                                             09:39 Friday, March 25, 2022
+      cpu time            0.00 seconds
+105                                                                                                                      The SAS System                                                                                             10:42 Monday, March 28, 2022
 
       
 
@@ -74,7 +74,7 @@ NOTE: There were 7 observations read from the data set WORK.DATA21.
 NOTE: The data set WORK.DATA21 has 6 observations and 1 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(BOXPLOT):   proc sql noprint;

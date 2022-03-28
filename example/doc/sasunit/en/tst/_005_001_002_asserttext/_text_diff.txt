@@ -1,9 +1,9 @@
-Comparing files D:\OPT\SASINSIDE\SASWORK\_TD5752_SAS-AAP_\text1.txt and D:\OPT\SASINSIDE\SASWORK\_TD5752_SAS-AAP_\TEXT2.TXT
-***** D:\OPT\SASINSIDE\SASWORK\_TD5752_SAS-AAP_\text1.txt
+Comparing files D:\OPT\SASINSIDE\SASWORK\_TD25068_SAS-AAP_\text1.txt and D:\OPT\SASINSIDE\SASWORK\_TD25068_SAS-AAP_\TEXT2.TXT
+***** D:\OPT\SASINSIDE\SASWORK\_TD25068_SAS-AAP_\text1.txt
 ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
 dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-***** D:\OPT\SASINSIDE\SASWORK\_TD5752_SAS-AAP_\TEXT2.TXT
+***** D:\OPT\SASINSIDE\SASWORK\_TD25068_SAS-AAP_\TEXT2.TXT
 ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
 Dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut

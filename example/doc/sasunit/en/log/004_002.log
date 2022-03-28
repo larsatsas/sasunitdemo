@@ -4,7 +4,7 @@ NOTE: PROCEDURE PRINTTO used (Total process time):
       
 
 MPRINT(INITTESTCASE):   options linesize=max;
-21                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+21                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 36         %boxplot(data=testdata.blood_pressure, x=visit, y=sbp, group=med, report=&g_work/report2.pdf)
 MAUTOLOCDISPLAY(BOXPLOT):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\example\saspgm\boxplot.sas
@@ -14,7 +14,7 @@ MPRINT(BOXPLOT):   select distinct visit into :xvalues2 separated by ' ' from te
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(BOXPLOT):   proc sql noprint;
@@ -60,7 +60,7 @@ NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
       cpu time            0.00 seconds
       
-22                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+22                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 
 MPRINT(BOXPLOT):   proc sql noprint;
@@ -70,7 +70,7 @@ MPRINT(BOXPLOT):   select count(*) into :misscount from testdata.blood_pressure 
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.00 seconds
+      cpu time            0.01 seconds
       
 
 MPRINT(BOXPLOT):   run;
@@ -88,7 +88,7 @@ NOTE: There were 240 observations read from the data set TESTDATA.BLOOD_PRESSURE
 NOTE: The data set WORK.DATA5 has 240 observations and 3 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(BOXPLOT):   GOPTIONS FTEXT="Helvetica" HTEXT=12pt hsize=16cm vsize=16cm;
@@ -97,8 +97,8 @@ MPRINT(BOXPLOT):   SYMBOL2 WIDTH = 3 BWIDTH = 3 COLOR = black LINE = 1 VALUE = n
 MPRINT(BOXPLOT):   AXIS1 LABEL=(ANGLE=90) MINOR=none;
 MPRINT(BOXPLOT):   AXIS2 ORDER=(-1 0 1 2 3 4 5 6) VALUE=(" " "0" "1" "2" "3" "4" "5" " ") MINOR=none;
 MPRINT(BOXPLOT):   LEGEND1 FRAME;
-MPRINT(BOXPLOT):   ODS PDF FILE="D:\opt\sasinside\SASWORK\_TD5912_SAS-AAP_/report2.pdf";
-NOTE: Writing ODS PDF output to DISK destination "D:\opt\sasinside\SASWORK\_TD5912_SAS-AAP_\report2.pdf", printer "PDF".
+MPRINT(BOXPLOT):   ODS PDF FILE="D:\opt\sasinside\SASWORK\_TD29304_SAS-AAP_/report2.pdf";
+NOTE: Writing ODS PDF output to DISK destination "D:\opt\sasinside\SASWORK\_TD29304_SAS-AAP_\report2.pdf", printer "PDF".
 MPRINT(BOXPLOT):   ODS LISTING CLOSE;
 MPRINT(BOXPLOT):   PROC GPLOT DATA=WORK.DATA5;
 MPRINT(BOXPLOT):   PLOT sbp * visit = med / VAXIS=Axis1 HAXIS=Axis2 LEGEND=Legend1 NOFRAME;
@@ -108,15 +108,15 @@ MPRINT(BOXPLOT):   QUIT;
 
 NOTE: There were 240 observations read from the data set WORK.DATA5.
 NOTE: PROCEDURE GPLOT used (Total process time):
-      real time           0.04 seconds
+      real time           0.03 seconds
       cpu time            0.03 seconds
       
 
 MPRINT(BOXPLOT):   ODS PDF CLOSE;
-NOTE: ODS PDF printed 1 page to D:\opt\sasinside\SASWORK\_TD5912_SAS-AAP_\report2.pdf.
+NOTE: ODS PDF printed 1 page to D:\opt\sasinside\SASWORK\_TD29304_SAS-AAP_\report2.pdf.
 MPRINT(BOXPLOT):   ODS LISTING;
 MPRINT(BOXPLOT):   proc sql noprint;
-23                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+23                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(BOXPLOT):   drop table WORK.DATA5;
 NOTE: Table WORK.DATA5 has been dropped.

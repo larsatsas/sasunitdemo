@@ -9,7 +9,7 @@ MPRINT(INITTESTCASE):   options linesize=max;
 
 NOTE: PROCEDURE DATASETS used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 116        proc datasets lib=test2 nolist kill;
@@ -37,7 +37,7 @@ MPRINT(GENERATE):   run;
 NOTE: The data set WORK.DATA10 has 1 observations and 0 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-52                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+52                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
       cpu time            0.00 seconds
       
@@ -52,7 +52,7 @@ WARNING: The data set WORK.DATA9 may be incomplete.  When this step was stopped 
 WARNING: Data set WORK.DATA9 was not replaced because this step was stopped.
 NOTE: PROCEDURE SORT used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 ERROR: Macro Generate: data= or by= specified incorrectly
 

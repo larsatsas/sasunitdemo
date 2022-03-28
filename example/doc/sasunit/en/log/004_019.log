@@ -12,7 +12,7 @@ MPRINT(BOXPLOT):   select distinct visit into :xvalues2 separated by ' ' from te
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 ERROR: boxplot: Group variable must be specified

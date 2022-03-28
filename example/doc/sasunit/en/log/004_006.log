@@ -43,7 +43,7 @@ MPRINT(BOXPLOT):   RUN;
 NOTE: The data set WORK.DATA16 has 1 observations and 0 variables.
 NOTE: DATA statement used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MPRINT(BOXPLOT):   proc sql noprint;
@@ -51,7 +51,7 @@ MPRINT(BOXPLOT):   create table WORK.DATA16 as select distinct visit from blood_
 NOTE: Table WORK.DATA16 created, with 1 rows and 1 columns.
 
 MPRINT(BOXPLOT):   quit;
-66                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+66                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
@@ -91,7 +91,7 @@ NOTE: Table WORK.DATA16 has been dropped.
 MPRINT(BOXPLOT):   quit;
 NOTE: PROCEDURE SQL used (Total process time):
       real time           0.00 seconds
-      cpu time            0.01 seconds
+      cpu time            0.00 seconds
       
 
 MAUTOLOCDISPLAY(ASSERTLOGMSG):  This macro was compiled from the autocall file C:\Users\sas\work\sasunitdemo\saspgm\sasunit\assertlogmsg.sas

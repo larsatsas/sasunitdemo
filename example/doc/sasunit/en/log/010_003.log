@@ -3,7 +3,7 @@ NOTE: PROCEDURE PRINTTO used (Total process time):
       cpu time            0.01 seconds
       
 
-20                                                                                                                       The SAS System                                                                                             09:39 Friday, March 25, 2022
+20                                                                                                                       The SAS System                                                                                             10:42 Monday, March 28, 2022
 
 MPRINT(INITTESTCASE):   options linesize=max;
 44         data work.big;
@@ -15,7 +15,7 @@ MPRINT(INITTESTCASE):   options linesize=max;
 
 NOTE: The data set WORK.BIG has 1000000 observations and 2 variables.
 NOTE: DATA statement used (Total process time):
-      real time           0.11 seconds
+      real time           0.06 seconds
       cpu time            0.06 seconds
       
 

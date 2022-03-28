@@ -41,4 +41,4 @@ jobs:
         uses: mikepenz/action-junit-report@v3
         if: always()
         with:
-           files: "example/doc/sasunit/en/rep/*.xml"
+           report_paths: example/doc/sasunit/en/rep/*.xml

@@ -38,3 +38,4 @@ jobs:
         if: always()
         with:
            report_paths: example/doc/sasunit/en/rep/*.xml
+           fail_on_failure: true

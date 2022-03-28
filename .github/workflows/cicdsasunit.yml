@@ -35,5 +35,10 @@ jobs:
         run: |
           c:
           cd example\bin
-          sasunit.9.4.windows.en.overwrite.cmd
+          sasunit.9.4.windows.en.overwrite.cmd    
           
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action/composite@v1
+        if: always()
+        with:
+           files: "example/doc/sasunit/en/rep/*.xml"

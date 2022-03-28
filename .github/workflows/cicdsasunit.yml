@@ -35,6 +35,7 @@ jobs:
 
       # Runs a set of commands using the runners shell sasunit
       - name: Run a multi-line script
+        shell: cmd
         run: |
           cd \users\sas\work\sasunitdemo\example\bin
           sasunit.9.4.windows.en.overwrite.cmd
